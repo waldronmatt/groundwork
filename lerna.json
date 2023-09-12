@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
+  "packages": ["packages/*", "apps/*"],
+  "npmClient": "pnpm",
+  "loglevel": "verbose",
+  "version": "independent",
+  "command": {
+    "publish": {
+      "cleanupTempFiles": true,
+      "registry": "https://registry.npmjs.org"
+    },
+    "version": {
+      "allowBranch": "main",
+      "changelogIncludeCommitsClientLogin": " - by @%l",
+      "conventionalCommits": true,
+      "createRelease": "github",
+      "ignoreChanges": ["**/CHANGELOG.md", "**/node_modules/**"],
+      "message": "chore(release): publish %s",
+      "syncWorkspaceLock": true
+    }
+  },
+  "changelogPreset": "conventional-changelog-conventionalcommits"
+}

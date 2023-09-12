@@ -1,0 +1,30 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "build": "tsc && vite build",
+    "clean": "rimraf dist",
+    "preview": "vite preview --open"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "@waldronmatt/basic-math": "workspace:^",
+    "@waldronmatt/parity": "workspace:^",
+    "eslint": "^8.49.0",
+    "eslint-config-custom": "workspace:^",
+    "rimraf": "^3.0.2",
+    "tsconfig-config": "workspace:^",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.5"
+  }
+}

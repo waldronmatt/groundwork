@@ -1,0 +1,83 @@
+name: Release
+on:
+  push:
+    branches:
+      - main
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+  release:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [18]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: NX Affected
+        uses: nrwl/nx-set-shas@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm bootstrap:ci
+
+      - name: Build
+        run: pnpm build:ci
+
+      - name: Lint Monorepo and Related Files
+        run: pnpm lint:js
+
+      - name: Lint
+        run: pnpm lint:ci
+
+      - name: Test
+        run: pnpm test:ci
+
+      - name: Config Git User
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
+      - name: NPM Registry Authentication
+        run: |
+          npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+
+      - name: Bump Versions
+        run: |
+          pnpm version:ci
+
+      - name: Publish Packages
+        run: |
+          pnpm publish:ci

@@ -1,0 +1,72 @@
+{
+  "name": "pnpm-nx-lerna-lite-boilerplate",
+  "description": "A monorepo boilerplate using pnpm, nx, and lerna-lite.",
+  "private": true,
+  "author": "Matthew Waldron",
+  "workspaces": [
+    "apps/*",
+    "configs/**",
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "commit": "git-cz",
+    "clear": "rimraf pnpm-lock.yaml node_modules",
+    "nx:graph": "npx nx graph",
+    "changed": "lerna changed",
+    "preview:version": "lerna version --dry-run --yes",
+    "preview:publish": "lerna publish from-package --dry-run --yes",
+    "lint:js": "eslint --fix **/**.{js,cjs}",
+    "lint:secrets": "npx secretlint **/*",
+    "lint:publish": "npx publint",
+    "lint:package": "npx manypkg check",
+    "lint:mr": "run-p lint:js lint:secrets lint:publish lint:package",
+    "dev": "npx nx run-many -t dev",
+    "lint": "npx nx run-many -t lint",
+    "test": "npx nx run-many -t test",
+    "test:watch": "npx nx run-many -t test:watch",
+    "clean": "npx nx run-many -t clean",
+    "build": "npx nx run-many -t build",
+    "preview": "npx nx run-many -t preview",
+    "stub": "npx nx run-many -t stub",
+    "bootstrap:ci": "pnpm i --frozen-lockfile",
+    "lint:ci": "npx nx affected -t lint --parallel=3",
+    "build:ci": "npx nx affected -t build --parallel=3",
+    "test:ci": "npx nx affected -t test:prod --parallel=3",
+    "version:ci": "lerna version --yes",
+    "publish:ci": "lerna publish from-package --yes"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@lerna-lite/changed": "^2.5.1",
+    "@lerna-lite/cli": "^1.17.0",
+    "@lerna-lite/publish": "^2.5.1",
+    "@lerna-lite/version": "^2.5.1",
+    "@manypkg/cli": "^0.21.0",
+    "@nrwl/cli": "^15.9.3",
+    "@nrwl/nx-cloud": "16.4.0",
+    "@secretlint/secretlint-rule-preset-recommend": "^7.0.7",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.49.0",
+    "eslint-config-custom": "workspace:^",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0",
+    "npm-run-all": "^4.1.5",
+    "nx": "^16.8.1",
+    "prettier": "^2.8.8",
+    "publint": "^0.2.2",
+    "secretlint": "^6.2.4",
+    "typescript": "^5.2.2"
+  },
+  "resolutions": {
+    "tsconfig-paths": "^4.0.0"
+  },
+  "manypkg": {
+    "ignoredRules": [
+      "INTERNAL_MISMATCH"
+    ]
+  }
+}

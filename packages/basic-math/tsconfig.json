@@ -1,0 +1,20 @@
+{
+  "extends": ["tsconfig-config/library.json", "../../tsconfig.base.json"],
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "coverage"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "references": [
+    {
+      "path": "./tsconfig.build.json"
+    },
+    {
+      "path": "./tsconfig.eslint.json"
+    }
+  ]
+}

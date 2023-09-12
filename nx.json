@@ -1,0 +1,44 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "defaultBase": "main",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx-cloud",
+      "options": {
+        "cacheableOperations": ["lint:ts", "lint", "test", "test:prod", "build:dtsmaps", "build:src", "build", "stub"]
+      }
+    }
+  },
+  "cli": {
+    "packageManager": "pnpm"
+  },
+  "targetDefaults": {
+    "lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.cjs"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "test": {
+      "inputs": ["{projectRoot}/src/**/*.ts", "{projectRoot}/src/**/*.tsx"],
+      "outputs": ["{projectRoot}/coverage"]
+    },
+    "test:prod": {
+      "dependsOn": ["^test:prod"],
+      "outputs": ["{projectRoot}/coverage"]
+    },
+    "build:src": {
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "build:dtsmaps": {
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "stub": {
+      "outputs": ["{projectRoot}/dist"]
+    }
+  }
+}
