@@ -56,8 +56,8 @@ jobs:
       - name: Build
         run: pnpm build:ci
 
-      - name: Lint Monorepo and Related Files
-        run: pnpm lint:js
+      - name: Lint Monorepo
+        run: pnpm lint:mr
 
       - name: Lint
         run: pnpm lint:ci
