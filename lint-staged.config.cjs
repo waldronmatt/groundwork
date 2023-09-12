@@ -1,3 +1,3 @@
 module.exports = {
-  '**/*': ['secretlint', 'prettier --cache --write --ignore-unknown', 'manypkg check', 'npx publint'],
+  '**/*': ['secretlint', 'prettier --cache --write --ignore-unknown'],
 };
