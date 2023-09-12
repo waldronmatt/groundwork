@@ -42,6 +42,8 @@ pnpm dev
 
 Lint files:
 
+**Note**: Since `vite-project` depends on linked packages, a linting error will occur if `pnpm build` has not run at least once first.
+
 ```bash
 pnpm lint
 ```
@@ -126,7 +128,7 @@ Delete workspace root `node_modules` and `pnpm-lock.yaml` files:
 pnpm clear
 ```
 
-Lint root and `configs/` `js/cjs` files, check for secrets, validate published packages, and verify monorepo best practices:
+Lint root and `configs/` `js/cjs` files, check for secrets, lint dependency versions, validate published packages, and verify monorepo best practices:
 
 ```bash
 pnpm lint:mr

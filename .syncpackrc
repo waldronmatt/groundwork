@@ -1,0 +1,24 @@
+{
+  "semverRange": "^",
+  "source": [
+    "package.json",
+    "apps/*/package.json",
+    "configs/*/package.json",
+    "packages/*/package.json"
+  ],
+  "semverGroups": [
+    {
+      "packages": [
+        "@waldronmatt/**",
+        "eslint-config-custom",
+        "tsconfig-config",
+        "jest-config",
+        "vite-project"
+      ],
+      "dependencies": [
+        "**"
+      ],
+      "isIgnored": true
+    }
+  ]
+}

@@ -33,7 +33,7 @@ importers:
         specifier: ^15.9.3
         version: 15.9.3
       '@nrwl/nx-cloud':
-        specifier: 16.4.0
+        specifier: ^16.4.0
         version: 16.4.0
       '@secretlint/secretlint-rule-preset-recommend':
         specifier: ^7.0.7
@@ -47,9 +47,6 @@ importers:
       eslint:
         specifier: ^8.49.0
         version: 8.49.0
-      eslint-config-custom:
-        specifier: workspace:^
-        version: link:configs/eslint-config-custom
       husky:
         specifier: ^8.0.3
         version: 8.0.3
