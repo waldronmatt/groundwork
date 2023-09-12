@@ -30,6 +30,8 @@ Create a `GH_TOKEN` personal access token [here](https://github.com/settings/tok
 
 Set up your `NPM_TOKEN` and `NX_CLOUD_ACCESS_TOKEN` via `Settings` -> `Secrets` -> `Actions`.
 
+Enable read and write workflow permissions in your repo via `Settings` -> `Actions` -> `General` -> `Workflow permissions` -> `read and write permissions`.
+
 ## Commands
 
 Run local development servers:
