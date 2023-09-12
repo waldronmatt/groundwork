@@ -17,9 +17,6 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^17.7.0
         version: 17.7.0
-      '@lerna-lite/changed':
-        specifier: ^2.5.1
-        version: 2.5.1(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2)
       '@lerna-lite/cli':
         specifier: ^1.17.0
         version: 1.17.0
@@ -1671,25 +1668,6 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@lerna-lite/changed@2.5.1(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2):
-    resolution: {integrity: sha512-4HYk3MtIQ+cBhVzR98K2q+cXr2cz65UQM5aalhSNwSg4uJYnTa7KVpWxz7GJP3kw8Ofwh0JTccsL6wj/6rLikQ==}
-    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
-    dependencies:
-      '@lerna-lite/cli': 2.5.1(@lerna-lite/list@2.5.1)(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2)
-      '@lerna-lite/core': 2.5.1(typescript@5.2.2)
-      '@lerna-lite/list': 2.5.1(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2)
-      '@lerna-lite/listable': 2.5.1(typescript@5.2.2)
-    transitivePeerDependencies:
-      - '@lerna-lite/exec'
-      - '@lerna-lite/publish'
-      - '@lerna-lite/run'
-      - '@lerna-lite/version'
-      - '@lerna-lite/watch'
-      - babel-plugin-macros
-      - supports-color
-      - typescript
-    dev: false
-
   /@lerna-lite/cli@1.17.0:
     resolution: {integrity: sha512-kNqrEtUs1oIDHgOBGwHkRZGl/E7VTW+2wX89akQtpmfW7oV6qPdpjBirN9Hv9cVYW7UJzE2Hrk273WVZGoK7Jw==}
     engines: {node: '>=14.17.0', npm: '>=8.0.0'}
@@ -1713,7 +1691,7 @@ packages:
       - supports-color
     dev: false
 
-  /@lerna-lite/cli@2.5.1(@lerna-lite/list@2.5.1)(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2):
+  /@lerna-lite/cli@2.5.1(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2):
     resolution: {integrity: sha512-6Bs/w4rB/SVbiwbHfahm2W9wfUcvKcA34VBkVE8UrYOmwxOqODNdBUOUiZj76OTl5n5yByBf6MHWZN2MREPECw==}
     engines: {node: '>=16.15.0', npm: '>=8.5.0'}
     hasBin: true
@@ -1740,7 +1718,6 @@ packages:
     dependencies:
       '@lerna-lite/core': 2.5.1(typescript@5.2.2)
       '@lerna-lite/init': 2.5.1(typescript@5.2.2)
-      '@lerna-lite/list': 2.5.1(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2)
       '@lerna-lite/publish': 2.5.1(typescript@5.2.2)
       '@lerna-lite/version': 2.5.1(@lerna-lite/publish@2.5.1)(typescript@5.2.2)
       dedent: 1.5.1
@@ -1825,19 +1802,6 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/filter-packages@2.5.1(typescript@5.2.2):
-    resolution: {integrity: sha512-fFxRCm5Oo6KJJ/Er1OCUp0y2AmFK52egi37GyiQt4iLuqNfE/V+trOIof1OWMmR4sggk92QYcj98D1JXrBbomA==}
-    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
-    dependencies:
-      '@lerna-lite/core': 2.5.1(typescript@5.2.2)
-      multimatch: 6.0.0
-      npmlog: 7.0.1
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - supports-color
-      - typescript
-    dev: false
-
   /@lerna-lite/init@1.17.0:
     resolution: {integrity: sha512-JKRmfOzZ43AIzhE1wU265gbsnMWhjZ54gxYA2twBrWi4RIn+45jXViTgmVHsXfhUeD9XkBKW7Sc9hhdC5HOtZg==}
     engines: {node: '>=14.17.0', npm: '>=8.0.0'}
@@ -1865,25 +1829,6 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/list@2.5.1(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2):
-    resolution: {integrity: sha512-bm9e7bwETDrLQLHXu78VlGhoUYZZbWBe53bmhTrR9CPsK5XJtgZHZKPuZYZCFyeIbQtyAYapXp5/aaI7RA3UxQ==}
-    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
-    dependencies:
-      '@lerna-lite/cli': 2.5.1(@lerna-lite/list@2.5.1)(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2)
-      '@lerna-lite/core': 2.5.1(typescript@5.2.2)
-      '@lerna-lite/filter-packages': 2.5.1(typescript@5.2.2)
-      '@lerna-lite/listable': 2.5.1(typescript@5.2.2)
-    transitivePeerDependencies:
-      - '@lerna-lite/exec'
-      - '@lerna-lite/publish'
-      - '@lerna-lite/run'
-      - '@lerna-lite/version'
-      - '@lerna-lite/watch'
-      - babel-plugin-macros
-      - supports-color
-      - typescript
-    dev: false
-
   /@lerna-lite/listable@1.17.0:
     resolution: {integrity: sha512-Ns7dxHkR1rMg7NflSjgB15wjb2MTyjsRKzPFKn2s46yX7GmXZojzolQflSQZDtyO4W9U/Apsd6MJsAdMmeqNyQ==}
     engines: {node: '>=14.17.0', npm: '>=8.0.0'}
@@ -1893,19 +1838,6 @@ packages:
       columnify: 1.6.0
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /@lerna-lite/listable@2.5.1(typescript@5.2.2):
-    resolution: {integrity: sha512-Xm+YGY+jHk5SJ2FvQ/+Armfot6AM39rvkAN8ARENQeogrbycv+AiaFr1/QmAmmYRdj/2z5cNon3PPMkrElqsuw==}
-    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
-    dependencies:
-      '@lerna-lite/core': 2.5.1(typescript@5.2.2)
-      chalk: 5.3.0
-      columnify: 1.6.0
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - supports-color
-      - typescript
     dev: false
 
   /@lerna-lite/publish@1.17.0:
@@ -1947,7 +1879,7 @@ packages:
     resolution: {integrity: sha512-bxvaaFUcQ1wiOLc1xWtekmsyobd7kqUoehzZ8HIStDIASMo+DZGVNyM+OZirI1F3Fz3PM/JbyRz+yo7Qp6kEVA==}
     engines: {node: '>=16.15.0', npm: '>=8.5.0'}
     dependencies:
-      '@lerna-lite/cli': 2.5.1(@lerna-lite/list@2.5.1)(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2)
+      '@lerna-lite/cli': 2.5.1(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2)
       '@lerna-lite/core': 2.5.1(typescript@5.2.2)
       '@lerna-lite/version': 2.5.1(@lerna-lite/publish@2.5.1)(typescript@5.2.2)
       '@npmcli/arborist': 7.1.0
@@ -2030,7 +1962,7 @@ packages:
     resolution: {integrity: sha512-d7b2ZiCwTGbxE5LPkt43kRNSCBCgAEMYKVGMhpabm6YXOs9J5Si7gmcSQ9eTYctUjwY+QBUimRr/KFT4PvBfEw==}
     engines: {node: '>=16.15.0', npm: '>=8.5.0'}
     dependencies:
-      '@lerna-lite/cli': 2.5.1(@lerna-lite/list@2.5.1)(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2)
+      '@lerna-lite/cli': 2.5.1(@lerna-lite/publish@2.5.1)(@lerna-lite/version@2.5.1)(typescript@5.2.2)
       '@lerna-lite/core': 2.5.1(typescript@5.2.2)
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 19.0.13
@@ -3318,10 +3250,6 @@ packages:
       '@types/node': 20.6.0
     dev: false
 
-  /@types/minimatch@3.0.5:
-    resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
-    dev: false
-
   /@types/minimist@1.2.2:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: false
@@ -3861,11 +3789,6 @@ packages:
       is-array-buffer: 3.0.2
     dev: false
 
-  /array-differ@4.0.0:
-    resolution: {integrity: sha512-Q6VPTLMsmXZ47ENG3V+wQyZS1ZxXMxFyYzA+Z/GMrJ6yIutAIEf9wTyroTzmGjNfox9/h3GdGBCVh43GVFx4Uw==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: false
-
   /array-ify@1.0.0:
     resolution: {integrity: sha512-c5AMf34bKdvPhQ7tBGhqkgKNUzMr4WUs+WDtC2ZUGOUncbxKMTvqxYctiseW3+L4bA8ec+GcZ6/A/FW4m8ukng==}
     dev: false
@@ -3884,11 +3807,6 @@ packages:
   /array-union@2.1.0:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
-
-  /array-union@3.0.1:
-    resolution: {integrity: sha512-1OvF9IbWwaeiM9VhzYXVQacMibxpXOMYVNIvMtKRyX9SImBXpKcFr8XvFDeEslCyuH/t6KRt7HEO94AlP8Iatw==}
-    engines: {node: '>=12'}
-    dev: false
 
   /array.prototype.flat@1.3.2:
     resolution: {integrity: sha512-djYB+Zx2vLewY8RWlNCUdHjDXs2XOgm602S9E7P/UpHgfeHL00cRiIF+IN/G/aUJ7kGPb6yO/ErDI5V2s8iycA==}
@@ -8326,16 +8244,6 @@ packages:
 
   /ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
-    dev: false
-
-  /multimatch@6.0.0:
-    resolution: {integrity: sha512-I7tSVxHGPlmPN/enE3mS1aOSo6bWBfls+3HmuEeCUBCE7gWnm3cBXCBkpurzFjVRwC6Kld8lLaZ1Iv5vOcjvcQ==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dependencies:
-      '@types/minimatch': 3.0.5
-      array-differ: 4.0.0
-      array-union: 3.0.1
-      minimatch: 3.1.2
     dev: false
 
   /mute-stream@0.0.8:

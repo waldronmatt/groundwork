@@ -138,12 +138,6 @@ Visualize the project structure/dependencies:
 pnpm nx:graph
 ```
 
-List local packages that have changed since the last tagged release:
-
-```bash
-pnpm changed
-```
-
 Preview the output result of the `version` command without actually executing it:
 
 **Note**: Set your personal access token as an environment variable in your operating system as `GH_TOKEN` with the token unique identifier as the value.
@@ -155,7 +149,7 @@ pnpm preview:version
 Preview the output result of the `publish` command without actually executing it:
 
 ```bash
-pnpm preview:version
+pnpm preview:publish
 ```
 
 ## NX Distributed Caching

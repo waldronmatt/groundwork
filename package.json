@@ -40,7 +40,6 @@
   "dependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
-    "@lerna-lite/changed": "^2.5.1",
     "@lerna-lite/cli": "^1.17.0",
     "@lerna-lite/publish": "^2.5.1",
     "@lerna-lite/version": "^2.5.1",
