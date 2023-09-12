@@ -13,7 +13,6 @@
     "commit": "git-cz",
     "clear": "rimraf pnpm-lock.yaml node_modules",
     "nx:graph": "npx nx graph",
-    "changed": "lerna changed",
     "preview:version": "lerna version --dry-run --yes",
     "preview:publish": "lerna publish from-package --dry-run --yes",
     "lint:js": "eslint --fix **/**.{js,cjs}",
