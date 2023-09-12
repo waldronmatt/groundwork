@@ -19,7 +19,7 @@
     "lint:secrets": "npx secretlint **/*",
     "lint:publish": "npx publint",
     "lint:package": "npx manypkg check",
-    "lint:deps": "syncpack lint-semver-ranges --config .syncpackrc",
+    "lint:deps": "npx syncpack lint-semver-ranges --config .syncpackrc",
     "lint:mr": "run-p lint:js lint:secrets lint:deps lint:publish lint:package",
     "dev": "npx nx run-many -t dev",
     "lint": "npx nx run-many -t lint",
