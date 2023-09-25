@@ -19,7 +19,7 @@
     "README.md"
   ],
   "scripts": {
-    "lint:ts": "eslint --fix **/*.{ts,tsx}",
+    "lint:ts": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
     "lint": "pnpm lint:ts",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
