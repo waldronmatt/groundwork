@@ -1,8 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["tsconfig-config/vite.json", "../../tsconfig.base.json"],
+  "extends": "tsconfig-config/vite.json",
   "include": ["src"],
-  "exclude": ["node_modules", "dist"],
-  "references": [{ "path": "./tsconfig.node.json" }],
-  "files": []
+  "exclude": ["node_modules", "dist"]
 }

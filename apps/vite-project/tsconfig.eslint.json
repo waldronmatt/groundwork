@@ -3,7 +3,6 @@
   "extends": "./tsconfig.json",
   "include": [".*.cjs", "*.cjs", "*.config.ts", "src/*"],
   "compilerOptions": {
-    "noEmit": true,
     "allowJs": true
   }
 }
