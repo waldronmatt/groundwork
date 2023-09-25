@@ -3,6 +3,12 @@
   "exclude": [".*.cjs", "*.cjs", "*.config.ts", "src/*.spec.ts"],
   "compilerOptions": {
     "rootDir": "./src",
-    "noEmit": false
+    "outDir": "dist",
+    // https://www.typescriptlang.org/docs/handbook/declaration-files/dts-from-js.html
+    "noEmit": false,
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationMap": true
   }
 }

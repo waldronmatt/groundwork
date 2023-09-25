@@ -24,7 +24,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:prod": "cross-env TEST_ENV=prod NODE_OPTIONS=--experimental-vm-modules jest",
-    "build:dtsmaps": "tsc --project tsconfig.build.json --emitDeclarationOnly --declaration",
+    "build:dtsmaps": "tsc --project tsconfig.build.json",
     "build:src": "tsup src/*[!.spec].ts --format cjs,esm --sourcemap --onSuccess \"pnpm build:dtsmaps\"",
     "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo",
     "build": "pnpm build:src",
