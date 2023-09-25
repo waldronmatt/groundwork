@@ -16,5 +16,6 @@
     {
       "path": "./tsconfig.eslint.json"
     }
-  ]
+  ],
+  "files": []
 }
