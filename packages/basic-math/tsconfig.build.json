@@ -5,11 +5,7 @@
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "dist",
-    // https://www.typescriptlang.org/docs/handbook/declaration-files/dts-from-js.html
     "noEmit": false,
-    "allowJs": true,
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "declarationMap": true
+    "emitDeclarationOnly": true
   }
 }

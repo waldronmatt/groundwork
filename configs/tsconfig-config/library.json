@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "noEmit": true,
+    "noEmit": false,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
