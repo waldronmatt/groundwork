@@ -15,7 +15,7 @@
       "conventionalCommits": true,
       "createRelease": "github",
       "ignoreChanges": ["**/CHANGELOG.md", "**/node_modules/**"],
-      "message": "chore(release): publish %s",
+      "message": "chore(release): publish",
       "syncWorkspaceLock": true
     }
   },
