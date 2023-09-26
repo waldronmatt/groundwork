@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.1.0...vite-project@1.1.1) (2023-09-26)
+
+### Bug Fixes
+
+* **global:** remove unnecessary tsconfig properties ([85512bb](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/85512bb920f24bfe322a86009371cd7d5b981642)) - by @waldronmatt
+
 ## [1.1.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.0.3...vite-project@1.1.0) (2023-09-25)
 
 ### Features

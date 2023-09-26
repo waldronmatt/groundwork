@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@1.0.4...@waldronmatt/parity@1.0.5) (2023-09-26)
+
+### Bug Fixes
+
+* **global:** remove unnecessary tsconfig properties ([85512bb](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/85512bb920f24bfe322a86009371cd7d5b981642)) - by @waldronmatt
+
 ## [1.0.4](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@1.0.3...@waldronmatt/parity@1.0.4) (2023-09-25)
 
 ### Bug Fixes
