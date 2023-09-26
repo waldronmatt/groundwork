@@ -7,4 +7,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **configs:** add license and readme to each config ([aaa20dd](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/aaa20ddce8b94a4fa68dbae2fc6cc6103efcc6dd)) - by @waldronmatt
+- **configs:** add license and readme to each config ([aaa20dd](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/aaa20ddce8b94a4fa68dbae2fc6cc6103efcc6dd)) - by @waldronmatt
