@@ -140,6 +140,12 @@ Visualize the project structure/dependencies:
 pnpm nx:graph
 ```
 
+Format all files in the monorepo:
+
+```bash
+pnpm format
+```
+
 Preview the output result of the `version` command without actually executing it:
 
 **Note**: Set your personal access token as an environment variable in your operating system as `GH_TOKEN` with the token unique identifier as the value.
