@@ -4,6 +4,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
+    "jest-environment-jsdom": "^29.7.0",
     "ts-jest": "^29.0.3"
   }
 }
