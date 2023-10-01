@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/tsconfig-config@1.1.0...tsconfig-config@1.1.1) (2023-10-01)
+
+### Bug Fixes
+
+* **vite.json:** remove support for ts extensions ([6bc7d78](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/6bc7d78b701debfd04fa1db0dba604e32365cdb5)) - by @waldronmatt
+
 ## [1.1.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/tsconfig-config@1.0.1...tsconfig-config@1.1.0) (2023-09-25)
 
 ### Features

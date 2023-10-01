@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/basic-math@1.0.5...@waldronmatt/basic-math@2.0.0) (2023-10-01)
+
+### ⚠ BREAKING CHANGES
+
+* **package.json:** esm support only
+
+### Features
+
+* **package.json:** remove cjs support, update jest config ([32ad266](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/32ad266eabd74c53e12e5d60ace448d75c4246c6)) - by @waldronmatt
+
 ## [1.0.5](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/basic-math@1.0.4...@waldronmatt/basic-math@1.0.5) (2023-09-26)
 
 ### Bug Fixes

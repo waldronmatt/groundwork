@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@1.0.5...@waldronmatt/parity@2.0.0) (2023-10-01)
+
+### ⚠ BREAKING CHANGES
+
+* **package.json:** only esm is supported
+
+### Features
+
+* **package.json:** remove cjs support, update jest config ([5bb886d](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/5bb886d7168ced23ce9553708f36e0eabf925458)) - by @waldronmatt
+
 ## [1.0.5](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@1.0.4...@waldronmatt/parity@1.0.5) (2023-09-26)
 
 ### Bug Fixes
