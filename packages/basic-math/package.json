@@ -1,14 +1,13 @@
 {
   "name": "@waldronmatt/basic-math",
   "version": "1.0.5",
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
       "import": "./dist/index.js"
     },
     "./*": "./dist/*"
@@ -25,7 +24,7 @@
     "test:watch": "jest --watch",
     "test:prod": "cross-env TEST_ENV=prod NODE_OPTIONS=--experimental-vm-modules jest",
     "build:dtsmaps": "tsc --project tsconfig.build.json",
-    "build:src": "tsup src/*[!.spec].ts --format cjs,esm --sourcemap --onSuccess \"pnpm build:dtsmaps\"",
+    "build:src": "tsup src/*[!.spec].ts --format esm --sourcemap --onSuccess \"pnpm build:dtsmaps\"",
     "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo",
     "build": "pnpm build:src",
     "stub": "npx unbuild --stub"
