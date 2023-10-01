@@ -1,10 +1,7 @@
-const mappedModule = process.env.TEST_ENV === 'prod' ? '<rootDir>/dist/$1' : '<rootDir>/src/$1';
-
 module.exports = {
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-  testMatch: ['<rootDir>/src/**?(*.)+(spec|test).+(ts|tsx|js|jsx)'],
   moduleNameMapper: {
-    '^@/(.*)\\.js$': mappedModule,
+    '^(\\.{1,2}/.*)\\.js$': '$1',
   },
   transform: {
     '^.+\\.(ts|tsx)$': [
