@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@1.1.0...@waldronmatt/demo-ui@1.1.1) (2023-10-01)
+
+### Bug Fixes
+
+* **package.json:** add missing publishConfig preventing npm publish ([18996c7](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/18996c7842531e8955597ec386f188be8bf3ad82)) - by @waldronmatt
+
 ## 1.1.0 (2023-10-01)
 
 ### Features
