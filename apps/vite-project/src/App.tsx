@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
+import { Button } from '@waldronmatt/demo-ui/components/Button/index.js';
+import { Link } from '@waldronmatt/demo-ui/components/Link/index.js';
 import { addition } from '@waldronmatt/basic-math/addition.js';
 import { isEven } from '@waldronmatt/parity/even.js';
 import './App.css';
@@ -12,23 +14,23 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
+        <Link href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
+        </Link>
+        <Link href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        </Link>
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setAdditionCount((thiscountAddition) => thiscountAddition + 1)}>
+        <Button onClick={() => setAdditionCount((thiscountAddition) => thiscountAddition + 1)}>
           {countAddition} + {countAddition} = {addition(countAddition, countAddition)}
-        </button>
+        </Button>
       </div>
       <div className="card">
-        <button onClick={() => setParityCount((thisCountParity) => thisCountParity + 1)}>
+        <Button onClick={() => setParityCount((thisCountParity) => thisCountParity + 1)}>
           Is {countParity} even? {isEven(countParity) ? 'True' : 'False'}
-        </button>
+        </Button>
       </div>
     </>
   );

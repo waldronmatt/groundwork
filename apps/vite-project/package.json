@@ -11,6 +11,9 @@
     "preview": "vite preview --open"
   },
   "dependencies": {
+    "@waldronmatt/basic-math": "^2.0.0",
+    "@waldronmatt/demo-ui": "^1.1.1",
+    "@waldronmatt/parity": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -18,8 +21,6 @@
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react-swc": "^3.3.2",
-    "@waldronmatt/basic-math": "workspace:^",
-    "@waldronmatt/parity": "workspace:^",
     "eslint": "^8.49.0",
     "eslint-config-custom": "workspace:^",
     "rimraf": "^3.0.2",
