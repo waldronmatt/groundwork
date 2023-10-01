@@ -13,7 +13,8 @@ pnpm add @waldronmatt/demo-ui
 ## Getting Started
 
 ```tsx
-import { Button, Link } from '@waldronmatt/demo-ui';
+import { Button } from '@waldronmatt/demo-ui/components/Button/index.js';
+import { Link } from '@waldronmatt/demo-ui/components/Link/index.js';
 
 function App() {
   return (
