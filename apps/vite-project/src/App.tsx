@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
+import '@waldronmatt/demo-ui/styles/global.css';
 import { Button } from '@waldronmatt/demo-ui/components/Button/index.js';
-import { Link } from '@waldronmatt/demo-ui/components/Link/index.js';
 import { addition } from '@waldronmatt/basic-math/addition.js';
 import { isEven } from '@waldronmatt/parity/even.js';
 import './App.css';
@@ -14,12 +14,12 @@ function App() {
   return (
     <>
       <div>
-        <Link href="https://vitejs.dev" target="_blank" rel="noreferrer">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
-        </Link>
-        <Link href="https://react.dev" target="_blank" rel="noreferrer">
+        </a>
+        <a href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
-        </Link>
+        </a>
       </div>
       <h1>Vite + React</h1>
       <div className="card">
