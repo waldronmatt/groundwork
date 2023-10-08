@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@1.1.2...@waldronmatt/demo-ui@1.1.3) (2023-10-08)
+
+### Bug Fixes
+
+* **global.css:** fix token names ([8fbe5ad](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/8fbe5ad5bdbdc0b609fe795958498c4994e2ab6a)) - by @waldronmatt
+* **ui:** fix broken css modules on build, remove css resets, copy global css file ([0fd16f6](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/0fd16f6f584405f8bdb7f853b2a96fa9bda1957f)) - by @waldronmatt
+
 ## [1.1.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@1.1.1...@waldronmatt/demo-ui@1.1.2) (2023-10-01)
 
 **Note:** Version bump only for package @waldronmatt/demo-ui

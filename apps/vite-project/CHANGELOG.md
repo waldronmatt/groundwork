@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.1.3...vite-project@1.1.4) (2023-10-08)
+
+### Bug Fixes
+
+* **vite-project:** update app with demo-ui fixes and imported reset/normalize styles ([f45bb89](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/f45bb899bbe782d91d3aede10273d321453fca05)) - by @waldronmatt
+
 ## [1.1.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.1.2...vite-project@1.1.3) (2023-10-01)
 
 ### Bug Fixes
