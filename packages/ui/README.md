@@ -13,6 +13,7 @@ pnpm add @waldronmatt/demo-ui
 ## Getting Started
 
 ```tsx
+import '@waldronmatt/demo-ui/styles/global.css'; // add global tokens
 import { Button } from '@waldronmatt/demo-ui/components/Button/index.js';
 import { Link } from '@waldronmatt/demo-ui/components/Link/index.js';
 

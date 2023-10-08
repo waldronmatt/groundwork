@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 import alias from '@rollup/plugin-alias';
 import { extname, relative, resolve } from 'path';
 import { fileURLToPath } from 'node:url';
@@ -18,6 +19,14 @@ export default defineConfig({
       exclude: ['lib/**/*.spec.tsx'],
     }),
     libInjectCss(),
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'lib/global.css',
+          dest: 'styles',
+        },
+      ],
+    }),
   ],
   build: {
     copyPublicDir: false,
@@ -29,7 +38,7 @@ export default defineConfig({
       external: ['react', 'react/jsx-runtime'],
       input: Object.fromEntries(
         glob
-          .sync('lib/**/*.{ts,tsx,css}', {
+          .sync('lib/**/*.{ts,tsx}', {
             ignore: ['lib/**/*.spec.tsx'],
           })
           .map((file) => [
@@ -43,7 +52,7 @@ export default defineConfig({
       ),
       output: {
         sourcemap: true,
-        assetFileNames: 'styles/[name].css',
+        assetFileNames: 'styles/[name][extname]',
         entryFileNames: '[name].js',
       },
     },
