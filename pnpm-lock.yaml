@@ -92,6 +92,12 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      sanitize.css:
+        specifier: ^13.0.0
+        version: 13.0.0
+      the-new-css-reset:
+        specifier: ^1.11.0
+        version: 1.11.0
     devDependencies:
       '@types/react':
         specifier: ^18.2.15
@@ -9859,6 +9865,10 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: false
 
+  /sanitize.css@13.0.0:
+    resolution: {integrity: sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==}
+    dev: false
+
   /saxes@6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
@@ -10446,6 +10456,10 @@ packages:
   /textextensions@5.16.0:
     resolution: {integrity: sha512-7D/r3s6uPZyU//MCYrX6I14nzauDwJ5CxazouuRGNuvSCihW87ufN6VLoROLCrHg6FblLuJrT6N2BVaPVzqElw==}
     engines: {node: '>=0.8'}
+    dev: false
+
+  /the-new-css-reset@1.11.0:
+    resolution: {integrity: sha512-1H8Q68FfsZMCuQD5yuz3nvra3bLlYt3iN5Jq237GmzHEmY+/xEcYE7NUq3ysCNpvfurlEqyq0SpcjUqlL6ps6A==}
     dev: false
 
   /thenify-all@1.6.0:
