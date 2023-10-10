@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import '@waldronmatt/demo-ui/styles/global.css';
-import { Button } from '@waldronmatt/demo-ui/components/Button/index.js';
-import { addition } from '@waldronmatt/basic-math/addition.js';
-import { isEven } from '@waldronmatt/parity/even.js';
+// we use `lib/` and `src/` paths so we can get source files and have storybook/vite
+// auto refresh (hmr) whenever we update our packages source files
+import '@waldronmatt/demo-ui/lib/styles/global.css';
+import { Button } from '@waldronmatt/demo-ui/lib/components/Button/index.js';
+// there is an issue using `pnpm stub` with this project
+// see https://github.com/unjs/jiti/issues/136
+import { addition } from '@waldronmatt/basic-math/src/addition.js';
+import { isEven } from '@waldronmatt/parity/src/even.js';
 import './App.css';
 
 function App() {

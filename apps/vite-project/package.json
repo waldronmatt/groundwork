@@ -8,7 +8,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "build": "tsc && vite build",
     "clean": "rimraf dist tsconfig.tsbuildinfo",
-    "preview": "vite preview --open"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@waldronmatt/basic-math": "^2.0.0",
