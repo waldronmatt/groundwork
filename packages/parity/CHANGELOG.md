@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@2.0.0...@waldronmatt/parity@2.0.1) (2023-10-10)
+
+### Bug Fixes
+
+* **package.json:** add lib submodule to exports for hmr due to stub issues ([dcf2fd5](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/dcf2fd5408fe2f284eec5ba7c1f191e480ba0e77)) - by @waldronmatt
+
 ## [2.0.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@1.0.5...@waldronmatt/parity@2.0.0) (2023-10-01)
 
 ### ⚠ BREAKING CHANGES

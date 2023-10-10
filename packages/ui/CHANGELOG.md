@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@1.1.3...@waldronmatt/demo-ui@1.2.0) (2023-10-10)
+
+### Features
+
+* **ui:** update tokens, clean up component, add doc ui references ([a3838e6](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/a3838e6b3f2d48c7f2f2e8a2d3291d95a20c3024)) - by @waldronmatt
+
 ## [1.1.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@1.1.2...@waldronmatt/demo-ui@1.1.3) (2023-10-08)
 
 ### Bug Fixes
