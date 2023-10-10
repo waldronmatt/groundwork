@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Button } from '@/Button/index.js';
 
-test('loads and displays greeting', async () => {
+test('loads and displays greeting', () => {
   render(<Button>Hello World</Button>);
   expect(screen.getByRole('button')).toHaveAttribute('type', 'button');
   // css module class names get randomized on prod build,

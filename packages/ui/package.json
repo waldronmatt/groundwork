@@ -10,7 +10,8 @@
       "types": "./dist/main.d.ts",
       "import": "./dist/main.js"
     },
-    "./*": "./dist/*"
+    "./*": "./dist/*",
+    "./lib/*": "./lib/*"
   },
   "files": [
     "dist",
@@ -25,8 +26,8 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:prod": "cross-env TEST_ENV=prod NODE_OPTIONS=--experimental-vm-modules jest",
-    "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo",
-    "build": "tsc --p ./tsconfig.build.json && vite build"
+    "build": "tsc --p ./tsconfig.build.json && vite build",
+    "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo"
   },
   "publishConfig": {
     "access": "public"

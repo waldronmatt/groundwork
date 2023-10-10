@@ -1,15 +1,18 @@
 .button {
+  border: 1px solid #000;
+  background-color: #d3d3d3;
+  cursor: pointer;
   padding: 1rem;
 }
 
 .sm {
-  font-size: var(--font-size-sm);
+  font-size: var(--demo-ui-font-size-sm);
 }
 
 .md {
-  font-size: var(--font-size-md);
+  font-size: var(--demo-ui-font-size-md);
 }
 
 .lg {
-  font-size: var(--font-size-lg);
+  font-size: var(--demo-ui-font-size-lg);
 }

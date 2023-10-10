@@ -8,12 +8,9 @@ export interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement>
 }
 
 export function Link({ children, variant = 'md', ...nativeProps }: LinkProps): JSX.Element {
-  const { className, ...props } = nativeProps;
   return (
-    <a className={`${className} ${styles.link} ${styles[variant]}`} {...props}>
+    <a className={`${styles.link} ${styles[variant]}`} {...nativeProps}>
       {children}
     </a>
   );
 }
-
-Link.displayName = 'Link';

@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
-  "packages": ["apps/*", "configs/*", "packages/*"],
+  "packages": ["apps/*", "configs/*", "docs/*", "packages/*"],
   "npmClient": "pnpm",
   "loglevel": "verbose",
   "version": "independent",

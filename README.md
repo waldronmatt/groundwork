@@ -125,7 +125,7 @@ Delete workspace root `node_modules` and `pnpm-lock.yaml` files:
 **Note**: Install `rimraf` globally and make sure it is not installed in the workspace root so errors aren't thrown.
 
 ```bash
-pnpm clear
+pnpm delete
 ```
 
 Lint root and `configs/` `js/cjs` files, check for secrets, lint dependency versions, validate published packages, and verify monorepo best practices:
