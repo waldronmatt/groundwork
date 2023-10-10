@@ -25,7 +25,7 @@
     "@vitejs/plugin-react-swc": "^3.3.2",
     "eslint": "^8.49.0",
     "eslint-config-custom": "workspace:^",
-    "rimraf": "^3.0.2",
+    "rimraf": "^5.0.0",
     "tsconfig-config": "workspace:^",
     "typescript": "^5.2.2",
     "vite": "^4.4.5"
