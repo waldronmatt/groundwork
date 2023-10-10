@@ -10,7 +10,8 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./*": "./dist/*"
+    "./*": "./dist/*",
+    "./src/*": "./src/*"
   },
   "files": [
     "dist/*",
@@ -18,15 +19,14 @@
     "README.md"
   ],
   "scripts": {
-    "lint:ts": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
-    "lint": "pnpm lint:ts",
+    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:prod": "cross-env TEST_ENV=prod NODE_OPTIONS=--experimental-vm-modules jest",
     "build:dtsmaps": "tsc --project tsconfig.build.json",
     "build:src": "tsup src/*[!.spec].ts --format esm --sourcemap --onSuccess \"pnpm build:dtsmaps\"",
-    "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo",
     "build": "pnpm build:src",
+    "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo",
     "stub": "npx unbuild --stub"
   },
   "publishConfig": {
