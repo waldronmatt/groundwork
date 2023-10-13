@@ -92,6 +92,10 @@ pnpm stub
 
 To enable nx distributed caching, refactor the `.github/workflows/release.yml` file via the directions [here](https://nx.dev/recipes/ci/monorepo-ci-github-actions#distributed-ci-with-nx-cloud).
 
+## Additional Documentation
+
+Additional monorepo documentation can be [found here](docs/repo/README.md).
+
 ## License
 
 MIT
