@@ -180,6 +180,8 @@ importers:
 
   configs/tsconfig-config: {}
 
+  docs/repo: {}
+
   docs/ui:
     dependencies:
       '@waldronmatt/demo-ui':
