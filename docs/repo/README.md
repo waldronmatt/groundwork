@@ -1,6 +1,6 @@
 # Monorepo Documentation
 
-[Architecture](ARCHTIECTURE.md)
+[Architecture](ARCHITECTURE.md)
 
 [Additional Commands](COMMANDS.md)
 
