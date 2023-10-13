@@ -16,7 +16,7 @@ Install hooks:
 pnpm prepare
 ```
 
-## Getting Started
+## Setup
 
 Follow the directions [here](https://nx.dev/nx-cloud/intro/what-is-nx-cloud) to set up an nx account and access token.
 
@@ -32,7 +32,9 @@ Set up your `NPM_TOKEN` and `NX_CLOUD_ACCESS_TOKEN` via `Settings` -> `Secrets` 
 
 Enable read and write workflow permissions in your repo via `Settings` -> `Actions` -> `General` -> `Workflow permissions` -> `read and write permissions`.
 
-## Commands
+## Getting Started
+
+**Note**: Append `--skip-nx-cache` at the end of cached commands to disable nx cloud caching
 
 Run local development servers:
 
@@ -41,8 +43,6 @@ pnpm dev
 ```
 
 Lint files:
-
-**Note**: Since `vite-project` depends on linked packages, a linting error will occur if `pnpm build` has not run at least once first.
 
 ```bash
 pnpm lint
@@ -60,19 +60,21 @@ Run tests in watch mode:
 pnpm test:watch
 ```
 
+Compile files and build bundle:
+
+**Note**: It is recommended to run `pnpm clean` before `pnpm build`
+
+```bash
+pnpm build
+```
+
 Clean up bundle artifacts:
 
 ```bash
 pnpm clean
 ```
 
-Compile files and build bundle:
-
-```bash
-pnpm build
-```
-
-Starts local servers that serves the `build` outputs from their respective from `dist/` folders:
+Starts local servers that serves the `build` outputs from their respective output folders:
 
 **Note**: Run `pnpm build` first.
 
@@ -84,80 +86,6 @@ Stub `dist` for project linking without needing to watch and rebuild:
 
 ```bash
 pnpm stub
-```
-
-### Workspace Commands
-
-Install dependecies to the root of the workspace:
-
-```bash
-pnpm add -w [package-name]
-```
-
-Add a local package as a dependency for another local package:
-
-```bash
-pnpm add -D eslint-config-custom --filter vite-project --workspace
-```
-
-Remove a local package from another local package:
-
-```bash
-pnpm remove eslint-config-custom --filter vite-project
-```
-
-Install / run commands for a specific sub-package:
-
-```bash
-pnpm --filter vite-project dev
-```
-
-### Other Commands
-
-Commit changes using conventional changelog:
-
-```bash
-pnpm commit
-```
-
-Delete workspace root `node_modules` and `pnpm-lock.yaml` files:
-
-**Note**: Install `rimraf` globally and make sure it is not installed in the workspace root so errors aren't thrown.
-
-```bash
-pnpm delete
-```
-
-Lint root and `configs/` `js/cjs` files, check for secrets, lint dependency versions, validate published packages, and verify monorepo best practices:
-
-```bash
-pnpm lint:mr
-```
-
-Visualize the project structure/dependencies:
-
-```bash
-pnpm nx:graph
-```
-
-Format all files in the monorepo:
-
-```bash
-pnpm format
-```
-
-Preview the output result of the `version` command without actually executing it:
-
-**Note**: Set your personal access token as an environment variable in your operating system as `GH_TOKEN` with the token unique identifier as the value.
-
-```bash
-pnpm preview:version
-```
-
-Preview the output result of the `publish` command without actually executing it:
-
-```bash
-pnpm preview:publish
 ```
 
 ## NX Distributed Caching
