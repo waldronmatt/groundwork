@@ -41,13 +41,15 @@ pnpm add the-new-css-reset sanitize.css
 ```
 
 ```tsx
-// reset/normalize styles
+// reset styles
 import 'the-new-css-reset/css/reset.css';
+// normalize styles
 import 'sanitize.css';
 // app styles
 import './index.css';
-// component styles
+// add global tokens
 import '@waldronmatt/demo-ui/styles/global.css';
+// component styles
 import { Button } from '@waldronmatt/demo-ui';
 ```
 
