@@ -35,7 +35,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate.git",
-    "directory": "apps/parity"
+    "directory": "packages/parity"
   },
   "author": "Matthew Waldron",
   "license": "MIT",
