@@ -81,7 +81,7 @@ importers:
         specifier: ^2.0.3
         version: link:../../packages/basic-math
       '@waldronmatt/demo-ui':
-        specifier: ^1.2.2
+        specifier: ^1.2.3
         version: link:../../packages/ui
       '@waldronmatt/parity':
         specifier: ^2.0.3

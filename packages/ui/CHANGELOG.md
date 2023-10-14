@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@1.2.2...@waldronmatt/demo-ui@1.2.3) (2023-10-14)
+
+### Bug Fixes
+
+* **package.json:** fix npm links ([989e1b0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/989e1b0b1f7382eb645d9c54658054e5adc62184)) - by @waldronmatt
+
 ## [1.2.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@1.2.1...@waldronmatt/demo-ui@1.2.2) (2023-10-14)
 
 ### Bug Fixes
