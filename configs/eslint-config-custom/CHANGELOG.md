@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.1.0...eslint-config-custom@1.1.1) (2023-10-14)
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-jest-dom to v5 ([436ca2c](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/436ca2c5e4d4750a8ed4f9cc6530166bed572c82)) - by @renovate[bot]
+
 ## [1.1.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.0.1...eslint-config-custom@1.1.0) (2023-10-10)
 
 ### Features
