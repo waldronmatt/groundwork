@@ -115,8 +115,8 @@ importers:
         specifier: workspace:^
         version: link:../../configs/eslint-config-custom
       rimraf:
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: ^5.0.0
+        version: 5.0.5
       tsconfig-config:
         specifier: workspace:^
         version: link:../../configs/tsconfig-config
@@ -234,8 +234,8 @@ importers:
         specifier: workspace:^
         version: link:../../configs/eslint-config-custom
       rimraf:
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: ^5.0.0
+        version: 5.0.5
       serve:
         specifier: ^13.0.4
         version: 13.0.4
@@ -276,8 +276,8 @@ importers:
         specifier: workspace:^
         version: link:../../configs/jest-config
       rimraf:
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: ^5.0.0
+        version: 5.0.5
       tsconfig-config:
         specifier: workspace:^
         version: link:../../configs/tsconfig-config
@@ -321,8 +321,8 @@ importers:
         specifier: workspace:^
         version: link:../../configs/jest-config
       rimraf:
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: ^5.0.0
+        version: 5.0.5
       tsconfig-config:
         specifier: workspace:^
         version: link:../../configs/tsconfig-config
@@ -390,8 +390,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       rimraf:
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: ^5.0.0
+        version: 5.0.5
       tsconfig-config:
         specifier: workspace:^
         version: link:../../configs/tsconfig-config
@@ -10060,7 +10060,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.0.5
+      minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
     dev: false
@@ -14721,6 +14721,14 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
+
+  /rimraf@5.0.5:
+    resolution: {integrity: sha512-CqDakW+hMe/Bz202FPEymy68P+G50RfMQK+Qo5YUqc9SPipvbGjCGKd0RSKEelbsfQuw3g5NZDSrlZZAJurH1A==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dependencies:
+      glob: 10.3.10
+    dev: true
 
   /rollup-plugin-dts@5.3.1(rollup@3.29.4)(typescript@5.2.2):
     resolution: {integrity: sha512-gusMi+Z4gY/JaEQeXnB0RUdU82h1kF0WYzCWgVmV4p3hWXqelaKuCvcJawfeg+EKn2T1Ie+YWF2OiN1/L8bTVg==}
