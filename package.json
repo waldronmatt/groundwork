@@ -59,7 +59,7 @@
     "nx": "^16.8.1",
     "prettier": "^3.0.0",
     "publint": "^0.2.2",
-    "secretlint": "^6.2.4",
+    "secretlint": "^7.0.0",
     "typescript": "^5.2.2"
   },
   "resolutions": {
