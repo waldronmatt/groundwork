@@ -24,11 +24,15 @@ Set up your `NPM_TOKEN` and `NX_CLOUD_ACCESS_TOKEN` via `Settings` -> `Secrets` 
 
 Enable read and write workflow permissions in your repo via `Settings` -> `Actions` -> `General` -> `Workflow permissions` -> `read and write permissions`.
 
-### Renovate
+### Renovate Automerge
 
 Go to `Option` and activate at least `Allow auto-merge` and `Automatically delete head branches`.
 
 Go to `Branches` and add a branch protection rule for your `main` branch. Activate `Require status checks to pass before merging` and `Require branches to be up to date before merging`.
+
+### Dependabot Integration
+
+Have Renovate delegate vulnerability checks to Dependabot by enabling `Dependabot Alerts` via `Settings`. For private repositoies, enable `Dependency Graph` via `Settings` -> `Code security and analysis`.
 
 ## NX Distributed Caching
 
