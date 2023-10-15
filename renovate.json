@@ -23,5 +23,6 @@
   "platformAutomerge": true,
   "automergeType": "branch",
   "ignoreTests": true,
-  "prHourlyLimit": 2
+  "prHourlyLimit": 2,
+  "rangeStrategy": "pin"
 }
