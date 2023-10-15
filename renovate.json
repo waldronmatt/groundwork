@@ -24,5 +24,6 @@
   "automergeType": "branch",
   "ignoreTests": true,
   "prHourlyLimit": 2,
-  "rangeStrategy": "pin"
+  "rangeStrategy": "pin",
+  "transitiveRemediation": true
 }
