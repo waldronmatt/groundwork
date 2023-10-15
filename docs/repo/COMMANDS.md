@@ -1,5 +1,25 @@
 # Additional Commands
 
+Run tests in watch mode:
+
+```bash
+pnpm test:watch
+```
+
+Starts local servers that serves the `build` outputs from their respective output folders:
+
+**Note**: Run `pnpm build` first.
+
+```bash
+pnpm preview
+```
+
+Stub `dist` for project linking without needing to watch and rebuild:
+
+```bash
+pnpm stub
+```
+
 Commit changes using conventional changelog:
 
 ```bash

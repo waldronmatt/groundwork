@@ -1,7 +1,9 @@
 # Monorepo Documentation
 
+[Additional Commands](COMMANDS.md)
+
 [Architecture](ARCHITECTURE.md)
 
-[Additional Commands](COMMANDS.md)
+[Setup](SETUP.md)
 
 [Workspace Commands](WORKSPACE.md)
