@@ -13,13 +13,13 @@ pnpm add -w [package-name]
 Add a package as a dependency for another local package:
 
 ```bash
-pnpm add react --filter vite-project --workspace
+pnpm add react --filter vite-project
 ```
 
 Add a **local** package as a development dependency for another local package:
 
 ```bash
-pnpm add -D eslint-config-custom --filter vite-project --workspace
+pnpm add -D eslint-config-custom --workspace --filter vite-project
 ```
 
 ## Remove Packages

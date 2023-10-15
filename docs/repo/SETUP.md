@@ -4,9 +4,7 @@
 
 ### NX
 
-Follow the directions [here](https://nx.dev/nx-cloud/set-up) to set up an `nx` account.
-
-Follow the directions [here](https://nx.dev/nx-cloud/account/access-tokens) to set up an `nx` access token.
+Follow the directions [here](https://nx.dev/nx-cloud/set-up) to set up an `nx` account and [here](https://nx.dev/nx-cloud/account/access-tokens) to set up an `nx` access token.
 
 Create an `nx-cloud.env` file with the following to enable cloud caching:
 
@@ -28,9 +26,9 @@ Enable read and write workflow permissions in your repo via `Settings` -> `Actio
 
 ### Renovate
 
-Go to `Option` and activate at least `Allow auto-merge` and `Automatically delete head branches`
+Go to `Option` and activate at least `Allow auto-merge` and `Automatically delete head branches`.
 
-Go to `Branches` and add a branch protection rule for your `main` branch. Activate `Require status checks to pass before merging` and `Require branches to be up to date before merging`
+Go to `Branches` and add a branch protection rule for your `main` branch. Activate `Require status checks to pass before merging` and `Require branches to be up to date before merging`.
 
 ## NX Distributed Caching
 
