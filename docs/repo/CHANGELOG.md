@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/monorepo-docs@1.1.1...monorepo-docs@1.1.2) (2023-10-15)
+
+### Bug Fixes
+
+* **setup.md:** add security dependabot section ([4526293](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/45262937e42536c419d71781dd583c02c0285868)) - by @waldronmatt
+
 ## [1.1.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/monorepo-docs@1.1.0...monorepo-docs@1.1.1) (2023-10-15)
 
 ### Bug Fixes

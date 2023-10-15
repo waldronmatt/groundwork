@@ -1,7 +1,7 @@
 {
   "name": "vite-project",
   "private": true,
-  "version": "1.1.9",
+  "version": "1.1.10",
   "type": "module",
   "scripts": {
     "dev": "vite --open",
@@ -11,9 +11,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@waldronmatt/basic-math": "^2.0.3",
-    "@waldronmatt/demo-ui": "^1.2.4",
-    "@waldronmatt/parity": "^2.0.3",
+    "@waldronmatt/basic-math": "^2.0.4",
+    "@waldronmatt/demo-ui": "^1.2.5",
+    "@waldronmatt/parity": "^2.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sanitize.css": "^13.0.0",
