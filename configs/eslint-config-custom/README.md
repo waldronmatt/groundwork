@@ -5,7 +5,7 @@
 Install dependencies:
 
 ```bash
-pnpm add -D eslint-config-custom eslint --filter [package-name] --workspace
+pnpm add -D eslint-config-custom --workspace eslint --filter [package-name]
 ```
 
 ## Getting Started

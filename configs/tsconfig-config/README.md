@@ -5,7 +5,7 @@
 Install dependencies:
 
 ```bash
-pnpm add -D tsconfig-config typescript --filter [package-name] --workspace
+pnpm add -D tsconfig-config --workspace typescript --filter [package-name]
 ```
 
 ## Getting Started
