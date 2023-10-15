@@ -3,14 +3,25 @@
   "extends": ["config:base"],
   "packageRules": [
     {
+      "description": "Automerge non-major updates while ignoring < 1.0.0 releases",
       "matchUpdateTypes": ["minor", "patch"],
       "matchCurrentVersion": "!/^0/",
       "automerge": true
     },
     {
+      "description": "Automerge development dependencies",
       "matchDepTypes": ["devDependencies"],
       "automerge": true
+    },
+    {
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch"]
     }
   ],
-  "platformAutomerge": true
+  "platformAutomerge": true,
+  "automergeType": "branch",
+  "ignoreTests": true,
+  "prHourlyLimit": 2
 }
