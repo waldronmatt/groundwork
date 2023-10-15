@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.0.8...demo-ui-storybook@1.0.9) (2023-10-15)
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([6561477](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/6561477112932d42e1b6bcda27de3f63d71cdbc6)) - by @renovate[bot]
+
 ## [1.0.8](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.0.7...demo-ui-storybook@1.0.8) (2023-10-15)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/jest-config@1.1.1...jest-config@1.1.2) (2023-10-15)
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([6561477](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/6561477112932d42e1b6bcda27de3f63d71cdbc6)) - by @renovate[bot]
+
 ## [1.1.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/jest-config@1.1.0...jest-config@1.1.1) (2023-10-15)
 
 ### Bug Fixes

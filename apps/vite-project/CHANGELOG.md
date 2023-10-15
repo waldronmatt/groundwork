@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.11](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.1.10...vite-project@1.1.11) (2023-10-15)
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([6561477](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/6561477112932d42e1b6bcda27de3f63d71cdbc6)) - by @renovate[bot]
+
 ## [1.1.10](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.1.9...vite-project@1.1.10) (2023-10-15)
 
 ### Bug Fixes
