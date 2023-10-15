@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/monorepo-docs@1.1.0...monorepo-docs@1.1.1) (2023-10-15)
+
+### Bug Fixes
+
+* **repo:** minor doc updates ([31fbb97](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/31fbb976dbc77828b9bc16b8bf042ac1e2473df8)) - by @waldronmatt
+
 ## [1.1.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/monorepo-docs@1.0.2...monorepo-docs@1.1.0) (2023-10-15)
 
 ### Features
