@@ -1,5 +1,5 @@
 {
-  "semverRange": "^",
+  "semverRange": "",
   "source": [
     "package.json",
     "apps/*/package.json",
