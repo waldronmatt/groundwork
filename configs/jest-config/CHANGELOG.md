@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/jest-config@1.1.2...jest-config@1.1.3) (2023-10-15)
+
+### Bug Fixes
+
+* **configs:** update readme install cmd ([c4749b4](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/c4749b45f04ecd5cf63a770eb3232c7fe8142597)) - by @waldronmatt
+
 ## [1.1.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/jest-config@1.1.1...jest-config@1.1.2) (2023-10-15)
 
 ### Bug Fixes
