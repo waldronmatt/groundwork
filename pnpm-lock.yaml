@@ -100,10 +100,10 @@ importers:
         version: 1.11.0
     devDependencies:
       '@types/react':
-        specifier: ^18.2.15
+        specifier: 18.2.15
         version: 18.2.15
       '@types/react-dom':
-        specifier: ^18.2.7
+        specifier: 18.2.7
         version: 18.2.7
       '@vitejs/plugin-react-swc':
         specifier: ^3.3.2
@@ -222,10 +222,10 @@ importers:
         specifier: ^7.4.6
         version: 7.4.6
       '@types/react':
-        specifier: ^18.2.15
+        specifier: 18.2.15
         version: 18.2.15
       '@types/react-dom':
-        specifier: ^18.2.7
+        specifier: 18.2.7
         version: 18.2.7
       '@vitejs/plugin-react':
         specifier: ^4.0.0
@@ -357,10 +357,10 @@ importers:
         specifier: ^29.2.3
         version: 29.2.3
       '@types/react':
-        specifier: ^18.2.15
+        specifier: 18.2.15
         version: 18.2.15
       '@types/react-dom':
-        specifier: ^18.2.7
+        specifier: 18.2.7
         version: 18.2.7
       '@vitejs/plugin-react-swc':
         specifier: ^3.3.2
