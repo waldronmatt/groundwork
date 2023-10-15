@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
+  "schedule": ["before 4am on the first day of the month"],
   "packageRules": [
     {
       "description": "Automerge non-major updates while ignoring < 1.0.0 releases",
