@@ -44,19 +44,19 @@
   },
   "homepage": "https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/tree/main/packages/parity#readme",
   "devDependencies": {
-    "@types/jest": "^29.2.3",
-    "cross-env": "^7.0.3",
-    "esbuild": "^0.19.0",
-    "eslint": "^8.49.0",
+    "@types/jest": "29.2.3",
+    "cross-env": "7.0.3",
+    "esbuild": "0.19.0",
+    "eslint": "8.49.0",
     "eslint-config-custom": "workspace:^",
-    "jest": "^29.7.0",
+    "jest": "29.7.0",
     "jest-config": "workspace:^",
-    "rimraf": "^5.0.0",
+    "rimraf": "5.0.5",
     "tsconfig-config": "workspace:^",
-    "tslib": "^2.4.1",
-    "tsup": "^7.1.0",
-    "turbo": "^1.6.3",
-    "typescript": "^5.2.2",
-    "unbuild": "^2.0.0"
+    "tslib": "2.4.1",
+    "tsup": "7.1.0",
+    "turbo": "1.6.3",
+    "typescript": "5.2.2",
+    "unbuild": "2.0.0"
   }
 }

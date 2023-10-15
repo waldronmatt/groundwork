@@ -14,20 +14,20 @@
     "@waldronmatt/basic-math": "^2.0.4",
     "@waldronmatt/demo-ui": "^1.2.5",
     "@waldronmatt/parity": "^2.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sanitize.css": "^13.0.0",
-    "the-new-css-reset": "^1.11.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sanitize.css": "13.0.0",
+    "the-new-css-reset": "1.11.0"
   },
   "devDependencies": {
     "@types/react": "18.2.28",
     "@types/react-dom": "18.2.13",
-    "@vitejs/plugin-react-swc": "^3.4.0",
-    "eslint": "^8.49.0",
+    "@vitejs/plugin-react-swc": "3.4.0",
+    "eslint": "8.49.0",
     "eslint-config-custom": "workspace:^",
-    "rimraf": "^5.0.0",
+    "rimraf": "5.0.5",
     "tsconfig-config": "workspace:^",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.5"
+    "typescript": "5.2.2",
+    "vite": "4.4.5"
   }
 }
