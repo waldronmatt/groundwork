@@ -15,11 +15,7 @@ pnpm add @waldronmatt/demo-ui
 Used named imports to enable `js` and `css` treeshaking:
 
 ```tsx
-// add global tokens
-import '@waldronmatt/demo-ui/styles/global.css';
 import { Button } from '@waldronmatt/demo-ui';
-// or import the component directly
-// import { Button } from '@waldronmatt/demo-ui/components/Button/index.js';
 
 function App() {
   return (
@@ -47,10 +43,10 @@ import 'the-new-css-reset/css/reset.css';
 import 'sanitize.css';
 // app styles
 import './index.css';
-// add global tokens
+// add demo-ui global tokens
 import '@waldronmatt/demo-ui/styles/global.css';
-// component styles
-import { Button } from '@waldronmatt/demo-ui';
+// component and component styles
+import { Button } from '@waldronmatt/demo-ui/components/Button/index.js';
 ```
 
 Alternatively, you can use your own css reset/normalize libraries.
