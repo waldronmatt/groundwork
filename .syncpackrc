@@ -4,16 +4,19 @@
     "package.json",
     "apps/*/package.json",
     "configs/*/package.json",
+    "docs/*/package.json",
     "packages/*/package.json"
   ],
   "semverGroups": [
     {
       "packages": [
-        "@waldronmatt/**",
+        "vite-project",
         "eslint-config-custom",
         "tsconfig-config",
         "jest-config",
-        "vite-project"
+        "monorepo-docs",
+        "demo-ui-storybook",
+        "@waldronmatt/**"
       ],
       "dependencies": [
         "**"
