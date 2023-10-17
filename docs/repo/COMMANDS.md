@@ -34,7 +34,7 @@ Delete workspace root `node_modules` and `pnpm-lock.yaml` files:
 pnpm delete
 ```
 
-Lint root and `configs/` `js/cjs` files, check for secrets, lint dependency versions, validate published packages, and verify monorepo best practices:
+Lint root and `js/cjs` files, check for secrets, lint dependency versions, validate published packages, and verify monorepo best practices:
 
 ```bash
 pnpm lint:mr
