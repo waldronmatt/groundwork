@@ -22,7 +22,7 @@
     }
   ],
   "platformAutomerge": true,
-  "automergeType": "branch",
+  "automergeType": "pr",
   "prHourlyLimit": 20,
   "rangeStrategy": "pin",
   "transitiveRemediation": true
