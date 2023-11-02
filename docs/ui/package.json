@@ -15,25 +15,25 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sanitize.css": "13.0.0",
-    "the-new-css-reset": "1.11.0"
+    "the-new-css-reset": "1.11.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "7.4.6",
-    "@storybook/addon-docs": "7.4.6",
-    "@storybook/addon-essentials": "7.4.6",
-    "@storybook/addon-links": "7.4.6",
-    "@storybook/react": "7.4.6",
-    "@storybook/react-vite": "7.4.6",
-    "@storybook/types": "7.4.6",
-    "@types/react": "18.2.28",
-    "@types/react-dom": "18.2.13",
+    "@storybook/addon-actions": "7.5.2",
+    "@storybook/addon-docs": "7.5.2",
+    "@storybook/addon-essentials": "7.5.2",
+    "@storybook/addon-links": "7.5.2",
+    "@storybook/react": "7.5.2",
+    "@storybook/react-vite": "7.5.2",
+    "@storybook/types": "7.5.2",
+    "@types/react": "18.2.34",
+    "@types/react-dom": "18.2.14",
     "@vitejs/plugin-react": "4.1.0",
     "eslint-config-custom": "workspace:^",
     "rimraf": "5.0.5",
     "serve": "14.2.1",
-    "storybook": "7.4.6",
+    "storybook": "7.5.2",
     "tsconfig-config": "workspace:^",
     "typescript": "5.2.2",
-    "vite": "4.4.11"
+    "vite": "4.5.0"
   }
 }
