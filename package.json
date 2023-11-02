@@ -56,7 +56,7 @@
     "husky": "8.0.3",
     "lint-staged": "15.0.2",
     "npm-run-all": "4.1.5",
-    "nx": "16.10.0",
+    "nx": "17.0.2",
     "prettier": "3.0.3",
     "publint": "0.2.5",
     "secretlint": "7.0.7",
