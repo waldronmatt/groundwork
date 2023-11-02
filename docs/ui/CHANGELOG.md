@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.0.12...demo-ui-storybook@1.0.13) (2023-11-02)
+
+### Bug Fixes
+
+* **ui:** remove intro doc causing build issues ([774796f](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/774796f2fbc017a80baf664396bbc36d488423b8)) - by @waldronmatt
+
 ## [1.0.12](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.0.11...demo-ui-storybook@1.0.12) (2023-11-02)
 
 ### Bug Fixes
