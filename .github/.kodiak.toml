@@ -1,0 +1,20 @@
+# .kodiak.toml
+# docs: https://kodiakhq.com/docs/config-reference
+
+version = 1
+
+[approve]
+#auto_approve_usernames = ["renovate"]
+
+[merge]
+automerge_label = ["automerge"]
+blocking_labels = ["wip"]
+delete_branch_on_merge = true
+method = "squash"
+optimistic_updates = true
+prioritize_ready_to_merge = true
+require_automerge_label = true
+
+[update]
+always = true
+autoupdate_label = "["conflict"]"
