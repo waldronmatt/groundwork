@@ -1,0 +1,72 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "baseBranches": ["main"],
+  "branchPrefix": "deps/",
+  "dependencyDashboard": false,
+  "schedule": ["after 10pm every weekday"],
+  "packageRules": [
+    {
+      "groupSlug": "github-actions",
+      "matchPackagePatterns": ["^actions"]
+    },
+    {
+      "groupSlug": "monorepo-root",
+      "matchFileNames": ["package.json"]
+    },
+    {
+      "groupSlug": "eslint-config",
+      "matchPackageNames": ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser"],
+      "matchPackagePatterns": ["^eslint"]
+    },
+    {
+      "groupSlug": "testing-library",
+      "matchPackageNames": ["@types/testing-library__jest-dom"],
+      "matchPackagePatterns": ["^@testing-library/"]
+    },
+    {
+      "groupSlug": "jest",
+      "matchPackageNames": ["@types/jest", "eslint-plugin-jest-dom", "jest"],
+      "matchPackagePatterns": ["^jest/", "^jest-/"]
+    },
+    {
+      "groupSlug": "types",
+      "excludePackageNames": ["@types/jest", "@types/node", "@types/react", "@types/testing-library__jest-dom"],
+      "matchPackageNames": ["@types/*"]
+    },
+    {
+      "groupSlug": "storybook",
+      "matchPackageNames": ["storybook"],
+      "matchPackagePatterns": ["^@storybook/"]
+    },
+    {
+      "groupSlug": "react",
+      "matchPackageNames": ["@types/react", "@types/react-dom", "react", "react-dom"]
+    },
+    {
+      "groupSlug": "vite",
+      "matchPackageNames": ["vite"],
+      "matchPackagePatterns": ["^@vitejs/", "^@rollup/", "^vite"]
+    },
+    {
+      "groupSlug": "dependencies",
+      "matchDepTypes": ["dependencies"]
+    },
+    {
+      "groupSlug": "peer-dependencies",
+      "matchDepTypes": ["peerDependencies"]
+    },
+    {
+      "groupSlug": "dev-dependencies",
+      "matchDepTypes": ["devDependencies"]
+    },
+    {
+      "assignees": ["waldronmatt"],
+      "matchUpdateTypes": ["major"],
+      "reviewers": ["waldronmatt"]
+    }
+  ],
+  "prHourlyLimit": 10,
+  "rangeStrategy": "pin",
+  "transitiveRemediation": true
+}
