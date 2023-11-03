@@ -49,13 +49,6 @@ jobs:
       - name: Install dependencies
         run: pnpm bootstrap:ci
 
-  run:
-    needs: setup
-    runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        node-version: [18]
-    steps:
       - name: NX Affected
         uses: nrwl/nx-set-shas@v4
 

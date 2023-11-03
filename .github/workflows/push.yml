@@ -50,13 +50,6 @@ jobs:
       - name: Install dependencies
         run: pnpm bootstrap:ci
 
-  run:
-    needs: setup
-    runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        node-version: [18]
-    steps:
       - name: NX Affected
         uses: nrwl/nx-set-shas@v4
 
@@ -66,13 +59,6 @@ jobs:
       - name: Build, Lint, Test
         run: npx nx affected -t build,lint,test --parallel=3
 
-  publish:
-    needs: run
-    runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        node-version: [18]
-    steps:
       - name: Config Git User
         run: |
           git config --global user.name "${{ github.actor }}"
