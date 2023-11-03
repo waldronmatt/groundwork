@@ -17,4 +17,4 @@ require_automerge_label = true
 
 [update]
 always = true
-autoupdate_label = "["conflict"]"
+autoupdate_label = ["conflict"]
