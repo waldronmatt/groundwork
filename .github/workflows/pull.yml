@@ -6,7 +6,6 @@ on:
 
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
 jobs:
   agents:
@@ -14,6 +13,8 @@ jobs:
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.13.0
     with:
       number-of-agents: 3
+    secrets:
+      NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
   setup:
     runs-on: ubuntu-22.04
