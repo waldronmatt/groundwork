@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/jest-config@1.1.3...jest-config@1.1.4) (2023-11-03)
+
+### Bug Fixes
+
+* **global:** add eslint to configs, remove from workspace root ([360de68](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/360de687d87b1de29147cd07e2d0783ef2d814a0)) - by @waldronmatt
+* **global:** add workspace configs to renovate, update jest config ([e9e96d4](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/e9e96d46f5cc7a7a977a1c270b27d9ae82cb6624)) - by @waldronmatt
+
 ## [1.1.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/jest-config@1.1.2...jest-config@1.1.3) (2023-10-15)
 
 ### Bug Fixes
