@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.1.8...eslint-config-custom@1.1.9) (2023-11-03)
+
+**Note:** Version bump only for package eslint-config-custom
+
 ## [1.1.8](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.1.7...eslint-config-custom@1.1.8) (2023-11-03)
 
 ### Bug Fixes
