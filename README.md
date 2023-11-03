@@ -22,7 +22,13 @@ Token setup and repository settings can be [found here](docs/repo/SETUP.md).
 
 ## Getting Started
 
-**Note**: Append `--skip-nx-cache` at the end of cached commands to disable nx cloud caching
+**Note**: Append `--no-cache` at the end of cached commands **directly** to disable nx cloud caching and append `--skip-nx-cache` to disable cache connection to `nx cloud`. Example: `npx nx run-many -t test --no-cache`
+
+Commit changes using conventional changelog:
+
+```bash
+pnpm commit
+```
 
 Run local development servers:
 
@@ -44,6 +50,20 @@ Run tests with coverage:
 pnpm test
 ```
 
+Run tests in watch mode:
+
+```bash
+pnpm test:watch
+```
+
+Run tests against compiled files:
+
+**Note**: Run `pnpm build` first.
+
+```bash
+pnpm test:prod
+```
+
 Compile files and build bundle:
 
 **Note**: It is recommended to run `pnpm clean` before `pnpm build`
@@ -56,6 +76,14 @@ Clean up bundle artifacts:
 
 ```bash
 pnpm clean
+```
+
+Starts local servers that serves the `build` outputs from their respective output folders:
+
+**Note**: Run `pnpm build` first.
+
+```bash
+pnpm preview
 ```
 
 ## Additional Documentation

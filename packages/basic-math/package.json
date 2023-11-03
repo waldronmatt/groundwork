@@ -26,8 +26,7 @@
     "build:dtsmaps": "tsc --project tsconfig.build.json",
     "build:src": "tsup src/*[!.spec].ts --format esm --sourcemap --onSuccess \"pnpm build:dtsmaps\"",
     "build": "pnpm build:src",
-    "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo",
-    "stub": "npx unbuild --stub"
+    "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo"
   },
   "publishConfig": {
     "access": "public"
@@ -56,7 +55,6 @@
     "tslib": "2.6.2",
     "tsup": "7.2.0",
     "turbo": "1.10.16",
-    "typescript": "5.2.2",
-    "unbuild": "2.0.0"
+    "typescript": "5.2.2"
   }
 }
