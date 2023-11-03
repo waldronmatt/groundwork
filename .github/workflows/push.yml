@@ -10,12 +10,6 @@ env:
   NX_CLOUD_ACCESS_TOKEN: ${{ secrets.NX_CLOUD_ACCESS_TOKEN }}
 
 jobs:
-  agents:
-    name: Nx Cloud - Agents
-    uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.13.0
-    with:
-      number-of-agents: 3
-
   push:
     runs-on: ubuntu-22.04
     strategy:
@@ -59,6 +53,11 @@ jobs:
 
       - name: NX Affected
         uses: nrwl/nx-set-shas@v4
+
+      - name: Nx Cloud - Agents
+        uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.13.0
+        with:
+          number-of-agents: 3
 
       - name: Build, Lint, Test using Distributed Task Execution
         uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.13.0
