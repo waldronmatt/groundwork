@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.1.6...eslint-config-custom@1.1.7) (2023-11-03)
+
+### Bug Fixes
+
+* **global:** add eslint to configs, remove from workspace root ([360de68](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/360de687d87b1de29147cd07e2d0783ef2d814a0)) - by @waldronmatt
+
 ## [1.1.6](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.1.5...eslint-config-custom@1.1.6) (2023-11-02)
 
 ### Bug Fixes

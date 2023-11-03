@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.15](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.1.14...vite-project@1.1.15) (2023-11-03)
+
+**Note:** Version bump only for package vite-project
+
 ## [1.1.14](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.1.13...vite-project@1.1.14) (2023-11-02)
 
 ### Bug Fixes

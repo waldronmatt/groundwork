@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.15](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.0.14...demo-ui-storybook@1.0.15) (2023-11-03)
+
+### Bug Fixes
+
+* **global:** add eslint to configs, remove from workspace root ([360de68](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/360de687d87b1de29147cd07e2d0783ef2d814a0)) - by @waldronmatt
+
 ## [1.0.14](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.0.13...demo-ui-storybook@1.0.14) (2023-11-02)
 
 ### Bug Fixes
