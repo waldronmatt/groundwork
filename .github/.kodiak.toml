@@ -1,17 +1,29 @@
 # .kodiak.toml
-# docs: https://kodiakhq.com/docs/config-reference
+# docs: https://kodiakhq.com/docs/features
 
 version = 1
+
+[approve]
+auto_approve_usernames = ["renovate"]
 
 [merge]
 automerge_label = ["automerge"]
 blocking_labels = ["wip"]
 delete_branch_on_merge = true
-# method = "squash"
+method = "squash"
 optimistic_updates = true
 prioritize_ready_to_merge = true
 require_automerge_label = true
 
+[merge.automerge_dependencies]
+# only auto merge "minor" and "patch" version upgrades opened by "renovate"
+# do not automerge "major" version upgrades.
+versions = ["minor", "patch"]
+usernames = ["renovate"]
+
 [update]
+# if using `update.always`, add renovate to `update.ignore_usernames` to allow
+# renovate to update and close stale dependency upgrades.
+ignored_usernames = ["renovate"]
 always = true
 autoupdate_label = "conflict"

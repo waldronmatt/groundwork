@@ -4,6 +4,8 @@
   "baseBranches": ["main"],
   "branchPrefix": "deps/",
   "dependencyDashboard": false,
+  "automerge": false,
+  "automergeType": "pr",
   "schedule": ["after 10pm every weekday"],
   "packageRules": [
     {
@@ -61,12 +63,16 @@
       "matchDepTypes": ["devDependencies"]
     },
     {
+      "matchUpdateTypes": ["minor", "patch"],
+      "labels": ["automerge"]
+    },
+    {
       "assignees": ["waldronmatt"],
       "matchUpdateTypes": ["major"],
       "reviewers": ["waldronmatt"]
     }
   ],
-  "prHourlyLimit": 10,
+  "prHourlyLimit": 14,
   "rangeStrategy": "pin",
   "transitiveRemediation": true
 }
