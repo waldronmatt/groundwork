@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@2.0.9...@waldronmatt/parity@2.0.10) (2023-11-03)
+
+### Bug Fixes
+
+* **global:** remove unbuild, update docs and lint-staged config ([d5cabbf](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/d5cabbf86631bbc5f605df4410d4e697915c6306)) - by @waldronmatt
+
 ## [2.0.9](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@2.0.8...@waldronmatt/parity@2.0.9) (2023-11-03)
 
 **Note:** Version bump only for package @waldronmatt/parity
