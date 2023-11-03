@@ -13,8 +13,17 @@
       "matchPackagePatterns": ["^actions"]
     },
     {
-      "groupSlug": "monorepo-root",
+      "groupSlug": "workspace-root",
       "matchFileNames": ["package.json"]
+    },
+    {
+      "groupSlug": "nx",
+      "matchPackageNames": ["nx"],
+      "matchPackagePatterns": ["^@nrwl/"]
+    },
+    {
+      "groupSlug": "lerna-lite",
+      "matchPackagePatterns": ["^@lerna-lite/"]
     },
     {
       "groupSlug": "eslint-config",

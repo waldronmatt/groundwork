@@ -169,9 +169,6 @@ importers:
 
   configs/jest-config:
     dependencies:
-      jest:
-        specifier: '>= 29'
-        version: 29.7.0(@types/node@18.18.8)(ts-node@10.9.1)
       jest-environment-jsdom:
         specifier: 29.7.0
         version: 29.7.0
@@ -185,6 +182,9 @@ importers:
       eslint-config-custom:
         specifier: workspace:^
         version: link:../eslint-config-custom
+      jest:
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@18.18.8)(ts-node@10.9.1)
 
   configs/tsconfig-config: {}
 
