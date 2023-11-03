@@ -53,9 +53,6 @@ jobs:
       - name: NX Affected
         uses: nrwl/nx-set-shas@v4
 
-      - name: Checkout Main
-        run: git branch --track main origin/main
-
       - name: Build, Lint, Test
         run: npx nx affected -t build,lint,test --parallel=3
 
