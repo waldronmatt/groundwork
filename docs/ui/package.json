@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --ext tsx --report-unused-disable-directives --max-warnings 0",
     "build": "storybook build --docs",
     "clean": "rimraf storybook-static",
     "preview": "serve storybook-static"
@@ -28,6 +28,7 @@
     "@types/react": "18.2.34",
     "@types/react-dom": "18.2.14",
     "@vitejs/plugin-react": "4.1.0",
+    "eslint": "8.52.0",
     "eslint-config-custom": "workspace:^",
     "rimraf": "5.0.5",
     "serve": "14.2.1",

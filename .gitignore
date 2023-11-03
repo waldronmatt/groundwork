@@ -147,6 +147,7 @@ coverage/
 
 # nx
 nx-cloud.env
+.nx
 
 # Storybook
 storybook-static

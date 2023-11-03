@@ -32,6 +32,8 @@ pnpm dev
 
 Lint files:
 
+**Note**: Append `--fix` to have `eslint` automatically fix issues
+
 ```bash
 pnpm lint
 ```
