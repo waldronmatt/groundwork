@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.1.7...eslint-config-custom@1.1.8) (2023-11-03)
+
+### Bug Fixes
+
+* **global:** remove unbuild, update docs and lint-staged config ([d5cabbf](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/d5cabbf86631bbc5f605df4410d4e697915c6306)) - by @waldronmatt
+
 ## [1.1.7](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.1.6...eslint-config-custom@1.1.7) (2023-11-03)
 
 ### Bug Fixes
