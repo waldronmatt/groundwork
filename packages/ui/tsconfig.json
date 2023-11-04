@@ -9,6 +9,6 @@
     "paths": {
       "@/*": ["lib/components/*"]
     },
-    "jsx": "react-jsx"
+    "forceConsistentCasingInFileNames": false
   }
 }
