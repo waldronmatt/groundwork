@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.12](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/basic-math@2.0.11...@waldronmatt/basic-math@2.0.12) (2023-11-04)
+
+**Note:** Version bump only for package @waldronmatt/basic-math
+
 ## [2.0.11](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/basic-math@2.0.10...@waldronmatt/basic-math@2.0.11) (2023-11-03)
 
 **Note:** Version bump only for package @waldronmatt/basic-math

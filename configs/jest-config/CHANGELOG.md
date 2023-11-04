@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/jest-config@1.1.6...jest-config@1.1.7) (2023-11-04)
+
+**Note:** Version bump only for package jest-config
+
 ## [1.1.6](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/jest-config@1.1.5...jest-config@1.1.6) (2023-11-03)
 
 **Note:** Version bump only for package jest-config
