@@ -8,7 +8,7 @@
     "default": {
       "runner": "nx-cloud",
       "options": {
-        "cacheableOperations": ["lint:ts", "lint", "test", "test:prod", "build:dtsmaps", "build:src", "build", "stub"]
+        "cacheableOperations": ["lint:ts", "lint", "test", "test:prod", "build:dtsmaps", "build:src", "build"]
       }
     }
   },
@@ -35,9 +35,6 @@
       "outputs": ["{projectRoot}/dist"]
     },
     "build:dtsmaps": {
-      "outputs": ["{projectRoot}/dist"]
-    },
-    "stub": {
       "outputs": ["{projectRoot}/dist"]
     }
   }
