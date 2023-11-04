@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@1.2.12...@waldronmatt/demo-ui@2.0.0) (2023-11-04)
+
+### ⚠ BREAKING CHANGES
+
+* **ui:** filenames updated to uppercase
+
+### Bug Fixes
+
+* **ui:** try disabling consistent casing in tsconfig to fix build issues ([8585a8d](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/8585a8d848520529dd8a82ea5c94e9a6fc03f2b0)) - by @waldronmatt
+* **ui:** update css module filename imports ([23a0890](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/23a08902340f3ff77c5ee9a62265a76737688313)) - by @waldronmatt
+* **ui:** update filenames to uppercase to match react naming standards ([2a5a1ee](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/2a5a1eebec67af322f60a515281186949b425097)) - by @waldronmatt
+* **ui:** use git mv cmd to rename files due to git not picking up filename case changes ([c5c1ebf](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/c5c1ebfa98aee83ead0ce2a7f97062dbcf10d8b3)) - by @waldronmatt
+
 ## [1.2.12](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@1.2.11...@waldronmatt/demo-ui@1.2.12) (2023-11-03)
 
 **Note:** Version bump only for package @waldronmatt/demo-ui
