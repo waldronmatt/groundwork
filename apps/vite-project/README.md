@@ -2,6 +2,60 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Installation
+
+Install dependencies:
+
+```bash
+pnpm i
+```
+
+Install hooks:
+
+```bash
+pnpm prepare
+```
+
+## Getting Started
+
+Commit changes using conventional changelog:
+
+```bash
+pnpm commit
+```
+
+Run local development server:
+
+```bash
+pnpm dev
+```
+
+Lint files:
+
+```bash
+pnpm lint
+```
+
+Compile files and build bundle:
+
+```bash
+pnpm build
+```
+
+Clean up bundle artifacts:
+
+```bash
+pnpm clean
+```
+
+Starts the local server that serves the `build` output from `dist/` folder:
+
+**Note**: Run `pnpm build` first
+
+```bash
+pnpm preview
+```
+
 ## License
 
 MIT

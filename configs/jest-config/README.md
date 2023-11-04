@@ -5,7 +5,7 @@
 Install dependencies:
 
 ```bash
-pnpm add -D jest-config jest --workspace @types/jest --filter [package-name]
+pnpm add -D jest-config --workspace jest @types/jest --filter [package-name]
 ```
 
 ## Getting Started
