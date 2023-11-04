@@ -8,7 +8,6 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["lib/components/*"]
-    },
-    "forceConsistentCasingInFileNames": false
+    }
   }
 }
