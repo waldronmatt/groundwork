@@ -1,39 +1,45 @@
 # Repository Setup
 
-## Tokens
+## PNPM
 
-### NX
+Follow the directions [here](https://pnpm.io/installation) to install pnpm.
 
-Follow the directions [here](https://nx.dev/nx-cloud/set-up) to set up an `nx` account and [here](https://nx.dev/nx-cloud/account/access-tokens) to set up an `nx` access token.
+## NX
 
-Create an `nx-cloud.env` file with the following to enable cloud caching:
+Create an `nx` account [here](https://cloud.nx.app/).
+
+Create an `NX_CLOUD_ACCESS_TOKEN` token [here](https://cloud.nx.app/) via `Settings` -> `Manage Tokens`.
+
+Create an `nx-cloud.env` file at the project root to enable cloud caching:
 
 ```bash
 NX_CLOUD_ACCESS_TOKEN=your-token
 ```
 
-### Github and NPM
+Set up `NX_CLOUD_ACCESS_TOKEN` via `Settings` -> `Secrets` -> `Actions` to enable cloud caching via GitHub Actions.
 
-Create a `GH_TOKEN` personal access token [here](https://github.com/settings/tokens) and create an `NPM_TOKEN` [here](https://www.npmjs.com/login) via the `Access Tokens` section.
+## Lerna
 
-Set up your `NPM_TOKEN` and `NX_CLOUD_ACCESS_TOKEN` via `Settings` -> `Secrets` -> `Actions`.
+Create a `GH_TOKEN` with `read/write` access [here](https://github.com/settings/tokens) to allow Lerna to create GitHub tags and releases.
 
-## Repository Permissions
+Create an `NPM_TOKEN` [here](https://www.npmjs.com/login) as type `Automation` via the `Access Tokens` section to allow Lerna to publish packages.
 
-### Github
+Set up your `NPM_TOKEN` via `Settings` -> `Secrets` -> `Actions`.
+
+## Github
 
 Enable read and write workflow permissions in your repo via `Settings` -> `Actions` -> `General` -> `Workflow permissions` -> `read and write permissions`.
 
-### Renovate Automerge
+## Renovate
 
-Go to `Option` and activate at least `Allow auto-merge` and `Automatically delete head branches`.
+Follow the directions [here](https://github.com/renovatebot/tutorial) to set up Renovate.
 
-Go to `Branches` and add a branch protection rule for your `main` branch. Activate `Require status checks to pass before merging` and `Require branches to be up to date before merging`.
+## Kodiak
 
-### Dependabot Integration
+Follow the directions [here](https://kodiakhq.com/docs/quickstart) to set up Kodiak.
 
-Have Renovate delegate vulnerability checks to Dependabot by enabling `Dependabot Alerts` via `Settings`. For private repositoies, enable `Dependency Graph` via `Settings` -> `Code security and analysis`.
+Additionally create `wip` and `conflict` labels.
 
-## NX Distributed Caching
+## NX Distributed Task Execution
 
-To enable nx distributed caching, refactor the `.github/workflows/release.yml` file via the directions [here](https://nx.dev/recipes/ci/monorepo-ci-github-actions#distributed-ci-with-nx-cloud).
+(Optional): Follow the directions [here](https://nx.dev/nx-cloud/recipes/set-up/monorepo-ci-github-actions#distributed-task-execution-with-nx-cloud) to set up NX DTE.
