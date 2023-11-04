@@ -7,5 +7,5 @@ module.exports = {
     'npx manypkg check',
   ],
   '*.{cjs,js,jsx,ts,tsx}': ['nx affected -t lint --fix --files'],
-  '*.{ts,tsx}': ['nx affected -t test --fix --files'],
+  '*.{ts,tsx}': ['nx affected -t test --files'],
 };
