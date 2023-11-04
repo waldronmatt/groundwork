@@ -18,11 +18,11 @@ pnpm prepare
 
 ## Setup
 
-Token setup and repository settings can be [found here](docs/repo/SETUP.md).
+Repository setup can be [found here](docs/repo/SETUP.md).
 
 ## Getting Started
 
-**Note**: Append `--no-cache` at the end of cached commands to disable nx cloud caching and append `--skip-nx-cache` to disable cache connection to `nx cloud`. Example: `npx nx run-many -t test --no-cache --skip-nx-cache`
+**Note**: Append `--skip-nx-cache` to disable cache for a specific command. Example: `npx nx run-many -t test --skip-nx-cache`
 
 Commit changes using conventional changelog:
 

@@ -10,13 +10,13 @@ Create an `nx` account [here](https://cloud.nx.app/).
 
 Create an `NX_CLOUD_ACCESS_TOKEN` token [here](https://cloud.nx.app/) via `Settings` -> `Manage Tokens`.
 
-Create an `nx-cloud.env` file at the project root to enable cloud caching:
+Create an `nx-cloud.env` file at the project root to enable cloud caching locally:
 
 ```bash
 NX_CLOUD_ACCESS_TOKEN=your-token
 ```
 
-Set up `NX_CLOUD_ACCESS_TOKEN` via `Settings` -> `Secrets` -> `Actions` to enable cloud caching via GitHub Actions.
+Set up `NX_CLOUD_ACCESS_TOKEN` in GitHub via `Settings` -> `Secrets` -> `Actions` to enable cloud caching via GitHub Actions.
 
 ## Lerna
 
@@ -24,7 +24,7 @@ Create a `GH_TOKEN` with `read/write` access [here](https://github.com/settings/
 
 Create an `NPM_TOKEN` [here](https://www.npmjs.com/login) as type `Automation` via the `Access Tokens` section to allow Lerna to publish packages.
 
-Set up your `NPM_TOKEN` via `Settings` -> `Secrets` -> `Actions`.
+Set up your `NPM_TOKEN` in GitHub via `Settings` -> `Secrets` -> `Actions`.
 
 ## Github
 

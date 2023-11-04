@@ -20,7 +20,7 @@ pnpm-workspace.yaml
 
 **`configs`** - Contains linters / configurations such as `eslint` / `tsconfig` shared across the monorepo
 
-**`docs`** - Contains documentation for ui components and other documentation
+**`docs`** - Contains documentation for ui components and workspace documentation
 
 **`packages`** - Contains utilities and tools published to `npm` that are used across the monorepo
 

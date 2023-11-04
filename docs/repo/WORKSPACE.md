@@ -1,7 +1,5 @@
 # Workspace Commands
 
-pnpm workspace commands
-
 ## Add Packages
 
 Install dependecies to the root of the workspace:
@@ -10,16 +8,16 @@ Install dependecies to the root of the workspace:
 pnpm add -w [package-name]
 ```
 
-Add a package as a dependency for another local package:
+Add a package as a dependency for local package:
 
 ```bash
 pnpm add react --filter vite-project
 ```
 
-Add a **local** package as a development dependency for another local package:
+Add a **local** package and another package as a development dependency for local package:
 
 ```bash
-pnpm add -D eslint-config-custom --workspace --filter vite-project
+pnpm add -D eslint-config-custom --workspace eslint --filter vite-project
 ```
 
 ## Remove Packages
@@ -32,7 +30,7 @@ pnpm remove eslint-config-custom --filter vite-project
 
 ## Run Commands
 
-Install / run commands for a specific sub-package:
+Install / run commands for a specific local package:
 
 ```bash
 pnpm dev --filter vite-project
