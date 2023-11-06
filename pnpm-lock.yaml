@@ -66,13 +66,13 @@ importers:
   apps/vite-project:
     dependencies:
       '@waldronmatt/basic-math':
-        specifier: ^2.0.13
+        specifier: ^2.0.14
         version: link:../../packages/basic-math
       '@waldronmatt/demo-ui':
-        specifier: ^2.0.2
+        specifier: ^2.0.3
         version: link:../../packages/ui
       '@waldronmatt/parity':
-        specifier: ^2.0.13
+        specifier: ^2.0.14
         version: link:../../packages/parity
       react:
         specifier: 18.2.0
