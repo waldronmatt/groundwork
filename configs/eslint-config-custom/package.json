@@ -22,7 +22,7 @@
     "eslint-plugin-storybook": "0.6.15"
   },
   "devDependencies": {
-    "eslint": "8.52.0"
+    "eslint": "8.53.0"
   },
   "peerDependencies": {
     "eslint": ">= 8"
