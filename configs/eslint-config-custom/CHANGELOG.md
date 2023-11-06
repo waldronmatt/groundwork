@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.10](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.1.9...eslint-config-custom@1.1.10) (2023-11-06)
+
+### Bug Fixes
+
+* **deps:** update typescript-eslint monorepo ([#30](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/issues/30)) ([58ce3de](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/58ce3de98ffcdd8ba3b7faaa1d52d45514c3bbf7)) - by @renovate[bot]
+
 ## [1.1.9](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.1.8...eslint-config-custom@1.1.9) (2023-11-03)
 
 **Note:** Version bump only for package eslint-config-custom
