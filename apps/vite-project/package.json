@@ -20,7 +20,7 @@
     "the-new-css-reset": "1.11.1"
   },
   "devDependencies": {
-    "@types/react": "18.2.34",
+    "@types/react": "18.2.36",
     "@types/react-dom": "18.2.14",
     "@vitejs/plugin-react-swc": "3.4.1",
     "eslint": "8.52.0",
