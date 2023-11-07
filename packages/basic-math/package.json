@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/tree/main/packages/basic-math#readme",
   "devDependencies": {
-    "@types/jest": "29.5.7",
+    "@types/jest": "29.5.8",
     "cross-env": "7.0.3",
     "esbuild": "0.19.5",
     "eslint": "8.53.0",
