@@ -81,7 +81,6 @@
       "reviewers": ["waldronmatt"]
     }
   ],
-  "prHourlyLimit": 14,
   "rangeStrategy": "pin",
   "transitiveRemediation": true
 }
