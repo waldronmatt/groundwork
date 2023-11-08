@@ -6,7 +6,7 @@
   "dependencyDashboard": false,
   "automerge": false,
   "automergeType": "pr",
-  "schedule": ["after 10pm every weekday"],
+  "schedule": ["before 4am on the first day of the month"],
   "packageRules": [
     {
       "groupSlug": "github-actions",
