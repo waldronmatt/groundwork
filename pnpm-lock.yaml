@@ -109,13 +109,13 @@ importers:
         specifier: 8.53.0
         version: 8.53.0
       eslint-config-custom:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/eslint-config-custom
       rimraf:
         specifier: 5.0.5
         version: 5.0.5
       tsconfig-config:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/tsconfig-config
       typescript:
         specifier: 5.2.2
@@ -183,7 +183,7 @@ importers:
         specifier: 8.53.0
         version: 8.53.0
       eslint-config-custom:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../eslint-config-custom
       jest:
         specifier: 29.7.0
@@ -196,7 +196,7 @@ importers:
   docs/ui:
     dependencies:
       '@waldronmatt/demo-ui':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/ui
       react:
         specifier: 18.2.0
@@ -245,7 +245,7 @@ importers:
         specifier: 8.53.0
         version: 8.53.0
       eslint-config-custom:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/eslint-config-custom
       rimraf:
         specifier: 5.0.5
@@ -257,7 +257,7 @@ importers:
         specifier: 7.5.3
         version: 7.5.3
       tsconfig-config:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/tsconfig-config
       typescript:
         specifier: 5.2.2
@@ -281,19 +281,19 @@ importers:
         specifier: 8.53.0
         version: 8.53.0
       eslint-config-custom:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/eslint-config-custom
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@18.18.8)
       jest-config:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/jest-config
       rimraf:
         specifier: 5.0.5
         version: 5.0.5
       tsconfig-config:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/tsconfig-config
       tslib:
         specifier: 2.6.2
@@ -323,19 +323,19 @@ importers:
         specifier: 8.53.0
         version: 8.53.0
       eslint-config-custom:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/eslint-config-custom
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@18.18.8)
       jest-config:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/jest-config
       rimraf:
         specifier: 5.0.5
         version: 5.0.5
       tsconfig-config:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/tsconfig-config
       tslib:
         specifier: 2.6.2
@@ -380,7 +380,7 @@ importers:
         specifier: 8.53.0
         version: 8.53.0
       eslint-config-custom:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/eslint-config-custom
       glob:
         specifier: 10.3.10
@@ -389,7 +389,7 @@ importers:
         specifier: 29.7.0
         version: 29.7.0(@types/node@18.18.8)
       jest-config:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/jest-config
       react:
         specifier: 18.2.0
@@ -401,7 +401,7 @@ importers:
         specifier: 5.0.5
         version: 5.0.5
       tsconfig-config:
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../configs/tsconfig-config
       typescript:
         specifier: 5.2.2
@@ -9919,6 +9919,7 @@ packages:
 
   /is-arrayish@0.2.1:
     resolution: {integrity: sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==}
+    requiresBuild: true
 
   /is-async-function@2.0.0:
     resolution: {integrity: sha512-Y1JXKrfykRJGdlDwdKlLpLyMIiWqWvuSd17TvZk68PLAOGOoF4Xyav1z0Xhoi+gCYjZVeC5SI+hYFOfvXmGRCA==}

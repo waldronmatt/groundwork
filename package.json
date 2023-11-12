@@ -22,7 +22,7 @@
     "nx:graph": "npx nx graph",
     "preview:changed": "lerna changed",
     "preview:diff": "lerna diff",
-    "preview:version": "lerna version --dry-run --yes",
+    "preview:version": "lerna version --dry-run --yes --exact",
     "preview:publish": "lerna publish from-package --dry-run --yes",
     "dev": "npx nx run-many -t dev",
     "lint": "npx nx run-many -t lint",
@@ -34,7 +34,7 @@
     "preview": "npx nx run-many -t preview",
     "stub": "npx nx run-many -t stub",
     "bootstrap:ci": "pnpm i --frozen-lockfile",
-    "version:ci": "lerna version --yes",
+    "version:ci": "lerna version --yes --exact",
     "publish:ci": "lerna publish from-package --yes"
   },
   "license": "MIT",

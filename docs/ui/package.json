@@ -11,7 +11,7 @@
     "preview": "serve storybook-static"
   },
   "dependencies": {
-    "@waldronmatt/demo-ui": "workspace:^",
+    "@waldronmatt/demo-ui": "workspace:*",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sanitize.css": "13.0.0",
@@ -29,11 +29,11 @@
     "@types/react-dom": "18.2.15",
     "@vitejs/plugin-react": "4.1.1",
     "eslint": "8.53.0",
-    "eslint-config-custom": "workspace:^",
+    "eslint-config-custom": "workspace:*",
     "rimraf": "5.0.5",
     "serve": "14.2.1",
     "storybook": "7.5.3",
-    "tsconfig-config": "workspace:^",
+    "tsconfig-config": "workspace:*",
     "typescript": "5.2.2",
     "vite": "4.5.0"
   }
