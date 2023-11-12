@@ -17,7 +17,13 @@ importers:
       '@commitlint/config-conventional':
         specifier: 18.1.0
         version: 18.1.0
+      '@lerna-lite/changed':
+        specifier: 2.6.0
+        version: 2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
       '@lerna-lite/cli':
+        specifier: 2.6.0
+        version: 2.6.0(@lerna-lite/list@2.6.0)(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
+      '@lerna-lite/diff':
         specifier: 2.6.0
         version: 2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
       '@lerna-lite/publish':
@@ -50,6 +56,9 @@ importers:
       lint-staged:
         specifier: 15.0.2
         version: 15.0.2
+      npm-run-all:
+        specifier: 4.1.5
+        version: 4.1.5
       nx:
         specifier: 17.0.3
         version: 17.0.3
@@ -2675,7 +2684,26 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: true
 
-  /@lerna-lite/cli@2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2):
+  /@lerna-lite/changed@2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-fimJ6Xx2w6ol7b4x+IEBQOnmxKApsdFcStWlPaOQJ2F017zDGeC5kIy4sK5KO+B3zzND+cVpa4SaRJkTFNBr4g==}
+    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
+    dependencies:
+      '@lerna-lite/cli': 2.6.0(@lerna-lite/list@2.6.0)(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
+      '@lerna-lite/core': 2.6.0(typescript@5.2.2)
+      '@lerna-lite/list': 2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
+      '@lerna-lite/listable': 2.6.0(typescript@5.2.2)
+    transitivePeerDependencies:
+      - '@lerna-lite/exec'
+      - '@lerna-lite/publish'
+      - '@lerna-lite/run'
+      - '@lerna-lite/version'
+      - '@lerna-lite/watch'
+      - babel-plugin-macros
+      - supports-color
+      - typescript
+    dev: false
+
+  /@lerna-lite/cli@2.6.0(@lerna-lite/list@2.6.0)(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2):
     resolution: {integrity: sha512-sxJmgGt/zQ4rYfdl5OSp5/TToLB16RVxsoVsUsg/qTl5F5C+P35evYBuXRuFNWr50+MdfHqLisbf0qEJgGAk9g==}
     engines: {node: '>=16.15.0', npm: '>=8.5.0'}
     hasBin: true
@@ -2702,6 +2730,7 @@ packages:
     dependencies:
       '@lerna-lite/core': 2.6.0(typescript@5.2.2)
       '@lerna-lite/init': 2.6.0(typescript@5.2.2)
+      '@lerna-lite/list': 2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
       '@lerna-lite/publish': 2.6.0(typescript@5.2.2)
       '@lerna-lite/version': 2.6.0(@lerna-lite/publish@2.6.0)(typescript@5.2.2)
       dedent: 1.5.1
@@ -2752,6 +2781,37 @@ packages:
       - typescript
     dev: false
 
+  /@lerna-lite/diff@2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-vd/JMVLH4xNefXx5W1DTCBw7nT1MIuQsoV+9dUcgickzGJTN3cNmJ33zaS4PDcy0I3n60VKR3awjlE4jofgxXw==}
+    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
+    dependencies:
+      '@lerna-lite/cli': 2.6.0(@lerna-lite/list@2.6.0)(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
+      '@lerna-lite/core': 2.6.0(typescript@5.2.2)
+    transitivePeerDependencies:
+      - '@lerna-lite/exec'
+      - '@lerna-lite/list'
+      - '@lerna-lite/publish'
+      - '@lerna-lite/run'
+      - '@lerna-lite/version'
+      - '@lerna-lite/watch'
+      - babel-plugin-macros
+      - supports-color
+      - typescript
+    dev: false
+
+  /@lerna-lite/filter-packages@2.6.0(typescript@5.2.2):
+    resolution: {integrity: sha512-K+KQ3yzzbGJ5Hhr7ij5SiFnWjs7Ns+dpaRjPlVbEnJZnkR2CTOG18fboQs241O5yPMO2EZYBVRL8EA2a9AUi8g==}
+    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
+    dependencies:
+      '@lerna-lite/core': 2.6.0(typescript@5.2.2)
+      multimatch: 6.0.0
+      npmlog: 7.0.1
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+      - typescript
+    dev: false
+
   /@lerna-lite/init@2.6.0(typescript@5.2.2):
     resolution: {integrity: sha512-K8lxcQXgGrTfl3YyvKSl+uiAT287vd1awouvme7m+3j32H6DTI31u35t7mR6mBY7GhkDLX/iJzjaHpv2qBb3NQ==}
     engines: {node: '>=16.15.0', npm: '>=8.5.0'}
@@ -2766,11 +2826,43 @@ packages:
       - typescript
     dev: false
 
+  /@lerna-lite/list@2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-5NGjg+sPrNqF9lCvEK3w8eJ5TIJst8Drn5maNuel5g1PrWmaRrXYLnuWL3qCWeXQbHeFIMFrJ2JJ+qIAwTwq2A==}
+    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
+    dependencies:
+      '@lerna-lite/cli': 2.6.0(@lerna-lite/list@2.6.0)(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
+      '@lerna-lite/core': 2.6.0(typescript@5.2.2)
+      '@lerna-lite/filter-packages': 2.6.0(typescript@5.2.2)
+      '@lerna-lite/listable': 2.6.0(typescript@5.2.2)
+    transitivePeerDependencies:
+      - '@lerna-lite/exec'
+      - '@lerna-lite/publish'
+      - '@lerna-lite/run'
+      - '@lerna-lite/version'
+      - '@lerna-lite/watch'
+      - babel-plugin-macros
+      - supports-color
+      - typescript
+    dev: false
+
+  /@lerna-lite/listable@2.6.0(typescript@5.2.2):
+    resolution: {integrity: sha512-Pcfu2oSBLJomvIisWoJ1BVe9aR/2kVeg/z3R4oCSKdR3m5jsApTmd/K258O+Z4xj+gbRzZbn02F4WRCkPJlJlA==}
+    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
+    dependencies:
+      '@lerna-lite/core': 2.6.0(typescript@5.2.2)
+      chalk: 5.3.0
+      columnify: 1.6.0
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+      - typescript
+    dev: false
+
   /@lerna-lite/publish@2.6.0(typescript@5.2.2):
     resolution: {integrity: sha512-Xa7MT1nZ8Q6vY0vwLMZgdoX8Lz2PHZ6tEMWx54qgWiK0HYOfZjW+NNXGV9hKu6PpaRBq+N5PIKOptJSjQCjEew==}
     engines: {node: '>=16.15.0', npm: '>=8.5.0'}
     dependencies:
-      '@lerna-lite/cli': 2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
+      '@lerna-lite/cli': 2.6.0(@lerna-lite/list@2.6.0)(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
       '@lerna-lite/core': 2.6.0(typescript@5.2.2)
       '@lerna-lite/version': 2.6.0(@lerna-lite/publish@2.6.0)(typescript@5.2.2)
       '@npmcli/arborist': 7.2.1
@@ -2812,7 +2904,7 @@ packages:
     resolution: {integrity: sha512-OEdSV6SwYqspXls2Nthd6itw7XJaWGAr65rDVrgcQajQ0dAngateYtsq/zmRMaJnSYNX6u5gUV5y+6WISQaGMA==}
     engines: {node: '>=16.15.0', npm: '>=8.5.0'}
     dependencies:
-      '@lerna-lite/cli': 2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
+      '@lerna-lite/cli': 2.6.0(@lerna-lite/list@2.6.0)(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
       '@lerna-lite/core': 2.6.0(typescript@5.2.2)
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 19.0.13
@@ -5613,6 +5705,10 @@ packages:
     resolution: {integrity: sha512-i8MBln35l856k5iOhKk2XJ4SeAWg75mLIpZB4v6imOagKL6twsukBZGDMNhdOVk7yRFTMPpfILocMos59Q1otQ==}
     dev: true
 
+  /@types/minimatch@3.0.5:
+    resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
+    dev: false
+
   /@types/minimatch@5.1.2:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
     dev: true
@@ -6346,6 +6442,11 @@ packages:
       call-bind: 1.0.5
       is-array-buffer: 3.0.2
 
+  /array-differ@4.0.0:
+    resolution: {integrity: sha512-Q6VPTLMsmXZ47ENG3V+wQyZS1ZxXMxFyYzA+Z/GMrJ6yIutAIEf9wTyroTzmGjNfox9/h3GdGBCVh43GVFx4Uw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
   /array-flatten@1.1.1:
     resolution: {integrity: sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==}
     dev: true
@@ -6368,6 +6469,11 @@ packages:
   /array-union@2.1.0:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
+
+  /array-union@3.0.1:
+    resolution: {integrity: sha512-1OvF9IbWwaeiM9VhzYXVQacMibxpXOMYVNIvMtKRyX9SImBXpKcFr8XvFDeEslCyuH/t6KRt7HEO94AlP8Iatw==}
+    engines: {node: '>=12'}
+    dev: false
 
   /array.prototype.findlastindex@1.2.3:
     resolution: {integrity: sha512-LzLoiOMAxvy+Gd3BAq3B7VeIgPdo+Q8hthvKtXybMvRV0jrXfJM/t8mw7nNlpEcVlVUnCnM2KSX4XU5HmpodOA==}
@@ -7485,6 +7591,17 @@ packages:
     resolution: {integrity: sha512-pTgQJ5KC0d2hcY8eyL1IzlBPYjTkyH72XRZPnLyKus2mBfNjQs3klqbJU2VILqZryAZUt9JOb3h/mWMy23/f5A==}
     dependencies:
       lru-cache: 4.1.5
+      shebang-command: 1.2.0
+      which: 1.3.1
+    dev: false
+
+  /cross-spawn@6.0.5:
+    resolution: {integrity: sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==}
+    engines: {node: '>=4.8'}
+    dependencies:
+      nice-try: 1.0.5
+      path-key: 2.0.1
+      semver: 5.7.2
       shebang-command: 1.2.0
       which: 1.3.1
     dev: false
@@ -9619,6 +9736,7 @@ packages:
   /iconv-lite@0.6.3:
     resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
     dependencies:
       safer-buffer: 2.1.2
     dev: false
@@ -11067,6 +11185,7 @@ packages:
 
   /lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
+    requiresBuild: true
     dev: false
 
   /lodash.kebabcase@4.1.1:
@@ -11086,6 +11205,7 @@ packages:
 
   /lodash.mergewith@4.6.2:
     resolution: {integrity: sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==}
+    requiresBuild: true
     dev: false
 
   /lodash.snakecase@4.1.1:
@@ -11106,6 +11226,7 @@ packages:
 
   /lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
+    requiresBuild: true
     dev: false
 
   /lodash.upperfirst@4.3.1:
@@ -11407,6 +11528,11 @@ packages:
     dependencies:
       map-or-similar: 1.5.0
     dev: true
+
+  /memorystream@0.3.1:
+    resolution: {integrity: sha512-S3UwM3yj5mtUSEfP41UZmt/0SCoVYUcU1rkXv+BQ5Ig8ndL4sPoJNBUJERafdPb5jjHJGuMgytgKvKIf58XNBw==}
+    engines: {node: '>= 0.10.0'}
+    dev: false
 
   /meow@12.1.1:
     resolution: {integrity: sha512-BhXM0Au22RwUneMPwSCnyhTOizdWoIEPU9sp0Aqa1PnDMR5Wv2FGXYDjuzJEIX+Eo2Rb8xuYe5jrnm5QowQFkw==}
@@ -11925,6 +12051,16 @@ packages:
     resolution: {integrity: sha512-ckmWDJjphvd/FvZawgygcUeQCxzvohjFO5RxTjj4eq8kw359gFF3E1brjfI+viLMxss5JrHTDRHZvu2/tuy0Qg==}
     dev: true
 
+  /multimatch@6.0.0:
+    resolution: {integrity: sha512-I7tSVxHGPlmPN/enE3mS1aOSo6bWBfls+3HmuEeCUBCE7gWnm3cBXCBkpurzFjVRwC6Kld8lLaZ1Iv5vOcjvcQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      '@types/minimatch': 3.0.5
+      array-differ: 4.0.0
+      array-union: 3.0.1
+      minimatch: 3.1.2
+    dev: false
+
   /mute-stream@0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
     dev: false
@@ -11963,6 +12099,10 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       type-fest: 2.19.0
+    dev: false
+
+  /nice-try@1.0.5:
+    resolution: {integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==}
     dev: false
 
   /node-addon-api@3.2.1:
@@ -12166,6 +12306,22 @@ packages:
       proc-log: 3.0.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /npm-run-all@4.1.5:
+    resolution: {integrity: sha512-Oo82gJDAVcaMdi3nuoKFavkIHBRVqQ1qvMb+9LHk/cF4P6B2m8aP04hGf7oL6wZ9BuGwX1onlLhpuoofSyoQDQ==}
+    engines: {node: '>= 4'}
+    hasBin: true
+    dependencies:
+      ansi-styles: 3.2.1
+      chalk: 2.4.2
+      cross-spawn: 6.0.5
+      memorystream: 0.3.1
+      minimatch: 3.1.2
+      pidtree: 0.3.1
+      read-pkg: 3.0.0
+      shell-quote: 1.8.1
+      string.prototype.padend: 3.1.5
     dev: false
 
   /npm-run-path@4.0.1:
@@ -12753,6 +12909,11 @@ packages:
     resolution: {integrity: sha512-DUWJr3+ULp4zXmol/SZkFf3JGsS9/SIv+Y3Rt93/UjPpDpklB5f1er4O3POIbUuUJ3FXgqte2Q7SrU6zAqwk8w==}
     dev: true
 
+  /path-key@2.0.1:
+    resolution: {integrity: sha512-fEHGKCSmUSDPv4uoj8AlD+joPlq3peND+HRYyxFz4KPw4z926S/b8rIuFs2FYJg3BwsxJf6A9/3eIdLaYC+9Dw==}
+    engines: {node: '>=4'}
+    dev: false
+
   /path-key@3.1.1:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
     engines: {node: '>=8'}
@@ -12813,6 +12974,12 @@ packages:
   /picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  /pidtree@0.3.1:
+    resolution: {integrity: sha512-qQbW94hLHEqCg7nhby4yRC7G2+jYHY4Rguc2bjw7Uug4GIJuu1tvf2uHaZv5Q8zdt+WKJ6qK1FOI6amaWUo5FA==}
+    engines: {node: '>=0.10'}
+    hasBin: true
+    dev: false
 
   /pidtree@0.6.0:
     resolution: {integrity: sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==}
@@ -13983,6 +14150,10 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
+  /shell-quote@1.8.1:
+    resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
+    dev: false
+
   /side-channel@1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
     dependencies:
@@ -14242,6 +14413,15 @@ packages:
       regexp.prototype.flags: 1.5.1
       set-function-name: 2.0.1
       side-channel: 1.0.4
+    dev: false
+
+  /string.prototype.padend@3.1.5:
+    resolution: {integrity: sha512-DOB27b/2UTTD+4myKUFh+/fXWcu/UDyASIXfg+7VzoCNNGOfWvoyU/x5pvVHr++ztyt/oSYI1BcWBBG/hmlNjA==}
+    engines: {node: '>= 0.4'}
+    dependencies:
+      call-bind: 1.0.5
+      define-properties: 1.2.1
+      es-abstract: 1.22.3
     dev: false
 
   /string.prototype.trim@1.2.8:

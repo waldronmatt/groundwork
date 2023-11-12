@@ -2,10 +2,10 @@
 
 ## Add Packages
 
-Install dependecies to the root of the workspace:
+Install an exact version of a dependency to the root of the workspace:
 
 ```bash
-pnpm add -w [package-name]
+pnpm add -w -E [package-name]
 ```
 
 Add a package as a dependency for local package:

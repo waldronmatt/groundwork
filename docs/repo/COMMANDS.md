@@ -20,6 +20,18 @@ Visualize the project structure/dependencies:
 pnpm nx:graph
 ```
 
+List local packages that have changed since the last tagged release:
+
+```bash
+pnpm preview:changed
+```
+
+Diff all packages or a single package since the last release:
+
+```bash
+pnpm preview:diff
+```
+
 Preview the output result of the `version` command without actually executing it:
 
 **Note**: Set your GitHub access token as a system/os-level environment variable in your operating system as `GH_TOKEN` with the token unique identifier as the value.
