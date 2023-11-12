@@ -4,6 +4,8 @@
 
 [Architecture](ARCHITECTURE.md)
 
+[Monorepo Tooling](TOOLS.md)
+
 [Setup](SETUP.md)
 
 [Workspace Commands](WORKSPACE.md)
