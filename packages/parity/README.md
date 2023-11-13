@@ -18,6 +18,14 @@ import { isEven } from '@waldronmatt/parity/even.js';
 console.log(isEven(4)); // Output: true
 ```
 
+## Monorepo Use
+
+For use inside this monorepo, we import via below so we can use directly from source files.
+
+```ts
+import { isEven } from '@waldronmatt/parity/src/even.js';
+```
+
 ## License
 
 MIT

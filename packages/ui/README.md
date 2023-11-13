@@ -51,6 +51,14 @@ import { Button } from '@waldronmatt/demo-ui/components/Button/index.js';
 
 Alternatively, you can use your own css reset/normalize libraries.
 
+## Monorepo Use
+
+For use inside this monorepo, we import via below so we can use directly from source files.
+
+```ts
+import { Button } from '@waldronmatt/demo-ui/lib/components/Button/index.js';
+```
+
 ## License
 
 MIT
