@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.23](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.0.22...demo-ui-storybook@1.0.23) (2023-11-13)
+
+### Bug Fixes
+
+* **global:** specifiy exact versions for all workspace packages ([9a896c8](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9a896c8d7107fae7c338309f6b5360cc46354bf5)) - by @waldronmatt
+
 ## [1.0.22](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.0.21...demo-ui-storybook@1.0.22) (2023-11-07)
 
 **Note:** Version bump only for package demo-ui-storybook

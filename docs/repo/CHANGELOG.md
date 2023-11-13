@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2023-11-13)
+
+### Bug Fixes
+
+* **global:** add lerna-lite changed and diff packages, update docs ([2c1275a](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/2c1275aeb11c52bc5d342e1c7b8f2d51f1b5eb6c)) - by @waldronmatt
+
+### Features
+
+* **tools.md:** add tooling section for repo ([7c6e714](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/7c6e71474add72a3f8766b7594996e6cce3983b3)) - by @waldronmatt
+
 ## [1.3.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/monorepo-docs@1.3.1...monorepo-docs@1.3.2) (2023-11-04)
 
 ### Bug Fixes
