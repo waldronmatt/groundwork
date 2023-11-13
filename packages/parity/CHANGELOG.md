@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.17](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@2.0.16...@waldronmatt/parity@2.0.17) (2023-11-13)
+
+### Bug Fixes
+
+* **packages:** update readme and bump so we can get compiled output back ([52bbd6e](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/52bbd6eb6f8a358ad1149f9ef4d4102616537350)) - by @waldronmatt
+
 ## [2.0.16](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@2.0.15...@waldronmatt/parity@2.0.16) (2023-11-13)
 
 ### Bug Fixes
