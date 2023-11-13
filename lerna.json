@@ -18,6 +18,5 @@
       "message": "chore(release): publish",
       "syncWorkspaceLock": true
     }
-  },
-  "changelogPreset": "conventional-changelog-conventionalcommits"
+  }
 }
