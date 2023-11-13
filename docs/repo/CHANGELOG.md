@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.1 (2023-11-13)
+
+### Bug Fixes
+
+* **repo:** add hyperlinks for tooling, minor tweaks ([8dc29cb](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/8dc29cb3d4f4adc73be0251b520ff167f2099bfa)) - by @waldronmatt
+
 # 1.4.0 (2023-11-13)
 
 ### Bug Fixes
