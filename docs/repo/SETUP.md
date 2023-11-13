@@ -4,6 +4,14 @@
 
 Follow the directions [here](https://pnpm.io/installation) to install pnpm.
 
+## Global Packages
+
+Globally install the `rimraf` package via:
+
+```bash
+pnpm i -g rimraf
+```
+
 ## NX
 
 Create an `nx` account [here](https://cloud.nx.app/).
@@ -20,9 +28,11 @@ Set up `NX_CLOUD_ACCESS_TOKEN` in GitHub via `Settings` -> `Secrets` -> `Actions
 
 ## Lerna
 
-Create a `GH_TOKEN` with `read/write` access [here](https://github.com/settings/tokens) to allow Lerna to create GitHub tags and releases.
+Follow the directions to set up a `GITHUB_TOKEN` [here](https://github.com/lerna-lite/lerna-lite/blob/main/packages/version/README.md#remote-client-auth-tokens) to allow Lerna to create GitHub tags and releases.
 
-Create an `NPM_TOKEN` [here](https://www.npmjs.com/login) as type `Automation` via the `Access Tokens` section to allow Lerna to publish packages.
+Additionally, you can set up `GITHUB_TOKEN` as an environment variable in your os so you can run Lerna commands via the terminal.
+
+Create an `NPM_TOKEN` [here](https://www.npmjs.com/login) as type `Automation` via the `Access Tokens` section to allow Lerna to publish packages to NPM.
 
 Set up your `NPM_TOKEN` in GitHub via `Settings` -> `Secrets` -> `Actions`.
 
@@ -43,3 +53,5 @@ Additionally create `wip` and `conflict` labels.
 ## NX Distributed Task Execution
 
 (Optional): Follow the directions [here](https://nx.dev/nx-cloud/recipes/set-up/monorepo-ci-github-actions#distributed-task-execution-with-nx-cloud) to set up NX DTE.
+
+**Note**: This repo's CICD is not configured to support DTE.

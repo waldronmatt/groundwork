@@ -5,13 +5,13 @@
 Install an exact version of a dependency to the root of the workspace:
 
 ```bash
-pnpm add -w -E [package-name]
+pnpm add -w prettier -E
 ```
 
 Add a package as a dependency for local package:
 
 ```bash
-pnpm add react --filter vite-project
+pnpm add react -E --filter vite-project
 ```
 
 Add a **local** package and another package as a development dependency for local package:

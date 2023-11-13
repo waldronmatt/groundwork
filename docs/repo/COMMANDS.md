@@ -34,7 +34,7 @@ pnpm preview:diff
 
 Preview the output result of the `version` command without actually executing it:
 
-**Note**: Set your GitHub access token as a system/os-level environment variable in your operating system as `GH_TOKEN` with the token unique identifier as the value.
+**Note**: Set your GitHub access token as a system/os-level environment variable in your operating system as `GITHUB_TOKEN` with the token unique identifier as the value.
 
 ```bash
 pnpm preview:version

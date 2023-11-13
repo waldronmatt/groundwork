@@ -2,36 +2,36 @@
 
 ## Core Tooling
 
-`pnpm`: Installer that is much faster than `npm` and has great support with libraries and monorepo tooling
+[`pnpm`](https://github.com/pnpm/pnpm): Installer that is much faster than `npm` and has great support with libraries and monorepo tooling
 
-`nx`: Task runner with great performance benchmarks for small and large sized monorepos and lots of tooling options for different tech stacks
+[`nx`](https://github.com/nrwl/nx): Task runner with great performance for small and large sized monorepos and many tooling options for different tech stacks
 
-`lerna-lite`: Publisher that supports automatic conventional commits semantic versioning and is smaller and more lightweight than `lerna`
+[`lerna-lite`](https://github.com/lerna-lite/lerna-lite): Publisher that supports conventional commits for semantic versioning and is smaller and more lightweight than `lerna`
 
 ## Workspace Tooling
 
-`husky`: For git hooks
+[`husky`](https://github.com/typicode/husky): For git hooks
 
-`lint-staged`: For running linters against staged git files
+[`lint-staged`](https://github.com/lint-staged/lint-staged): For running linters against staged git files
 
-`cz-conventional-changelog`: Prompts for the `conventional changelog` standard
+[`cz-conventional-changelog`](https://github.com/commitizen/cz-conventional-changelog): Prompts for the `conventional changelog` standard
 
-`commitizen`: For enabling `cz-conventional-changelog` via the command line
+[`commitizen`](https://github.com/commitizen/cz-cli): For enabling `cz-conventional-changelog` via the command line
 
-`commitlint`: For linting commit messages
+[`commitlint`](https://github.com/conventional-changelog/commitlint): For linting commit messages
 
-`secretlint`: For linting secrets to prevent commiting credentials
+[`secretlint`](https://github.com/secretlint/secretlint): For linting secrets to prevent commiting credentials
 
-`prettier`: For formatting code
+[`prettier`](https://github.com/prettier/prettier): For formatting code
 
-`syncpack`: For linting dependency versions
+[`syncpack`](https://github.com/JamieMason/syncpack): For linting dependency versions
 
-`publint`: For linting package publishing best practices
+[`publint`](https://github.com/bluwy/publint): For linting package publishing best practices
 
-`manypkg`: For linting monorepo best practices
+[`manypkg`](https://github.com/Thinkmill/manypkg): For linting monorepo best practices
 
-`github actions`: For CI/CD
+[`github actions`](https://docs.github.com/en/actions): For CI/CD
 
-`renovate`: For dependency updating
+[`renovate`](https://github.com/renovatebot/renovate): For dependency updating
 
-`kodiak`: For automating Github pull requests
+[`kodiak`](https://github.com/chdsbd/kodiak): For automating Github pull requests
