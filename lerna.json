@@ -14,6 +14,7 @@
       "changelogIncludeCommitsClientLogin": " - by @%l",
       "conventionalCommits": true,
       "createRelease": "github",
+      "exact": true,
       "ignoreChanges": ["**/CHANGELOG.md", "**/node_modules/**"],
       "message": "chore(release): publish",
       "syncWorkspaceLock": true
