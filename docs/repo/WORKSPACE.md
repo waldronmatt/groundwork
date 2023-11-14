@@ -5,19 +5,19 @@
 Install an exact version of a dependency to the root of the workspace:
 
 ```bash
-pnpm add -w prettier -E
+pnpm add -w -E prettier
 ```
 
-Add a package as a dependency for local package:
+Add an exact version of a package as a dependency for local package:
 
 ```bash
-pnpm add react -E --filter vite-project
+pnpm add -E react --filter vite-project
 ```
 
-Add a **local** package and another package as a development dependency for local package:
+Add an exact version of a **local** package and another package as a development dependency for local package:
 
 ```bash
-pnpm add -D eslint-config-custom --workspace eslint --filter vite-project
+pnpm add -D -E eslint-config-custom --workspace eslint --filter vite-project
 ```
 
 ## Remove Packages

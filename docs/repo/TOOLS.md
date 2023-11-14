@@ -6,7 +6,7 @@
 
 [`nx`](https://github.com/nrwl/nx): Task runner with great performance for small and large sized monorepos and many tooling options for different tech stacks
 
-[`lerna-lite`](https://github.com/lerna-lite/lerna-lite): Publisher that supports conventional commits for semantic versioning and is smaller and more lightweight than `lerna`
+[`lerna-lite`](https://github.com/lerna-lite/lerna-lite): Publisher that supports conventional commits for versioning and is smaller and more lightweight than Lerna
 
 ## Workspace Tooling
 

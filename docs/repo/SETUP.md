@@ -28,9 +28,9 @@ Set up `NX_CLOUD_ACCESS_TOKEN` in GitHub via `Settings` -> `Secrets` -> `Actions
 
 ## Lerna
 
-Follow the directions to set up a `GITHUB_TOKEN` [here](https://github.com/lerna-lite/lerna-lite/blob/main/packages/version/README.md#remote-client-auth-tokens) to allow Lerna to create GitHub tags and releases.
+Follow the directions to set up a `GITHUB_TOKEN` [here](https://github.com/lerna-lite/lerna-lite/blob/main/packages/version/README.md#remote-client-auth-tokens) with `repo:public_repo` scope to allow Lerna to create GitHub tags and releases.
 
-Additionally, you can set up `GITHUB_TOKEN` as an environment variable in your os so you can run Lerna commands via the terminal.
+Next, set up `GITHUB_TOKEN` as an environment variable in your operating system so you can run Lerna commands via the terminal.
 
 Create an `NPM_TOKEN` [here](https://www.npmjs.com/login) as type `Automation` via the `Access Tokens` section to allow Lerna to publish packages to NPM.
 

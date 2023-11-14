@@ -2,7 +2,7 @@
 
 Delete workspace root `node_modules` and `pnpm-lock.yaml` files:
 
-**Note**: Install `rimraf` globally and make sure it is not installed in the workspace root so errors aren't thrown.
+**Note**: Follow the directions [here](SETUP.md#global-packages) to install `rimraf` globally so errors aren't thrown.
 
 ```bash
 pnpm delete
@@ -34,7 +34,7 @@ pnpm preview:diff
 
 Preview the output result of the `version` command without actually executing it:
 
-**Note**: Set your GitHub access token as a system/os-level environment variable in your operating system as `GITHUB_TOKEN` with the token unique identifier as the value.
+**Note**: Follow the directions [here](SETUP.md#lerna) to set up a `GITHUB_TOKEN` environment variable in your operating system.
 
 ```bash
 pnpm preview:version
