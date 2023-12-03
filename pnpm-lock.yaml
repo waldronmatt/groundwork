@@ -21,8 +21,8 @@ importers:
         specifier: 2.7.2
         version: 2.7.2(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
       '@lerna-lite/cli':
-        specifier: 2.6.0
-        version: 2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
+        specifier: 2.7.2
+        version: 2.7.2(@lerna-lite/list@2.7.2)(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
       '@lerna-lite/diff':
         specifier: 2.6.0
         version: 2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.2.2)
