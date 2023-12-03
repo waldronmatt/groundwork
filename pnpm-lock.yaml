@@ -93,8 +93,8 @@ importers:
         specifier: 13.0.0
         version: 13.0.0
       the-new-css-reset:
-        specifier: 1.11.1
-        version: 1.11.1
+        specifier: 1.11.2
+        version: 1.11.2
     devDependencies:
       '@types/react':
         specifier: 18.2.37
@@ -208,8 +208,8 @@ importers:
         specifier: 13.0.0
         version: 13.0.0
       the-new-css-reset:
-        specifier: 1.11.1
-        version: 1.11.1
+        specifier: 1.11.2
+        version: 1.11.2
     devDependencies:
       '@storybook/addon-actions':
         specifier: 7.5.3
@@ -14726,8 +14726,8 @@ packages:
     engines: {node: '>=0.8'}
     dev: false
 
-  /the-new-css-reset@1.11.1:
-    resolution: {integrity: sha512-AsNpvcX9YkVja3ZwVYjwULYOyelhse4Atnnple2wPwrKdf3tEBXECBPAoTN+tMSFiFbi00jyprt7F9vhHornMw==}
+  /the-new-css-reset@1.11.2:
+    resolution: {integrity: sha512-m/JQ/srn+e5SAI7MVCZOJ1hoxoE1w1uA96birT52Y9769GN9e0M4K1PBxlz05Vq4HprX11ASBjM2TcQs4WXnXg==}
     dev: false
 
   /thenify-all@1.6.0:
