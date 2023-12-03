@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.13 (2023-12-03)
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-react-refresh to v0.4.5 ([#39](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/issues/39)) ([b3f1f57](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/b3f1f5792b7a32b141eff97ac216e59b524dfb8e)) - by @renovate[bot]
+
 ## 1.1.12 (2023-11-13)
 
 **Note:** Version bump only for package eslint-config-custom

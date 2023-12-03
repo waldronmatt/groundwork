@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.19](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@2.0.18...@waldronmatt/parity@2.0.19) (2023-12-03)
+
+**Note:** Version bump only for package @waldronmatt/parity
+
 ## 2.0.18 (2023-12-01)
 
 **Note:** Version bump only for package @waldronmatt/parity
