@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.15 (2023-12-03)
+
+### Bug Fixes
+
+* **deps:** update commitlint monorepo ([#49](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/issues/49)) ([dc915c8](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/dc915c870d149d6e345d5bd8df3d21a1fa3fe580)) - by @renovate[bot]
+
 ## [1.1.14](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.1.13...eslint-config-custom@1.1.14) (2023-12-03)
 
 **Note:** Version bump only for package eslint-config-custom
