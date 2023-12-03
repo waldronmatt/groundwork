@@ -46,7 +46,7 @@
     "@lerna-lite/diff": "2.6.0",
     "@lerna-lite/publish": "2.6.0",
     "@lerna-lite/version": "2.6.0",
-    "@manypkg/cli": "0.21.0",
+    "@manypkg/cli": "0.21.1",
     "@nrwl/cli": "15.9.3",
     "@nrwl/nx-cloud": "16.5.2",
     "@secretlint/secretlint-rule-preset-recommend": "7.0.7",
