@@ -66,8 +66,8 @@ importers:
         specifier: 3.0.3
         version: 3.0.3
       publint:
-        specifier: 0.2.5
-        version: 0.2.5
+        specifier: 0.2.6
+        version: 0.2.6
       secretlint:
         specifier: 7.0.7
         version: 7.0.7
@@ -13201,8 +13201,8 @@ packages:
     resolution: {integrity: sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==}
     dev: false
 
-  /publint@0.2.5:
-    resolution: {integrity: sha512-eoQiP0WXkxkpth1fMLoS1I/6BQoxKNZxTAAnFjPgURFrJulC5D5Uifk49a9kfNCYmcza9E/ZkbFhQQdjkmKAbg==}
+  /publint@0.2.6:
+    resolution: {integrity: sha512-zMwDVwrlLnCsviDXlczhuc5nIljsjZUgbLeKNyMYqbIJLRhcW81xrKsHlEu21YUaIxpa8T66tdIqP0mZm9ym3A==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
