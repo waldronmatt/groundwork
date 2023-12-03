@@ -6,34 +6,21 @@
   "dependencyDashboard": false,
   "automerge": false,
   "automergeType": "pr",
-  "schedule": ["before 4am on the first day of the month"],
+  "schedule": ["before 4am"],
+  "prHourlyLimit": 10,
   "packageRules": [
     {
-      "groupSlug": "github-actions",
-      "matchPackagePatterns": ["^actions"]
+      "groupSlug": "commitlint",
+      "matchPackagePatterns": ["^@commitlint/"]
     },
     {
-      "groupSlug": "workspace-root",
-      "matchFileNames": ["package.json"]
-    },
-    {
-      "groupSlug": "nx",
-      "matchPackageNames": ["nx"],
-      "matchPackagePatterns": ["^@nrwl/"]
-    },
-    {
-      "groupSlug": "lerna-lite",
-      "matchPackagePatterns": ["^@lerna-lite/"]
-    },
-    {
-      "groupSlug": "eslint-config",
+      "groupSlug": "eslint",
       "matchPackageNames": ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser"],
       "matchPackagePatterns": ["^eslint"]
     },
     {
-      "groupSlug": "testing-library",
-      "matchPackageNames": ["@types/testing-library__jest-dom"],
-      "matchPackagePatterns": ["^@testing-library/"]
+      "groupSlug": "github-actions",
+      "matchPackagePatterns": ["^actions"]
     },
     {
       "groupSlug": "jest",
@@ -41,9 +28,22 @@
       "matchPackagePatterns": ["^jest/", "^jest-/"]
     },
     {
-      "groupSlug": "types",
-      "excludePackageNames": ["@types/jest", "@types/node", "@types/react", "@types/testing-library__jest-dom"],
-      "matchPackageNames": ["@types/*"]
+      "groupSlug": "lerna-lite",
+      "matchPackagePatterns": ["^@lerna-lite/"]
+    },
+    {
+      "groupSlug": "nx",
+      "matchPackageNames": ["nx"],
+      "matchPackagePatterns": ["^@nrwl/"]
+    },
+    {
+      "groupSlug": "react",
+      "matchPackageNames": ["@types/react", "@types/react-dom", "react", "react-dom"]
+    },
+    {
+      "groupSlug": "secretlint",
+      "matchPackageNames": ["secretlint"],
+      "matchPackagePatterns": ["^@secretlint/"]
     },
     {
       "groupSlug": "storybook",
@@ -51,8 +51,14 @@
       "matchPackagePatterns": ["^@storybook/"]
     },
     {
-      "groupSlug": "react",
-      "matchPackageNames": ["@types/react", "@types/react-dom", "react", "react-dom"]
+      "groupSlug": "testing-library",
+      "matchPackageNames": ["@types/testing-library__jest-dom"],
+      "matchPackagePatterns": ["^@testing-library/"]
+    },
+    {
+      "groupSlug": "types",
+      "excludePackageNames": ["@types/jest", "@types/node", "@types/react", "@types/testing-library__jest-dom"],
+      "matchPackageNames": ["@types/*"]
     },
     {
       "groupSlug": "vite",
