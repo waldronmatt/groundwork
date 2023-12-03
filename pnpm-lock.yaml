@@ -24,8 +24,8 @@ importers:
         specifier: 2.7.2
         version: 2.7.2(@lerna-lite/list@2.7.2)(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.3.2)
       '@lerna-lite/diff':
-        specifier: 2.6.0
-        version: 2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.3.2)
+        specifier: 2.7.2
+        version: 2.7.2(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.3.2)
       '@lerna-lite/publish':
         specifier: 2.6.0
         version: 2.6.0(typescript@5.3.2)
@@ -457,7 +457,7 @@ packages:
     resolution: {integrity: sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/highlight': 7.22.20
+      '@babel/highlight': 7.23.4
       chalk: 2.4.2
     dev: true
 
@@ -699,15 +699,6 @@ packages:
       '@babel/types': 7.23.5
     transitivePeerDependencies:
       - supports-color
-
-  /@babel/highlight@7.22.20:
-    resolution: {integrity: sha512-dkdMCN3py0+ksCgYmGG8jKeGA/8Tk+gJwSYYlFGxG5lmhfKNoAy004YpLxpS1W2J8m/EK2Ew+yOs9pVRwO89mg==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-validator-identifier': 7.22.20
-      chalk: 2.4.2
-      js-tokens: 4.0.0
-    dev: true
 
   /@babel/highlight@7.23.4:
     resolution: {integrity: sha512-acGdbYSfp2WheJoJm/EBBBLh/ID8KDc64ISZ9DYtBmC8/Q204PZJLHyzeB5qMzJ5trcOkybd78M4x2KWsUq++A==}
@@ -2780,7 +2771,7 @@ packages:
       fs-extra: 11.1.1
       glob-parent: 6.0.2
       globby: 13.2.2
-      inquirer: 9.2.11
+      inquirer: 9.2.12
       is-ci: 3.0.1
       json5: 2.2.3
       load-json-file: 7.0.1
@@ -2838,12 +2829,12 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/diff@2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.3.2):
-    resolution: {integrity: sha512-vd/JMVLH4xNefXx5W1DTCBw7nT1MIuQsoV+9dUcgickzGJTN3cNmJ33zaS4PDcy0I3n60VKR3awjlE4jofgxXw==}
+  /@lerna-lite/diff@2.7.2(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.3.2):
+    resolution: {integrity: sha512-NEsHDCPHl6YWo+93NmwBsTsnFptQ7YSJIEmgzez7ZHCIYNGi800gW3zB8D1GU1bkIl8xA0QGCVC8oYlvuJJgow==}
     engines: {node: '>=16.15.0', npm: '>=8.5.0'}
     dependencies:
-      '@lerna-lite/cli': 2.6.0(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.3.2)
-      '@lerna-lite/core': 2.6.0(typescript@5.3.2)
+      '@lerna-lite/cli': 2.7.2(@lerna-lite/list@2.7.2)(@lerna-lite/publish@2.6.0)(@lerna-lite/version@2.6.0)(typescript@5.3.2)
+      '@lerna-lite/core': 2.7.2(typescript@5.3.2)
     transitivePeerDependencies:
       - '@lerna-lite/exec'
       - '@lerna-lite/list'
@@ -9741,27 +9732,6 @@ packages:
       strip-ansi: 6.0.1
       through: 2.3.8
       wrap-ansi: 7.0.0
-    dev: false
-
-  /inquirer@9.2.11:
-    resolution: {integrity: sha512-B2LafrnnhbRzCWfAdOXisUzL89Kg8cVJlYmhqoi3flSiV/TveO+nsXwgKr9h9PIo+J1hz7nBSk6gegRIMBBf7g==}
-    engines: {node: '>=14.18.0'}
-    dependencies:
-      '@ljharb/through': 2.3.11
-      ansi-escapes: 4.3.2
-      chalk: 5.3.0
-      cli-cursor: 3.1.0
-      cli-width: 4.1.0
-      external-editor: 3.1.0
-      figures: 5.0.0
-      lodash: 4.17.21
-      mute-stream: 1.0.0
-      ora: 5.4.1
-      run-async: 3.0.0
-      rxjs: 7.8.1
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      wrap-ansi: 6.2.0
     dev: false
 
   /inquirer@9.2.12:
