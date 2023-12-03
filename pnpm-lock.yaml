@@ -42,8 +42,8 @@ importers:
         specifier: 16.5.2
         version: 16.5.2
       '@secretlint/secretlint-rule-preset-recommend':
-        specifier: 7.0.7
-        version: 7.0.7
+        specifier: 7.2.0
+        version: 7.2.0
       commitizen:
         specifier: 4.3.0
         version: 4.3.0(typescript@5.3.2)
@@ -1744,6 +1744,7 @@ packages:
   /@commitlint/config-validator@18.4.3:
     resolution: {integrity: sha512-FPZZmTJBARPCyef9ohRC9EANiQEKSWIdatx5OlgeHKu878dWwpyeFauVkhzuBRJFcCA4Uvz/FDtlDKs008IHcA==}
     engines: {node: '>=v18'}
+    requiresBuild: true
     dependencies:
       '@commitlint/types': 18.4.3
       ajv: 8.12.0
@@ -1764,6 +1765,7 @@ packages:
   /@commitlint/execute-rule@18.4.3:
     resolution: {integrity: sha512-t7FM4c+BdX9WWZCPrrbV5+0SWLgT3kCq7e7/GhHCreYifg3V8qyvO127HF796vyFql75n4TFF+5v1asOOWkV1Q==}
     engines: {node: '>=v18'}
+    requiresBuild: true
     dev: false
 
   /@commitlint/format@18.4.3:
@@ -1795,6 +1797,7 @@ packages:
   /@commitlint/load@18.4.3(typescript@5.3.2):
     resolution: {integrity: sha512-v6j2WhvRQJrcJaj5D+EyES2WKTxPpxENmNpNG3Ww8MZGik3jWRXtph0QTzia5ZJyPh2ib5aC/6BIDymkUUM58Q==}
     engines: {node: '>=v18'}
+    requiresBuild: true
     dependencies:
       '@commitlint/config-validator': 18.4.3
       '@commitlint/execute-rule': 18.4.3
@@ -1840,6 +1843,7 @@ packages:
   /@commitlint/resolve-extends@18.4.3:
     resolution: {integrity: sha512-30sk04LZWf8+SDgJrbJCjM90gTg2LxsD9cykCFeFu+JFHvBFq5ugzp2eO/DJGylAdVaqxej3c7eTSE64hR/lnw==}
     engines: {node: '>=v18'}
+    requiresBuild: true
     dependencies:
       '@commitlint/config-validator': 18.4.3
       '@commitlint/types': 18.4.3
@@ -4485,8 +4489,8 @@ packages:
     resolution: {integrity: sha512-RX5x0PH74Inty7CaUJ6iLCjr5wbby7oRhoxMkWB4yUevmJKzCadGS8eVK/gNHrKt93aAdCGb/ic/wRE5+4fX5w==}
     dev: false
 
-  /@secretlint/secretlint-rule-preset-recommend@7.0.7:
-    resolution: {integrity: sha512-ORmyhOIxsSoRY/O4Wca4VknzTUVnoNZrwNxgMB3xoFMLg5r4MZVc+pskXq3BDr0g/oodLxD84+/Xj1DSvEGMKw==}
+  /@secretlint/secretlint-rule-preset-recommend@7.2.0:
+    resolution: {integrity: sha512-wEtTqV66j7rMuALKIIA6jWQc+GsjA6L998uCsUk6ma560u4E+HciKXt127UF6LJG+XdrgRx3Xfxg7mMYsVQ28w==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dev: false
 
