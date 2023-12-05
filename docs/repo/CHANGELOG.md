@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.3 (2023-12-05)
+
+### Bug Fixes
+
+* **global:** tweak workspace configurations ([d61d80a](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/d61d80a54dca7786bc14352a972c43f3225a0705)) - by @waldronmatt
+
 ## [1.4.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/monorepo-docs@1.4.1...monorepo-docs@1.4.2) (2023-11-14)
 
 ### Bug Fixes
