@@ -44,7 +44,7 @@
     "@lerna-lite/changed": "3.0.0",
     "@lerna-lite/cli": "3.0.0",
     "@lerna-lite/diff": "3.0.0",
-    "@lerna-lite/publish": "2.7.2",
+    "@lerna-lite/publish": "3.0.0",
     "@lerna-lite/version": "3.0.0",
     "@manypkg/cli": "0.21.1",
     "@nrwl/cli": "15.9.3",
