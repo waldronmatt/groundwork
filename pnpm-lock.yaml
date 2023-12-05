@@ -17,13 +17,7 @@ importers:
       '@commitlint/config-conventional':
         specifier: 18.4.3
         version: 18.4.3
-      '@lerna-lite/changed':
-        specifier: 3.0.0
-        version: 3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
       '@lerna-lite/cli':
-        specifier: 3.0.0
-        version: 3.0.0(@lerna-lite/list@3.0.0)(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
-      '@lerna-lite/diff':
         specifier: 3.0.0
         version: 3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
       '@lerna-lite/publish':
@@ -668,6 +662,7 @@ packages:
   /@babel/helper-validator-identifier@7.22.20:
     resolution: {integrity: sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==}
     engines: {node: '>=6.9.0'}
+    requiresBuild: true
 
   /@babel/helper-validator-option@7.22.15:
     resolution: {integrity: sha512-bMn7RmyFjY/mdECUbgn9eoSY4vqvacUnS9i9vGAGttgFWesO6B4CYWA7XlpbWgBt71iv/hfbPlynohStqnu5hA==}
@@ -695,6 +690,7 @@ packages:
   /@babel/highlight@7.23.4:
     resolution: {integrity: sha512-acGdbYSfp2WheJoJm/EBBBLh/ID8KDc64ISZ9DYtBmC8/Q204PZJLHyzeB5qMzJ5trcOkybd78M4x2KWsUq++A==}
     engines: {node: '>=6.9.0'}
+    requiresBuild: true
     dependencies:
       '@babel/helper-validator-identifier': 7.22.20
       chalk: 2.4.2
@@ -2646,26 +2642,7 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: true
 
-  /@lerna-lite/changed@3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
-    resolution: {integrity: sha512-LSqGwQ2Zes+YbvEc0j8Huamk+o69pYpwkM1M9G6jHWUDJffKLfwSGmwSdub+fAGRBY2JhK8q8sKXERDJa22lmQ==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    dependencies:
-      '@lerna-lite/cli': 3.0.0(@lerna-lite/list@3.0.0)(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
-      '@lerna-lite/core': 3.0.0(typescript@5.3.2)
-      '@lerna-lite/list': 3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
-      '@lerna-lite/listable': 3.0.0(typescript@5.3.2)
-    transitivePeerDependencies:
-      - '@lerna-lite/exec'
-      - '@lerna-lite/publish'
-      - '@lerna-lite/run'
-      - '@lerna-lite/version'
-      - '@lerna-lite/watch'
-      - babel-plugin-macros
-      - supports-color
-      - typescript
-    dev: false
-
-  /@lerna-lite/cli@3.0.0(@lerna-lite/list@3.0.0)(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
+  /@lerna-lite/cli@3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
     resolution: {integrity: sha512-vtTvFrBbG//4aKhGAQNSpFLNK6SWvQZzI4iCCLYJKfIARxdniV5clZ94BGNJmvmR29+8rUghL5qqvNhU1LfX7g==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2692,7 +2669,6 @@ packages:
     dependencies:
       '@lerna-lite/core': 3.0.0(typescript@5.3.2)
       '@lerna-lite/init': 3.0.0(typescript@5.3.2)
-      '@lerna-lite/list': 3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
       '@lerna-lite/publish': 3.0.0(typescript@5.3.2)
       '@lerna-lite/version': 3.0.0(@lerna-lite/publish@3.0.0)(typescript@5.3.2)
       dedent: 1.5.1
@@ -2743,37 +2719,6 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/diff@3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
-    resolution: {integrity: sha512-LSH5KKOSxH4MibHb/KxGfPqEmJauFLQPVNF5NRJtKkId2FHZ/XwZLwh7gGZM+98V6BscWEMYHFFNusfdzmXEKg==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    dependencies:
-      '@lerna-lite/cli': 3.0.0(@lerna-lite/list@3.0.0)(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
-      '@lerna-lite/core': 3.0.0(typescript@5.3.2)
-    transitivePeerDependencies:
-      - '@lerna-lite/exec'
-      - '@lerna-lite/list'
-      - '@lerna-lite/publish'
-      - '@lerna-lite/run'
-      - '@lerna-lite/version'
-      - '@lerna-lite/watch'
-      - babel-plugin-macros
-      - supports-color
-      - typescript
-    dev: false
-
-  /@lerna-lite/filter-packages@3.0.0(typescript@5.3.2):
-    resolution: {integrity: sha512-E52/Mirj7MN+HQ+2ryFxGE5TuwVs0n7/xc44F3pgavE4RpNvXmioQ84I3u5wgWKKggOJYu9iHvsPG6jVN91cOA==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    dependencies:
-      '@lerna-lite/core': 3.0.0(typescript@5.3.2)
-      multimatch: 6.0.0
-      npmlog: 7.0.1
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - supports-color
-      - typescript
-    dev: false
-
   /@lerna-lite/init@3.0.0(typescript@5.3.2):
     resolution: {integrity: sha512-mRTkV6enNDR6b6IO7Bds5g7FDVEc/qpg2QKwWviFlOq63g41fmZvaG69Ko8vUUuyGWXYRbV4P3IcOFHjxDrJqg==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -2788,43 +2733,11 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/list@3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
-    resolution: {integrity: sha512-Xokte+Ob7OrCxXKlUwtGG0MilRMM2Es34QFojcyPDLrr38PSzF+ySwnKnmy870xKaMy0HWBu+Ne1/X+reXf8lg==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    dependencies:
-      '@lerna-lite/cli': 3.0.0(@lerna-lite/list@3.0.0)(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
-      '@lerna-lite/core': 3.0.0(typescript@5.3.2)
-      '@lerna-lite/filter-packages': 3.0.0(typescript@5.3.2)
-      '@lerna-lite/listable': 3.0.0(typescript@5.3.2)
-    transitivePeerDependencies:
-      - '@lerna-lite/exec'
-      - '@lerna-lite/publish'
-      - '@lerna-lite/run'
-      - '@lerna-lite/version'
-      - '@lerna-lite/watch'
-      - babel-plugin-macros
-      - supports-color
-      - typescript
-    dev: false
-
-  /@lerna-lite/listable@3.0.0(typescript@5.3.2):
-    resolution: {integrity: sha512-fo85j/PdggN2kvR6SJuDCSjYyXgnB3sNA1DFY9OxdDKgASX7Chbwy9+X2D1qsQOTznR35wVMZ5kFi7HPW8HHJQ==}
-    engines: {node: ^18.0.0 || >=20.0.0}
-    dependencies:
-      '@lerna-lite/core': 3.0.0(typescript@5.3.2)
-      chalk: 5.3.0
-      columnify: 1.6.0
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - supports-color
-      - typescript
-    dev: false
-
   /@lerna-lite/publish@3.0.0(typescript@5.3.2):
     resolution: {integrity: sha512-a7OZ6IEPFBfDYUtQPvUVTAdUZzNVa0rcvQ2MIkfS5yTQ2gN16FQ4Hno4XvWk1l87pIcLBZyufUbICyIAay+9Ag==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/cli': 3.0.0(@lerna-lite/list@3.0.0)(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
+      '@lerna-lite/cli': 3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
       '@lerna-lite/core': 3.0.0(typescript@5.3.2)
       '@lerna-lite/version': 3.0.0(@lerna-lite/publish@3.0.0)(typescript@5.3.2)
       '@npmcli/arborist': 7.2.1
@@ -2865,7 +2778,7 @@ packages:
     resolution: {integrity: sha512-YQ8RreieB/76GwKs95qrVoZhXVigEmcZMdqHIsMybFF44kLbVINbP71Yemb5TNpxw7gi6Uceb0sAgaRaFj6D9g==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/cli': 3.0.0(@lerna-lite/list@3.0.0)(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
+      '@lerna-lite/cli': 3.0.0(@lerna-lite/publish@3.0.0)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
       '@lerna-lite/core': 3.0.0(typescript@5.3.2)
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.0.2
@@ -5597,10 +5510,6 @@ packages:
     resolution: {integrity: sha512-i8MBln35l856k5iOhKk2XJ4SeAWg75mLIpZB4v6imOagKL6twsukBZGDMNhdOVk7yRFTMPpfILocMos59Q1otQ==}
     dev: true
 
-  /@types/minimatch@3.0.5:
-    resolution: {integrity: sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==}
-    dev: false
-
   /@types/minimatch@5.1.2:
     resolution: {integrity: sha512-K0VQKziLUWkVKiRVrx4a40iPaxTUefQmjtkQofBkYRcoaaL/8rhwDWww9qWbrgicNOgnpIsMxyNIUM4+n6dUIA==}
     dev: true
@@ -5622,6 +5531,7 @@ packages:
 
   /@types/node@18.18.8:
     resolution: {integrity: sha512-OLGBaaK5V3VRBS1bAkMVP2/W9B+H8meUfl866OrMNQqt7wDgdpWPp5o6gmIc9pB+lIQHSq4ZL8ypeH1vPxcPaQ==}
+    requiresBuild: true
     dependencies:
       undici-types: 5.26.5
 
@@ -6332,11 +6242,6 @@ packages:
       call-bind: 1.0.5
       is-array-buffer: 3.0.2
 
-  /array-differ@4.0.0:
-    resolution: {integrity: sha512-Q6VPTLMsmXZ47ENG3V+wQyZS1ZxXMxFyYzA+Z/GMrJ6yIutAIEf9wTyroTzmGjNfox9/h3GdGBCVh43GVFx4Uw==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: false
-
   /array-flatten@1.1.1:
     resolution: {integrity: sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==}
     dev: true
@@ -6359,11 +6264,6 @@ packages:
   /array-union@2.1.0:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
-
-  /array-union@3.0.1:
-    resolution: {integrity: sha512-1OvF9IbWwaeiM9VhzYXVQacMibxpXOMYVNIvMtKRyX9SImBXpKcFr8XvFDeEslCyuH/t6KRt7HEO94AlP8Iatw==}
-    engines: {node: '>=12'}
-    dev: false
 
   /array.prototype.findlastindex@1.2.3:
     resolution: {integrity: sha512-LzLoiOMAxvy+Gd3BAq3B7VeIgPdo+Q8hthvKtXybMvRV0jrXfJM/t8mw7nNlpEcVlVUnCnM2KSX4XU5HmpodOA==}
@@ -6866,6 +6766,7 @@ packages:
   /callsites@3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
+    requiresBuild: true
 
   /camelcase-keys@6.2.2:
     resolution: {integrity: sha512-YrwaA0vEKazPBkn0ipTiMpSajYDSe+KjQfrjhcBMxJt/znbvlHd8Pw/Vamaz5EB4Wfhs3SUR3Z9mwRu/P3s3Yg==}
@@ -8732,6 +8633,7 @@ packages:
 
   /fast-deep-equal@3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
+    requiresBuild: true
 
   /fast-glob@3.2.7:
     resolution: {integrity: sha512-rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCwQMEupiN02ZP4DiT1Q==}
@@ -9660,6 +9562,7 @@ packages:
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
+    requiresBuild: true
     dependencies:
       parent-module: 1.0.1
       resolve-from: 4.0.0
@@ -10716,6 +10619,7 @@ packages:
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+    requiresBuild: true
 
   /js-yaml@3.14.1:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
@@ -10824,6 +10728,7 @@ packages:
 
   /json-parse-even-better-errors@2.3.1:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==}
+    requiresBuild: true
 
   /json-parse-even-better-errors@3.0.0:
     resolution: {integrity: sha512-iZbGHafX/59r39gPwVPRBGw0QQKnA7tte5pSMrhWOW7swGsVvVTjmfyAV9pNqk8YGT7tRCdxRu8uzcgZwoDooA==}
@@ -10835,6 +10740,7 @@ packages:
 
   /json-schema-traverse@1.0.0:
     resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
+    requiresBuild: true
 
   /json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
@@ -10971,6 +10877,7 @@ packages:
 
   /lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
+    requiresBuild: true
 
   /lines-and-columns@2.0.3:
     resolution: {integrity: sha512-cNOjgCnLB+FnvWWtyRTzmB3POJ+cXxTA81LoW7u8JdmhfXzriropYwpjShnz1QLLWsQwY7nIxoDmcPTwphDK9w==}
@@ -11106,6 +11013,7 @@ packages:
 
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
+    requiresBuild: true
 
   /lodash.mergewith@4.6.2:
     resolution: {integrity: sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==}
@@ -11954,16 +11862,6 @@ packages:
   /muggle-string@0.3.1:
     resolution: {integrity: sha512-ckmWDJjphvd/FvZawgygcUeQCxzvohjFO5RxTjj4eq8kw359gFF3E1brjfI+viLMxss5JrHTDRHZvu2/tuy0Qg==}
     dev: true
-
-  /multimatch@6.0.0:
-    resolution: {integrity: sha512-I7tSVxHGPlmPN/enE3mS1aOSo6bWBfls+3HmuEeCUBCE7gWnm3cBXCBkpurzFjVRwC6Kld8lLaZ1Iv5vOcjvcQ==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dependencies:
-      '@types/minimatch': 3.0.5
-      array-differ: 4.0.0
-      array-union: 3.0.1
-      minimatch: 3.1.2
-    dev: false
 
   /mute-stream@0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
@@ -13150,6 +13048,7 @@ packages:
   /punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
+    requiresBuild: true
 
   /puppeteer-core@2.1.1:
     resolution: {integrity: sha512-n13AWriBMPYxnpbb6bnaY5YoY6rGj8vPLrz6CZF3o0qJNEwlcfJVxBzYZ0NJsQ21UbdJoijPCDrM++SUVEz7+w==}
@@ -15112,6 +15011,7 @@ packages:
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    requiresBuild: true
 
   /unicode-canonical-property-names-ecmascript@2.0.0:
     resolution: {integrity: sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ==}
@@ -15328,6 +15228,7 @@ packages:
 
   /uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+    requiresBuild: true
     dependencies:
       punycode: 2.3.1
 

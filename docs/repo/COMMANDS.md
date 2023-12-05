@@ -20,18 +20,6 @@ Visualize the project structure/dependencies:
 pnpm nx:graph
 ```
 
-List local packages that have changed since the last tagged release:
-
-```bash
-pnpm preview:changed
-```
-
-Diff all packages or a single package since the last release:
-
-```bash
-pnpm preview:diff
-```
-
 Preview the output result of the `version` command without actually executing it:
 
 **Note**: Follow the directions [here](SETUP.md#lerna) to set up a `GITHUB_TOKEN` environment variable in your operating system.

@@ -25,7 +25,9 @@
     {
       "matchUpdateTypes": ["major"],
       "assignees": ["waldronmatt"],
-      "reviewers": ["waldronmatt"]
+      "reviewers": ["waldronmatt"],
+      "minimumReleaseAge": "7 days",
+      "prCreation": "status-success"
     },
     {
       "groupSlug": "commitlint",

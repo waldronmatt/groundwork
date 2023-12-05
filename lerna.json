@@ -7,17 +7,21 @@
   "command": {
     "publish": {
       "cleanupTempFiles": true,
-      "registry": "https://registry.npmjs.org"
+      "registry": "https://registry.npmjs.org",
+      "removePackageFields": ["devDependencies", "scripts"]
     },
     "version": {
       "allowBranch": "main",
       "changelogIncludeCommitsClientLogin": " - by @%l",
       "conventionalCommits": true,
+      "changelogPreset": "angular",
       "createRelease": "github",
       "exact": true,
       "ignoreChanges": ["**/CHANGELOG.md", "**/node_modules/**"],
       "message": "chore(release): publish",
-      "syncWorkspaceLock": true
+      "syncWorkspaceLock": true,
+      "skip-bump-only-releases": true
     }
-  }
+  },
+  "changelogPreset": "conventional-changelog-conventionalcommits"
 }

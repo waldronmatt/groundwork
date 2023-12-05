@@ -50,8 +50,20 @@ Follow the directions [here](https://kodiakhq.com/docs/quickstart) to set up Kod
 
 Additionally create `wip` and `conflict` labels.
 
-## NX Distributed Task Execution
+## Initial Versioning and Publishing of Packages
 
-(Optional): Follow the directions [here](https://nx.dev/nx-cloud/recipes/set-up/monorepo-ci-github-actions#distributed-task-execution-with-nx-cloud) to set up NX DTE.
+Lerna does not support automation of initial version 1 packages. Follow the directions below for each of your packages to set up a manual version/changelog and publish:
 
-**Note**: This repo's CICD is not configured to support DTE.
+- Change the version in `package.json` for the packages from `0.x.x` to `1.0.0-1` as per this [comment](https://github.com/lerna/lerna/pull/2486#discussion_r389792137)
+- Graduate them to a release with `lerna version --conventional-graduate my-package,my-other-package` (will create release notes etc on GitHub)
+- Publish them to npm with `lerna publish from-package`
+
+## Advanced NX
+
+(Optional)
+
+- Follow the directions [here](https://nx.dev/nx-cloud/recipes/set-up/monorepo-ci-github-actions#distributed-task-execution-with-nx-cloud) to set up NX DTE
+
+- Follow the directions [here](https://nx.dev/ci/recipes/source-control-integration/github) to set up NX VCS
+
+**Note**: This repo's CICD is not configured to support DTE and VCS.
