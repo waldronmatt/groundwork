@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.16 (2023-12-05)
+
+### Bug Fixes
+
+* **deps:** update typescript-eslint monorepo to v6.13.2 ([#71](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/issues/71)) ([7315fb5](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/7315fb541e1ebdf56ceb8b0dc1f91905a93c4ff6)) - by @renovate[bot]
+
 ## 1.1.15 (2023-12-03)
 
 ### Bug Fixes
