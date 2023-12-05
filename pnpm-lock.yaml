@@ -18,11 +18,11 @@ importers:
         specifier: 18.4.3
         version: 18.4.3
       '@lerna-lite/changed':
-        specifier: 2.7.2
-        version: 2.7.2(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
+        specifier: 3.0.0
+        version: 3.0.0(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
       '@lerna-lite/cli':
         specifier: 2.7.2
-        version: 2.7.2(@lerna-lite/list@2.7.2)(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
+        version: 2.7.2(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
       '@lerna-lite/diff':
         specifier: 2.7.2
         version: 2.7.2(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
@@ -2646,62 +2646,20 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: true
 
-  /@lerna-lite/changed@2.7.2(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
-    resolution: {integrity: sha512-n6cEmGBGu1yPYS5FZ0M8XHaYZiB8aZYtPiD6FdO5mLF+uNlRqyTl8QsCmKZ4A5h0sHAEtThfxU/A/ppcD2OR8w==}
-    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
+  /@lerna-lite/changed@3.0.0(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
+    resolution: {integrity: sha512-LSqGwQ2Zes+YbvEc0j8Huamk+o69pYpwkM1M9G6jHWUDJffKLfwSGmwSdub+fAGRBY2JhK8q8sKXERDJa22lmQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/cli': 2.7.2(@lerna-lite/list@2.7.2)(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
-      '@lerna-lite/core': 2.7.2(typescript@5.3.2)
-      '@lerna-lite/list': 2.7.2(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
-      '@lerna-lite/listable': 2.7.2(typescript@5.3.2)
+      '@lerna-lite/cli': 3.0.0(@lerna-lite/list@3.0.0)(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
+      '@lerna-lite/core': 3.0.0(typescript@5.3.2)
+      '@lerna-lite/list': 3.0.0(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
+      '@lerna-lite/listable': 3.0.0(typescript@5.3.2)
     transitivePeerDependencies:
       - '@lerna-lite/exec'
       - '@lerna-lite/publish'
       - '@lerna-lite/run'
       - '@lerna-lite/version'
       - '@lerna-lite/watch'
-      - babel-plugin-macros
-      - supports-color
-      - typescript
-    dev: false
-
-  /@lerna-lite/cli@2.7.2(@lerna-lite/list@2.7.2)(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
-    resolution: {integrity: sha512-NDd4wx8bJUoK+A5MUvti+fTAoP8VHn3oaLMxEcJUd3l2Qxh8JjREzK1GfjQXBjr6esVqNDpPP+2jOSlDVuV4UQ==}
-    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
-    hasBin: true
-    peerDependencies:
-      '@lerna-lite/exec': '*'
-      '@lerna-lite/list': '*'
-      '@lerna-lite/publish': '*'
-      '@lerna-lite/run': '*'
-      '@lerna-lite/version': '*'
-      '@lerna-lite/watch': '*'
-    peerDependenciesMeta:
-      '@lerna-lite/exec':
-        optional: true
-      '@lerna-lite/list':
-        optional: true
-      '@lerna-lite/publish':
-        optional: true
-      '@lerna-lite/run':
-        optional: true
-      '@lerna-lite/version':
-        optional: true
-      '@lerna-lite/watch':
-        optional: true
-    dependencies:
-      '@lerna-lite/core': 2.7.2(typescript@5.3.2)
-      '@lerna-lite/init': 2.7.2(typescript@5.3.2)
-      '@lerna-lite/list': 2.7.2(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
-      '@lerna-lite/publish': 2.7.2(typescript@5.3.2)
-      '@lerna-lite/version': 3.0.0(@lerna-lite/publish@2.7.2)(typescript@5.3.2)
-      dedent: 1.5.1
-      dotenv: 16.3.1
-      import-local: 3.1.0
-      load-json-file: 7.0.1
-      npmlog: 7.0.1
-      yargs: 17.7.2
-    transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
       - typescript
@@ -2748,7 +2706,48 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/cli@3.0.0(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
+  /@lerna-lite/cli@2.7.2(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
+    resolution: {integrity: sha512-NDd4wx8bJUoK+A5MUvti+fTAoP8VHn3oaLMxEcJUd3l2Qxh8JjREzK1GfjQXBjr6esVqNDpPP+2jOSlDVuV4UQ==}
+    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
+    hasBin: true
+    peerDependencies:
+      '@lerna-lite/exec': '*'
+      '@lerna-lite/list': '*'
+      '@lerna-lite/publish': '*'
+      '@lerna-lite/run': '*'
+      '@lerna-lite/version': '*'
+      '@lerna-lite/watch': '*'
+    peerDependenciesMeta:
+      '@lerna-lite/exec':
+        optional: true
+      '@lerna-lite/list':
+        optional: true
+      '@lerna-lite/publish':
+        optional: true
+      '@lerna-lite/run':
+        optional: true
+      '@lerna-lite/version':
+        optional: true
+      '@lerna-lite/watch':
+        optional: true
+    dependencies:
+      '@lerna-lite/core': 2.7.2(typescript@5.3.2)
+      '@lerna-lite/init': 2.7.2(typescript@5.3.2)
+      '@lerna-lite/publish': 2.7.2(typescript@5.3.2)
+      '@lerna-lite/version': 3.0.0(@lerna-lite/publish@2.7.2)(typescript@5.3.2)
+      dedent: 1.5.1
+      dotenv: 16.3.1
+      import-local: 3.1.0
+      load-json-file: 7.0.1
+      npmlog: 7.0.1
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+      - typescript
+    dev: false
+
+  /@lerna-lite/cli@3.0.0(@lerna-lite/list@3.0.0)(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
     resolution: {integrity: sha512-vtTvFrBbG//4aKhGAQNSpFLNK6SWvQZzI4iCCLYJKfIARxdniV5clZ94BGNJmvmR29+8rUghL5qqvNhU1LfX7g==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -2775,6 +2774,7 @@ packages:
     dependencies:
       '@lerna-lite/core': 3.0.0(typescript@5.3.2)
       '@lerna-lite/init': 3.0.0(typescript@5.3.2)
+      '@lerna-lite/list': 3.0.0(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
       '@lerna-lite/publish': 2.7.2(typescript@5.3.2)
       '@lerna-lite/version': 3.0.0(@lerna-lite/publish@2.7.2)(typescript@5.3.2)
       dedent: 1.5.1
@@ -2865,7 +2865,7 @@ packages:
     resolution: {integrity: sha512-NEsHDCPHl6YWo+93NmwBsTsnFptQ7YSJIEmgzez7ZHCIYNGi800gW3zB8D1GU1bkIl8xA0QGCVC8oYlvuJJgow==}
     engines: {node: '>=16.15.0', npm: '>=8.5.0'}
     dependencies:
-      '@lerna-lite/cli': 2.7.2(@lerna-lite/list@2.7.2)(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
+      '@lerna-lite/cli': 2.7.2(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
       '@lerna-lite/core': 2.7.2(typescript@5.3.2)
     transitivePeerDependencies:
       - '@lerna-lite/exec'
@@ -2879,11 +2879,11 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/filter-packages@2.7.2(typescript@5.3.2):
-    resolution: {integrity: sha512-eCKCz8+7ZG5FxzHf+d1bNck/JIucjuma1fgTiYdlRpZoQWx9BtLJw4Ybd8hEcCKIMGXXJ//1WHoonwWXYeqcLQ==}
-    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
+  /@lerna-lite/filter-packages@3.0.0(typescript@5.3.2):
+    resolution: {integrity: sha512-E52/Mirj7MN+HQ+2ryFxGE5TuwVs0n7/xc44F3pgavE4RpNvXmioQ84I3u5wgWKKggOJYu9iHvsPG6jVN91cOA==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/core': 2.7.2(typescript@5.3.2)
+      '@lerna-lite/core': 3.0.0(typescript@5.3.2)
       multimatch: 6.0.0
       npmlog: 7.0.1
     transitivePeerDependencies:
@@ -2920,14 +2920,14 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/list@2.7.2(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
-    resolution: {integrity: sha512-n83avt9bPbh2VXL4pDhTLgmUiKYAkW80WDWcxFUWTcNz6vh7IAIMztmnYdmOum86X+WlXDocvr8BK4jK74XwzA==}
-    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
+  /@lerna-lite/list@3.0.0(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2):
+    resolution: {integrity: sha512-Xokte+Ob7OrCxXKlUwtGG0MilRMM2Es34QFojcyPDLrr38PSzF+ySwnKnmy870xKaMy0HWBu+Ne1/X+reXf8lg==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/cli': 2.7.2(@lerna-lite/list@2.7.2)(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
-      '@lerna-lite/core': 2.7.2(typescript@5.3.2)
-      '@lerna-lite/filter-packages': 2.7.2(typescript@5.3.2)
-      '@lerna-lite/listable': 2.7.2(typescript@5.3.2)
+      '@lerna-lite/cli': 3.0.0(@lerna-lite/list@3.0.0)(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
+      '@lerna-lite/core': 3.0.0(typescript@5.3.2)
+      '@lerna-lite/filter-packages': 3.0.0(typescript@5.3.2)
+      '@lerna-lite/listable': 3.0.0(typescript@5.3.2)
     transitivePeerDependencies:
       - '@lerna-lite/exec'
       - '@lerna-lite/publish'
@@ -2939,11 +2939,11 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/listable@2.7.2(typescript@5.3.2):
-    resolution: {integrity: sha512-So4vn056xl3JF+fHLJmui5qV3L02XU4p9L7NBondCVDluQNpzW92vhyLu6QMUG7qmPTT6sYLSsPciZSud0Ljfw==}
-    engines: {node: '>=16.15.0', npm: '>=8.5.0'}
+  /@lerna-lite/listable@3.0.0(typescript@5.3.2):
+    resolution: {integrity: sha512-fo85j/PdggN2kvR6SJuDCSjYyXgnB3sNA1DFY9OxdDKgASX7Chbwy9+X2D1qsQOTznR35wVMZ5kFi7HPW8HHJQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/core': 2.7.2(typescript@5.3.2)
+      '@lerna-lite/core': 3.0.0(typescript@5.3.2)
       chalk: 5.3.0
       columnify: 1.6.0
     transitivePeerDependencies:
@@ -3046,7 +3046,7 @@ packages:
     resolution: {integrity: sha512-YQ8RreieB/76GwKs95qrVoZhXVigEmcZMdqHIsMybFF44kLbVINbP71Yemb5TNpxw7gi6Uceb0sAgaRaFj6D9g==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/cli': 3.0.0(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
+      '@lerna-lite/cli': 3.0.0(@lerna-lite/list@3.0.0)(@lerna-lite/publish@2.7.2)(@lerna-lite/version@3.0.0)(typescript@5.3.2)
       '@lerna-lite/core': 3.0.0(typescript@5.3.2)
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.0.2
