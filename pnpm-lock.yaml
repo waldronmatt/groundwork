@@ -416,8 +416,8 @@ importers:
         specifier: 1.3.0
         version: 1.3.0(vite@5.0.5)
       vite-plugin-static-copy:
-        specifier: 0.17.1
-        version: 0.17.1(vite@5.0.5)
+        specifier: 1.0.0
+        version: 1.0.0(vite@5.0.5)
 
 packages:
 
@@ -8767,17 +8767,6 @@ packages:
       micromatch: 4.0.5
     dev: false
 
-  /fast-glob@3.3.1:
-    resolution: {integrity: sha512-kNFPyjhh5cKjrUltxs+wFx+ZkbRaxxmZ+X0ZU31SOsxCEtP9VPgtq2teZw1DebupL5GmDaNQ6yKMMVcM41iqDg==}
-    engines: {node: '>=8.6.0'}
-    dependencies:
-      '@nodelib/fs.stat': 2.0.5
-      '@nodelib/fs.walk': 1.2.8
-      glob-parent: 5.1.2
-      merge2: 1.4.1
-      micromatch: 4.0.5
-    dev: true
-
   /fast-glob@3.3.2:
     resolution: {integrity: sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow==}
     engines: {node: '>=8.6.0'}
@@ -15572,14 +15561,14 @@ packages:
       vite: 5.0.5(@types/node@18.18.8)
     dev: true
 
-  /vite-plugin-static-copy@0.17.1(vite@5.0.5):
-    resolution: {integrity: sha512-9h3iaVs0bqnqZOM5YHJXGHqdC5VAVlTZ2ARYsuNpzhEJUHmFqXY7dAK4ZFpjEQ4WLFKcaN8yWbczr81n01U4sQ==}
-    engines: {node: ^14.18.0 || >=16.0.0}
+  /vite-plugin-static-copy@1.0.0(vite@5.0.5):
+    resolution: {integrity: sha512-kMlrB3WDtC5GzFedNIPkpjnOAr8M11PfWOiUaONrUZ3AqogTsOmIhTt6w7Fh311wl8pN81ld7sfuOEogFJ9N8A==}
+    engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0
+      vite: ^5.0.0
     dependencies:
       chokidar: 3.5.3
-      fast-glob: 3.3.1
+      fast-glob: 3.3.2
       fs-extra: 11.1.1
       picocolors: 1.0.0
       vite: 5.0.5(@types/node@18.18.8)
