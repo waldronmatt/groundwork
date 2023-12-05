@@ -42,8 +42,8 @@ importers:
         specifier: 16.5.2
         version: 16.5.2
       '@secretlint/secretlint-rule-preset-recommend':
-        specifier: 7.2.0
-        version: 7.2.0
+        specifier: 8.0.0
+        version: 8.0.0
       commitizen:
         specifier: 4.3.0
         version: 4.3.0(typescript@5.3.2)
@@ -4309,8 +4309,8 @@ packages:
     resolution: {integrity: sha512-Moshp9CcFDGiDRibuEE/l3DwLH6Hc778AnVsFx0iRMz3sCkw65W64QMmRJloGln+Vb03jwYcerEdK+WfIw1a7Q==}
     dev: false
 
-  /@secretlint/secretlint-rule-preset-recommend@7.2.0:
-    resolution: {integrity: sha512-wEtTqV66j7rMuALKIIA6jWQc+GsjA6L998uCsUk6ma560u4E+HciKXt127UF6LJG+XdrgRx3Xfxg7mMYsVQ28w==}
+  /@secretlint/secretlint-rule-preset-recommend@8.0.0:
+    resolution: {integrity: sha512-V80PUPaUv+oDi00w+ZEE6YmxdNHoM0/CRWaAG/cC/wO7RIYMlHoZqsacMt3GEuzkOfAGnNENnOzDYsq08Z6u3Q==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dev: false
 
