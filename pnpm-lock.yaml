@@ -230,7 +230,7 @@ importers:
         specifier: 5.0.5
         version: 5.0.5
       serve:
-        specifier: ^14.2.1
+        specifier: 14.2.1
         version: 14.2.1
       storybook:
         specifier: 7.6.3
