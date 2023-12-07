@@ -1,6 +1,6 @@
 {
   "name": "demo-ui-storybook",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -28,7 +28,7 @@
     "eslint": "8.55.0",
     "eslint-config-custom": "workspace:*",
     "rimraf": "5.0.5",
-    "serve": "^14.2.1",
+    "serve": "14.2.1",
     "storybook": "7.6.3",
     "tsconfig-config": "workspace:*",
     "typescript": "5.3.2"
