@@ -1,0 +1,15 @@
+.input {
+  padding: 0.5rem;
+}
+
+.sm {
+  width: var(--demo-ui-width-sm);
+}
+
+.md {
+  width: var(--demo-ui-width-md);
+}
+
+.lg {
+  width: var(--demo-ui-width-lg);
+}

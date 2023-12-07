@@ -1,0 +1,15 @@
+.label {
+  font-weight: bolder;
+}
+
+.sm {
+  font-size: var(--demo-ui-font-size-sm);
+}
+
+.md {
+  font-size: var(--demo-ui-font-size-md);
+}
+
+.lg {
+  font-size: var(--demo-ui-font-size-lg);
+}

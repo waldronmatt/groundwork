@@ -2,4 +2,7 @@
   --demo-ui-font-size-sm: 10px;
   --demo-ui-font-size-md: 20px;
   --demo-ui-font-size-lg: 30px;
+  --demo-ui-width-sm: 100px;
+  --demo-ui-width-md: 250px;
+  --demo-ui-width-lg: 500px;
 }

@@ -1,15 +1,11 @@
 import type { Meta, StoryFn } from '@storybook/react';
 // we use `lib/` paths so we can get source files and have storybook
 // auto refresh (hmr) whenever we update our component source files
-import { Button, type ButtonProps } from '@waldronmatt/demo-ui/lib/index.js';
+import { Input, type InputProps } from '@waldronmatt/demo-ui/lib/index.js';
 
-const defaultProps = {
-  children: 'Hello World',
-};
-
-const meta: Meta<typeof Button> = {
-  title: 'Components/Button',
-  component: Button,
+const meta: Meta<typeof Input> = {
+  title: 'Components/Input',
+  component: Input,
   argTypes: {
     variant: {
       options: ['md', 'sm', 'lg'],
@@ -20,8 +16,8 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 
-const Template: StoryFn<typeof Button> = (args: ButtonProps) => {
-  return <Button {...args}></Button>;
+const Template: StoryFn<typeof Input> = (args: InputProps) => {
+  return <Input {...args}></Input>;
 };
 
 export const Default = Template.bind({});
@@ -29,16 +25,13 @@ export const Small = Template.bind({});
 export const Large = Template.bind({});
 
 Default.args = {
-  ...defaultProps,
   variant: 'md',
 };
 
 Small.args = {
-  ...defaultProps,
   variant: 'sm',
 };
 
 Large.args = {
-  ...defaultProps,
   variant: 'lg',
 };

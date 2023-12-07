@@ -1,6 +1,14 @@
 # Demo-UI
 
-A demo react component library.
+A demo react component library. Heavily inspired by [this article](https://dev.to/receter/how-to-create-a-react-component-library-using-vites-library-mode-4lma)
+
+## Features
+
+- Fully tree shakeable (`js` and `css`)
+- Compiled CSS modules (consuming app is not required to support css modules)
+- Bundle auto generates declaration files (`.d.ts`), source maps for declaration files (`.d.ts.map`), and source maps for JavaScript files (`.js.map`)
+- Submodules setup for explicit path referencing. Will automatically map to the right module system (`esm` and `cjs`)
+- Libraries are externalized for a lighter bundle size (`react`, `react/jsx-runtime`)
 
 ## Installation
 
@@ -12,17 +20,25 @@ pnpm add @waldronmatt/demo-ui
 
 ## Getting Started
 
-Used named imports to enable `js` and `css` treeshaking:
-
 ```tsx
 import { Button } from '@waldronmatt/demo-ui';
 
 function App() {
-  return (
-    <>
-      <Button>Hello</Button>
-    </>
-  );
+  return <Button>Hello World</Button>;
+}
+
+export default App;
+```
+
+## Explicit Paths
+
+You can also declare the path explicitly. Because we are using `import`, the path below will auto map to the `esm` bundle of this library:
+
+```tsx
+import { Button } from '@waldronmatt/demo-ui/components/Button/index.js';
+
+function App() {
+  return <Button>Hello</Button>;
 }
 
 export default App;
@@ -30,33 +46,37 @@ export default App;
 
 ## Styles
 
-This component library was tested and built using [the-new-css-reset](https://github.com/elad2412/the-new-css-reset) reset library and the [sanitize.css](https://github.com/csstools/sanitize.css/) normalize library. However, this library **does not** come with these libraries included. To use, import into your app's entrypoint above the app and component imports:
+This component library relies on a global css file via `styles/global.css` that provides token variables used by components.
 
-```bash
-pnpm add the-new-css-reset sanitize.css
-```
+This component library was tested using a custom css reset file via `styles/reset.css`.
+
+To use, import into your app's entrypoint above the app and component imports:
 
 ```tsx
-// reset styles
-import 'the-new-css-reset/css/reset.css';
-// normalize styles
-import 'sanitize.css';
-// app styles
-import './index.css';
-// add demo-ui global tokens
+// demo-ui css reset file
+import '@waldronmatt/demo-ui/styles/reset.css';
+// demo-ui global css variable tokens
 import '@waldronmatt/demo-ui/styles/global.css';
-// component and component styles
-import { Button } from '@waldronmatt/demo-ui/components/Button/index.js';
+// demo-ui Button component js and styles
+import { Button, type ButtonProps } from '@waldronmatt/demo-ui/components/Button/index.js';
+// your app-specific styles, etc.
+import './App.css';
 ```
-
-Alternatively, you can use your own css reset/normalize libraries.
 
 ## Monorepo Use
 
-For use inside this monorepo, we import via below so we can use directly from source files.
+For use inside this monorepo, we import by referencing the `lib` folder so we can map directly from source files.
+
+The advantage is that we can enable auto refresh (hmr) whenever we make updates to components.
 
 ```ts
-import { Button } from '@waldronmatt/demo-ui/lib/components/Button/index.js';
+import { Button, type ButtonProps } from '@waldronmatt/demo-ui/lib/index.js';
+```
+
+Explict paths:
+
+```ts
+import { Button, type ButtonProps } from '@waldronmatt/demo-ui/lib/components/Button/index.js';
 ```
 
 ## License

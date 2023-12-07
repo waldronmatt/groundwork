@@ -1,6 +1,4 @@
 import styles from './Button.module.css';
-// This vite config is configured to use aliases so you can do something like:
-// import { Link } from '@/Link/index.js';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;

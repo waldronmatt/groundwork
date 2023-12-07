@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-// we use `lib/` and `src/` paths so we can get source files and have storybook/vite
-// auto refresh (hmr) whenever we update our packages source files
+// demo-ui css reset file
+import '@waldronmatt/demo-ui/lib/styles/reset.css';
+// demo-ui global css variable tokens
 import '@waldronmatt/demo-ui/lib/styles/global.css';
-import { Button } from '@waldronmatt/demo-ui/lib/components/Button/index.js';
-// there is an issue using `pnpm stub` with this project
-// see https://github.com/unjs/jiti/issues/136
-import { addition } from '@waldronmatt/basic-math/src/addition.js';
-import { isEven } from '@waldronmatt/parity/src/even.js';
+// we use `lib/` and `src/` paths so we can have storybook/vite
+// auto refresh (hmr) whenever we update our packages' source files
+import { Button, Link } from '@waldronmatt/demo-ui';
+import { addition } from '@waldronmatt/basic-math/src/index.js';
+import { isEven } from '@waldronmatt/parity/src/index.js';
+// core styles/element styles applied across the project
+import './index.css';
+// app-specific styles
 import './App.css';
 
 function App() {
@@ -18,12 +22,12 @@ function App() {
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
+        <Link href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
+        </Link>
+        <Link href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        </Link>
       </div>
       <h1>Vite + React</h1>
       <div className="card">

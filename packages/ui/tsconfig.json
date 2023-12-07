@@ -8,6 +8,8 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["lib/components/*"]
-    }
+    },
+    "declaration": true,
+    "declarationMap": true
   }
 }
