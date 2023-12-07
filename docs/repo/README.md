@@ -1,11 +1,13 @@
 # Monorepo Documentation
 
-[Additional Commands](COMMANDS.md)
-
 [Architecture](ARCHITECTURE.md)
+
+[Lerna-Lite Commands](LERNALITE.md)
 
 [Monorepo Tooling](TOOLS.md)
 
-[Setup](SETUP.md)
+[NX Commands](NX.md)
 
-[Workspace Commands](WORKSPACE.md)
+[PNPM Commands](PNPM.md)
+
+[Setup](SETUP.md)

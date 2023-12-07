@@ -1,4 +1,4 @@
-# Workspace Commands
+# PNPM Workspace Commands
 
 ## Add Packages
 

@@ -22,8 +22,6 @@ Repository setup can be [found here](docs/repo/SETUP.md).
 
 ## Getting Started
 
-**Note**: Append `--skip-nx-cache` to disable cache for a specific command. Example: `npx nx run-many -t test --skip-nx-cache`
-
 Commit changes using conventional changelog:
 
 ```bash
@@ -84,6 +82,28 @@ Starts local servers that serves the `build` outputs from their respective outpu
 
 ```bash
 pnpm preview
+```
+
+## Additional Commands
+
+Delete workspace root `node_modules` and `pnpm-lock.yaml` files:
+
+**Note**: Follow the directions [here](SETUP.md#global-packages) to install `rimraf` globally so errors aren't thrown.
+
+```bash
+pnpm delete
+```
+
+Check for secrets, format files, lint dependency versions, validate published packages, and verify monorepo best practices:
+
+```bash
+pnpm lint:mr
+```
+
+Visualize the project structure/dependencies:
+
+```bash
+pnpm nx:graph
 ```
 
 ## Additional Documentation
