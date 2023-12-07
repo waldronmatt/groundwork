@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.5.0 (2023-12-07)
+
+### Features
+
+* **docs:** add nx commands, rename files, reorganize content, and update links ([f75e7db](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/f75e7dbc710306f8c532eaab1f0a12c84abe3350)) - by @waldronmatt
+
 ## 1.4.3 (2023-12-05)
 
 ### Bug Fixes

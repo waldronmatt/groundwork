@@ -1,6 +1,6 @@
 {
   "name": "@waldronmatt/parity",
-  "version": "2.0.24",
+  "version": "2.0.25",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",

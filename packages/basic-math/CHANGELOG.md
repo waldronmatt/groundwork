@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.25 (2023-12-07)
+
+### Bug Fixes
+
+* **packages:** remove commonjs main field from package.json ([fecfcf2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/fecfcf2fd2ad0e625344a78ae8960fbfbd042e7a)) - by @waldronmatt
+
 ## [2.0.24](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/basic-math@2.0.23...@waldronmatt/basic-math@2.0.24) (2023-12-05)
 
 **Note:** Version bump only for package @waldronmatt/basic-math
