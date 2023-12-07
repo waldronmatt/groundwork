@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2023-12-07)
+
+### Features
+
+* **global:** add cjs support to component lib, upgrade submodules support, update apps ([9436315](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9436315a08f72464283ebbc449385c20ce3187da)) - by @waldronmatt
+
 ## [1.1.32](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.1.31...vite-project@1.1.32) (2023-12-05)
 
 **Note:** Version bump only for package vite-project

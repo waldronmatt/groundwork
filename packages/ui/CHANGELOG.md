@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-12-07)
+
+### Features
+
+* **global:** add cjs support to component lib, upgrade submodules support, update apps ([9436315](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9436315a08f72464283ebbc449385c20ce3187da)) - by @waldronmatt
+
 ## [2.0.14](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@2.0.13...@waldronmatt/demo-ui@2.0.14) (2023-12-05)
 
 **Note:** Version bump only for package @waldronmatt/demo-ui
