@@ -27,11 +27,3 @@ Remove a local package from another local package:
 ```bash
 pnpm remove eslint-config-custom --filter vite-project
 ```
-
-## Run Commands
-
-Install / run commands for a specific local package:
-
-```bash
-pnpm dev --filter vite-project
-```
