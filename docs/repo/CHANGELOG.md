@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/monorepo-docs@1.5.0...monorepo-docs@1.5.1) (2023-12-07)
+
+### Bug Fixes
+
+* **docs:** remove run command section in pnpm ([5e7ee7c](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/5e7ee7c2363ed86e9a0b9ab20df8f17b15771bb1)) - by @waldronmatt
+
 # 1.5.0 (2023-12-07)
 
 ### Features
