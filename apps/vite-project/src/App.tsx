@@ -7,7 +7,7 @@ import '@waldronmatt/demo-ui/lib/styles/reset.css';
 import '@waldronmatt/demo-ui/lib/styles/global.css';
 // we use `lib/` and `src/` paths so we can have storybook/vite
 // auto refresh (hmr) whenever we update our packages' source files
-import { Button, Link } from '@waldronmatt/demo-ui';
+import { Button, Link } from '@waldronmatt/demo-ui/lib/index.js';
 import { addition } from '@waldronmatt/basic-math/src/index.js';
 import { isEven } from '@waldronmatt/parity/src/index.js';
 // core styles/element styles applied across the project

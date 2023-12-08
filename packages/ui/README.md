@@ -18,10 +18,18 @@ A demo react component library. Heavily inspired by [this article](https://dev.t
 Install dependencies:
 
 ```bash
-pnpm add @waldronmatt/demo-ui
+pnpm add @waldronmatt/demo-ui react react-dom
+```
+
+Install type definitions:
+
+```bash
+pnpm add -D @types/react @types/react-dom
 ```
 
 ## Getting Started
+
+`MyApp.tsx`
 
 ```tsx
 import { Button } from '@waldronmatt/demo-ui';
@@ -36,6 +44,8 @@ export default App;
 ## Explicit Paths
 
 You can also declare the path explicitly. Because we are using `import`, the path below will auto map to the `esm` bundle of this library:
+
+`MyApp.tsx`
 
 ```tsx
 import { Button } from '@waldronmatt/demo-ui/components/Button/index.js';
@@ -55,6 +65,8 @@ This component library was tested using a custom css reset file via `styles/rese
 
 To use, import into your app's entrypoint above the app and component imports:
 
+`MyApp.tsx`
+
 ```tsx
 // demo-ui css reset file
 import '@waldronmatt/demo-ui/styles/reset.css';
@@ -63,14 +75,20 @@ import '@waldronmatt/demo-ui/styles/global.css';
 // demo-ui Button component js and styles
 import { Button, type ButtonProps } from '@waldronmatt/demo-ui/components/Button/index.js';
 // your app-specific styles, etc.
-import './App.css';
+import './MyApp.css';
 ```
 
 ## Monorepo Use
 
 For use inside this monorepo, we import by referencing the `lib` subpath export and install via the `workspace:` protocol.
 
-The advantage is that we can enable auto refresh (hmr) whenever we make updates to components.
+The advantage is that we can enable auto refresh (hmr) whenever we make updates to the component library.
+
+```bash
+pnpm add @waldronmatt/demo-ui --workspace --filter myapp
+```
+
+`MyApp.tsx`
 
 ```ts
 import { Button, type ButtonProps } from '@waldronmatt/demo-ui/lib/index.js';
