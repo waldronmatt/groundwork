@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@2.1.1...@waldronmatt/demo-ui@2.1.2) (2023-12-08)
+
+### Bug Fixes
+
+* **global:** add lib path for components in app, update documentation ([c6bd3d8](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/c6bd3d8940a4cf59a3fbe0749ece5240b5f061d2)) - by @waldronmatt
+
 ## 2.1.1 (2023-12-08)
 
 ### Bug Fixes

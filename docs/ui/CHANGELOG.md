@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.1.3...demo-ui-storybook@1.1.4) (2023-12-08)
+
+**Note:** Version bump only for package demo-ui-storybook
+
 ## 1.1.3 (2023-12-08)
 
 **Note:** Version bump only for package demo-ui-storybook

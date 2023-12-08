@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.2.2...vite-project@1.2.3) (2023-12-08)
+
+### Bug Fixes
+
+* **global:** add lib path for components in app, update documentation ([c6bd3d8](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/c6bd3d8940a4cf59a3fbe0749ece5240b5f061d2)) - by @waldronmatt
+
 ## 1.2.2 (2023-12-08)
 
 **Note:** Version bump only for package vite-project
