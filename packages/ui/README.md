@@ -1,13 +1,16 @@
 # Demo-UI
 
-A demo react component library. Heavily inspired by [this article](https://dev.to/receter/how-to-create-a-react-component-library-using-vites-library-mode-4lma)
+A demo react component library. Heavily inspired by [this article](https://dev.to/receter/how-to-create-a-react-component-library-using-vites-library-mode-4lma).
 
 ## Features
 
 - Fully tree shakeable (`js` and `css`)
+- Outputs both `esm` and `cjs` bundles
+- Component library is written in TypeScript
 - Compiled CSS modules (consuming app is not required to support css modules)
 - Bundle auto generates declaration files (`.d.ts`), source maps for declaration files (`.d.ts.map`), and source maps for JavaScript files (`.js.map`)
-- Submodules setup for explicit path referencing. Will automatically map to the right module system (`esm` and `cjs`)
+- Subpath exports for explicit path referencing. Will automatically map to the right module system (`esm` and `cjs`)
+- Component updates auto reflect (hmr) in monorepos when referenced via the `lib` subpath export and installed via the `workspace:` protocol
 - Libraries are externalized for a lighter bundle size (`react`, `react/jsx-runtime`)
 
 ## Installation
@@ -65,7 +68,7 @@ import './App.css';
 
 ## Monorepo Use
 
-For use inside this monorepo, we import by referencing the `lib` folder so we can map directly from source files.
+For use inside this monorepo, we import by referencing the `lib` subpath export and install via the `workspace:` protocol.
 
 The advantage is that we can enable auto refresh (hmr) whenever we make updates to components.
 
