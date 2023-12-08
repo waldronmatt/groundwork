@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.1 (2023-12-08)
+
+### Bug Fixes
+
+* **demo-ui:** update subpath export references, add to features ([4878cc7](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/4878cc7b4b3be3cfe8e78e4126d4e9c4bb316eb8)) - by @waldronmatt
+
 # 2.1.0 (2023-12-07)
 
 ### Features
