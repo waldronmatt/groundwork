@@ -48,7 +48,7 @@ Clean up bundle artifacts:
 pnpm clean
 ```
 
-Starts the local server that serves the `build` output from `dist/` folder:
+Starts the [local server](http://localhost:3000/) that serves the `build` output from `dist/` folder:
 
 **Note**: Run `pnpm build` first
 

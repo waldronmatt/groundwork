@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
-import alias from '@rollup/plugin-alias';
 import { extname, relative, resolve } from 'path';
 import { fileURLToPath } from 'node:url';
 import { glob } from 'glob';
@@ -10,7 +9,6 @@ import react from '@vitejs/plugin-react-swc';
 
 export default defineConfig({
   plugins: [
-    alias({ entries: [{ find: '@', replacement: '/lib/components' }] }),
     react(),
     // enables output dist to match the source directory structure
     //
@@ -29,7 +27,6 @@ export default defineConfig({
     // generates a separate CSS file for each chunk and includes an import statement
     // at the beginning of each chunk's output file
     libInjectCss({
-      formats: ['es', 'cjs'],
       entry: {
         entry: resolve(__dirname, 'lib/index.ts'),
       },
