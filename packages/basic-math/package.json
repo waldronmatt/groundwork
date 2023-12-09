@@ -53,7 +53,6 @@
     "tsconfig-config": "workspace:*",
     "tslib": "2.6.2",
     "tsup": "8.0.1",
-    "turbo": "1.10.16",
     "typescript": "5.3.2"
   }
 }
