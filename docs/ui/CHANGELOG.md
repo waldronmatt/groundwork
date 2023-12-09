@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.1.4...demo-ui-storybook@1.2.0) (2023-12-09)
+
+### Features
+
+* **global:** add LabeledInput component to test deduping of css ([3c76396](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/3c76396c2c7bd0383eafaef0955ad3b50f8d3ee0)) - by @waldronmatt
+
 ## [1.1.4](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.1.3...demo-ui-storybook@1.1.4) (2023-12-08)
 
 **Note:** Version bump only for package demo-ui-storybook

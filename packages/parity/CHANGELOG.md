@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.26 (2023-12-09)
+
+### Bug Fixes
+
+* **package.json:** remove unused turbo dep ([2ef3eaa](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/2ef3eaaa1b32bf6ae487956fe8d212fd600a9a97)) - by @waldronmatt
+
 ## 2.0.25 (2023-12-07)
 
 ### Bug Fixes
