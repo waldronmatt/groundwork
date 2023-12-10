@@ -89,14 +89,7 @@
     {
       "groupName": "testing-library",
       "groupSlug": "testing-library",
-      "matchPackageNames": ["@types/testing-library__jest-dom"],
       "matchPackagePatterns": ["^@testing-library/"]
-    },
-    {
-      "groupName": "types",
-      "groupSlug": "types",
-      "excludePackageNames": ["@types/jest", "@types/node", "@types/react", "@types/testing-library__jest-dom"],
-      "matchPackageNames": ["@types/*"]
     },
     {
       "groupName": "vite",
