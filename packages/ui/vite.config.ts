@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
 import { viteStaticCopy } from 'vite-plugin-static-copy';
 import { extname, relative, resolve } from 'path';
 import { fileURLToPath } from 'node:url';
 import { glob } from 'glob';
-import react from '@vitejs/plugin-react-swc';
 
 export default defineConfig({
   plugins: [
@@ -21,7 +21,7 @@ export default defineConfig({
     // this is redudant since we are using dts plugin below to do this
     dts({
       // exclude test files so dts plugin doesn't generate source maps for them
-      exclude: ['lib/**/*.spec.tsx'],
+      exclude: ['lib/**/*.spec.tsx', 'lib/__mocks__/*'],
       outDir: ['dist/types'],
     }),
     // generates a separate CSS file for each chunk and includes an import statement
@@ -82,7 +82,7 @@ export default defineConfig({
         glob
           .sync('lib/**/*.{ts,tsx}', {
             // we don't want test files included
-            ignore: ['lib/**/*.spec.tsx'],
+            ignore: ['lib/**/*.spec.tsx', 'lib/__mocks__/*'],
           })
           .map((file) => [
             // The name of the entry point

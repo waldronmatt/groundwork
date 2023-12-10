@@ -1,12 +1,52 @@
-import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Button } from './index.js';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Button, type ButtonProps } from './index.js';
 
-test('loads and displays greeting', () => {
-  render(<Button>Hello World</Button>);
-  expect(screen.getByRole('button')).toHaveAttribute('type', 'button');
-  // css module class names get randomized on prod build,
-  // works only when running tests against source files
-  // expect(screen.getByRole('button')).toHaveClass('button md');
-  expect(screen.getByRole('button')).toBeEnabled();
+describe('Button component', () => {
+  const testText = 'Test Button';
+
+  const defaultProps: ButtonProps = {
+    children: testText,
+  };
+
+  it('renders with default props', () => {
+    render(<Button {...defaultProps} />);
+    const buttonElement = screen.getByText(testText);
+
+    expect(buttonElement).toBeInTheDocument();
+    expect(buttonElement.tagName).toBe('BUTTON');
+    expect(buttonElement).toHaveClass('button');
+    expect(buttonElement).toHaveClass('md');
+    expect(buttonElement).toHaveAttribute('type', 'button');
+  });
+
+  it('renders with sm variant', () => {
+    render(<Button {...defaultProps} variant={'sm'} />);
+    const buttonElement = screen.getByText(testText);
+
+    expect(buttonElement).toHaveClass('sm');
+  });
+
+  it('renders with lg variant', () => {
+    render(<Button {...defaultProps} variant={'lg'} />);
+    const buttonElement = screen.getByText(testText);
+
+    expect(buttonElement).toHaveClass('lg');
+  });
+
+  it('handles native props', () => {
+    render(<Button {...defaultProps} disabled />);
+    const buttonElement = screen.getByText(testText);
+
+    expect(buttonElement).toBeDisabled();
+  });
+
+  it('handles click event', () => {
+    const onClickMock = jest.fn();
+    render(<Button {...defaultProps} onClick={onClickMock} />);
+    const buttonElement = screen.getByText(testText);
+    fireEvent.click(buttonElement);
+
+    expect(onClickMock).toHaveBeenCalledTimes(1);
+  });
 });

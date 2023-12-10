@@ -2,7 +2,6 @@ import styles from './Label.module.css';
 
 export interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
   children: React.ReactNode;
-  for?: string;
   variant?: string;
 }
 
