@@ -8,7 +8,7 @@
     "default": {
       "runner": "nx-cloud",
       "options": {
-        "cacheableOperations": ["lint:ts", "lint", "test", "test:prod", "build:dtsmaps", "build:src", "build"]
+        "cacheableOperations": ["lint", "test", "build", "build:dtsmaps", "build:src"]
       }
     }
   },
@@ -25,10 +25,6 @@
     },
     "test": {
       "inputs": ["{projectRoot}/src/**/*.ts", "{projectRoot}/src/**/*.tsx"],
-      "outputs": ["{projectRoot}/coverage"]
-    },
-    "test:prod": {
-      "dependsOn": ["^test:prod"],
       "outputs": ["{projectRoot}/coverage"]
     },
     "build:src": {

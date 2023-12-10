@@ -54,14 +54,6 @@ Run tests in watch mode:
 pnpm test:watch
 ```
 
-Run tests against compiled files:
-
-**Note**: Run `pnpm build` first
-
-```bash
-pnpm test:prod
-```
-
 Compile files and build bundle:
 
 **Note**: It is recommended to run `pnpm clean` before `pnpm build`
