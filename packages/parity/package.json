@@ -21,7 +21,6 @@
     "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "test:prod": "cross-env TEST_ENV=prod NODE_OPTIONS=--experimental-vm-modules jest",
     "build:dtsmaps": "tsc --project tsconfig.build.json",
     "build:src": "tsup src/*[!.spec].ts --format esm --sourcemap --onSuccess \"pnpm build:dtsmaps\"",
     "build": "pnpm build:src",
@@ -43,7 +42,6 @@
   "homepage": "https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/tree/main/packages/parity#readme",
   "devDependencies": {
     "@types/jest": "29.5.10",
-    "cross-env": "7.0.3",
     "esbuild": "0.19.8",
     "eslint": "8.55.0",
     "eslint-config-custom": "workspace:*",
