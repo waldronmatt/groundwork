@@ -1,6 +1,4 @@
 import type { Meta, StoryFn } from '@storybook/react';
-// we use `lib/` paths so we can get source files and have storybook
-// auto refresh (hmr) whenever we update our component source files
 import { Label, type LabelProps } from '@waldronmatt/demo-ui/lib/index.js';
 
 const defaultProps = {

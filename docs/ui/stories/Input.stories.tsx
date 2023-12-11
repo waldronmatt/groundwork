@@ -1,6 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react';
-// we use `lib/` paths so we can get source files and have storybook
-// auto refresh (hmr) whenever we update our component source files
+import { action } from '@storybook/addon-actions';
 import { Input, type InputProps } from '@waldronmatt/demo-ui/lib/index.js';
 
 const meta: Meta<typeof Input> = {
@@ -16,8 +15,10 @@ const meta: Meta<typeof Input> = {
 
 export default meta;
 
+const onChangeHandler = action('input-change');
+
 const Template: StoryFn<typeof Input> = (args: InputProps) => {
-  return <Input {...args}></Input>;
+  return <Input {...args} onChange={onChangeHandler} />;
 };
 
 export const Default = Template.bind({});

@@ -16,12 +16,13 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "7.6.3",
     "@storybook/addon-actions": "7.6.3",
-    "@storybook/addon-docs": "7.6.3",
     "@storybook/addon-essentials": "7.6.3",
-    "@storybook/addon-links": "7.6.3",
+    "@storybook/blocks": "7.6.3",
     "@storybook/react": "7.6.3",
     "@storybook/react-vite": "7.6.3",
+    "@storybook/theming": "7.6.3",
     "@storybook/types": "7.6.3",
     "@types/react": "18.2.42",
     "@types/react-dom": "18.2.17",

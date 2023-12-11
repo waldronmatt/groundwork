@@ -1,6 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react';
-// we use `lib/` paths so we can get source files and have storybook
-// auto refresh (hmr) whenever we update our component source files
+import { action } from '@storybook/addon-actions';
 import { Button, type ButtonProps } from '@waldronmatt/demo-ui/lib/index.js';
 
 const defaultProps = {
@@ -20,8 +19,10 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 
+const onClickHandler = action('button-click');
+
 const Template: StoryFn<typeof Button> = (args: ButtonProps) => {
-  return <Button {...args}></Button>;
+  return <Button {...args} onClick={onClickHandler} />;
 };
 
 export const Default = Template.bind({});
