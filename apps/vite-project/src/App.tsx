@@ -5,13 +5,9 @@ import viteLogo from '/vite.svg';
 import '@waldronmatt/demo-ui/lib/styles/reset.css';
 // demo-ui global css variable tokens
 import '@waldronmatt/demo-ui/lib/styles/global.css';
-// we use `lib/` and `src/` paths so we can have storybook/vite
-// auto refresh (hmr) whenever we update our packages' source files
 import { Button, Link } from '@waldronmatt/demo-ui/lib/index.js';
 import { addition } from '@waldronmatt/basic-math/src/index.js';
 import { isEven } from '@waldronmatt/parity/src/index.js';
-// core styles/element styles applied across the project
-import './index.css';
 // app-specific styles
 import './App.css';
 
