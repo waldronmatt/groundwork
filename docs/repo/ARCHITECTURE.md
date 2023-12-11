@@ -38,3 +38,21 @@ pnpm-workspace.yaml
 ## Versioning
 
 All packages including `peerDependencies` are configured to use exact versions of packages. I prefer to have exact package versions to simplify debugging and reduce the likelihood of compatibility issues. I use `renovate` to automatically handle version updates.
+
+## Package Testing
+
+Internal packages used in other packages are imported by referencing the `lib` / `src` subpath export and installed via `pnpm`'s `workspace:` protocol.
+
+For example, I have a react component library package that I reference in the storybook and vite-project apps. If I make updates to the react library, I want those changes to automatically refresh (hmr) in those apps. The `lib` / `src` subpath exports allow us to link to the source files so we can avoid rebuilding the component library to see changes.
+
+There are other ways to do this such as symlinking and/or stubbing via third-party packages. Alternatively, some may choose to refernce them via a registry (`npm`) with specified versions so that changes do not break other apps in the monorepo. This may be preferred for larger teams and organizations.
+
+```bash
+pnpm add @waldronmatt/demo-ui --workspace --filter vite-project
+```
+
+`apps/vite-project/src/App.tsx`
+
+```ts
+import { Button, type ButtonProps } from '@waldronmatt/demo-ui/lib/index.js';
+```

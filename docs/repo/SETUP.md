@@ -50,12 +50,12 @@ Follow the directions [here](https://kodiakhq.com/docs/quickstart) to set up Kod
 
 Additionally create `wip` and `conflict` labels.
 
-## Initial Versioning and Publishing of Packages
+## Initial v1 Package Release
 
 Lerna does not support automation of initial version 1 packages. Follow the directions below for each of your packages to set up a manual version/changelog and publish:
 
-- Change the version in `package.json` for the packages from `0.x.x` to `1.0.0-1` as per this [comment](https://github.com/lerna/lerna/pull/2486#discussion_r389792137)
-- Graduate them to a release with `lerna version --conventional-graduate my-package,my-other-package` (will create release notes etc on GitHub)
+- Add a commit (type of `chore`) changing the version in `package.json` for the packages from `0.x.x` to `1.0.0-1` as per this [comment](https://github.com/lerna/lerna/pull/2486#discussion_r389792137)
+- Graduate them to a release with `lerna version --conventional-graduate my-package` (will create release notes etc on GitHub)
 - Publish them to npm with `lerna publish from-package`
 
 ## Advanced NX
