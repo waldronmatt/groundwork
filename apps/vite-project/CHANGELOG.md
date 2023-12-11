@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.2.4...vite-project@1.2.5) (2023-12-11)
+
+### Bug Fixes
+
+* **vite-project:** remove extra css ([9e4a8ce](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9e4a8ced6829ca85175eea588256b2c7a8b20ccd)) - by @waldronmatt
+
 ## [1.2.4](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/vite-project@1.2.3...vite-project@1.2.4) (2023-12-09)
 
 **Note:** Version bump only for package vite-project

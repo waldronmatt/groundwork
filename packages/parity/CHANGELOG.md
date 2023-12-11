@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.27](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@2.0.26...@waldronmatt/parity@2.0.27) (2023-12-11)
+
+### Bug Fixes
+
+* **packages:** remove cross-env and jest test on prod script, remove unused config file and refs ([01a7098](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/01a70988f3bc25d0a934a9a549f97467643e1c02)) - by @waldronmatt
+
 ## 2.0.26 (2023-12-09)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@2.2.0...@waldronmatt/demo-ui@2.3.0) (2023-12-11)
+
+### Features
+
+* **demo-ui:** better tests, remove test on prod output ([f8c06a7](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/f8c06a7aef4a4c9653700d3f82511af32268504d)) - by @waldronmatt
+
 # [2.2.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@2.1.2...@waldronmatt/demo-ui@2.2.0) (2023-12-09)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.2.0...demo-ui-storybook@1.3.0) (2023-12-11)
+
+### Features
+
+* **ui:** add storybook addons, add landing page and mdx pages ([789bdf0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/789bdf0576e44e644836b94335daf3d16199f300)) - by @waldronmatt
+
 # [1.2.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.1.4...demo-ui-storybook@1.2.0) (2023-12-09)
 
 ### Features

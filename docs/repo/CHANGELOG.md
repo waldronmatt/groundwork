@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.2 (2023-12-11)
+
+### Bug Fixes
+
+* **repo:** add section on package testing using subpaths and update lerna v1 description ([6665772](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/66657724fe58c81c894b43de98b444656d46e8f5)) - by @waldronmatt
+
 ## [1.5.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/monorepo-docs@1.5.0...monorepo-docs@1.5.1) (2023-12-07)
 
 ### Bug Fixes
