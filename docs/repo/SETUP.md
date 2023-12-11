@@ -52,15 +52,14 @@ Additionally create `wip` and `conflict` labels.
 
 ## Initial v1 Package Release
 
-Lerna does not support automation of initial version 1 packages. Follow the directions below for each of your packages to set up a manual version/changelog and publish:
+Lerna does not support automation of initial version 1 packages. Follow the directions below to set up a manual version/changelog and publish:
 
-- Add a commit (type of `chore`) changing the version in `package.json` for the packages from `0.x.x` to `1.0.0-1` as per this [comment](https://github.com/lerna/lerna/pull/2486#discussion_r389792137)
+- Add a commit (type of `chore`) changing the version in `package.json` for your package from `0.x.x` to `1.0.0-1` as per this [comment](https://github.com/lerna/lerna/pull/2486#discussion_r389792137)
 - Graduate them to a release with `lerna version --conventional-graduate my-package` (will create release notes etc on GitHub)
-- Publish them to npm with `lerna publish from-package`
+- Publish them to NPM with `lerna publish from-package`
+- Repeat the process for your other packages
 
 ## Advanced NX
-
-(Optional)
 
 - Follow the directions [here](https://nx.dev/nx-cloud/recipes/set-up/monorepo-ci-github-actions#distributed-task-execution-with-nx-cloud) to set up NX DTE
 

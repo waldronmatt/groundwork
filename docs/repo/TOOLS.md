@@ -8,15 +8,7 @@
 
 [`lerna-lite`](https://github.com/lerna-lite/lerna-lite): Publisher that supports conventional commits for versioning and is smaller and more lightweight than Lerna
 
-## Workspace Tooling
-
-[`husky`](https://github.com/typicode/husky): For git hooks
-
-[`lint-staged`](https://github.com/lint-staged/lint-staged): For running linters against staged git files
-
-[`cz-conventional-changelog`](https://github.com/commitizen/cz-conventional-changelog): Prompts for the `conventional changelog` standard
-
-[`commitizen`](https://github.com/commitizen/cz-cli): For enabling `cz-conventional-changelog` via the command line
+## Linters
 
 [`commitlint`](https://github.com/conventional-changelog/commitlint): For linting commit messages
 
@@ -29,6 +21,18 @@
 [`publint`](https://github.com/bluwy/publint): For linting package publishing best practices
 
 [`manypkg`](https://github.com/Thinkmill/manypkg): For linting monorepo best practices
+
+## Other Tools
+
+[`husky`](https://github.com/typicode/husky): For git hooks
+
+[`lint-staged`](https://github.com/lint-staged/lint-staged): For running linters against staged git files
+
+[`cz-conventional-changelog`](https://github.com/commitizen/cz-conventional-changelog): Prompts for the `conventional changelog` standard
+
+[`commitizen`](https://github.com/commitizen/cz-cli): For enabling `cz-conventional-changelog` via the command line
+
+## CICD
 
 [`github actions`](https://docs.github.com/en/actions): For CI/CD
 

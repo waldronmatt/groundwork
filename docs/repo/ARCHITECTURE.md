@@ -45,7 +45,7 @@ Internal packages used in other packages are imported by referencing the `lib` /
 
 For example, I have a react component library package that I reference in the storybook and vite-project apps. If I make updates to the react library, I want those changes to automatically refresh (hmr) in those apps. The `lib` / `src` subpath exports allow us to link to the source files so we can avoid rebuilding the component library to see changes.
 
-There are other ways to do this such as symlinking and/or stubbing via third-party packages. Alternatively, some may choose to refernce them via a registry (`npm`) with specified versions so that changes do not break other apps in the monorepo. This may be preferred for larger teams and organizations.
+**Example**:
 
 ```bash
 pnpm add @waldronmatt/demo-ui --workspace --filter vite-project
@@ -56,3 +56,5 @@ pnpm add @waldronmatt/demo-ui --workspace --filter vite-project
 ```ts
 import { Button, type ButtonProps } from '@waldronmatt/demo-ui/lib/index.js';
 ```
+
+There are other ways to do this such as symlinking and/or stubbing via third-party packages, but I personally ran into issues using these other methods. Alternatively, some may choose to refernce them via a registry (`npm`) with specified versions so that changes do not break other apps in the monorepo. This may be preferred for larger teams and organizations.
