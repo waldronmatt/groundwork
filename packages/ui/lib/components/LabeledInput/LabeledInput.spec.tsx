@@ -26,10 +26,10 @@ describe('LabeledInput component', () => {
   };
 
   test('renders with label and input components', () => {
-    render(<LabeledInput {...defaultProps} id={testId} />);
+    render(<LabeledInput {...defaultProps} />);
 
-    expect(mockLabel).toHaveBeenCalledWith(expect.objectContaining({ htmlFor: 'testId' }), {});
-    expect(mockInput).toHaveBeenCalledWith(expect.objectContaining({ id: 'testId', type: 'text' }), {});
+    expect(mockLabel).toHaveBeenCalledWith(expect.objectContaining({ htmlFor: testId }), {});
+    expect(mockInput).toHaveBeenCalledWith(expect.objectContaining({ id: testId, type: 'text' }), {});
 
     const labeledInputElement = screen.getByText(testText);
     expect(labeledInputElement).toBeInTheDocument();

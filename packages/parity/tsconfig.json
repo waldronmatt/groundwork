@@ -4,9 +4,6 @@
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist", "coverage"],
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "baseUrl": "./"
   }
 }

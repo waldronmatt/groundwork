@@ -37,7 +37,7 @@ describe('Input component', () => {
     const onChangeMock = jest.fn();
     render(<Input onChange={onChangeMock} />);
     const inputElement = screen.getByRole('textbox');
-    const eventTargetObj = { target: { value: 'Hello, World!' } };
+    const eventTargetObj = { target: { value: 'Hello World!' } };
     fireEvent.change(inputElement, eventTargetObj);
 
     expect(onChangeMock).toHaveBeenCalledTimes(1);

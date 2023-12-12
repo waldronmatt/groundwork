@@ -1,8 +1,10 @@
 import styles from './LabeledInput.module.css';
-import { Label } from '../Label/index.js';
-import { Input } from '../Input/index.js';
+import { Label, type LabelProps } from '../Label/index.js';
+import { Input, type InputProps } from '../Input/index.js';
 
-export interface LabeledInputProps {
+type CombinedChildrenProps = LabelProps & InputProps;
+
+export interface LabeledInputProps extends CombinedChildrenProps {
   children: React.ReactNode;
   id: string;
 }

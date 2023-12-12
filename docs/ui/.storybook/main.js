@@ -25,6 +25,8 @@ const config = {
   viteFinal(config) {
     return {
       ...config,
+      // this fixed the build issues using alias
+      // https://github.com/storybookjs/storybook/issues/18920#issuecomment-1310273755
       define: {
         'process.env.NODE_DEBUG': false,
       },

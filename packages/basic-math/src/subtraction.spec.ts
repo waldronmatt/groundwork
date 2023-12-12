@@ -1,4 +1,4 @@
-import { subtraction } from '@/subtraction.js';
+import { subtraction } from './subtraction.js';
 
 test('Value with no arguments passed should be zero', () => {
   expect(subtraction()).toBe(0);

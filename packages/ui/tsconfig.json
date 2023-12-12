@@ -6,9 +6,6 @@
   "compilerOptions": {
     "outDir": "dist",
     "baseUrl": "./",
-    "paths": {
-      "@/*": ["lib/components/*"]
-    },
     "declaration": true,
     "declarationMap": true
   }

@@ -1,4 +1,4 @@
-import { isEven } from '@/even.js';
+import { isEven } from './even.js';
 
 test('Value of even number should be true', () => {
   expect(isEven(4)).toBe(true);

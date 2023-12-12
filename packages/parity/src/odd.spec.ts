@@ -1,4 +1,4 @@
-import { isOdd } from '@/odd.js';
+import { isOdd } from './odd.js';
 
 test('Value of odd number should be true', () => {
   expect(isOdd(3)).toBe(true);
