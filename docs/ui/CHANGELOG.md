@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.3.0...demo-ui-storybook@1.3.1) (2023-12-12)
+
+### Bug Fixes
+
+* **docs:** keep bump consistent with other storybook deps ([46257ed](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/46257ed1f81adfff9a13c073417a3f6fbdc13695)) - by @waldronmatt
+* **global:** typing updates, tsconfig and alias cleanup, comments ([7268483](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/72684835229547dc06de83f1f935a9b92c378e08)) - by @waldronmatt
+* **ui:** set up alias to get component md files, split up getting started and naming changes ([a88923f](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/a88923ffb1c1f40f36e4da8448e2a8b3f7a39553)) - by @waldronmatt
+
 # [1.3.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.2.0...demo-ui-storybook@1.3.0) (2023-12-11)
 
 ### Features

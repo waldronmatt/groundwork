@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.28](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@2.0.27...@waldronmatt/parity@2.0.28) (2023-12-12)
+
+### Bug Fixes
+
+* **global:** typing updates, tsconfig and alias cleanup, comments ([7268483](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/72684835229547dc06de83f1f935a9b92c378e08)) - by @waldronmatt
+
 ## [2.0.27](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/parity@2.0.26...@waldronmatt/parity@2.0.27) (2023-12-11)
 
 ### Bug Fixes
