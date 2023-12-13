@@ -9,6 +9,12 @@ const defaultProps = {
 const meta: Meta<typeof LabeledInput> = {
   title: 'Components/LabeledInput',
   component: LabeledInput,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
+    },
+  },
 };
 
 export default meta;

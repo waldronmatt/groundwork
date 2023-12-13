@@ -14,6 +14,12 @@ const meta: Meta<typeof Label> = {
       control: { type: 'radio' },
     },
   },
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
+    },
+  },
 };
 
 export default meta;
