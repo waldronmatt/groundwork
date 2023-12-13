@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.3.1...demo-ui-storybook@1.3.2) (2023-12-13)
+
+### Bug Fixes
+
+* **ui:** set up useful defaults, add theme and lang switcher shells ([935fafd](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/935fafda0f83adb2a4ed7bfe9d6de1e91a2c5662)) - by @waldronmatt
+
 ## [1.3.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.3.0...demo-ui-storybook@1.3.1) (2023-12-12)
 
 ### Bug Fixes
