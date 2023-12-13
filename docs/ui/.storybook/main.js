@@ -1,14 +1,8 @@
 import path from 'path';
 
 const config = {
-  stories: [
-    '../docs/Introduction.mdx',
-    '../docs/StartDesigning.mdx',
-    '../docs/StartDeveloping.mdx',
-    '../docs/Changelog.mdx',
-    '../stories/**/*.stories.tsx',
-  ],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-a11y', '@storybook/theming'],
+  stories: ['../docs/**/*.mdx', '../stories/**/*.stories.tsx'],
+  addons: ['@storybook/addon-essentials', '@storybook/addon-a11y'],
   framework: {
     name: '@storybook/react-vite',
     options: {},
