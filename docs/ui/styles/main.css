@@ -1,3 +1,5 @@
-body {
+body,
+/* the doc page for associated stories */
+.docs-story {
   background-color: var(--demo-ui-color-bg);
 }

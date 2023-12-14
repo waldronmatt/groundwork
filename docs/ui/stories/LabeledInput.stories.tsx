@@ -9,6 +9,13 @@ const defaultProps = {
 const meta: Meta<typeof LabeledInput> = {
   title: 'Components/LabeledInput',
   component: LabeledInput,
+  argTypes: {
+    variant: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   parameters: {
     design: {
       type: 'figma',

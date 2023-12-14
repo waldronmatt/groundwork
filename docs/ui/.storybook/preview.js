@@ -10,7 +10,7 @@ import '../styles/main.css';
 const siteMetadata = {
   brandTitle: 'Demo-UI',
   brandUrl: '/',
-  brandTarget: '_target',
+  brandTarget: '_self',
 };
 
 const preview = {
@@ -54,6 +54,8 @@ const preview = {
       light: { ...themes.light, ...siteMetadata },
     },
     options: {
+      showPanel: true,
+      panelPosition: 'bottom',
       storySort: {
         order: ['Introduction', 'Start Designing', 'Start Developing', 'Changelog'],
       },

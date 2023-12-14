@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "lint": "eslint . --ext tsx --report-unused-disable-directives --max-warnings 0",
-    "build": "storybook build --docs",
+    "build": "storybook build",
     "clean": "rimraf storybook-static",
     "preview": "serve storybook-static"
   },
