@@ -2,7 +2,13 @@ import path from 'path';
 
 const config = {
   stories: ['../docs/**/*.mdx', '../stories/**/*.stories.tsx'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-a11y', '@storybook/addon-designs'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
+    '@storybook/addon-designs',
+    '@storybook/addon-themes',
+    'storybook-dark-mode',
+  ],
   framework: {
     name: '@storybook/react-vite',
     options: {},

@@ -1,7 +1,17 @@
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
+import { themes } from '@storybook/theming';
 // demo-ui css reset file
 import '@waldronmatt/demo-ui/lib/styles/reset.css';
 // demo-ui global css variable tokens
 import '@waldronmatt/demo-ui/lib/styles/global.css';
+// storybook styles
+import '../styles/main.css';
+
+const siteMetadata = {
+  brandTitle: 'Demo-UI',
+  brandUrl: 'https://www.npmjs.com/package/@waldronmatt/demo-ui',
+  brandTarget: '_target',
+};
 
 const preview = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -11,6 +21,17 @@ const preview = {
       date: /Date$/,
     },
   },
+  decorators: [
+    withThemeByDataAttribute({
+      themes: {
+        light: 'light',
+        dark: 'dark',
+      },
+      defaultTheme: 'light',
+      parentSelector: 'html',
+      attributeName: 'data-theme',
+    }),
+  ],
   globalTypes: {
     locale: {
       description: 'Language Switcher',
@@ -24,22 +45,14 @@ const preview = {
         ],
       },
     },
-    theme: {
-      description: 'Theme Switcher',
-      defaultValue: '',
-      toolbar: {
-        icon: 'sun',
-        items: [
-          { value: '', right: '', title: 'Reset Theme' },
-          { value: 'light', right: '☀️', title: 'Light' },
-          { value: 'dark', right: '🌚', title: 'Dark' },
-        ],
-      },
-    },
   },
   parameters: {
     backgrounds: { disable: true },
     controls: { expanded: true },
+    darkMode: {
+      dark: { ...themes.dark, ...siteMetadata },
+      light: { ...themes.light, ...siteMetadata },
+    },
     options: {
       storySort: {
         order: ['Introduction', 'Start Designing', 'Start Developing', 'Changelog'],

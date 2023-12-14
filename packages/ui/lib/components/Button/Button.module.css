@@ -1,6 +1,7 @@
 .button {
-  border: 1px solid #000;
-  background-color: #d3d3d3;
+  border: 1px solid var(--demo-ui-color-fg);
+  color: var(--demo-ui-color-fg);
+  background-color: var(--demo-ui-color-bg);
   cursor: pointer;
   padding: 1rem;
 }

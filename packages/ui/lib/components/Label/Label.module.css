@@ -1,5 +1,6 @@
 .label {
   font-weight: bolder;
+  color: var(--demo-ui-color-fg);
 }
 
 .sm {
