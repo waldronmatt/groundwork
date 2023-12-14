@@ -25,10 +25,26 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 
+const getCaptionForLocale = (locale: string) => {
+  switch (locale) {
+    case 'es':
+      return 'Hola!';
+    default:
+      return 'Hello!';
+  }
+};
+
 const onClickHandler = action('button-click');
 
-const Template: StoryFn<typeof Button> = (args: ButtonProps) => {
-  return <Button {...args} onClick={onClickHandler} />;
+const Template: StoryFn<typeof Button> = (args: ButtonProps, { globals: { locale } }) => {
+  // by default, let the user modify the text through the `children` control
+  // otherwise, load in the text from locale for i18n testing
+  const caption = locale !== '' ? getCaptionForLocale(locale as string) : args.children;
+  return (
+    <Button {...args} onClick={onClickHandler}>
+      {caption}
+    </Button>
+  );
 };
 
 export const Default = Template.bind({});

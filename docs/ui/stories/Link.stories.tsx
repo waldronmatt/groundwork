@@ -26,9 +26,21 @@ const meta: Meta<typeof Link> = {
 
 export default meta;
 
+const getCaptionForLocale = (locale: string) => {
+  switch (locale) {
+    case 'es':
+      return 'Hola!';
+    default:
+      return 'Hello!';
+  }
+};
+
 const onClickHandler = action('link-click');
 
-const Template: StoryFn<typeof Link> = (args: LinkProps) => {
+const Template: StoryFn<typeof Link> = (args: LinkProps, { globals: { locale } }) => {
+  // by default, let the user modify the text through the `children` control
+  // otherwise, load in the text from locale for i18n testing
+  const caption = locale !== '' ? getCaptionForLocale(locale as string) : args.children;
   return (
     <Link
       {...args}
@@ -36,7 +48,9 @@ const Template: StoryFn<typeof Link> = (args: LinkProps) => {
         event.preventDefault();
         onClickHandler(event);
       }}
-    />
+    >
+      {caption}
+    </Link>
   );
 };
 

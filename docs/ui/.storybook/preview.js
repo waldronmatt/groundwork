@@ -9,7 +9,7 @@ import '../styles/main.css';
 
 const siteMetadata = {
   brandTitle: 'Demo-UI',
-  brandUrl: 'https://www.npmjs.com/package/@waldronmatt/demo-ui',
+  brandUrl: '/',
   brandTarget: '_target',
 };
 
