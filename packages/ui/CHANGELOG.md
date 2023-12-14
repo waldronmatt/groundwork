@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.2 (2023-12-14)
+
+### Bug Fixes
+
+* **ui:** add theming css vars, implement working storybook story and site theme switching ([9d05620](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9d056203c393314940aea554219c0a2dad22357c)) - by @waldronmatt
+
 ## [2.3.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@2.3.0...@waldronmatt/demo-ui@2.3.1) (2023-12-12)
 
 ### Bug Fixes

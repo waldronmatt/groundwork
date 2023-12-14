@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.3.2...demo-ui-storybook@1.4.0) (2023-12-14)
+
+### Bug Fixes
+
+* **ui:** add theming css vars, implement working storybook story and site theme switching ([9d05620](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9d056203c393314940aea554219c0a2dad22357c)) - by @waldronmatt
+* **ui:** minor fixes ([fe5be8d](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/fe5be8d8308dfce7e09e3b0bf99e9ed545d17b31)) - by @waldronmatt
+
+### Features
+
+* **ui:** add a working i18n example with args control fallback ([2e77017](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/2e77017ba02876ba3a3c12510d0f3ca572d78469)) - by @waldronmatt
+* **ui:** add storybook designs addon ([08663e0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/08663e0de4d70d3efb6752214b4a19a46d211044)) - by @waldronmatt
+
 ## [1.3.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.3.1...demo-ui-storybook@1.3.2) (2023-12-13)
 
 ### Bug Fixes
