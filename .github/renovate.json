@@ -84,7 +84,7 @@
       "groupName": "storybook",
       "groupSlug": "storybook",
       "matchPackageNames": ["storybook"],
-      "matchPackagePatterns": ["^@storybook/"]
+      "matchPackagePatterns": ["^@storybook/", "^storybook"]
     },
     {
       "groupName": "testing-library",
