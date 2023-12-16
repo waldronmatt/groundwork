@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.4.0...demo-ui-storybook@1.5.0) (2023-12-16)
+
+### Features
+
+* **ui:** add color component that auto generates tokens for docs ([ab53e35](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/ab53e35870b71ecbd2bdf9b5584a4ba390a88497)) - by @waldronmatt
+
 # [1.4.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.3.2...demo-ui-storybook@1.4.0) (2023-12-14)
 
 ### Bug Fixes

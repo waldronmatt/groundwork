@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@2.3.2...@waldronmatt/demo-ui@2.3.3) (2023-12-16)
+
+### Bug Fixes
+
+* **ui:** create color primitives and apply for default and light theme ([79a9586](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/79a958678b87913c4c0c19329394e2dc8980deda)) - by @waldronmatt
+
 ## 2.3.2 (2023-12-14)
 
 ### Bug Fixes
