@@ -1,6 +1,6 @@
 :root {
-  --demo-ui-color-bg: #fff;
-  --demo-ui-color-fg: #000;
+  --demo-ui-color-white: #fff;
+  --demo-ui-color-black: #000;
   --demo-ui-font-size-sm: 10px;
   --demo-ui-font-size-md: 20px;
   --demo-ui-font-size-lg: 30px;
@@ -9,12 +9,13 @@
   --demo-ui-width-lg: 500px;
 }
 
+:root,
 :root[data-theme='light'] {
-  --demo-ui-color-bg: #fff;
-  --demo-ui-color-fg: #000;
+  --demo-ui-color-bg: var(--demo-ui-color-white);
+  --demo-ui-color-fg: var(--demo-ui-color-black);
 }
 
 :root[data-theme='dark'] {
-  --demo-ui-color-bg: #000;
-  --demo-ui-color-fg: #fff;
+  --demo-ui-color-bg: var(--demo-ui-color-black);
+  --demo-ui-color-fg: var(--demo-ui-color-white);
 }
