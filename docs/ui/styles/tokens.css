@@ -1,0 +1,87 @@
+:root {
+  /*
+   * Color Primitives
+   */
+
+  /* Red */
+  --sl-color-red-50: #ffccd9;
+  --sl-color-red-100: #ffb3c1;
+  --sl-color-red-200: #ff99a4;
+  --sl-color-red-300: #ff7a8f;
+  --sl-color-red-400: #ff5c75;
+  --sl-color-red-500: #ff3957;
+  --sl-color-red-600: #f92640;
+  --sl-color-red-700: #eb1f3a;
+  --sl-color-red-800: #b9002e;
+  --sl-color-red-900: #9a0025;
+  --sl-color-red-950: #4c0014;
+
+  /* Orange */
+  --sl-color-orange-50: #ffe0b2;
+  --sl-color-orange-100: #ffcd9c;
+  --sl-color-orange-200: #ffbc82;
+  --sl-color-orange-300: #ffab65;
+  --sl-color-orange-400: #ff983d;
+  --sl-color-orange-500: #ff8800;
+  --sl-color-orange-600: #f07200;
+  --sl-color-orange-700: #d66100;
+  --sl-color-orange-800: #b24c00;
+  --sl-color-orange-900: #944a00;
+  --sl-color-orange-950: #4b2d00;
+
+  /* Yellow */
+  --sl-color-yellow-50: #fffae5;
+  --sl-color-yellow-100: #fff4c8;
+  --sl-color-yellow-200: #ffedab;
+  --sl-color-yellow-300: #ffe57e;
+  --sl-color-yellow-400: #ffdd4f;
+  --sl-color-yellow-500: #ffd300;
+  --sl-color-yellow-600: #eac000;
+  --sl-color-yellow-700: #c6a600;
+  --sl-color-yellow-800: #a18400;
+  --sl-color-yellow-900: #7f6700;
+  --sl-color-yellow-950: #542400;
+
+  /* Green */
+  --sl-color-green-50: #c1f7d6;
+  --sl-color-green-100: #a4edbf;
+  --sl-color-green-200: #8ee1aa;
+  --sl-color-green-300: #71d18f;
+  --sl-color-green-400: #50be71;
+  --sl-color-green-500: #2fa84d;
+  --sl-color-green-600: #238b3b;
+  --sl-color-green-700: #1c702b;
+  --sl-color-green-800: #183f21;
+  --sl-color-green-900: #143522;
+  --sl-color-green-950: #0c2d19;
+
+  /* Blue */
+  --sl-color-blue-50: #cdf0ff;
+  --sl-color-blue-100: #aeddff;
+  --sl-color-blue-200: #9ed9ff;
+  --sl-color-blue-300: #aad4ff;
+  --sl-color-blue-400: #d5e1ff;
+  --sl-color-blue-500: #94cdff;
+  --sl-color-blue-600: #80c2ff;
+  --sl-color-blue-700: #6eb5ff;
+  --sl-color-blue-800: #5795ff;
+  --sl-color-blue-900: #4281ff;
+  --sl-color-blue-950: #2b51ff;
+
+  /* Purple */
+  --sl-color-purple-50: #fdf0ff;
+  --sl-color-purple-100: #f9eaff;
+  --sl-color-purple-200: #f4e5ff;
+  --sl-color-purple-300: #f0ddff;
+  --sl-color-purple-400: #ebd4ff;
+  --sl-color-purple-500: #e4cfff;
+  --sl-color-purple-600: #dbbfff;
+  --sl-color-purple-700: #cfabff;
+  --sl-color-purple-800: #b78eff;
+  --sl-color-purple-900: #a271ff;
+  --sl-color-purple-950: #7012e3;
+
+  /* Neutral one-offs */
+  --sl-color-neutral-0: #ffffff;
+  --sl-color-neutral-1000: #000000;
+}

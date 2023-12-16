@@ -4,8 +4,12 @@ import { themes } from '@storybook/theming';
 import '@waldronmatt/demo-ui/lib/styles/reset.css';
 // demo-ui global css variable tokens
 import '@waldronmatt/demo-ui/lib/styles/global.css';
-// storybook styles
+// sets the component light/dark mode on stories
 import '../styles/main.css';
+// tokens for demo purposes only
+import '../styles/tokens.css';
+// styling for design tokens docs
+import '../styles/docs.css';
 
 const siteMetadata = {
   brandTitle: 'Demo-UI',
@@ -57,7 +61,7 @@ const preview = {
       showPanel: true,
       panelPosition: 'bottom',
       storySort: {
-        order: ['Introduction', 'Start Designing', 'Start Developing', 'Changelog'],
+        order: ['Introduction', 'Start Designing', 'Start Developing', 'Changelog', 'Design Tokens', ['Colors']],
       },
     },
   },

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./tsconfig.json",
-  "include": [".*.cjs", "*.cjs", "stories/*"],
+  "include": [".*.cjs", "*.cjs", "components/*", "docs/*", "stories/*"],
   "compilerOptions": {
     "allowJs": true
   }
