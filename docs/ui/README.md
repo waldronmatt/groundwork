@@ -1,6 +1,8 @@
 # Demo UI Storybook
 
-Demo UI Storybook repo.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/33565ac2-d430-4fc1-b50e-8da1c2d6b393/deploy-status)](https://app.netlify.com/sites/pnlb-demo-ui-storybook/deploys)
+
+Demo UI Storybook repo. See it in action [here](https://pnlb-demo-ui-storybook.netlify.app/).
 
 ## Installation
 
