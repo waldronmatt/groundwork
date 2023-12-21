@@ -1,0 +1,22 @@
+table {
+  max-width: 100%;
+  border: none;
+  border-collapse: collapse;
+  color: inherit;
+  font-size: 1rem;
+  overflow-y: auto;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  line-height: normal;
+  min-width: 250px;
+  padding: 1rem 1rem !important;
+}
+
+th {
+  background-color: #f2f2f2;
+}

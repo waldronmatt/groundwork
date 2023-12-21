@@ -15,6 +15,8 @@ function App() {
   const [countAddition, setAdditionCount] = useState(0);
   const [countParity, setParityCount] = useState(0);
 
+  document.firstElementChild?.setAttribute('data-theme', 'light');
+
   return (
     <>
       <div>

@@ -1,7 +1,8 @@
 import path from 'path';
+import react from '@vitejs/plugin-react';
 
 const config = {
-  stories: ['../docs/**/*.mdx', '../stories/**/*.stories.tsx'],
+  stories: ['../src/docs/**/*.mdx', '../src/stories/**/*.stories.tsx'],
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
@@ -30,6 +31,7 @@ const config = {
       define: {
         'process.env.NODE_DEBUG': false,
       },
+      plusgins: [react()],
       resolve: {
         alias: [
           {

@@ -1,17 +1,22 @@
+.reference {
+  display: flex;
+  column-gap: 1rem;
+}
+
 .color-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
   gap: 1rem;
 }
 
-.color-category-row {
+.color-type-row {
   grid-column: 1 / -1;
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
 }
 
-.color-category-row h2 {
+.color-type-row h2 {
   margin: 0;
 }
 
@@ -31,4 +36,8 @@
 
 .color-details {
   text-align: center;
+}
+
+.color-alias {
+  color: #808080;
 }

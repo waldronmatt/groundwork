@@ -1,0 +1,13 @@
+.table-scroll {
+  max-width: 100%;
+  overflow-y: auto;
+}
+
+.example-typography-td {
+  /*
+    set a default font for your design system so the other
+    typography properties get set correctly
+  */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol' !important;
+}

@@ -9,7 +9,6 @@
   --demo-ui-width-lg: 500px;
 }
 
-:root,
 :root[data-theme='light'] {
   --demo-ui-color-bg: var(--demo-ui-color-white);
   --demo-ui-color-fg: var(--demo-ui-color-black);

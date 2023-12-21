@@ -5,11 +5,9 @@ import '@waldronmatt/demo-ui/lib/styles/reset.css';
 // demo-ui global css variable tokens
 import '@waldronmatt/demo-ui/lib/styles/global.css';
 // sets the component light/dark mode on stories
-import '../styles/main.css';
+import '../src/styles/main.css';
 // tokens for demo purposes only
-import '../styles/tokens.css';
-// styling for design tokens docs
-import '../styles/docs.css';
+import '../src/styles/tokens.css';
 
 const siteMetadata = {
   brandTitle: 'Demo-UI',
@@ -28,10 +26,11 @@ const preview = {
   decorators: [
     withThemeByDataAttribute({
       themes: {
+        reset: 'reset',
         light: 'light',
         dark: 'dark',
       },
-      defaultTheme: 'light',
+      defaultTheme: 'reset',
       parentSelector: 'html',
       attributeName: 'data-theme',
     }),
@@ -43,7 +42,7 @@ const preview = {
       toolbar: {
         icon: 'globe',
         items: [
-          { value: '', right: '', title: 'Reset Language' },
+          { value: '', right: '', title: 'Reset' },
           { value: 'en', right: '🇺🇸', title: 'English' },
           { value: 'es', right: '🇪🇸', title: 'Español' },
         ],
@@ -61,7 +60,14 @@ const preview = {
       showPanel: true,
       panelPosition: 'bottom',
       storySort: {
-        order: ['Introduction', 'Start Designing', 'Start Developing', 'Changelog', 'Design Tokens', ['Colors']],
+        order: [
+          'Introduction',
+          'Start Designing',
+          'Start Developing',
+          'Changelog',
+          'Design Tokens',
+          ['Colors', 'Typography', 'Space', 'Elevation', 'Border Radius', 'Transition', 'Z-Index'],
+        ],
       },
     },
   },

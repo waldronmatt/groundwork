@@ -1,0 +1,20 @@
+.table-scroll {
+  max-width: 100%;
+  overflow-y: auto;
+}
+
+.transition-demo:after {
+  content: '';
+  position: absolute;
+  background-color: #0090ff;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition-duration: inherit;
+  transition-property: width;
+}
+
+.transition-demo:hover:after {
+  width: 100%;
+}
