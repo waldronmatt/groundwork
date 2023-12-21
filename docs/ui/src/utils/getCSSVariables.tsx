@@ -14,7 +14,12 @@ export const getCSSVariables = (token: TokenName, queryParams?: URLSearchParams 
   const themeParam = queryParams;
   // this is the name of the queryparam that gets set for toolbar option toggling
   const themeGlobals = themeParam?.get('globals');
-  const themeValue = themeGlobals?.split(':')[1];
+  const themeValue = themeGlobals
+    // extract the storybook queryparams
+    ?.split(';')
+    ?.find((el) => el.includes('theme'))
+    // extract 'theme' value
+    ?.split(':')[1];
   const noThemeSpecified = themeValue === 'reset' || themeValue === undefined;
 
   for (const sheet of styleSheets) {
