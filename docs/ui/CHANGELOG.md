@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@2.0.0...demo-ui-storybook@2.0.1) (2023-12-21)
+
+### Bug Fixes
+
+* **ui:** fix bug where colors don't show if other storybook toolbar options chosen ([3d0bf79](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/3d0bf79e6ef49b1863772e5a7c954e2c38a20ceb)) - by @waldronmatt
+
 # [2.0.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.5.1...demo-ui-storybook@2.0.0) (2023-12-21)
 
 ### Features
