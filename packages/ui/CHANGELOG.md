@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2023-12-21)
+
+### Features
+
+* **global:** add storybook components for docs, restructure folders ([9882290](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9882290f2a0fc3a836454b17b742c65edf8697c6)) - by @waldronmatt
+
+### BREAKING CHANGES
+
+* **global:** revamped storybook source structure
+
 ## [2.3.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@2.3.2...@waldronmatt/demo-ui@2.3.3) (2023-12-16)
 
 ### Bug Fixes

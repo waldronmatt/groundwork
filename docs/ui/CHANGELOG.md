@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.5.1...demo-ui-storybook@2.0.0) (2023-12-21)
+
+### Features
+
+* **global:** add storybook components for docs, restructure folders ([9882290](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9882290f2a0fc3a836454b17b742c65edf8697c6)) - by @waldronmatt
+
+### BREAKING CHANGES
+
+* **global:** revamped storybook source structure
+
 ## [1.5.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.5.0...demo-ui-storybook@1.5.1) (2023-12-16)
 
 **Note:** Version bump only for package demo-ui-storybook
