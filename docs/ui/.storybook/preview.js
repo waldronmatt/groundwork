@@ -26,11 +26,10 @@ const preview = {
   decorators: [
     withThemeByDataAttribute({
       themes: {
-        reset: 'reset',
         light: 'light',
         dark: 'dark',
       },
-      defaultTheme: 'reset',
+      defaultTheme: 'light',
       parentSelector: 'html',
       attributeName: 'data-theme',
     }),

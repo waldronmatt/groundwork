@@ -13,7 +13,7 @@ const FontSize: FC<{ variable: string; typography: string }> = ({ variable, typo
     <td>
       {typography} ({`${Number(typography.split('rem')[0]) * 16}px`})
     </td>
-    <td className={docStyles['example-typography-td']} style={{ fontSize: `${typography}` }}>
+    <td className={docStyles['typography-demo']} style={{ fontSize: `${typography}` }}>
       Aa
     </td>
   </tr>
@@ -25,7 +25,7 @@ const FontWeight: FC<{ variable: string; typography: string }> = ({ variable, ty
       <code>{variable}</code>
     </td>
     <td>{typography}</td>
-    <td className={docStyles['example-typography-td']} style={{ fontWeight: `${typography}` }}>
+    <td className={docStyles['typography-demo']} style={{ fontWeight: `${typography}` }}>
       The quick brown fox jumped over the lazy dog.
     </td>
   </tr>
@@ -37,7 +37,7 @@ const LetterSpacing: FC<{ variable: string; typography: string }> = ({ variable,
       <code>{variable}</code>
     </td>
     <td>{typography}</td>
-    <td className={docStyles['example-typography-td']} style={{ letterSpacing: `${typography}` }}>
+    <td className={docStyles['typography-demo']} style={{ letterSpacing: `${typography}` }}>
       The quick brown fox jumped over the lazy dog.
     </td>
   </tr>
@@ -49,7 +49,7 @@ const LineHeight: FC<{ variable: string; typography: string }> = ({ variable, ty
       <code>{variable}</code>
     </td>
     <td>{typography}</td>
-    <td className={docStyles['example-typography-td']} style={{ lineHeight: `${typography}` }}>
+    <td className={docStyles['typography-demo']} style={{ lineHeight: `${typography}` }}>
       The quick brown fox jumped over the lazy dog.
       <br />
       The quick brown fox jumped over the lazy dog.

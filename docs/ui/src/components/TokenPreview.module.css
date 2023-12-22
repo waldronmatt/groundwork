@@ -3,6 +3,14 @@
   overflow-y: auto;
 }
 
+.size-demo {
+  background-color: #339dff;
+}
+
+.transition-demo {
+  background-color: #c0c0c0;
+}
+
 .transition-demo:after {
   content: '';
   position: absolute;

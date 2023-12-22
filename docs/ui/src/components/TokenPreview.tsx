@@ -14,7 +14,7 @@ const Space: FC<{ variable: string; tokenValue: string }> = ({ variable, tokenVa
       {tokenValue} ({`${Number(tokenValue.split('rem')[0]) * 16}px`})
     </td>
     <td>
-      <div style={{ backgroundColor: '#0090ff', width: `${tokenValue}`, height: `${tokenValue}` }}></div>
+      <div className={`${docStyles['size-demo']}`} style={{ width: `${tokenValue}`, height: `${tokenValue}` }}></div>
     </td>
   </tr>
 );
@@ -49,8 +49,8 @@ const BorderRadius: FC<{ variable: string; tokenValue: string }> = ({ variable, 
     </td>
     <td>
       <div
+        className={`${docStyles['size-demo']}`}
         style={{
-          backgroundColor: '#0090ff',
           borderRadius: `${tokenValue}`,
           width: tokenValue.includes('999px') ? '6rem' : '3rem',
           height: '3rem',
@@ -70,7 +70,6 @@ const Transition: FC<{ variable: string; tokenValue: string }> = ({ variable, to
       <div
         className={`${docStyles['transition-demo']}`}
         style={{
-          background: '#808080',
           borderRadius: '3px',
           boxShadow: `${tokenValue}`,
           position: 'relative',

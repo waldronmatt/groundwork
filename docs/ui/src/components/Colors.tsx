@@ -29,7 +29,8 @@ const getVarName = (extractValueFromVar: RegExpMatchArray | null) => {
 const getVarValue = (extractValueFromVar: RegExpMatchArray | null) => {
   return window.getComputedStyle(document.documentElement).getPropertyValue(extractValueFromVar![1]);
 };
-const ColorGrid: FC<TokenProps> = ({ token }) => {
+
+const Colors: FC<TokenProps> = ({ token }) => {
   const [queryParams, setQueryParams] = useState<URLSearchParams | null>(new URLSearchParams(window.location.search));
 
   const cssVariables = getCSSVariables(token, queryParams);
@@ -91,7 +92,7 @@ const ColorGrid: FC<TokenProps> = ({ token }) => {
       <>
         <h2 id="reference">Reference:</h2>
         <br />
-        <div className={docStyles.reference}>
+        <div className={docStyles['color-reference']}>
           <div>
             Name: <strong>500</strong>
           </div>
@@ -136,4 +137,4 @@ const ColorGrid: FC<TokenProps> = ({ token }) => {
   );
 };
 
-export default ColorGrid;
+export default Colors;
