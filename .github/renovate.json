@@ -14,7 +14,8 @@
   "automergeType": "pr",
   "rangeStrategy": "pin",
   "transitiveRemediation": true,
-  "schedule": ["before 4am on Monday"],
+  "schedule": ["after 10pm every weekday", "before 5am every weekday", "every weekend"],
+  "prConcurrentLimit": 10,
   "rebaseWhen": "conflicted",
   "major": {
     "automerge": false,
@@ -24,16 +25,12 @@
   "minor": {
     "automerge": true,
     "labels": ["automerge"],
-    "groupName": "Minor updates",
-    "minimumReleaseAge": "7 days",
-    "prCreation": "status-success"
+    "groupName": "Minor updates"
   },
   "patch": {
     "automerge": true,
     "labels": ["automerge"],
-    "groupName": "Patch updates",
-    "minimumReleaseAge": "7 days",
-    "prCreation": "status-success"
+    "groupName": "Patch updates"
   },
   "packageRules": [
     {
