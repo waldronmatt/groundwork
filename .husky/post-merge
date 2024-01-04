@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+# Change to the root of the repository
+cd "$(git rev-parse --show-toplevel)"
+
+# Run pnpm install
+pnpm install
