@@ -28,13 +28,12 @@ export const getCSSVariables = (token: TokenName, queryParams?: URLSearchParams 
     if (rules) {
       for (const rule of rules) {
         if (
-          (rule instanceof CSSStyleRule &&
-            (token.category !== 'color'
-              ? rule.selectorText === ':root'
-              : rule.selectorText === `:root[data-theme="${themeValue}"]`)) ||
-          rule.selectorText === ':root'
+          rule instanceof CSSStyleRule &&
+          (token.category !== 'color'
+            ? rule.selectorText === ':root'
+            : rule.selectorText === `:root[data-theme="${themeValue}"]` || rule.selectorText === ':root')
         ) {
-          const styles: CSSStyleDeclaration = rule.style as CSSStyleRule;
+          const styles = rule.style;
           for (const name of styles) {
             if (name.includes(token.category) && name.startsWith(`--${token.prefix}`)) {
               const value = styles.getPropertyValue(name);
