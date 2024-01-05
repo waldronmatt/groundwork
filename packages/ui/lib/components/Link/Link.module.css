@@ -2,6 +2,7 @@
   color: #0f62fe;
   text-decoration: underline;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .sm {
