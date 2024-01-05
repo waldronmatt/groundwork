@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/@waldronmatt/demo-ui@3.0.1...@waldronmatt/demo-ui@3.0.2) (2024-01-05)
+
+### Bug Fixes
+
+* **ui:** add href prop explicitly to link component, add mouse on hover ([5336677](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/5336677b5263eabde005038cc82509866dad982f)) - by @waldronmatt
+
 ## 3.0.1 (2024-01-01)
 
 **Note:** Version bump only for package @waldronmatt/demo-ui

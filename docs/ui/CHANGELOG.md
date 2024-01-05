@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@2.0.3...demo-ui-storybook@2.0.4) (2024-01-05)
+
+### Bug Fixes
+
+* **ui:** update elevation docs to use preview component, typing and doc updates ([251e27a](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/251e27a61ad5ddd2fa7a76ad1ec2caa1a2d07433)) - by @waldronmatt
+
 ## [2.0.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@2.0.2...demo-ui-storybook@2.0.3) (2024-01-01)
 
 **Note:** Version bump only for package demo-ui-storybook
