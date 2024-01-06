@@ -50,6 +50,32 @@ const preview = {
   },
   parameters: {
     backgrounds: { disable: true },
+    badgesConfig: {
+      stable: {
+        title: 'STABLE',
+        styles: {
+          backgroundColor: '#DCF2EA',
+          borderColor: '#317159',
+          color: '#317159',
+        },
+      },
+      unstable: {
+        title: 'UNSTABLE',
+        styles: {
+          backgroundColor: '#F9DADA',
+          borderColor: '#7D2828',
+          color: '#7D2828',
+        },
+      },
+      deprecated: {
+        title: 'DEPRECATED',
+        styles: {
+          backgroundColor: '#F8E3DA',
+          borderColor: '#85462B',
+          color: '#85462B',
+        },
+      },
+    },
     controls: { expanded: true },
     darkMode: {
       dark: { ...themes.dark, ...siteMetadata },
@@ -64,6 +90,7 @@ const preview = {
           'Start Designing',
           'Start Developing',
           'Changelog',
+          'Component Status',
           'Design Tokens',
           ['Colors', 'Typography', 'Space', 'Elevation', 'Border Radius', 'Transition', 'Z-Index'],
         ],

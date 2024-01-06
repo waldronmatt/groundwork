@@ -16,6 +16,7 @@ const meta: Meta<typeof Button> = {
     },
   },
   parameters: {
+    badges: ['stable'],
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',

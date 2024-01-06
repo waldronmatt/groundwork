@@ -16,6 +16,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@geometricpanda/storybook-addon-badges": "2.0.0",
     "@storybook/addon-a11y": "7.6.3",
     "@storybook/addon-actions": "7.6.3",
     "@storybook/addon-designs": "7.0.7",

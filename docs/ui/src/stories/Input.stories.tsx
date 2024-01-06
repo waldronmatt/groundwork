@@ -12,6 +12,7 @@ const meta: Meta<typeof Input> = {
     },
   },
   parameters: {
+    badges: ['unstable'],
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',

@@ -17,6 +17,7 @@ const meta: Meta<typeof LabeledInput> = {
     },
   },
   parameters: {
+    badges: ['deprecated'],
     design: {
       type: 'figma',
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',

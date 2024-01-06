@@ -1,3 +1,8 @@
+.table-scroll {
+  max-width: 100%;
+  overflow-y: auto;
+}
+
 table {
   max-width: 100%;
   border: none;
@@ -13,7 +18,7 @@ td {
   padding: 8px;
   text-align: left;
   line-height: normal;
-  min-width: 250px;
+  min-width: 200px;
   padding: 1rem 1rem !important;
 }
 

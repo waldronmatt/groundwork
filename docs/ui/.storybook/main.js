@@ -9,6 +9,7 @@ const config = {
     '@storybook/addon-designs',
     '@storybook/addon-themes',
     'storybook-dark-mode',
+    '@geometricpanda/storybook-addon-badges',
   ],
   framework: {
     name: '@storybook/react-vite',
