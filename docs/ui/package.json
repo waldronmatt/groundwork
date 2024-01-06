@@ -25,6 +25,7 @@
     "@storybook/blocks": "7.6.3",
     "@storybook/builder-vite": "7.6.3",
     "@storybook/components": "7.6.3",
+    "@storybook/icons": "1.2.3",
     "@storybook/react": "7.6.3",
     "@storybook/react-vite": "7.6.3",
     "@storybook/theming": "7.6.3",

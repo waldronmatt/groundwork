@@ -220,6 +220,9 @@ importers:
       '@storybook/components':
         specifier: 7.6.3
         version: 7.6.3(@types/react-dom@18.2.17)(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/icons':
+        specifier: 1.2.3
+        version: 1.2.3(react-dom@18.2.0)(react@18.2.0)
       '@storybook/react':
         specifier: 7.6.3
         version: 7.6.3(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.2)
@@ -5150,6 +5153,17 @@ packages:
 
   /@storybook/global@5.0.0:
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
+    dev: true
+
+  /@storybook/icons@1.2.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-A2egQFgdX8sQqcC/u/JUzKG8iO1g2CdkvIn88fZUy3kf4DTgHXSO8TK/KePHlaHReBvdW7egmegfzS6s3qLjVw==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: true
 
   /@storybook/manager-api@7.6.3(react-dom@18.2.0)(react@18.2.0):

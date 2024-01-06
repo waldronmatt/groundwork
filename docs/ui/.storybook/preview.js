@@ -92,7 +92,7 @@ const preview = {
           'Changelog',
           'Component Status',
           'Design Tokens',
-          ['Colors', 'Typography', 'Space', 'Elevation', 'Border Radius', 'Transition', 'Z-Index'],
+          ['Colors', 'Typography', 'Iconography', 'Space', 'Elevation', 'Border Radius', 'Transition', 'Z-Index'],
         ],
       },
     },

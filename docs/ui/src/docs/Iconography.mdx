@@ -1,0 +1,17 @@
+import { Meta, Title, IconGallery, IconItem } from '@storybook/blocks';
+import * as Icons from '@storybook/icons';
+
+<Meta title="Design Tokens/Iconography" />
+
+# Iconography
+
+<br />
+<IconGallery>
+  {Object.entries(Icons)
+    .filter(([name]) => name !== 'iconList')
+    .map(([name, Icon]) => (
+      <IconItem name={name}>
+        <Icon />
+      </IconItem>
+    ))}
+</IconGallery>
