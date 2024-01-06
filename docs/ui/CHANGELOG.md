@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@2.0.4...demo-ui-storybook@2.1.0) (2024-01-06)
+
+### Features
+
+* **ui:** add storybook component status table component ([e350d2f](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/e350d2f999b74a633984d6bd7a86ab5975b97f7b)) - by @waldronmatt
+* **ui:** add storybook icon gallery prebuilt component ([9460384](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9460384dff8524ba15db4178b9bacfdedf29e0cb)) - by @waldronmatt
+
 ## [2.0.4](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@2.0.3...demo-ui-storybook@2.0.4) (2024-01-05)
 
 ### Bug Fixes
