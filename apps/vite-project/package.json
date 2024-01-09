@@ -26,6 +26,6 @@
     "rimraf": "5.0.5",
     "tsconfig-config": "workspace:*",
     "typescript": "5.3.2",
-    "vite": "5.0.5"
+    "vite": "5.0.11"
   }
 }
