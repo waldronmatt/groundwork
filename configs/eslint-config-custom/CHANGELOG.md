@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.17 (2024-01-09)
+
+### Bug Fixes
+
+* **deps:** update eslint ([#81](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/issues/81)) ([ad778a5](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/ad778a5339deeb13c99062e7abe0c02de3832230)) - by @renovate[bot]
+
 ## 1.1.16 (2023-12-05)
 
 ### Bug Fixes

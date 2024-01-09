@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.15 (2024-01-09)
+
+**Note:** Version bump only for package jest-config
+
 ## 1.1.14 (2023-12-05)
 
 **Note:** Version bump only for package jest-config
