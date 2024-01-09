@@ -43,7 +43,7 @@
   "devDependencies": {
     "@types/jest": "29.5.11",
     "esbuild": "0.19.11",
-    "eslint": "8.55.0",
+    "eslint": "8.56.0",
     "eslint-config-custom": "workspace:*",
     "jest": "29.7.0",
     "jest-config": "workspace:*",

@@ -59,7 +59,7 @@
     "@types/react": "18.2.47",
     "@types/react-dom": "18.2.18",
     "@vitejs/plugin-react-swc": "3.5.0",
-    "eslint": "8.55.0",
+    "eslint": "8.56.0",
     "eslint-config-custom": "workspace:*",
     "glob": "10.3.10",
     "jest": "29.7.0",
