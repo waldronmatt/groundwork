@@ -130,8 +130,8 @@ importers:
         specifier: 2.29.1
         version: 2.29.1(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)
       eslint-plugin-jest:
-        specifier: 27.6.1
-        version: 27.6.1(@typescript-eslint/eslint-plugin@6.18.1)(eslint@8.56.0)(typescript@5.3.3)
+        specifier: 27.6.3
+        version: 27.6.3(@typescript-eslint/eslint-plugin@6.18.1)(eslint@8.56.0)(typescript@5.3.3)
       eslint-plugin-jest-dom:
         specifier: 5.1.0
         version: 5.1.0(eslint@8.56.0)
@@ -139,8 +139,8 @@ importers:
         specifier: 3.1.0
         version: 3.1.0(eslint@8.56.0)
       eslint-plugin-mdx:
-        specifier: 2.3.2
-        version: 2.3.2(eslint@8.56.0)
+        specifier: 2.3.3
+        version: 2.3.3(eslint@8.56.0)
       eslint-plugin-react:
         specifier: 7.33.2
         version: 7.33.2(eslint@8.56.0)
@@ -5759,7 +5759,7 @@ packages:
   /@types/concat-stream@2.0.3:
     resolution: {integrity: sha512-3qe4oQAPNwVNwK4C9c8u+VJqv9kez+2MR4qJpoPFfXtgxxif1QbFusvXzK0/Wra2VX07smostI2VMmJNSpZjuQ==}
     dependencies:
-      '@types/node': 18.19.6
+      '@types/node': 20.11.0
     dev: false
 
   /@types/connect@3.4.38:
@@ -8654,8 +8654,8 @@ packages:
       eslint: 8.56.0
     dev: false
 
-  /eslint-plugin-jest@27.6.1(@typescript-eslint/eslint-plugin@6.18.1)(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-WEYkyVXD9NlmFBKvrkmzrC+C9yZoz5pAml2hO19PlS3spJtoiwj4p2u8spd/7zx5IvRsZsCmsoImaAvBB9X93Q==}
+  /eslint-plugin-jest@27.6.3(@typescript-eslint/eslint-plugin@6.18.1)(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-+YsJFVH6R+tOiO3gCJon5oqn4KWc+mDq2leudk8mrp8RFubLOo9CVyi3cib4L7XMpxExmkmBZQTPDYVBzgpgOA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^5.0.0 || ^6.0.0
@@ -8687,8 +8687,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-mdx@2.3.2(eslint@8.56.0):
-    resolution: {integrity: sha512-NwDt+g2cheYKfgguJF1eYHjStUDVploN0OZ2okg1whh2cw2Pz3jxbGqU9FYe4GnLtZD77EKVggxUEdMzbidwGQ==}
+  /eslint-plugin-mdx@2.3.3(eslint@8.56.0):
+    resolution: {integrity: sha512-x7H3RWOM9zpX07/9Up+qBMB5nWANXHH1y/TeGE2iqbMGmYafhIgYh5FDYRChG4Bxas1MxXBG+B4BsSiDxqwAWA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=8.0.0'
