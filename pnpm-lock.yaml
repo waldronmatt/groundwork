@@ -194,8 +194,8 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@geometricpanda/storybook-addon-badges':
-        specifier: 2.0.0
-        version: 2.0.0(@storybook/blocks@7.6.7)(@storybook/components@7.6.7)(@storybook/core-events@7.6.8)(@storybook/manager-api@7.6.8)(@storybook/preview-api@7.6.8)(@storybook/theming@7.6.7)(@storybook/types@7.6.7)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 2.0.1
+        version: 2.0.1(@storybook/blocks@7.6.7)(@storybook/components@7.6.7)(@storybook/core-events@7.6.8)(@storybook/manager-api@7.6.8)(@storybook/preview-api@7.6.8)(@storybook/theming@7.6.7)(@storybook/types@7.6.7)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-a11y':
         specifier: 7.6.7
         version: 7.6.7
@@ -2369,8 +2369,8 @@ packages:
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
     dev: true
 
-  /@geometricpanda/storybook-addon-badges@2.0.0(@storybook/blocks@7.6.7)(@storybook/components@7.6.7)(@storybook/core-events@7.6.8)(@storybook/manager-api@7.6.8)(@storybook/preview-api@7.6.8)(@storybook/theming@7.6.7)(@storybook/types@7.6.7)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-M1CQabr1/IDG6ku0/+n6kZBvWTCSun7LndkGsaB89nTNaCcflWxflgY2HdcbjblLL8W0iT7QiW9TgWP4kcpn5Q==}
+  /@geometricpanda/storybook-addon-badges@2.0.1(@storybook/blocks@7.6.7)(@storybook/components@7.6.7)(@storybook/core-events@7.6.8)(@storybook/manager-api@7.6.8)(@storybook/preview-api@7.6.8)(@storybook/theming@7.6.7)(@storybook/types@7.6.7)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-dCEK/xJewuFe1d+ndF0hQIAJRnUsV9q5kuDmp7zvO7fTd7cDz0X9Bjz0lNRn6n4Z9bL9/iFHKzJESDHFfs4ihQ==}
     peerDependencies:
       '@storybook/blocks': ^7.0.0
       '@storybook/components': ^7.0.0
