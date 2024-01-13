@@ -16,7 +16,7 @@ pnpm i -g rimraf
 
 Create an `nx` account [here](https://cloud.nx.app/).
 
-Create an `NX_CLOUD_ACCESS_TOKEN` token [here](https://cloud.nx.app/) via `Settings` -> `Manage Tokens`.
+Create an `NX_CLOUD_ACCESS_TOKEN` token [here](https://cloud.nx.app/) with `Read` permissions via `Settings` -> `Manage Tokens`.
 
 Create an `nx-cloud.env` file at the project root to enable cloud caching locally:
 
@@ -28,11 +28,11 @@ Set up `NX_CLOUD_ACCESS_TOKEN` in GitHub via `Settings` -> `Secrets` -> `Actions
 
 ## Lerna
 
-Follow the directions to set up a `GITHUB_TOKEN` [here](https://github.com/lerna-lite/lerna-lite/blob/main/packages/version/README.md#remote-client-auth-tokens) with `repo:public_repo` scope to allow Lerna to create GitHub tags and releases.
+Follow the directions to set up a `GITHUB_TOKEN` [here](https://github.com/lerna-lite/lerna-lite/blob/main/packages/version/README.md#remote-client-auth-tokens) with permissions of `repo:public_repo` scope to allow Lerna to create GitHub tags and releases.
 
 Next, set up `GITHUB_TOKEN` as an environment variable in your operating system so you can run Lerna commands via the terminal.
 
-Create an `NPM_TOKEN` [here](https://www.npmjs.com/login) as type `Automation` via the `Access Tokens` section to allow Lerna to publish packages to NPM.
+Create an `NPM_TOKEN` [here](https://www.npmjs.com/login) with permissions of type `Automation` via the `Access Tokens` section to allow Lerna to publish packages to NPM.
 
 Set up your `NPM_TOKEN` in GitHub via `Settings` -> `Secrets` -> `Actions`.
 
