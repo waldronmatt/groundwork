@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.4 (2024-01-13)
+
+### Bug Fixes
+
+* **docs:** token permission description ([2a7d43a](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/2a7d43a1a4f4b3d00a95554ac3965b4e0b26e4ff)) - by @waldronmatt
+
 ## [1.5.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/monorepo-docs@1.5.2...monorepo-docs@1.5.3) (2023-12-12)
 
 ### Bug Fixes
