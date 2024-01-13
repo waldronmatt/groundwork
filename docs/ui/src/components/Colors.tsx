@@ -1,5 +1,5 @@
 import { FC, useEffect, useState, useCallback } from 'react';
-import getCSSVariables from './utils/getCSSVariables.js';
+import { getCSSVariables } from './utils/getCSSVariables.js';
 import { capitalizeFirstLetter } from './utils/functions.js';
 import { TokenPropsInterface } from './types/tokenPropsInterface.js';
 import docStyles from './styles/Colors.module.css';

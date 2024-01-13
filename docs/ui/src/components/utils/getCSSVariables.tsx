@@ -1,4 +1,4 @@
-interface TokenName {
+interface TokenNameInterface {
   prefix: string;
   category: string;
 }
@@ -7,7 +7,7 @@ interface CSSVariables {
   [key: string]: string;
 }
 
-export const getCSSVariables = (token: TokenName, queryParams?: URLSearchParams | null): CSSVariables => {
+export const getCSSVariables = (token: TokenNameInterface, queryParams?: URLSearchParams | null): CSSVariables => {
   const variables: CSSVariables = {};
   const styleSheets = document.styleSheets;
 

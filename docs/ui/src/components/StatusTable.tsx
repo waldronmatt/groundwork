@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useStorybookData } from './hooks/useStorybookData.js';
-import { StorybookDataItem } from './types/storybookDataItemInterface.js';
+import { StorybookDataItemInterface } from './types/storybookDataItemInterface.js';
 import docStyles from './styles/StatusTable.module.css';
 import './styles/Table.module.css';
 
@@ -11,7 +11,7 @@ declare global {
       [key: string]: any;
       cacheAllCSFFiles: () => Promise<void>;
       cachedCSFFiles: {
-        [key: string]: StorybookDataItem;
+        [key: string]: StorybookDataItemInterface;
       };
     };
   }

@@ -1,4 +1,4 @@
-export interface StorybookDataItem {
+export interface StorybookDataItemInterface {
   meta: {
     id: string;
     title: string;
