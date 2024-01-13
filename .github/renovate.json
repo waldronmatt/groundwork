@@ -14,8 +14,8 @@
   "automergeType": "pr",
   "rangeStrategy": "pin",
   "transitiveRemediation": true,
-  "schedule": ["after 10pm every weekday", "before 5am every weekday", "every weekend"],
-  "prConcurrentLimit": 10,
+  "schedule": ["before 4am"],
+  "prHourlyLimit": 5,
   "rebaseWhen": "conflicted",
   "major": {
     "automerge": false,
