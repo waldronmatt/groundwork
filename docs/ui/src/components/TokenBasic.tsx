@@ -1,11 +1,11 @@
 import { FC } from 'react';
-import getCSSVariables from '../utils/getCSSVariables';
-import docStyles from './TokenBasic.module.css';
-import './Table.module.css';
-import { capitalizeFirstLetter } from '../utils/functions';
-import { TokenProps } from '../types/interfaces';
+import getCSSVariables from './utils/getCSSVariables.js';
+import { capitalizeFirstLetter } from './utils/functions.js';
+import { TokenPropsInterface } from './types/tokenPropsInterface.js';
+import docStyles from './styles/TokenBasic.module.css';
+import './styles/Table.module.css';
 
-const TokenBasic: FC<TokenProps> = ({ token }) => {
+const TokenBasic: FC<TokenPropsInterface> = ({ token }) => {
   const cssVariables = getCSSVariables(token);
 
   const generateGridItems = () => {

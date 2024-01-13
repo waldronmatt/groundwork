@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import getCSSVariables from '../utils/getCSSVariables';
-import docStyles from './Typography.module.css';
-import './Table.module.css';
-import { capitalizeFirstLetter } from '../utils/functions';
-import { TokenProps } from '../types/interfaces';
+import getCSSVariables from './utils/getCSSVariables.js';
+import { capitalizeFirstLetter } from './utils/functions.js';
+import { TokenPropsInterface } from './types/tokenPropsInterface.js';
+import docStyles from './styles/Typography.module.css';
+import './styles/Table.module.css';
 
 const FontSize: FC<{ variable: string; typography: string }> = ({ variable, typography }) => (
   <tr>
@@ -75,7 +75,7 @@ const SwitchComponent: FC<{ variable: string; typography: string; category: stri
   return <>{component}</>;
 };
 
-const Typography: FC<TokenProps> = ({ token }) => {
+const Typography: FC<TokenPropsInterface> = ({ token }) => {
   const cssVariables = getCSSVariables(token);
 
   const generateGridItems = () => {

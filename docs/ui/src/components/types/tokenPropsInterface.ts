@@ -3,6 +3,6 @@ interface Token {
   category: string;
 }
 
-export interface TokenProps {
+export interface TokenPropsInterface {
   token: Token;
 }
