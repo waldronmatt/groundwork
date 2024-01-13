@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@2.1.1...demo-ui-storybook@2.1.2) (2024-01-12)
+
+### Bug Fixes
+
+* **deps:** update eslint ([#83](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/issues/83)) ([195cc8e](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/195cc8eb8508a1d56f9c62c710bfa02e9da88eef)) - by @renovate[bot]
+
 ## [2.1.1](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@2.1.0...demo-ui-storybook@2.1.1) (2024-01-09)
 
 **Note:** Version bump only for package demo-ui-storybook
