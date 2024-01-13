@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.3](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@2.1.2...demo-ui-storybook@2.1.3) (2024-01-13)
+
+### Bug Fixes
+
+* **deps:** update eslint ([#83](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/issues/83)) ([195cc8e](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/195cc8eb8508a1d56f9c62c710bfa02e9da88eef)) - by @renovate[bot]
+* **ui:** add badge and component title filters to status table ([8a1fec0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/8a1fec071c9cc50b6ff14bc50c2435d5c4eac431)) - by @waldronmatt
+* **ui:** naming and imports ([9175fac](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9175faccff1f0acba6fa5c293f0972bc0d4b01cb)) - by @waldronmatt
+
 ## [2.1.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@2.1.1...demo-ui-storybook@2.1.2) (2024-01-12)
 
 ### Bug Fixes
