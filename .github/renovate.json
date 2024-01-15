@@ -5,7 +5,7 @@
     ":noUnscheduledUpdates",
     ":separatePatchReleases",
     "npm:unpublishSafe",
-    ":prNotPending"
+    ":maintainLockFilesWeekly"
   ],
   "baseBranches": ["main"],
   "branchPrefix": "deps/",
@@ -31,6 +31,10 @@
     "automerge": true,
     "labels": ["automerge"],
     "groupName": "Patch updates"
+  },
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "automerge": true
   },
   "packageRules": [
     {
