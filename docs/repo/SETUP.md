@@ -44,11 +44,21 @@ Enable read and write workflow permissions in your repo via `Settings` -> `Actio
 
 Follow the directions [here](https://github.com/renovatebot/tutorial) to set up Renovate.
 
+Create an `automerge` PR label. Renovate will apply this label on PRs for Kodiak to merge automatically.
+
+## Security Alerts
+
+Follow the directions [here](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/configuring-dependabot-alerts#enabling-or-disabling-dependabot-alerts-for-new-repositories) to enable dependabot alerts.
+
+Create a `security` PR label. Renovate will apply this label on created PRs when Dependabot issues a security alert.
+
 ## Kodiak
 
 Follow the directions [here](https://kodiakhq.com/docs/quickstart) to set up Kodiak.
 
-Additionally create `wip` and `conflict` labels.
+Create a `wip` PR labels. When you set the `wip` label on a PR, Kodiak will not merge the PR.
+
+Create a `conflict` PR label. When you set the `conflict` label on a PR, Kodiak will update when the PR is out-of-date with the main branch. Renovate will typically rebase a branch so this label isn't typically needed.
 
 ## Initial v1 Package Release
 
