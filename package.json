@@ -53,7 +53,8 @@
     "nx": "17.2.8",
     "prettier": "3.2.1",
     "publint": "0.2.7",
-    "secretlint": "8.1.0"
+    "secretlint": "8.1.0",
+    "syncpack": "12.3.0"
   },
   "resolutions": {
     "tsconfig-paths": "4.2.0"
