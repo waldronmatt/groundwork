@@ -2,6 +2,13 @@
 
 Welcome to my personal monorepo, a curated collection of boilerplate projects and reusable configurations. This repository serves as my go-to resource for quickly setting up new projects and experimenting with emerging technologies. Whether you're a fellow developer or just curious, feel free to explore and utilize these setups.
 
+## Sites
+
+Below is a list of boilerplate sites:
+
+- [Vite](https://groundwork-vite.netlify.app/)
+- [Storybook](https://groundwork-storybook.netlify.app/)
+
 ## Installation
 
 Install dependencies:
