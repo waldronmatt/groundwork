@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.10](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@2.1.9...demo-ui-storybook@2.1.10) (2024-01-15)
+
+### Bug Fixes
+
+* **global:** update netlify links ([5c0a6af](https://github.com/waldronmatt/groundwork/commit/5c0a6af3805eaf632c44433e9dd6f79300811860)) - by @waldronmatt
+
 ## [2.1.9](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@2.1.8...demo-ui-storybook@2.1.9) (2024-01-15)
 
 **Note:** Version bump only for package demo-ui-storybook

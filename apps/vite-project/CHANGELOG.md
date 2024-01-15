@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://github.com/waldronmatt/groundwork/compare/vite-project@2.0.9...vite-project@2.0.10) (2024-01-15)
+
+### Bug Fixes
+
+* **global:** update netlify links ([5c0a6af](https://github.com/waldronmatt/groundwork/commit/5c0a6af3805eaf632c44433e9dd6f79300811860)) - by @waldronmatt
+
 ## 2.0.9 (2024-01-15)
 
 **Note:** Version bump only for package vite-project
