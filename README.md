@@ -1,6 +1,6 @@
-# pnpm | nx | lerna-lite
+# groundwork
 
-A monorepo boilerplate using `pnpm` (installer), `nx` (task-runner), and `lerna lite` (publisher).
+Welcome to my personal monorepo, a curated collection of boilerplate projects and reusable configurations. This repository serves as my go-to resource for quickly setting up new projects and experimenting with emerging technologies. Whether you're a fellow developer or just curious, feel free to explore and utilize these setups.
 
 ## Installation
 

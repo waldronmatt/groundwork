@@ -38,15 +38,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate.git",
+    "url": "git+https://github.com/waldronmatt/groundwork.git",
     "directory": "packages/ui"
   },
   "author": "Matthew Waldron",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/issues"
+    "url": "https://github.com/waldronmatt/groundwork/issues"
   },
-  "homepage": "https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/tree/main/packages/ui#readme",
+  "homepage": "https://github.com/waldronmatt/groundwork/tree/main/packages/ui#readme",
   "peerDependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"

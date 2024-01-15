@@ -31,15 +31,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate.git",
+    "url": "git+https://github.com/waldronmatt/groundwork.git",
     "directory": "packages/basic-math"
   },
   "author": "Matthew Waldron",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/issues"
+    "url": "https://github.com/waldronmatt/groundwork/issues"
   },
-  "homepage": "https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/tree/main/packages/basic-math#readme",
+  "homepage": "https://github.com/waldronmatt/groundwork/tree/main/packages/basic-math#readme",
   "devDependencies": {
     "@types/jest": "29.5.11",
     "esbuild": "0.19.11",

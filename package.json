@@ -1,5 +1,5 @@
 {
-  "name": "pnpm-nx-lerna-lite-boilerplate",
+  "name": "groundwork",
   "description": "A monorepo boilerplate using pnpm, nx, and lerna-lite.",
   "version": "0.0.0",
   "private": true,
