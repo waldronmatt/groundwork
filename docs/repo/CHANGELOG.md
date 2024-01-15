@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.5 (2024-01-15)
+
+### Bug Fixes
+
+* **docs:** add label info ([c23a19c](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/c23a19c524cfbeec83f9de0eb05246c710f8f0b4)) - by @waldronmatt
+
 ## 1.5.4 (2024-01-13)
 
 ### Bug Fixes
