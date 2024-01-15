@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.22 (2024-01-15)
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-mdx to v3.1.4 ([#97](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/issues/97)) ([ddc6983](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/ddc69836cba8e8572bf9f6ca52e46dd89560069c)) - by @renovate[bot]
+
 ## [1.1.21](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/eslint-config-custom@1.1.19...eslint-config-custom@1.1.21) (2024-01-13)
 
 ### Bug Fixes
