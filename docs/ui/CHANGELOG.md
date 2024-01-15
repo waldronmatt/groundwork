@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.8 (2024-01-15)
+
+### Bug Fixes
+
+* **ui:** refactoring interfaces ([3852453](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/38524535f6e0782853087bc4e1f34ac85adbeaa1)) - by @waldronmatt
+
 ## 2.1.7 (2024-01-15)
 
 **Note:** Version bump only for package demo-ui-storybook
