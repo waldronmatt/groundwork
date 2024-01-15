@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import { Unstyled } from '@storybook/blocks';
 import { getCSSVariables } from './utils/getCSSVariables.js';
 import { capitalizeFirstLetter } from './utils/functions.js';
-import { TokenPropsInterface } from './types/tokenPropsInterface.js';
 import docStyles from './styles/FontFamily.module.css';
 
 const extractTypeAndName = (variable: string): { type: string; name: string } => {
@@ -16,7 +15,7 @@ const extractTypeAndName = (variable: string): { type: string; name: string } =>
   return { type, name };
 };
 
-const FontFamily: FC<TokenPropsInterface> = ({ token }) => {
+const FontFamily: FC<Storybook.TokenProps> = ({ token }) => {
   const cssVariables = getCSSVariables(token);
 
   const generateGridItems = () => {

@@ -1,27 +1,13 @@
 import React, { useState } from 'react';
 import { useStorybookData } from './hooks/useStorybookData.js';
-import { StorybookDataItemInterface } from './types/storybookDataItemInterface.js';
 import docStyles from './styles/StatusTable.module.css';
 import './styles/Table.module.css';
-
-declare global {
-  interface Window {
-    __STORYBOOK_STORY_STORE__: {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      [key: string]: any;
-      cacheAllCSFFiles: () => Promise<void>;
-      cachedCSFFiles: {
-        [key: string]: StorybookDataItemInterface;
-      };
-    };
-  }
-}
 
 const StatusTable = () => {
   const [selectedBadge, setSelectedBadge] = useState<string | null>(null);
   const [filterComponentName, setFilterComponentName] = useState<string>('');
 
-  const store = window.__STORYBOOK_STORY_STORE__;
+  const store = window.__STORYBOOK_STORY_STORE__ as Storybook.StorybookAPI;
   const { data, loading, error, fetchSuccess } = useStorybookData(store, 'stories');
 
   const renderStatusEmoji = (status: string) => {

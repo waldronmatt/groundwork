@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { getCSSVariables } from './utils/getCSSVariables.js';
 import { capitalizeFirstLetter } from './utils/functions.js';
-import { TokenPropsInterface } from './types/tokenPropsInterface.js';
 import docStyles from './styles/Typography.module.css';
 import './styles/Table.module.css';
 
@@ -75,7 +74,7 @@ const SwitchComponent: FC<{ variable: string; typography: string; category: stri
   return <>{component}</>;
 };
 
-const Typography: FC<TokenPropsInterface> = ({ token }) => {
+const Typography: FC<Storybook.TokenProps> = ({ token }) => {
   const cssVariables = getCSSVariables(token);
 
   const generateGridItems = () => {

@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { StorybookDataItemInterface } from '../types/storybookDataItemInterface.js';
 
-export const useStorybookData = (store: typeof window.__STORYBOOK_STORY_STORE__, filter: string) => {
-  const [data, setData] = useState<Record<string, StorybookDataItemInterface>>({});
+export const useStorybookData = (store: Storybook.StorybookAPI, filter: string) => {
+  const [data, setData] = useState<Record<string, Storybook.StorybookDataItem>>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [fetchSuccess, setFetchSuccess] = useState(false);

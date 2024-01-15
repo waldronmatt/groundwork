@@ -1,7 +1,6 @@
 import { FC, useEffect, useState, useCallback } from 'react';
 import { getCSSVariables } from './utils/getCSSVariables.js';
 import { capitalizeFirstLetter } from './utils/functions.js';
-import { TokenPropsInterface } from './types/tokenPropsInterface.js';
 import docStyles from './styles/Colors.module.css';
 
 const extractWordSeparatedByDash = /[a-zA-Z0-9]+/g;
@@ -30,7 +29,7 @@ const getVarValue = (extractValueFromVar: RegExpMatchArray | null) => {
   return window.getComputedStyle(document.documentElement).getPropertyValue(extractValueFromVar![1]);
 };
 
-const Colors: FC<TokenPropsInterface> = ({ token }) => {
+const Colors: FC<Storybook.TokenProps> = ({ token }) => {
   const [queryParams, setQueryParams] = useState<URLSearchParams | null>(new URLSearchParams(window.location.search));
 
   const cssVariables = getCSSVariables(token, queryParams);
