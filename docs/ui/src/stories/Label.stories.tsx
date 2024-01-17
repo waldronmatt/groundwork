@@ -5,7 +5,7 @@ const defaultProps = {
   children: 'Hello World',
 };
 
-const meta: Meta<typeof Label> = {
+const meta = {
   title: 'Components/Label',
   component: Label,
   argTypes: {
@@ -21,7 +21,7 @@ const meta: Meta<typeof Label> = {
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
     },
   },
-};
+} satisfies Meta<typeof Label>;
 
 export default meta;
 

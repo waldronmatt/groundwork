@@ -7,7 +7,7 @@ const defaultProps = {
   href: '/',
 };
 
-const meta: Meta<typeof Link> = {
+const meta = {
   title: 'Components/Link',
   component: Link,
   argTypes: {
@@ -23,7 +23,7 @@ const meta: Meta<typeof Link> = {
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
     },
   },
-};
+} satisfies Meta<typeof Link>;
 
 export default meta;
 

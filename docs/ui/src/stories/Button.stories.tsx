@@ -6,7 +6,7 @@ const defaultProps = {
   children: 'Hello World',
 };
 
-const meta: Meta<typeof Button> = {
+const meta = {
   title: 'Components/Button',
   component: Button,
   argTypes: {
@@ -22,7 +22,7 @@ const meta: Meta<typeof Button> = {
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
     },
   },
-};
+} satisfies Meta<typeof Button>;
 
 export default meta;
 

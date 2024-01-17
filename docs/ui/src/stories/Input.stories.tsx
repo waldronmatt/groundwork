@@ -2,7 +2,7 @@ import type { Meta, StoryFn } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Input, type InputProps } from '@waldronmatt/demo-ui/lib/index.js';
 
-const meta: Meta<typeof Input> = {
+const meta = {
   title: 'Components/Input',
   component: Input,
   argTypes: {
@@ -18,7 +18,7 @@ const meta: Meta<typeof Input> = {
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
     },
   },
-};
+} satisfies Meta<typeof Input>;
 
 export default meta;
 

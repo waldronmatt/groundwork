@@ -6,7 +6,7 @@ const defaultProps = {
   children: 'Hello World',
 };
 
-const meta: Meta<typeof LabeledInput> = {
+const meta = {
   title: 'Components/LabeledInput',
   component: LabeledInput,
   argTypes: {
@@ -23,7 +23,7 @@ const meta: Meta<typeof LabeledInput> = {
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
     },
   },
-};
+} satisfies Meta<typeof LabeledInput>;
 
 export default meta;
 
