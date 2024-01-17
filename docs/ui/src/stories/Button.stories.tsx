@@ -51,6 +51,7 @@ const Template: StoryFn<typeof Button> = (args: ButtonProps, { globals: { locale
 export const Default = Template.bind({});
 export const Small = Template.bind({});
 export const Large = Template.bind({});
+export const Hover = Template.bind({});
 
 Default.args = {
   ...defaultProps,
@@ -65,4 +66,13 @@ Small.args = {
 Large.args = {
   ...defaultProps,
   variant: 'lg',
+};
+
+Hover.args = {
+  ...defaultProps,
+  variant: 'md',
+};
+
+Hover.parameters = {
+  pseudo: { hover: true },
 };

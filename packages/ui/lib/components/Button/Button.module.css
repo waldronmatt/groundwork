@@ -6,6 +6,11 @@
   padding: 1rem;
 }
 
+.button:hover {
+  color: var(--demo-ui-color-bg);
+  background-color: var(--demo-ui-color-fg);
+}
+
 .sm {
   font-size: var(--demo-ui-font-size-sm);
 }

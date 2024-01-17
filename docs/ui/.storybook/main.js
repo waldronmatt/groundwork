@@ -10,6 +10,7 @@ const config = {
     '@storybook/addon-themes',
     'storybook-dark-mode',
     '@geometricpanda/storybook-addon-badges',
+    'storybook-addon-pseudo-states',
   ],
   framework: {
     name: '@storybook/react-vite',
