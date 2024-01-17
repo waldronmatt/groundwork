@@ -5,10 +5,10 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   variant?: string;
 }
 
-export function Button({ children, variant = 'md', ...nativeProps }: ButtonProps): JSX.Element {
+export const Button = ({ children, variant = 'md', ...nativeProps }: ButtonProps): JSX.Element => {
   return (
     <button type="button" className={`${styles.button} ${styles[variant]}`} {...nativeProps}>
       {children}
     </button>
   );
-}
+};

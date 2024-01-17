@@ -9,11 +9,11 @@ export interface LabeledInputProps extends CombinedChildrenProps {
   id: string;
 }
 
-export function LabeledInput({ children, id, ...nativeProps }: LabeledInputProps): JSX.Element {
+export const LabeledInput = ({ children, id, ...nativeProps }: LabeledInputProps): JSX.Element => {
   return (
     <div className={`${styles.labeledInput}`} {...nativeProps}>
       <Label htmlFor={id}>{children}</Label>
       <Input id={id} type="text"></Input>
     </div>
   );
-}
+};
