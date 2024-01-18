@@ -14,6 +14,12 @@ Add an exact version of a package as a dependency for local package:
 pnpm add -E react --filter vite-project
 ```
 
+Add an exact version of a specified package version as a dependency for local package:
+
+```bash
+pnpm add -E storybook@7.6.8 --filter demo-ui
+```
+
 Add an exact version of a **local** package and another package as a development dependency for local package:
 
 ```bash
