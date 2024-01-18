@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.8 (2024-01-18)
+
+### Bug Fixes
+
+* **pnpm.md:** add a specified package version entry ([22b8c1b](https://github.com/waldronmatt/groundwork/commit/22b8c1b3e3ec36ed41a14d4d98ed48578f27b464)) - by @waldronmatt
+
 ## 1.5.7 (2024-01-18)
 
 ### Bug Fixes
