@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.1 (2024-01-18)
+
+**Note:** Version bump only for package demo-ui-storybook
+
 # [3.0.0](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@2.2.0...demo-ui-storybook@3.0.0) (2024-01-18)
 
 ### Features

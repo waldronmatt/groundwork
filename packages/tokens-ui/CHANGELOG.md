@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.1 (2024-01-18)
+
+### Bug Fixes
+
+* **readme.md:** add storybook demo link ([5fcfe0a](https://github.com/waldronmatt/groundwork/commit/5fcfe0a188786ccc782a9b4866b18dd358d02673)) - by @waldronmatt
+
 # 1.0.0 (2024-01-18)
 
 ### Features
