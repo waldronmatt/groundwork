@@ -2,6 +2,8 @@
 
 A react component library built to work with Storybook to render design tokens in `mdx` docs. Documentation look-and-feel inspired by the [Shoelace library](https://shoelace.style/tokens/typography).
 
+See a live demo [here](https://groundwork-storybook.netlify.app/).
+
 ## Installation
 
 Install dependencies:
