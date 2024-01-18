@@ -1,5 +1,7 @@
 # Monorepo Documentation
 
+[Additional Commands](COMMANDS.md)
+
 [Architecture](ARCHITECTURE.md)
 
 [Lerna-Lite Commands](LERNALITE.md)

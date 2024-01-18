@@ -31,3 +31,11 @@ Disables the connection to Nx Cloud for the current run. The remote cache will n
 ```bash
 npx nx run-many -t test --skip-nx-cache
 ```
+
+## View Project Graph
+
+Visualize the project structure/dependencies:
+
+```bash
+pnpm nx:graph
+```
