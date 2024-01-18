@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@2.2.0...demo-ui-storybook@3.0.0) (2024-01-18)
+
+### Features
+
+* **tokens-ui:** create a separate component library for storybook doc components ([5f2e54f](https://github.com/waldronmatt/groundwork/commit/5f2e54f391f94af21a7e190e614a4e7ea6882dba)) - by @
+
+### BREAKING CHANGES
+
+* **tokens-ui:** files moved and import paths changed
+
 # [2.2.0](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@2.1.10...demo-ui-storybook@2.2.0) (2024-01-18)
 
 ### Bug Fixes
@@ -50,7 +60,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Bug Fixes
 
 * **deps:** update eslint ([#83](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/issues/83)) ([195cc8e](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/195cc8eb8508a1d56f9c62c710bfa02e9da88eef)) - by @renovate[bot]
+
 * **ui:** add badge and component title filters to status table ([8a1fec0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/8a1fec071c9cc50b6ff14bc50c2435d5c4eac431)) - by @waldronmatt
+
 * **ui:** naming and imports ([9175fac](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9175faccff1f0acba6fa5c293f0972bc0d4b01cb)) - by @waldronmatt
 
 ## [2.1.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@2.1.1...demo-ui-storybook@2.1.2) (2024-01-12)
@@ -68,6 +80,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * **ui:** add storybook component status table component ([e350d2f](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/e350d2f999b74a633984d6bd7a86ab5975b97f7b)) - by @waldronmatt
+
 * **ui:** add storybook icon gallery prebuilt component ([9460384](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9460384dff8524ba15db4178b9bacfdedf29e0cb)) - by @waldronmatt
 
 ## [2.0.4](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@2.0.3...demo-ui-storybook@2.0.4) (2024-01-05)
@@ -117,11 +130,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Bug Fixes
 
 * **ui:** add theming css vars, implement working storybook story and site theme switching ([9d05620](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/9d056203c393314940aea554219c0a2dad22357c)) - by @waldronmatt
+
 * **ui:** minor fixes ([fe5be8d](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/fe5be8d8308dfce7e09e3b0bf99e9ed545d17b31)) - by @waldronmatt
 
 ### Features
 
 * **ui:** add a working i18n example with args control fallback ([2e77017](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/2e77017ba02876ba3a3c12510d0f3ca572d78469)) - by @waldronmatt
+
 * **ui:** add storybook designs addon ([08663e0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/08663e0de4d70d3efb6752214b4a19a46d211044)) - by @waldronmatt
 
 ## [1.3.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.3.1...demo-ui-storybook@1.3.2) (2023-12-13)
@@ -135,7 +150,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Bug Fixes
 
 * **docs:** keep bump consistent with other storybook deps ([46257ed](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/46257ed1f81adfff9a13c073417a3f6fbdc13695)) - by @waldronmatt
+
 * **global:** typing updates, tsconfig and alias cleanup, comments ([7268483](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/72684835229547dc06de83f1f935a9b92c378e08)) - by @waldronmatt
+
 * **ui:** set up alias to get component md files, split up getting started and naming changes ([a88923f](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/commit/a88923ffb1c1f40f36e4da8448e2a8b3f7a39553)) - by @waldronmatt
 
 # [1.3.0](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/demo-ui-storybook@1.2.0...demo-ui-storybook@1.3.0) (2023-12-11)
