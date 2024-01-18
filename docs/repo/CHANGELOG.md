@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.7 (2024-01-18)
+
+### Bug Fixes
+
+* **docs:** move additional commands to docs repo ([9ef2656](https://github.com/waldronmatt/groundwork/commit/9ef265627c21e8f7328e877cc0efe69ba6f4e210)) - by @waldronmatt
+
 ## [1.5.6](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/monorepo-docs@1.5.5...monorepo-docs@1.5.6) (2024-01-15)
 
 ### Bug Fixes
