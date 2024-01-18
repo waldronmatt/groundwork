@@ -25,6 +25,7 @@ declare namespace Storybook {
 
   interface TokenProps {
     token: Token;
+    children?: React.ReactNode;
   }
 
   interface Token {

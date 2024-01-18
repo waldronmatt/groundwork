@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "tsconfig-config/vite.json",
+  "include": ["lib"],
+  "exclude": ["node_modules", "dist", "coverage"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "./",
+    "declaration": true,
+    "declarationMap": true
+  }
+}

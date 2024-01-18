@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
-import { Unstyled } from '@storybook/blocks';
-import { getCSSVariables } from './utils/getCSSVariables.js';
-import { capitalizeFirstLetter } from './utils/functions.js';
-import docStyles from './styles/FontFamily.module.css';
+import { getCSSVariables } from '../../utils/getCSSVariables.js';
+import { capitalizeFirstLetter } from '../../utils/functions.js';
+import docStyles from './FontFamily.module.css';
 
 const extractTypeAndName = (variable: string): { type: string; name: string } => {
   const extractWordSeparatedByDash = /[a-zA-Z0-9]+/g;
@@ -15,7 +14,7 @@ const extractTypeAndName = (variable: string): { type: string; name: string } =>
   return { type, name };
 };
 
-const FontFamily: FC<Storybook.TokenProps> = ({ token }) => {
+export const FontFamily: FC<Storybook.TokenProps> = ({ token, children }) => {
   const cssVariables = getCSSVariables(token);
 
   const generateGridItems = () => {
@@ -54,17 +53,7 @@ const FontFamily: FC<Storybook.TokenProps> = ({ token }) => {
                 </code>
               </div>
             </div>
-            <div style={inlineStyle}>
-              <Unstyled>
-                <h1>The quick brown fox jumped over the lazy dog.</h1>
-                <h2>The quick brown fox jumped over the lazy dog.</h2>
-                <h3>The quick brown fox jumped over the lazy dog.</h3>
-                <h4>The quick brown fox jumped over the lazy dog.</h4>
-                <h5>The quick brown fox jumped over the lazy dog.</h5>
-                <h6>The quick brown fox jumped over the lazy dog.</h6>
-                <p>The quick brown fox jumped over the lazy dog.</p>
-              </Unstyled>
-            </div>
+            <div style={inlineStyle}>{children}</div>
           </div>
           <br />
         </React.Fragment>,
@@ -83,5 +72,3 @@ const FontFamily: FC<Storybook.TokenProps> = ({ token }) => {
     </>
   );
 };
-
-export default FontFamily;

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useStorybookData } from './hooks/useStorybookData.js';
-import docStyles from './styles/StatusTable.module.css';
-import './styles/Table.module.css';
+import { useStorybookData } from '../../hooks/useStorybookData.js';
+import docStyles from './StatusTable.module.css';
+import '../../styles/Table.module.css';
 
-const StatusTable = () => {
+export const StatusTable = () => {
   const [selectedBadge, setSelectedBadge] = useState<string | null>(null);
   const [filterComponentName, setFilterComponentName] = useState<string>('');
 
@@ -137,5 +137,3 @@ const StatusTable = () => {
     </>
   );
 };
-
-export default StatusTable;

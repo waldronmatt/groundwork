@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { getCSSVariables } from './utils/getCSSVariables.js';
-import { capitalizeFirstLetter } from './utils/functions.js';
-import docStyles from './styles/TokenPreview.module.css';
-import './styles/Table.module.css';
+import { getCSSVariables } from '../../utils/getCSSVariables.js';
+import { capitalizeFirstLetter } from '../../utils/functions.js';
+import docStyles from './TokenPreview.module.css';
+import '../../styles/Table.module.css';
 
 const Space: FC<{ variable: string; tokenValue: string }> = ({ variable, tokenValue }) => (
   <tr>
@@ -97,7 +97,7 @@ const SwitchComponent: FC<{ variable: string; tokenValue: string; category: stri
   return <>{component}</>;
 };
 
-const TokenPreview: FC<Storybook.TokenProps> = ({ token }) => {
+export const TokenPreview: FC<Storybook.TokenProps> = ({ token }) => {
   const cssVariables = getCSSVariables(token);
 
   const generateGridItems = () => {
@@ -133,5 +133,3 @@ const TokenPreview: FC<Storybook.TokenProps> = ({ token }) => {
     </>
   );
 };
-
-export default TokenPreview;

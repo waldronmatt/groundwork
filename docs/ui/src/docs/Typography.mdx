@@ -1,12 +1,22 @@
 import { Meta } from '@storybook/blocks';
-import Typography from '../components/Typography';
-import FontFamily from '../components/FontFamily';
+import { Unstyled } from '@storybook/blocks';
+import { FontFamily, Typography } from '@waldronmatt/story-tokens-ui/lib/index';
 
 <Meta title="Design Tokens/Typography" />
 
 # Typography
 
-<FontFamily token={{ prefix: 'sl', category: 'font-family' }} />
+<FontFamily token={{ prefix: 'sl', category: 'font-family' }}>
+  <Unstyled>
+    <h1>The quick brown fox jumped over the lazy dog.</h1>
+    <h2>The quick brown fox jumped over the lazy dog.</h2>
+    <h3>The quick brown fox jumped over the lazy dog.</h3>
+    <h4>The quick brown fox jumped over the lazy dog.</h4>
+    <h5>The quick brown fox jumped over the lazy dog.</h5>
+    <h6>The quick brown fox jumped over the lazy dog.</h6>
+    <p>The quick brown fox jumped over the lazy dog.</p>
+  </Unstyled>
+</FontFamily>
 
 <Typography token={{ prefix: 'sl', category: 'font-size' }} />
 

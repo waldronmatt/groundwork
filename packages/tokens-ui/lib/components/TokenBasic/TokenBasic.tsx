@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { getCSSVariables } from './utils/getCSSVariables.js';
-import { capitalizeFirstLetter } from './utils/functions.js';
-import docStyles from './styles/TokenBasic.module.css';
-import './styles/Table.module.css';
+import { getCSSVariables } from '../../utils/getCSSVariables.js';
+import { capitalizeFirstLetter } from '../../utils/functions.js';
+import docStyles from './TokenBasic.module.css';
+import '../../styles/Table.module.css';
 
-const TokenBasic: FC<Storybook.TokenProps> = ({ token }) => {
+export const TokenBasic: FC<Storybook.TokenProps> = ({ token }) => {
   const cssVariables = getCSSVariables(token);
 
   const generateGridItems = () => {
@@ -44,5 +44,3 @@ const TokenBasic: FC<Storybook.TokenProps> = ({ token }) => {
     </>
   );
 };
-
-export default TokenBasic;
