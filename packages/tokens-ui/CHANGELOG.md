@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.0.1...@waldronmatt/story-tokens-ui@1.0.2) (2024-01-18)
+
+### Bug Fixes
+
+* **package.json:** add storybook as a peer dep ([6a63b0a](https://github.com/waldronmatt/groundwork/commit/6a63b0a6c3076456f6d3ff35737489636c02fb90)) - by @waldronmatt
+
 ## 1.0.1 (2024-01-18)
 
 ### Bug Fixes
