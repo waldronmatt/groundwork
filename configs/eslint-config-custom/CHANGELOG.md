@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.23 (2024-01-18)
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-mdx to v3.1.5 ([#101](https://github.com/waldronmatt/groundwork/issues/101)) ([8f5c6d4](https://github.com/waldronmatt/groundwork/commit/8f5c6d48509ba58ecb4f3790b9e49f84b0c293d0)) - by @renovate[bot]
+
 ## 1.1.22 (2024-01-15)
 
 ### Bug Fixes

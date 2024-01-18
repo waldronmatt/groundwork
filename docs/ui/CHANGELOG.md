@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@2.1.10...demo-ui-storybook@2.2.0) (2024-01-18)
+
+### Bug Fixes
+
+* **ui:** convert to satisfies for typing best practices ([0658d33](https://github.com/waldronmatt/groundwork/commit/0658d33a2d7789ba3b9988180666e51b0a7030ac)) - by @waldronmatt
+
+### Features
+
+* **ui:** add storybook hover addon ([4d4a3a2](https://github.com/waldronmatt/groundwork/commit/4d4a3a2f03fe1b9b27d111151ff267d618abc3fd)) - by @waldronmatt
+
 ## [2.1.10](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@2.1.9...demo-ui-storybook@2.1.10) (2024-01-15)
 
 ### Bug Fixes

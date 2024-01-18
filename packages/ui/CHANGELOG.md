@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2024-01-18)
+
+### Bug Fixes
+
+* **ui:** convert to arrow functions ([4f195c6](https://github.com/waldronmatt/groundwork/commit/4f195c6407987dff8ed0d4b6d35a033ab2cfb2ac)) - by @waldronmatt
+
+### Features
+
+* **ui:** add storybook hover addon ([4d4a3a2](https://github.com/waldronmatt/groundwork/commit/4d4a3a2f03fe1b9b27d111151ff267d618abc3fd)) - by @waldronmatt
+
 ## 3.0.9 (2024-01-15)
 
 **Note:** Version bump only for package @waldronmatt/demo-ui
