@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.1 (2024-01-19)
+
+**Note:** Version bump only for package @waldronmatt/demo-ui
+
 # 3.1.0 (2024-01-18)
 
 ### Bug Fixes
