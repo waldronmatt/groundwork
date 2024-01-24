@@ -71,6 +71,7 @@ export default defineConfig({
     // of your library that can be published and consumed by other projects
     lib: {
       entry: resolve(__dirname, 'lib/index.ts'),
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['react', 'react/jsx-runtime'],
