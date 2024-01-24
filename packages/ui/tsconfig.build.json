@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": [".*.cjs", "*.cjs", "*.config.ts", "lib/**/*.spec.tsx"],
+  "exclude": [".*.cjs", "*.cjs", "*.config.ts"],
   "compilerOptions": {
     "rootDir": "./lib",
     "outDir": "dist"

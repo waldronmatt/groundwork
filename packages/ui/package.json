@@ -28,10 +28,8 @@
   ],
   "scripts": {
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch",
     "build": "tsc --p ./tsconfig.build.json && vite build",
-    "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo"
+    "clean": "rimraf dist tsconfig.build.tsbuildinfo"
   },
   "publishConfig": {
     "access": "public"
@@ -52,18 +50,12 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "6.2.0",
-    "@testing-library/react": "14.1.2",
-    "@testing-library/user-event": "14.5.2",
-    "@types/jest": "29.5.11",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
     "@vitejs/plugin-react-swc": "3.5.0",
     "eslint": "8.56.0",
     "eslint-config-custom": "workspace:*",
     "glob": "10.3.10",
-    "jest": "29.7.0",
-    "jest-config": "workspace:*",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rimraf": "5.0.5",

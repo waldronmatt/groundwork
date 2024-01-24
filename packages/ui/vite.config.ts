@@ -20,8 +20,6 @@ export default defineConfig({
     // we also declare `declaration` or else TS will throw errors even though
     // this is redudant since we are using dts plugin below to do this
     dts({
-      // exclude test files so dts plugin doesn't generate source maps for them
-      exclude: ['lib/**/*.spec.tsx', 'lib/__mocks__/*'],
       outDir: ['dist/types'],
     }),
     // generates a separate CSS file for each chunk and includes an import statement
@@ -80,19 +78,14 @@ export default defineConfig({
       //
       // directory structures are also preserved
       input: Object.fromEntries(
-        glob
-          .sync('lib/**/*.{ts,tsx}', {
-            // we don't want test files included
-            ignore: ['lib/**/*.spec.tsx', 'lib/__mocks__/*'],
-          })
-          .map((file) => [
-            // The name of the entry point
-            // lib/nested/foo.ts becomes nested/foo
-            relative('lib', file.slice(0, file.length - extname(file).length)),
-            // The absolute path to the entry file
-            // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
-            fileURLToPath(new URL(file, import.meta.url)),
-          ]),
+        glob.sync('lib/**/*.{ts,tsx}').map((file) => [
+          // The name of the entry point
+          // lib/nested/foo.ts becomes nested/foo
+          relative('lib', file.slice(0, file.length - extname(file).length)),
+          // The absolute path to the entry file
+          // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
+          fileURLToPath(new URL(file, import.meta.url)),
+        ]),
       ),
     },
   },

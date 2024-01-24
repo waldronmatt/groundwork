@@ -421,18 +421,6 @@ importers:
 
   packages/ui:
     devDependencies:
-      '@testing-library/jest-dom':
-        specifier: 6.2.0
-        version: 6.2.0(@types/jest@29.5.11)(jest@29.7.0)
-      '@testing-library/react':
-        specifier: 14.1.2
-        version: 14.1.2(react-dom@18.2.0)(react@18.2.0)
-      '@testing-library/user-event':
-        specifier: 14.5.2
-        version: 14.5.2(@testing-library/dom@9.3.4)
-      '@types/jest':
-        specifier: 29.5.11
-        version: 29.5.11
       '@types/react':
         specifier: 18.2.48
         version: 18.2.48
@@ -451,12 +439,6 @@ importers:
       glob:
         specifier: 10.3.10
         version: 10.3.10
-      jest:
-        specifier: 29.7.0
-        version: 29.7.0(@types/node@20.11.5)
-      jest-config:
-        specifier: workspace:*
-        version: link:../../configs/jest-config
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -5422,36 +5404,6 @@ packages:
       dom-accessibility-api: 0.5.16
       lz-string: 1.5.0
       pretty-format: 27.5.1
-    dev: true
-
-  /@testing-library/jest-dom@6.2.0(@types/jest@29.5.11)(jest@29.7.0):
-    resolution: {integrity: sha512-+BVQlJ9cmEn5RDMUS8c2+TU6giLvzaHZ8sU/x0Jj7fk+6/46wPdwlgOPcpxS17CjcanBi/3VmGMqVr2rmbUmNw==}
-    engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
-    peerDependencies:
-      '@jest/globals': '>= 28'
-      '@types/jest': '>= 28'
-      jest: '>= 28'
-      vitest: '>= 0.32'
-    peerDependenciesMeta:
-      '@jest/globals':
-        optional: true
-      '@types/jest':
-        optional: true
-      jest:
-        optional: true
-      vitest:
-        optional: true
-    dependencies:
-      '@adobe/css-tools': 4.3.2
-      '@babel/runtime': 7.23.8
-      '@types/jest': 29.5.11
-      aria-query: 5.3.0
-      chalk: 3.0.0
-      css.escape: 1.5.1
-      dom-accessibility-api: 0.6.3
-      jest: 29.7.0(@types/node@20.11.5)
-      lodash: 4.17.21
-      redent: 3.0.0
     dev: true
 
   /@testing-library/jest-dom@6.2.0(vitest@1.2.1):
