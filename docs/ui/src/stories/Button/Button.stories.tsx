@@ -1,15 +1,14 @@
 import type { Meta, StoryFn } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Link, type LinkProps } from '@waldronmatt/demo-ui/lib/index.js';
+import { Button, type ButtonProps } from '@waldronmatt/demo-ui/lib/index.js';
 
-const defaultProps = {
+export const DefaultProps = {
   children: 'Hello World',
-  href: '/',
 };
 
 const meta = {
-  title: 'Components/Link',
-  component: Link,
+  title: 'Components/Button',
+  component: Button,
   argTypes: {
     variant: {
       options: ['md', 'sm', 'lg'],
@@ -23,7 +22,8 @@ const meta = {
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
     },
   },
-} satisfies Meta<typeof Link>;
+  excludeStories: ['DefaultProps'],
+} satisfies Meta<typeof Button>;
 
 export default meta;
 
@@ -36,40 +36,54 @@ const getCaptionForLocale = (locale: string) => {
   }
 };
 
-const onClickHandler = action('link-click');
+const onClickHandler = action('button-click');
 
-const Template: StoryFn<typeof Link> = (args: LinkProps, { globals: { locale } }) => {
-  // by default, let the user modify the text through the `children` control
+const Template: StoryFn<typeof Button> = (args: ButtonProps) => {
+  return <Button {...args} onClick={onClickHandler}></Button>;
+};
+
+const LocaleTemplate: StoryFn<typeof Button> = (args: ButtonProps, { globals: { locale } }) => {
+  // by default (and as a fallback), let the user modify the text through the `children` control
   // otherwise, load in the text from locale for i18n testing
   const caption = locale !== '' ? getCaptionForLocale(locale as string) : args.children;
   return (
-    <Link
-      {...args}
-      onClick={(event) => {
-        event.preventDefault();
-        onClickHandler(event);
-      }}
-    >
+    <Button {...args} onClick={onClickHandler}>
       {caption}
-    </Link>
+    </Button>
   );
 };
 
 export const Default = Template.bind({});
 export const Small = Template.bind({});
 export const Large = Template.bind({});
+export const Hover = Template.bind({});
+export const Locale = LocaleTemplate.bind({});
 
 Default.args = {
-  ...defaultProps,
+  ...DefaultProps,
   variant: 'md',
 };
 
 Small.args = {
-  ...defaultProps,
+  ...DefaultProps,
   variant: 'sm',
 };
 
 Large.args = {
-  ...defaultProps,
+  ...DefaultProps,
   variant: 'lg',
+};
+
+Hover.args = {
+  ...DefaultProps,
+  variant: 'md',
+};
+
+Hover.parameters = {
+  pseudo: { hover: true },
+};
+
+Locale.args = {
+  ...DefaultProps,
+  variant: 'md',
 };

@@ -2,7 +2,7 @@ import type { Meta, StoryFn } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { LabeledInput, type LabeledInputProps } from '@waldronmatt/demo-ui/lib/index.js';
 
-const defaultProps = {
+export const DefaultProps = {
   children: 'Hello World',
 };
 
@@ -23,6 +23,7 @@ const meta = {
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
     },
   },
+  excludeStories: ['DefaultProps'],
 } satisfies Meta<typeof LabeledInput>;
 
 export default meta;
@@ -37,6 +38,6 @@ const Template: StoryFn<typeof LabeledInput> = (args: LabeledInputProps) => {
 export const Default = Template.bind({});
 
 Default.args = {
-  ...defaultProps,
+  ...DefaultProps,
   id: 'unique_id',
 };

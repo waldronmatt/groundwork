@@ -1,0 +1,34 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Input component > handles native props 1`] = `
+<div>
+  <input
+    class="input md"
+    id="testId"
+  />
+</div>
+`;
+
+exports[`Input component > renders with default props 1`] = `
+<div>
+  <input
+    class="input md"
+  />
+</div>
+`;
+
+exports[`Input component > renders with lg variant 1`] = `
+<div>
+  <input
+    class="input lg"
+  />
+</div>
+`;
+
+exports[`Input component > renders with sm variant 1`] = `
+<div>
+  <input
+    class="input sm"
+  />
+</div>
+`;

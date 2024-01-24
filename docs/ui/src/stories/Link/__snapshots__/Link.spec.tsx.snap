@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Link component > handles native props 1`] = `
+<div>
+  <a
+    class="link md"
+    href="/"
+    target="_blank"
+  >
+    Hello World
+  </a>
+</div>
+`;
+
+exports[`Link component > renders with default props 1`] = `
+<div>
+  <a
+    class="link md"
+    href="/"
+  >
+    Hello World
+  </a>
+</div>
+`;
+
+exports[`Link component > renders with lg variant 1`] = `
+<div>
+  <a
+    class="link lg"
+    href="/"
+  >
+    Hello World
+  </a>
+</div>
+`;
+
+exports[`Link component > renders with sm variant 1`] = `
+<div>
+  <a
+    class="link sm"
+    href="/"
+  >
+    Hello World
+  </a>
+</div>
+`;

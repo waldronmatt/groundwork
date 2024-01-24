@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "lint": "eslint . --ext tsx --report-unused-disable-directives --max-warnings 0",
+    "test": "vitest run --coverage -u",
+    "test:watch": "vitest --watch -u",
     "build": "storybook build",
     "clean": "rimraf storybook-static",
     "preview": "serve storybook-static"
@@ -31,9 +33,13 @@
     "@storybook/react-vite": "7.6.10",
     "@storybook/theming": "7.6.10",
     "@storybook/types": "7.6.10",
+    "@testing-library/jest-dom": "6.2.0",
+    "@testing-library/react": "14.1.2",
+    "@testing-library/user-event": "14.5.2",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
     "@vitejs/plugin-react": "4.2.1",
+    "@vitest/coverage-v8": "^1.2.1",
     "eslint": "8.56.0",
     "eslint-config-custom": "workspace:*",
     "rimraf": "5.0.5",
@@ -42,6 +48,8 @@
     "storybook-addon-pseudo-states": "2.1.2",
     "storybook-dark-mode": "3.0.3",
     "tsconfig-config": "workspace:*",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "vite": "5.0.12",
+    "vitest": "1.2.1"
   }
 }

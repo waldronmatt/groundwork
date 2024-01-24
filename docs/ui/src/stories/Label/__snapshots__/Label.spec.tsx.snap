@@ -1,0 +1,42 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Label component > handles native props 1`] = `
+<div>
+  <label
+    class="label md"
+    for="inputId"
+  >
+    Hello World
+  </label>
+</div>
+`;
+
+exports[`Label component > renders with default variant 1`] = `
+<div>
+  <label
+    class="label md"
+  >
+    Hello World
+  </label>
+</div>
+`;
+
+exports[`Label component > renders with lg variant 1`] = `
+<div>
+  <label
+    class="label lg"
+  >
+    Hello World
+  </label>
+</div>
+`;
+
+exports[`Label component > renders with sm variant 1`] = `
+<div>
+  <label
+    class="label sm"
+  >
+    Hello World
+  </label>
+</div>
+`;

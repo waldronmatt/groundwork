@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LabeledInput component > renders with label and input components 1`] = `
+<div>
+  <div
+    class="labeledInput"
+  />
+</div>
+`;

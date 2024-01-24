@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button component > handles native props 1`] = `
+<div>
+  <button
+    class="button md"
+    disabled=""
+    type="button"
+  >
+    Hello World
+  </button>
+</div>
+`;
+
+exports[`Button component > renders with default props 1`] = `
+<div>
+  <button
+    class="button md"
+    type="button"
+  >
+    Hello World
+  </button>
+</div>
+`;
+
+exports[`Button component > renders with lg variant 1`] = `
+<div>
+  <button
+    class="button lg"
+    type="button"
+  >
+    Hello World
+  </button>
+</div>
+`;
+
+exports[`Button component > renders with sm variant 1`] = `
+<div>
+  <button
+    class="button sm"
+    type="button"
+  >
+    Hello World
+  </button>
+</div>
+`;

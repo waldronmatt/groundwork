@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
-  extends: ['custom/storybook.cjs'],
-  ignorePatterns: ['dist/**'],
+  extends: ['custom/storybook.cjs', 'custom/vitest.cjs'],
+  ignorePatterns: ['dist/**', 'vite.config.ts'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',

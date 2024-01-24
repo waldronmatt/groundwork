@@ -1,7 +1,7 @@
 import type { Meta, StoryFn } from '@storybook/react';
 import { Label, type LabelProps } from '@waldronmatt/demo-ui/lib/index.js';
 
-const defaultProps = {
+export const DefaultProps = {
   children: 'Hello World',
 };
 
@@ -21,6 +21,7 @@ const meta = {
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
     },
   },
+  excludeStories: ['DefaultProps'],
 } satisfies Meta<typeof Label>;
 
 export default meta;
@@ -34,16 +35,16 @@ export const Small = Template.bind({});
 export const Large = Template.bind({});
 
 Default.args = {
-  ...defaultProps,
+  ...DefaultProps,
   variant: 'md',
 };
 
 Small.args = {
-  ...defaultProps,
+  ...DefaultProps,
   variant: 'sm',
 };
 
 Large.args = {
-  ...defaultProps,
+  ...DefaultProps,
   variant: 'lg',
 };
