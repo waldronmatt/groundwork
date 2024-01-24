@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2024-01-24)
+
+### Features
+
+* **vitest.cjs:** add vitest config ([add7679](https://github.com/waldronmatt/groundwork/commit/add76791aede7414aa8f035780f483fd8cbbab41)) - by @waldronmatt
+
 ## 1.1.24 (2024-01-19)
 
 ### Bug Fixes

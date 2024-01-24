@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2024-01-24)
+
+### Bug Fixes
+
+* **vite.config.ts:** add explicit formats array ([cc5aa3a](https://github.com/waldronmatt/groundwork/commit/cc5aa3ae8ad97ad1e37d1abfd17de465a21960b7)) - by @waldronmatt
+
+### Features
+
+* **global:** remove tests from ui library ([e63c7bb](https://github.com/waldronmatt/groundwork/commit/e63c7bbbb705fb70fca90ef42d3af1df579b92ad)) - by @waldronmatt
+
 ## [3.1.2](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.1.1...@waldronmatt/demo-ui@3.1.2) (2024-01-19)
 
 **Note:** Version bump only for package @waldronmatt/demo-ui

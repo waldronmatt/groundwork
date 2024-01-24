@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.0.6...demo-ui-storybook@3.1.0) (2024-01-24)
+
+### Bug Fixes
+
+* **global:** config updates ([0eccbd8](https://github.com/waldronmatt/groundwork/commit/0eccbd8bb2918e3905e6d3c46661a1f0c5d57dd6)) - by @waldronmatt
+
+### Features
+
+* **global:** move tests to storybook, migrate from jest to vitest, story tests and added snapshots ([dc0c932](https://github.com/waldronmatt/groundwork/commit/dc0c9326d5fad6ea0afa18a2d2e9f615003c2019)) - by @waldronmatt
+
 ## [3.0.6](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.0.5...demo-ui-storybook@3.0.6) (2024-01-22)
 
 **Note:** Version bump only for package demo-ui-storybook
