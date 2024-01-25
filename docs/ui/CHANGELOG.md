@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.1.0...demo-ui-storybook@3.1.1) (2024-01-25)
+
+### Bug Fixes
+
+* **vite.config.ts:** update coverage to include component library files ([830b238](https://github.com/waldronmatt/groundwork/commit/830b238b4ae1103f110ebddc23c373cbf9b631bb)) - by @waldronmatt
+
 # [3.1.0](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.0.6...demo-ui-storybook@3.1.0) (2024-01-24)
 
 ### Bug Fixes
