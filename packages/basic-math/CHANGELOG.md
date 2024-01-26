@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.39 (2024-01-26)
+
+**Note:** Version bump only for package @waldronmatt/basic-math
+
 ## 2.0.38 (2024-01-24)
 
 **Note:** Version bump only for package @waldronmatt/basic-math

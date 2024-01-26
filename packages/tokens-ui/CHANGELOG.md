@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.8 (2024-01-26)
+
+**Note:** Version bump only for package @waldronmatt/story-tokens-ui
+
 ## [1.0.7](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.0.6...@waldronmatt/story-tokens-ui@1.0.7) (2024-01-24)
 
 **Note:** Version bump only for package @waldronmatt/story-tokens-ui

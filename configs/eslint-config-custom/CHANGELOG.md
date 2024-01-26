@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.1 (2024-01-26)
+
+### Bug Fixes
+
+* **deps:** update eslint to v6.19.1 ([#115](https://github.com/waldronmatt/groundwork/issues/115)) ([fea140f](https://github.com/waldronmatt/groundwork/commit/fea140f57ddbe9a096a9c9d609bc782b64c1db1f)) - by @renovate[bot]
+
 # 1.2.0 (2024-01-24)
 
 ### Features

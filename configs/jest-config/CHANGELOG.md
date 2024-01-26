@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.24 (2024-01-26)
+
+### Bug Fixes
+
+* **deps:** update dependency ts-jest to v29.1.2 ([#114](https://github.com/waldronmatt/groundwork/issues/114)) ([d5d5516](https://github.com/waldronmatt/groundwork/commit/d5d551682e5df61408762c50068931e53823f1c3)) - by @renovate[bot]
+
 ## 1.1.23 (2024-01-24)
 
 **Note:** Version bump only for package jest-config
