@@ -36,8 +36,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@commitlint/cli": "18.4.4",
-    "@commitlint/config-conventional": "18.4.4",
+    "@commitlint/cli": "18.5.0",
+    "@commitlint/config-conventional": "18.5.0",
     "@lerna-lite/cli": "3.2.1",
     "@lerna-lite/publish": "3.2.1",
     "@lerna-lite/version": "3.2.1",
