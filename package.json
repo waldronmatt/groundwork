@@ -24,6 +24,7 @@
     "nx:graph": "npx nx graph",
     "list:deps": "npx syncpack list",
     "list:packages": "lerna ls -l -all",
+    "list:changed": "lerna changed -l -all",
     "update:deps": "npx syncpack update",
     "dev": "npx nx run-many -t dev",
     "lint": "npx nx run-many -t lint",
@@ -40,6 +41,7 @@
   "dependencies": {
     "@commitlint/cli": "18.6.0",
     "@commitlint/config-conventional": "18.6.0",
+    "@lerna-lite/changed": "3.2.1",
     "@lerna-lite/cli": "3.2.1",
     "@lerna-lite/list": "3.2.1",
     "@lerna-lite/publish": "3.2.1",

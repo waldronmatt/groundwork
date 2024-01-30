@@ -8,6 +8,12 @@ List local packages:
 pnpm list:packages
 ```
 
+List local packages that have changed:
+
+```bash
+pnpm list:changed
+```
+
 ## Version and Publish From CLI
 
 Version packages via the cli:
