@@ -89,7 +89,7 @@ Version packages via the cli:
 **Note**: Follow the directions [here](SETUP.md#lerna) to set up a `GITHUB_TOKEN` environment variable in your operating system.
 
 ```bash
-pnpm version
+pnpm version:cli
 ```
 
 ### Publish
@@ -97,5 +97,5 @@ pnpm version
 Publish packages via the cli:
 
 ```bash
-pnpm publish
+pnpm publish:cli
 ```
