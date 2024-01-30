@@ -1,7 +1,7 @@
 {
   "name": "groundwork",
   "description": "A monorepo boilerplate using pnpm, nx, and lerna-lite.",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "author": "Matthew Waldron",
   "workspaces": [
