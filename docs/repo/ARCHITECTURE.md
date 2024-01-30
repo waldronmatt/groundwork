@@ -35,6 +35,20 @@ pnpm-workspace.yaml
 
 - Under `docs` is where `storybook` component code is stored, however it is common to house this along with the UI component for simplicity. If kept together, you would need to update the project to ignore `storybook` files when building and publishing the UI components to `npm`.
 
+## Staged Files
+
+We are using `lint-staged` to run linting and tests on staged files. This is the ordering:
+
+1. Check for secrets (`secretlint`)
+2. Fix file formatting (`prettier`)
+3. Lint dependency versions (`syncpack`)
+4. Validate published packages best practices (`publint`)
+5. Verify monorepo best practices (`manypkg`)
+6. Lint and fix issues of affected `.ts` and related files (`eslint` and `nx`)
+7. Run tests of affected files (`jest`/`vitest` and `nx`)
+
+We limit automatic fixes to file formatting and linting when possible. For everything else, we let the user to decide on actions to take if there are errors.
+
 ## Versioning
 
 All packages including `peerDependencies` are configured to use exact versions of packages. I prefer to have exact package versions to simplify debugging and reduce the likelihood of compatibility issues. I use `renovate` to automatically handle version updates.

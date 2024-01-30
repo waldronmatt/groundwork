@@ -17,7 +17,7 @@ pnpm i -g rimraf
 Install husky and hooks in your repo for the first time:
 
 ```bash
-pnpm init:husky
+pnpm exec husky init
 ```
 
 ## NX

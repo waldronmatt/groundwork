@@ -1,13 +1,6 @@
 {
   "formatRepository": true,
   "lintFormatting": false,
-  "source": [
-    "package.json",
-    "apps/*/package.json",
-    "configs/*/package.json",
-    "docs/*/package.json",
-    "packages/*/package.json"
-  ],
   "semverGroups": [
     {
       "label": "Every dependency should have a semver range of fixed version numbers",

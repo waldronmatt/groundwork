@@ -1,7 +1,8 @@
 {
   "name": "groundwork",
   "description": "A monorepo boilerplate using pnpm, nx, and lerna-lite.",
-  "version": "0.0.1",
+  "version": "0.0.0",
+  "type": "module",
   "private": true,
   "author": "Matthew Waldron",
   "workspaces": [
@@ -12,22 +13,18 @@
   ],
   "scripts": {
     "prepare": "husky",
-    "init:husky": "pnpm exec husky init",
     "commit": "git-cz",
     "delete": "rimraf pnpm-lock.yaml .nx node_modules",
     "lint:secrets": "npx secretlint **/*",
-    "lint:format": "prettier --write .",
+    "lint:format": "prettier --check .",
     "lint:deps": "npx syncpack lint --config .syncpackrc",
-    "lint:publish": "npx publint",
-    "lint:packages": "npx manypkg check",
-    "lint:mr": "run-p lint:secrets lint:format lint:deps lint:publish lint:packages",
+    "lint:packages": "npx publint",
+    "lint:monorepo": "npx manypkg check",
+    "lint:mr": "run-p lint:secrets lint:format lint:deps lint:packages lint:monorepo",
     "nx:graph": "npx nx graph",
     "list:deps": "npx syncpack list",
     "list:packages": "lerna ls -l -all",
-    "preview:version": "lerna version --dry-run",
-    "preview:publish": "lerna publish from-package --dry-run",
-    "version:cli": "lerna version",
-    "publish:cli": "lerna publish from-package",
+    "update:deps": "npx syncpack update",
     "dev": "npx nx run-many -t dev",
     "lint": "npx nx run-many -t lint",
     "test": "npx nx run-many -t test",
@@ -61,9 +58,6 @@
     "publint": "0.2.7",
     "secretlint": "8.1.0",
     "syncpack": "12.3.0"
-  },
-  "resolutions": {
-    "tsconfig-paths": "4.2.0"
   },
   "manypkg": {
     "ignoredRules": [

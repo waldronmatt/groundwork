@@ -17,7 +17,7 @@ Install dependencies:
 pnpm i
 ```
 
-**Note**: Will install husky and hooks automatically via `prepare` lifecycle script.
+**Note**: Will set up husky and hooks automatically via `prepare` lifecycle script.
 
 ## Getting Started
 
