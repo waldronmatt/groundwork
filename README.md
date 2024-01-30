@@ -17,23 +17,9 @@ Install dependencies:
 pnpm i
 ```
 
-Install hooks:
-
-```bash
-pnpm prepare
-```
-
-## Setup
-
-Repository setup can be [found here](docs/repo/SETUP.md).
+**Note**: Will install husky and hooks automatically via `prepare` lifecycle script.
 
 ## Getting Started
-
-Commit changes using conventional changelog:
-
-```bash
-pnpm commit
-```
 
 Run local development servers:
 
@@ -69,12 +55,6 @@ Compile files and build bundle:
 pnpm build
 ```
 
-Clean up bundle artifacts:
-
-```bash
-pnpm clean
-```
-
 Starts local servers that serves the `build` outputs from their respective output folders:
 
 **Note**: Run `pnpm build` first
@@ -85,7 +65,7 @@ pnpm preview
 
 ## Additional Documentation
 
-Additional monorepo documentation can be [found here](docs/repo/README.md).
+Additional project setup, commands and documentation can be [found here](docs/repo/README.md).
 
 ## License
 

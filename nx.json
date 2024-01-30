@@ -24,7 +24,7 @@
       "outputs": ["{projectRoot}/dist"]
     },
     "test": {
-      "inputs": ["{projectRoot}/src/**/*.ts", "{projectRoot}/src/**/*.tsx"],
+      "inputs": ["{projectRoot}/src/**/*.ts"],
       "outputs": ["{projectRoot}/coverage"]
     },
     "build:src": {

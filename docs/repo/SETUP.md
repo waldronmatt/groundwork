@@ -12,6 +12,14 @@ Globally install the `rimraf` package via:
 pnpm i -g rimraf
 ```
 
+## Git Hooks
+
+Install husky and hooks in your repo for the first time:
+
+```bash
+pnpm init:husky
+```
+
 ## NX
 
 Create an `nx` account [here](https://cloud.nx.app/).

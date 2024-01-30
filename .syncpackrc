@@ -1,5 +1,6 @@
 {
-  "semverRange": "",
+  "formatRepository": true,
+  "lintFormatting": false,
   "source": [
     "package.json",
     "apps/*/package.json",
@@ -9,19 +10,35 @@
   ],
   "semverGroups": [
     {
-      "packages": [
-        "vite-project",
-        "eslint-config-custom",
-        "tsconfig-config",
-        "jest-config",
-        "monorepo-docs",
-        "demo-ui-storybook",
-        "@waldronmatt/**"
+      "label": "Every dependency should have a semver range of fixed version numbers",
+      "range": "",
+      "dependencyTypes": [
+        "prod",
+        "resolutions",
+        "overrides",
+        "pnpmOverrides",
+        "local"
       ],
       "dependencies": [
         "**"
       ],
-      "isIgnored": true
+      "packages": [
+        "**"
+      ]
+    }
+  ],
+  "versionGroups": [
+    {
+      "label": "Use workspace protocol when developing local packages",
+      "dependencies": [
+        "$LOCAL"
+      ],
+      "dependencyTypes": [
+        "prod",
+        "dev",
+        "peer"
+      ],
+      "pinVersion": "workspace:*"
     }
   ]
 }

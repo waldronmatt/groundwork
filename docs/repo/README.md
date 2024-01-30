@@ -4,8 +4,6 @@
 
 [Architecture](ARCHITECTURE.md)
 
-[Lerna-Lite Commands](LERNALITE.md)
-
 [Monorepo Tooling](TOOLS.md)
 
 [NX Commands](NX.md)

@@ -1,12 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    ":noUnscheduledUpdates",
-    ":separatePatchReleases",
-    "npm:unpublishSafe",
-    ":maintainLockFilesWeekly"
-  ],
+  "extends": ["config:recommended", ":noUnscheduledUpdates", ":separatePatchReleases", "npm:unpublishSafe"],
   "baseBranches": ["main"],
   "branchPrefix": "deps/",
   "dependencyDashboard": false,
@@ -15,22 +9,24 @@
   "rangeStrategy": "pin",
   "transitiveRemediation": true,
   "schedule": ["before 4am"],
-  "prHourlyLimit": 5,
+  "prHourlyLimit": 0,
   "rebaseWhen": "conflicted",
+  "separateMultipleMajor": true,
   "major": {
+    "groupName": "Major updates",
     "automerge": false,
     "assignees": ["waldronmatt"],
     "reviewers": ["waldronmatt"]
   },
   "minor": {
+    "groupName": "Minor updates",
     "automerge": true,
-    "labels": ["automerge"],
-    "groupName": "Minor updates"
+    "labels": ["automerge"]
   },
   "patch": {
+    "groupName": "Patch updates",
     "automerge": true,
-    "labels": ["automerge"],
-    "groupName": "Patch updates"
+    "labels": ["automerge"]
   },
   "vulnerabilityAlerts": {
     "labels": ["security"],
@@ -38,65 +34,107 @@
   },
   "packageRules": [
     {
-      "groupName": "commitlint",
-      "groupSlug": "commitlint",
-      "matchPackagePatterns": ["^@commitlint/"]
-    },
-    {
-      "groupName": "eslint",
-      "groupSlug": "eslint",
-      "matchPackageNames": ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser"],
-      "matchPackagePatterns": ["^eslint"]
-    },
-    {
-      "groupName": "github-actions",
-      "groupSlug": "github-actions",
-      "matchPackagePatterns": ["^actions"]
-    },
-    {
-      "groupName": "jest",
-      "groupSlug": "jest",
-      "matchPackageNames": ["@types/jest", "eslint-plugin-jest-dom", "jest"],
-      "matchPackagePatterns": ["^jest/", "^jest-/"]
-    },
-    {
-      "groupName": "lerna-lite",
-      "groupSlug": "lerna-lite",
-      "matchPackagePatterns": ["^@lerna-lite/"]
-    },
-    {
-      "groupName": "nx",
-      "groupSlug": "nx",
-      "matchPackageNames": ["nx"],
-      "matchPackagePatterns": ["^@nrwl/"]
-    },
-    {
-      "groupName": "react",
-      "groupSlug": "react",
-      "matchPackageNames": ["@types/react", "@types/react-dom", "react", "react-dom"]
-    },
-    {
-      "groupName": "secretlint",
-      "groupSlug": "secretlint",
-      "matchPackageNames": ["secretlint"],
-      "matchPackagePatterns": ["^@secretlint/"]
-    },
-    {
-      "groupName": "storybook",
-      "groupSlug": "storybook",
-      "matchPackageNames": ["storybook"],
-      "matchPackagePatterns": ["^@storybook/", "^storybook"]
-    },
-    {
-      "groupName": "testing-library",
-      "groupSlug": "testing-library",
-      "matchPackagePatterns": ["^@testing-library/"]
-    },
-    {
-      "groupName": "vite",
-      "groupSlug": "vite",
-      "matchPackageNames": ["vite"],
-      "matchPackagePatterns": ["^@vitejs/", "^@rollup/", "^vite"]
+      "matchCategories": ["node"],
+      "enabled": false
     }
-  ]
+  ],
+  "npm": {
+    "lockFileMaintenance": {
+      "enabled": true,
+      "schedule": "on the 2nd day of the month"
+    },
+    "packageRules": [
+      {
+        "groupName": "dependencies",
+        "matchDepTypes": ["dependencies"],
+        "matchUpdateTypes": ["patch", "minor"]
+      },
+      {
+        "matchDepTypes": ["dependencies"],
+        "bumpVersion": "patch"
+      },
+      {
+        "matchDepTypes": ["devDependencies"],
+        "groupName": "dev dependencies",
+        "matchUpdateTypes": ["patch", "minor"]
+      },
+      {
+        "matchDepTypes": ["peerDependencies"],
+        "groupName": "peer dependencies",
+        "matchUpdateTypes": ["patch", "minor"]
+      },
+      {
+        "groupName": "commitlint",
+        "groupSlug": "commitlint",
+        "matchPackagePatterns": ["^@commitlint/"]
+      },
+      {
+        "groupName": "eslint",
+        "groupSlug": "eslint",
+        "matchPackageNames": ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser"],
+        "matchPackagePatterns": ["^eslint"]
+      },
+      {
+        "groupName": "github-actions",
+        "groupSlug": "github-actions",
+        "matchPackagePatterns": ["^actions"]
+      },
+      {
+        "groupName": "jest",
+        "groupSlug": "jest",
+        "matchPackageNames": ["@types/jest", "eslint-plugin-jest-dom", "jest"],
+        "matchPackagePatterns": ["^jest/", "^jest-/"]
+      },
+      {
+        "groupName": "lerna-lite",
+        "groupSlug": "lerna-lite",
+        "matchPackagePatterns": ["^@lerna-lite/"]
+      },
+      {
+        "groupName": "nx",
+        "groupSlug": "nx",
+        "matchPackageNames": ["nx"],
+        "matchPackagePatterns": ["^@nrwl/"]
+      },
+      {
+        "groupName": "react",
+        "groupSlug": "react",
+        "matchPackageNames": ["@types/react", "@types/react-dom", "react", "react-dom"]
+      },
+      {
+        "groupName": "secretlint",
+        "groupSlug": "secretlint",
+        "matchPackageNames": ["secretlint"],
+        "matchPackagePatterns": ["^@secretlint/"]
+      },
+      {
+        "groupName": "storybook",
+        "groupSlug": "storybook",
+        "matchPackageNames": ["storybook"],
+        "matchPackagePatterns": ["^@storybook/", "^storybook"]
+      },
+      {
+        "groupName": "testing-library",
+        "groupSlug": "testing-library",
+        "matchPackagePatterns": ["^@testing-library/"]
+      },
+      {
+        "groupName": "vite",
+        "groupSlug": "vite",
+        "matchPackageNames": ["vite"],
+        "matchPackagePatterns": ["^@vitejs/", "^@rollup/", "^vite"]
+      },
+      {
+        "groupName": "dependency ranges",
+        "matchUpdateTypes": ["pin"],
+        "schedule": "at any time",
+        "prCreation": "immediate",
+        "automerge": true
+      },
+      {
+        "matchDepTypes": ["optionalDependencies", "engines"],
+        "enabled": false
+      }
+    ]
+  }
 }

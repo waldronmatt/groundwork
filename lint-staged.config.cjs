@@ -2,7 +2,7 @@ module.exports = {
   '*': [
     'secretlint',
     'prettier --cache --write --ignore-unknown',
-    'npx syncpack lint-semver-ranges --config .syncpackrc',
+    'npx syncpack lint --config .syncpackrc',
     'npx publint run ./',
     'npx manypkg check',
   ],

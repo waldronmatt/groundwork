@@ -19,8 +19,7 @@
       "exact": true,
       "ignoreChanges": ["**/CHANGELOG.md", "**/node_modules/**"],
       "message": "chore(release): publish",
-      "syncWorkspaceLock": true,
-      "skip-bump-only-releases": true
+      "syncWorkspaceLock": true
     }
   },
   "changelogPreset": "conventional-changelog-conventionalcommits"

@@ -19,13 +19,16 @@ importers:
         version: 18.5.0
       '@lerna-lite/cli':
         specifier: 3.2.1
+        version: 3.2.1(@lerna-lite/list@3.2.1)(@lerna-lite/publish@3.2.1)(@lerna-lite/version@3.2.1)(typescript@5.3.3)
+      '@lerna-lite/list':
+        specifier: 3.2.1
         version: 3.2.1(@lerna-lite/publish@3.2.1)(@lerna-lite/version@3.2.1)(typescript@5.3.3)
       '@lerna-lite/publish':
         specifier: 3.2.1
-        version: 3.2.1(typescript@5.3.3)
+        version: 3.2.1(@lerna-lite/list@3.2.1)(typescript@5.3.3)
       '@lerna-lite/version':
         specifier: 3.2.1
-        version: 3.2.1(@lerna-lite/publish@3.2.1)(typescript@5.3.3)
+        version: 3.2.1(@lerna-lite/list@3.2.1)(@lerna-lite/publish@3.2.1)(typescript@5.3.3)
       '@manypkg/cli':
         specifier: 0.21.2
         version: 0.21.2
@@ -45,8 +48,8 @@ importers:
         specifier: 3.3.0
         version: 3.3.0(@types/node@20.11.5)(typescript@5.3.3)
       husky:
-        specifier: 8.0.3
-        version: 8.0.3
+        specifier: 9.0.7
+        version: 9.0.7
       lint-staged:
         specifier: 15.2.0
         version: 15.2.0
@@ -2998,7 +3001,7 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: true
 
-  /@lerna-lite/cli@3.2.1(@lerna-lite/publish@3.2.1)(@lerna-lite/version@3.2.1)(typescript@5.3.3):
+  /@lerna-lite/cli@3.2.1(@lerna-lite/list@3.2.1)(@lerna-lite/publish@3.2.1)(@lerna-lite/version@3.2.1)(typescript@5.3.3):
     resolution: {integrity: sha512-aF7lfe+TOmL+YxaKgJcHCfFT/nZ3ZI+icZTEVM80LaEIhVvgBJZSqabGFu1PbQ9onvBdKX2/FYaWhJz+fO7cIQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -3025,8 +3028,9 @@ packages:
     dependencies:
       '@lerna-lite/core': 3.2.1(typescript@5.3.3)
       '@lerna-lite/init': 3.2.1(typescript@5.3.3)
-      '@lerna-lite/publish': 3.2.1(typescript@5.3.3)
-      '@lerna-lite/version': 3.2.1(@lerna-lite/publish@3.2.1)(typescript@5.3.3)
+      '@lerna-lite/list': 3.2.1(@lerna-lite/publish@3.2.1)(@lerna-lite/version@3.2.1)(typescript@5.3.3)
+      '@lerna-lite/publish': 3.2.1(@lerna-lite/list@3.2.1)(typescript@5.3.3)
+      '@lerna-lite/version': 3.2.1(@lerna-lite/list@3.2.1)(@lerna-lite/publish@3.2.1)(typescript@5.3.3)
       dedent: 1.5.1
       dotenv: 16.3.2
       import-local: 3.1.0
@@ -3075,6 +3079,19 @@ packages:
       - typescript
     dev: false
 
+  /@lerna-lite/filter-packages@3.2.1(typescript@5.3.3):
+    resolution: {integrity: sha512-xxnLcenaU+DY2JmUEiMZ0I6hOdtgyFMmi5yLruMh5ZiEQLd7LzD0lU3BHD/xt4aS2ra2NzmOd01Jls4ROFDquQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    dependencies:
+      '@lerna-lite/core': 3.2.1(typescript@5.3.3)
+      multimatch: 7.0.0
+      npmlog: 7.0.1
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+      - typescript
+    dev: false
+
   /@lerna-lite/init@3.2.1(typescript@5.3.3):
     resolution: {integrity: sha512-DuEsi4Jii4nmP+c7aID3L5viXkMKhWGKRtI798pcnNjB3dyVN22dZNCDzhiaetMo+ayTsLTe50UDpf5+yxamNg==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -3089,13 +3106,45 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/publish@3.2.1(typescript@5.3.3):
+  /@lerna-lite/list@3.2.1(@lerna-lite/publish@3.2.1)(@lerna-lite/version@3.2.1)(typescript@5.3.3):
+    resolution: {integrity: sha512-cO+/kbGhgoNSmPrZKHcSBuAJ1E3oaQxkuZkJnOp+aEc5c3SfeAIx6PFR4SOJpqJzHcA4AtSCxNr9/q167OGi2A==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    dependencies:
+      '@lerna-lite/cli': 3.2.1(@lerna-lite/list@3.2.1)(@lerna-lite/publish@3.2.1)(@lerna-lite/version@3.2.1)(typescript@5.3.3)
+      '@lerna-lite/core': 3.2.1(typescript@5.3.3)
+      '@lerna-lite/filter-packages': 3.2.1(typescript@5.3.3)
+      '@lerna-lite/listable': 3.2.1(typescript@5.3.3)
+    transitivePeerDependencies:
+      - '@lerna-lite/exec'
+      - '@lerna-lite/publish'
+      - '@lerna-lite/run'
+      - '@lerna-lite/version'
+      - '@lerna-lite/watch'
+      - babel-plugin-macros
+      - supports-color
+      - typescript
+    dev: false
+
+  /@lerna-lite/listable@3.2.1(typescript@5.3.3):
+    resolution: {integrity: sha512-zx9Z7ka4IBqOCZIJ8lO/5DCBDeX+LOnmVEBF8a6NChGjfG9tpPs44o3aKAspxibtlfh6N0Qt0QWOubz8P+RxNw==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    dependencies:
+      '@lerna-lite/core': 3.2.1(typescript@5.3.3)
+      chalk: 5.3.0
+      columnify: 1.6.0
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - supports-color
+      - typescript
+    dev: false
+
+  /@lerna-lite/publish@3.2.1(@lerna-lite/list@3.2.1)(typescript@5.3.3):
     resolution: {integrity: sha512-a9xE0OV6NeM0l+9rKrkmDeDyNg051QKY4a9zJAaiUJKbdn54z6WvHdaq8PUzM627Fg6cTxYdXtP1elodXGPxmA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/cli': 3.2.1(@lerna-lite/publish@3.2.1)(@lerna-lite/version@3.2.1)(typescript@5.3.3)
+      '@lerna-lite/cli': 3.2.1(@lerna-lite/list@3.2.1)(@lerna-lite/publish@3.2.1)(@lerna-lite/version@3.2.1)(typescript@5.3.3)
       '@lerna-lite/core': 3.2.1(typescript@5.3.3)
-      '@lerna-lite/version': 3.2.1(@lerna-lite/publish@3.2.1)(typescript@5.3.3)
+      '@lerna-lite/version': 3.2.1(@lerna-lite/list@3.2.1)(@lerna-lite/publish@3.2.1)(typescript@5.3.3)
       '@npmcli/arborist': 7.3.0
       byte-size: 8.1.1
       chalk: 5.3.0
@@ -3130,11 +3179,11 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/version@3.2.1(@lerna-lite/publish@3.2.1)(typescript@5.3.3):
+  /@lerna-lite/version@3.2.1(@lerna-lite/list@3.2.1)(@lerna-lite/publish@3.2.1)(typescript@5.3.3):
     resolution: {integrity: sha512-cMXSTOjAQgtsUCPLXna/Uflxbmppkgxa9yulwCnUGsEZP0G8DfvQAaIpb1QOgxy49mFzPpcw51VDt4zfcF0MHA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/cli': 3.2.1(@lerna-lite/publish@3.2.1)(@lerna-lite/version@3.2.1)(typescript@5.3.3)
+      '@lerna-lite/cli': 3.2.1(@lerna-lite/list@3.2.1)(@lerna-lite/publish@3.2.1)(@lerna-lite/version@3.2.1)(typescript@5.3.3)
       '@lerna-lite/core': 3.2.1(typescript@5.3.3)
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.0.2
@@ -6807,6 +6856,11 @@ packages:
       call-bind: 1.0.5
       is-array-buffer: 3.0.2
 
+  /array-differ@4.0.0:
+    resolution: {integrity: sha512-Q6VPTLMsmXZ47ENG3V+wQyZS1ZxXMxFyYzA+Z/GMrJ6yIutAIEf9wTyroTzmGjNfox9/h3GdGBCVh43GVFx4Uw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
+
   /array-flatten@1.1.1:
     resolution: {integrity: sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==}
     dev: true
@@ -6829,6 +6883,11 @@ packages:
   /array-union@2.1.0:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
+
+  /array-union@3.0.1:
+    resolution: {integrity: sha512-1OvF9IbWwaeiM9VhzYXVQacMibxpXOMYVNIvMtKRyX9SImBXpKcFr8XvFDeEslCyuH/t6KRt7HEO94AlP8Iatw==}
+    engines: {node: '>=12'}
+    dev: false
 
   /array.prototype.findlastindex@1.2.3:
     resolution: {integrity: sha512-LzLoiOMAxvy+Gd3BAq3B7VeIgPdo+Q8hthvKtXybMvRV0jrXfJM/t8mw7nNlpEcVlVUnCnM2KSX4XU5HmpodOA==}
@@ -10117,9 +10176,9 @@ packages:
     resolution: {integrity: sha512-AXcZb6vzzrFAUE61HnN4mpLqd/cSIwNQjtNWR0euPm6y0iqx3G4gOXaIDdtdDwZmhwe82LA6+zinmW4UBWVePQ==}
     engines: {node: '>=16.17.0'}
 
-  /husky@8.0.3:
-    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
-    engines: {node: '>=14'}
+  /husky@9.0.7:
+    resolution: {integrity: sha512-vWdusw+y12DUEeoZqW1kplOFqk3tedGV8qlga8/SF6a3lOiWLqGZZQvfWvY0fQYdfiRi/u1DFNpudTSV9l1aCg==}
+    engines: {node: '>=18'}
     hasBin: true
     dev: false
 
@@ -12429,6 +12488,15 @@ packages:
   /muggle-string@0.3.1:
     resolution: {integrity: sha512-ckmWDJjphvd/FvZawgygcUeQCxzvohjFO5RxTjj4eq8kw359gFF3E1brjfI+viLMxss5JrHTDRHZvu2/tuy0Qg==}
     dev: true
+
+  /multimatch@7.0.0:
+    resolution: {integrity: sha512-SYU3HBAdF4psHEL/+jXDKHO95/m5P2RvboHT2Y0WtTttvJLP4H/2WS9WlQPFvF6C8d6SpLw8vjCnQOnVIVOSJQ==}
+    engines: {node: '>=18'}
+    dependencies:
+      array-differ: 4.0.0
+      array-union: 3.0.1
+      minimatch: 9.0.3
+    dev: false
 
   /mute-stream@0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
