@@ -6,12 +6,12 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/types/index.d.ts"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
     },
     "./*": {
-      "import": "./dist/*",
-      "types": "./dist/types/*"
+      "types": "./dist/types/*",
+      "import": "./dist/*"
     },
     "./lib/*": "./lib/*"
   },
@@ -25,6 +25,7 @@
   ],
   "scripts": {
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:package": "npx publint",
     "build": "tsc --p ./tsconfig.build.json && vite build",
     "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo"
   },

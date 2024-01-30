@@ -8,6 +8,8 @@
 
 [Lerna-Lite Commands](LERNALITE.md)
 
+[Monorepo Commands](MONOREPO.md)
+
 [Monorepo Tooling](TOOLS.md)
 
 [NX Commands](NX.md)

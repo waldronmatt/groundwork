@@ -42,5 +42,3 @@ export const getCSSVariables = (token: Storybook.Token, queryParams?: URLSearchP
 
   return variables;
 };
-
-export default getCSSVariables;

@@ -41,11 +41,8 @@ We are using `lint-staged` to run linting and tests on staged files. This is the
 
 1. Check for secrets (`secretlint`)
 2. Fix file formatting (`prettier`)
-3. Lint dependency versions (`syncpack`)
-4. Validate published packages best practices (`publint`)
-5. Verify monorepo best practices (`manypkg`)
-6. Lint and fix issues of affected `.ts` and related files (`eslint` and `nx`)
-7. Run tests of affected files (`jest`/`vitest` and `nx`)
+3. Lint and fix issues of affected `.ts` and related files (`eslint` and `nx`)
+4. Run tests of affected files (`jest`/`vitest` and `nx`)
 
 We limit automatic fixes to file formatting and linting when possible. For everything else, we let the user to decide on actions to take if there are errors.
 

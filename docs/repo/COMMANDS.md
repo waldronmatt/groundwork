@@ -6,7 +6,7 @@ Commit changes using conventional changelog:
 pnpm commit
 ```
 
-Check for secrets, check files for formatting issues, lint dependency versions, validate published packages, and verify monorepo best practices:
+Check for secrets, check files for formatting issues, lint dependency versions, validate published packages, verify monorepo best practice, and find unused exports:
 
 ```bash
 pnpm lint:mr

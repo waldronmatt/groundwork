@@ -7,6 +7,6 @@
     "outDir": "dist",
     "baseUrl": "./",
     "declaration": true,
-    "declarationMap": true
-  }
+    "declarationMap": true,
+  },
 }
