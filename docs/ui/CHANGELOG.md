@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.1.3...demo-ui-storybook@3.2.0) (2024-01-30)
+
+### Features
+
+* **global:** add monorepo docs, reduce cmds for lint-staged, fix publint setup and linting issues ([7d853c1](https://github.com/waldronmatt/groundwork/commit/7d853c195879bda8aeb22a3cc1786c798013b315)) - by @waldronmatt
+
 ## [3.1.3](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.1.2...demo-ui-storybook@3.1.3) (2024-01-30)
 
 **Note:** Version bump only for package demo-ui-storybook

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.5.10...monorepo-docs@1.6.0) (2024-01-30)
+
+### Bug Fixes
+
+* **docs:** add lerna changed package ([1876448](https://github.com/waldronmatt/groundwork/commit/1876448edcc85047b651db5494d7737f2f6d76fc)) - by @waldronmatt
+
+### Features
+
+* **docs:** add and rearrange commands, remove unused scripts from package.json ([25a0ba0](https://github.com/waldronmatt/groundwork/commit/25a0ba012d0b81c2bd6d0f86e5188fd82f54d0d0)) - by @waldronmatt
+* **global:** add monorepo docs, reduce cmds for lint-staged, fix publint setup and linting issues ([7d853c1](https://github.com/waldronmatt/groundwork/commit/7d853c195879bda8aeb22a3cc1786c798013b315)) - by @waldronmatt
+
 ## [1.5.10](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.5.8...monorepo-docs@1.5.10) (2024-01-30)
 
 ### Bug Fixes
