@@ -21,9 +21,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Pull all tags (needed for lerna-lite to correctly version)
-        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
