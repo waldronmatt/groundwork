@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.10](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.0.8...@waldronmatt/story-tokens-ui@1.0.10) (2024-01-30)
+
+### Bug Fixes
+
+* **global:** bump versions to resolve version tagging error ([fdc23e0](https://github.com/waldronmatt/groundwork/commit/fdc23e05b452c6b34148445889b0cdebdf7e5539)) - by @waldronmatt
+
 ## 1.0.8 (2024-01-26)
 
 **Note:** Version bump only for package @waldronmatt/story-tokens-ui

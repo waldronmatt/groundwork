@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/waldronmatt/groundwork/compare/tsconfig-config@1.1.2...tsconfig-config@1.1.4) (2024-01-30)
+
+### Bug Fixes
+
+* **global:** bump versions to resolve version tagging error ([fdc23e0](https://github.com/waldronmatt/groundwork/commit/fdc23e05b452c6b34148445889b0cdebdf7e5539)) - by @waldronmatt
+
 ## [1.1.2](https://github.com/waldronmatt/pnpm-nx-lerna-lite-boilerplate/compare/tsconfig-config@1.1.1...tsconfig-config@1.1.2) (2023-10-15)
 
 ### Bug Fixes

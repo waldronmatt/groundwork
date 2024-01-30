@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.10](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.5.8...monorepo-docs@1.5.10) (2024-01-30)
+
+### Bug Fixes
+
+* **global:** bump versions to resolve version tagging error ([fdc23e0](https://github.com/waldronmatt/groundwork/commit/fdc23e05b452c6b34148445889b0cdebdf7e5539)) - by @waldronmatt
+* **global:** workspace updates ([d771ca7](https://github.com/waldronmatt/groundwork/commit/d771ca781be5d96eab43d4c6dd659b523deb3e41)) - by @waldronmatt
+* **package.json:** update script names to avoid lifecycle conflict ([7c7b4a2](https://github.com/waldronmatt/groundwork/commit/7c7b4a255549f4c09c9913aef8d04db3a93b1cce)) - by @waldronmatt
+
 ## 1.5.8 (2024-01-18)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.17](https://github.com/waldronmatt/groundwork/compare/vite-project@2.0.15...vite-project@2.0.17) (2024-01-30)
+
+### Bug Fixes
+
+* **global:** bump versions to resolve version tagging error ([fdc23e0](https://github.com/waldronmatt/groundwork/commit/fdc23e05b452c6b34148445889b0cdebdf7e5539)) - by @waldronmatt
+
 ## 2.0.15 (2024-01-29)
 
 **Note:** Version bump only for package vite-project
