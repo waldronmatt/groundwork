@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/basic-math@2.1.0...@waldronmatt/basic-math@2.1.1) (2024-01-31)
+
+### Bug Fixes
+
+* **global:** use script to loop through publint package.json instead of using nx ([d411dff](https://github.com/waldronmatt/groundwork/commit/d411dff4109c06ff7b254c421c91d4d0fd012964)) - by @waldronmatt
+
 # [2.1.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/basic-math@2.0.42...@waldronmatt/basic-math@2.1.0) (2024-01-30)
 
 ### Features

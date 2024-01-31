@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.2](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.6.1...monorepo-docs@1.6.2) (2024-01-31)
+
+### Bug Fixes
+
+* **global:** use script to loop through publint package.json instead of using nx ([d411dff](https://github.com/waldronmatt/groundwork/commit/d411dff4109c06ff7b254c421c91d4d0fd012964)) - by @waldronmatt
+
 ## [1.6.1](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.6.0...monorepo-docs@1.6.1) (2024-01-31)
 
 ### Bug Fixes

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.3.0...@waldronmatt/demo-ui@3.3.1) (2024-01-31)
+
+### Bug Fixes
+
+* **global:** use script to loop through publint package.json instead of using nx ([d411dff](https://github.com/waldronmatt/groundwork/commit/d411dff4109c06ff7b254c421c91d4d0fd012964)) - by @waldronmatt
+
 # [3.3.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.2.3...@waldronmatt/demo-ui@3.3.0) (2024-01-30)
 
 ### Features
