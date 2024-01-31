@@ -28,7 +28,6 @@
   ],
   "scripts": {
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "lint:package": "npx publint",
     "build": "tsc --p ./tsconfig.build.json && vite build",
     "clean": "rimraf dist tsconfig.build.tsbuildinfo"
   },

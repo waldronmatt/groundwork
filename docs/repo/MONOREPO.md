@@ -21,7 +21,7 @@ pnpm lint:format
 Validate package publishing best practices:
 
 ```bash
-pnpm lint:package
+pnpm lint:packages
 ```
 
 Lint dependency versions:

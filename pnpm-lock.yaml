@@ -50,6 +50,9 @@ importers:
       cz-conventional-changelog:
         specifier: 3.3.0
         version: 3.3.0(@types/node@20.11.10)(typescript@5.3.3)
+      execa:
+        specifier: 8.0.1
+        version: 8.0.1
       husky:
         specifier: 9.0.7
         version: 9.0.7

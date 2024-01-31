@@ -19,7 +19,6 @@
   ],
   "scripts": {
     "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
-    "lint:package": "npx publint",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "build:dtsmaps": "tsc --project tsconfig.build.json",
