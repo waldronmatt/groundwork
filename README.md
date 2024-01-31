@@ -13,11 +13,11 @@ Below is a list of boilerplate sites:
 
 Install dependencies:
 
+**Note**: Will set up husky and hooks automatically via `prepare` lifecycle script.
+
 ```bash
 pnpm i
 ```
-
-**Note**: Will set up husky and hooks automatically via `prepare` lifecycle script.
 
 ## Getting Started
 
