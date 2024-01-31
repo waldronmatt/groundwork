@@ -6,12 +6,6 @@ Commit changes using conventional changelog:
 pnpm commit
 ```
 
-Check for secrets, check files for formatting issues, lint dependency versions, validate published packages, verify monorepo best practice, and find unused exports:
-
-```bash
-pnpm lint:mr
-```
-
 Clean up bundle artifacts:
 
 ```bash

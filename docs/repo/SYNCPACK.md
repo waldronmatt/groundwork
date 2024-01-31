@@ -10,7 +10,7 @@ pnpm list:deps
 
 ## Update Dependencies
 
-Update dependencies for all packages:
+Update all dependencies for all packages:
 
 ```bash
 pnpm update:deps

@@ -22,7 +22,7 @@
 
 [`manypkg`](https://github.com/Thinkmill/manypkg): For linting monorepo best practices
 
-['knip`](https://github.com/webpro/knip): For finding unused files, dependencies, and exports
+[`knip`](https://github.com/webpro/knip): For finding unused files, dependencies, and exports
 
 ## Other Tools
 
