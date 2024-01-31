@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.6.0...monorepo-docs@1.6.1) (2024-01-31)
+
+### Bug Fixes
+
+* **docs:** formatting and add npm-run-all2 ([8adaae9](https://github.com/waldronmatt/groundwork/commit/8adaae913650de66b0640f36cad720133effc27b)) - by @waldronmatt
+
 # [1.6.0](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.5.10...monorepo-docs@1.6.0) (2024-01-30)
 
 ### Bug Fixes
