@@ -1,6 +1,4 @@
 # editorconfig.org
-# https://github.com/twbs/bootstrap/blob/main/.editorconfig
-
 root = true
 
 [*]
