@@ -1,14 +1,14 @@
 {
   "name": "eslint-config-custom",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "private": true,
   "license": "MIT",
   "scripts": {
     "lint": "eslint . --ext cjs --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "6.19.1",
-    "@typescript-eslint/parser": "6.19.1",
+    "@typescript-eslint/eslint-plugin": "6.20.0",
+    "@typescript-eslint/parser": "6.20.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "17.1.0",
     "eslint-plugin-import": "2.29.1",
