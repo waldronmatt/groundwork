@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.27](https://github.com/waldronmatt/groundwork/compare/jest-config@1.1.26...jest-config@1.1.27) (2024-02-01)
+
+**Note:** Version bump only for package jest-config
+
 ## [1.1.26](https://github.com/waldronmatt/groundwork/compare/jest-config@1.1.24...jest-config@1.1.26) (2024-01-30)
 
 ### Bug Fixes
