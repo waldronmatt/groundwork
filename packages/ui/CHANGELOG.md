@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.3](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.3.2...@waldronmatt/demo-ui@3.3.3) (2024-02-02)
+
+### Bug Fixes
+
+* **package.json:** add missing styles subpath export ([6272fd8](https://github.com/waldronmatt/groundwork/commit/6272fd89d7f58a75c956ce2b68c7051af29b9d25)) - by @waldronmatt
+
 ## [3.3.2](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.3.1...@waldronmatt/demo-ui@3.3.2) (2024-02-01)
 
 **Note:** Version bump only for package @waldronmatt/demo-ui
