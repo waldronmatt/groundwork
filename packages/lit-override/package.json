@@ -1,0 +1,62 @@
+{
+  "name": "@waldronmatt/lit-override",
+  "version": "0.0.0",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": "./dist/*",
+    "./src/*": "./src/*"
+  },
+  "files": [
+    "dist/*",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "web-dev-server --open example/ --watch --node-resolve",
+    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build:dtsmaps": "tsc --project tsconfig.build.json",
+    "build:src": "tsup src/*[!.spec].ts --format esm --sourcemap --onSuccess \"pnpm build:dtsmaps\"",
+    "build": "pnpm build:src",
+    "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waldronmatt/groundwork.git",
+    "directory": "packages/lit-override"
+  },
+  "author": "Matthew Waldron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/waldronmatt/groundwork/issues"
+  },
+  "homepage": "https://github.com/waldronmatt/groundwork/tree/main/packages/lit-override#readme",
+  "devDependencies": {
+    "@types/jest": "29.5.11",
+    "@web/dev-server": "0.4.2",
+    "@web/dev-server-esbuild": "1.0.2",
+    "esbuild": "0.19.11",
+    "eslint": "8.56.0",
+    "eslint-config-custom": "workspace:*",
+    "jest": "29.7.0",
+    "jest-config": "workspace:*",
+    "rimraf": "5.0.5",
+    "tsconfig-config": "workspace:*",
+    "tslib": "2.6.2",
+    "tsup": "8.0.1",
+    "typescript": "5.3.3"
+  },
+  "peerDependencies": {
+    "lit": "3.1.1"
+  }
+}
