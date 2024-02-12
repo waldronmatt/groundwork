@@ -1,6 +1,6 @@
 {
   "name": "@waldronmatt/basic-math",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",

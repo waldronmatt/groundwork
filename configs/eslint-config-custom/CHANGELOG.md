@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.2.5...eslint-config-custom@1.3.0) (2024-02-12)
+
+### Features
+
+* **lit.js:** add a lit config ([d1d4b9c](https://github.com/waldronmatt/groundwork/commit/d1d4b9c05a297aef651ef9f0e4c07b1cc2425f18)) - by @
+
 ## [1.2.5](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.2.3...eslint-config-custom@1.2.5) (2024-02-01)
 
 ### Bug Fixes

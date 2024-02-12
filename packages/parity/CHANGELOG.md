@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.4](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/parity@2.1.3...@waldronmatt/parity@2.1.4) (2024-02-12)
+
+**Note:** Version bump only for package @waldronmatt/parity
+
 ## [2.1.3](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/parity@2.1.2...@waldronmatt/parity@2.1.3) (2024-02-01)
 
 **Note:** Version bump only for package @waldronmatt/parity
