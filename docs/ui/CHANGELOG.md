@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.2.4...demo-ui-storybook@3.3.0) (2024-02-13)
+
+### Features
+
+* **.eslintrc.cjs:** fix storybook config so it doesn't import react config file ([a16c40c](https://github.com/waldronmatt/groundwork/commit/a16c40ca72235272809b121da28d3717492aedef)) - by @waldronmatt
+
 ## [3.2.4](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.2.3...demo-ui-storybook@3.2.4) (2024-02-12)
 
 **Note:** Version bump only for package demo-ui-storybook
