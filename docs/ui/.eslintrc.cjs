@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['custom/storybook.cjs', 'custom/vitest.cjs'],
+  extends: ['custom/react.cjs', 'custom/storybook.cjs', 'custom/vitest.cjs'],
   ignorePatterns: ['dist/**'],
   parserOptions: {
     ecmaVersion: 'latest',
