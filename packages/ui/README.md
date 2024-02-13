@@ -78,6 +78,22 @@ import { Button, type ButtonProps } from '@waldronmatt/demo-ui/components/Button
 import './MyApp.css';
 ```
 
+## Next.js
+
+Configure your `next.config.js`:
+
+**Note:** Even though Next.js supports importing global stylesheets anywhere as of version 13.4, you still need to tell Next.js to compile this library. Because this library contains css imports in the final bundle, when consumed by a Next.js host application, Next.js will not be able to process those css import statements from `node_modules` unless we tell it to through the `transpilePackages` property.
+
+`next.config.js`
+
+```js
+const nextConfig = {
+  transpilePackages: ['@waldronmatt/demo-ui'],
+};
+
+module.exports = nextConfig;
+```
+
 ## Monorepo Use
 
 For use inside this monorepo, we import by referencing the `lib` subpath export and install via the `workspace:` protocol.
