@@ -42,7 +42,6 @@
   "homepage": "https://github.com/waldronmatt/groundwork/tree/main/packages/basic-math#readme",
   "devDependencies": {
     "@types/jest": "29.5.11",
-    "esbuild": "0.20.0",
     "eslint": "8.56.0",
     "eslint-config-custom": "workspace:*",
     "jest": "29.7.0",
