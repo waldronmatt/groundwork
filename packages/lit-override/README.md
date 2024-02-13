@@ -4,6 +4,13 @@ Utility functions for overriding styles and template markup in your Lit componen
 
 Check out this [live demo](https://studio.webcomponents.dev/view/XlfSrBJgu8hrptGm02hE)! Alternatively you can run `pnpm dev` to see the demo locally.
 
+## Features
+
+- Easily override styles and markup
+- Set overrides from a Lit component or from the Light DOM
+- Apply overrides to child components reliably with no race conditions
+- Apply overrides to dynamically loaded/lazy-loaded components
+
 ## Installation
 
 Install dependencies:
@@ -16,7 +23,7 @@ pnpm add @waldronmatt/lit-override lit
 
 Use `injectStyles` and `injectTemplate` for styles and markup overriding.
 
-This library includes a generic `lit-override` component which renders the template content.
+This library includes a generic `lit-override` component which renders the custom template content.
 
 **Note**: If you want to replace `<lit-override>` with your own component, you can copy the logic from there and integrate into your component.
 
@@ -38,18 +45,6 @@ render(): TemplateResult {
 }
 ```
 
-## Features
-
-- Overriding
-  - Styles: supports css child selectors; improvement over `:part`
-  - Styles: more flexible than `:part` and css variables
-  - Markup: Supports generic and named slots
-- Flexibility
-  - Override from host component/app or slotted from the light DOM (closer to a native web component approach)
-- Reliability
-  - Apply overrides to child components/apps reliably with no race conditions
-  - Support for overriding on dynamically loaded/lazy-loaded components
-
 ## Recipes
 
 ### Custom Styles and Markup Applied by Host App
@@ -65,7 +60,7 @@ render(): TemplateResult {
   </head>
 
   <body>
-    <my-promo></my-promo>
+    <my-component></my-component>
   </body>
 </html>
 ```
@@ -77,7 +72,7 @@ import { html, css, TemplateResult, CSSResult, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { injectStyles, injectTemplate } from '@waldronmatt/lit-override';
 
-@customElement('app')
+@customElement('my-component')
 export class App extends LitElement {
   private applyStyleOverride: CSSResult = css`
     :host {
@@ -132,7 +127,7 @@ export class App extends LitElement {
   </head>
 
   <body>
-    <my-promo>
+    <my-component>
       <lit-override>
         <h3 slot="heading">A heading from a template in the light dom</h3>
         <p slot="content">A paragraph from a template in the light dom.</p>
@@ -156,7 +151,7 @@ export class App extends LitElement {
           </style>
         </template>
       </lit-override>
-    </my-promo>
+    </my-component>
   </body>
 </html>
 ```
@@ -168,7 +163,7 @@ import { html, TemplateResult, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import '@waldronmatt/lit-override';
 
-@customElement('app')
+@customElement('my-component')
 export class App extends LitElement {
   render(): TemplateResult {
     return html` <slot></slot> `;
@@ -189,7 +184,7 @@ export class App extends LitElement {
   </head>
 
   <body>
-    <my-promo>
+    <my-component>
       <lit-override>
         <h3 slot="heading">A heading from a template in the light dom</h3>
         <p slot="content">A paragraph from a template in the light dom.</p>
@@ -198,7 +193,7 @@ export class App extends LitElement {
           <slot name="content"></slot>
         </template>
       </lit-override>
-    </my-promo>
+    </my-component>
   </body>
 </html>
 ```
@@ -210,7 +205,7 @@ import { html, css, TemplateResult, CSSResult, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { injectStyles } from '@waldronmatt/lit-override';
 
-@customElement('app')
+@customElement('my-component')
 export class App extends LitElement {
   private applyStyleOverride: CSSResult = css`
     :host {
@@ -243,11 +238,13 @@ export class App extends LitElement {
 
 ## Background
 
-When building out a design library, I came across situations where I needed a parent component/app to override child component styles and markup. Use cases included rendering different combinations of `p` tags, `div` tags, images, and other basic elements.
+When building out a design library, I came across situations where I needed a parent component/app to override child component styles and markup. Use cases included rendering different combinations of `p` tags, `div` tags, images, and other basic elements. Implementing, however, wouldn't be easy for many reasons. Dealing with component `shadowroot`s makes overriding particularly difficult. There are also reliability issues with race conditions when applying overrides to childen components.
 
-Ideally, a design system will atomize everything perfectly to create composable components, but oftentimes, requirements can deviate from an optimal solution. Updating existing components to support new variants would be preferred, but what if we have situations where component variants differ in styles and markup significantly?
+Ideally, a design system will atomize everything perfectly to create composable components, but oftentimes, requirements can deviate from an optimal solution. Updating existing components to support new variants would be preferred, but what if we have situations where component variants differ in styles and markup significantly across different component contexts?
 
 One option would be to break this out into a separate component, but this can create unwieldy code if styles and markup differ across many components/apps. Creating new components grouped together with one centralized component/app per use-case creates additional overhead and boilerplate. Another option would be to use regular html and css, but I still wanted to leverage the encapsulation benefits of web components.
+
+With these override utilities, we have a reliable way to define our override styles and markup at the host instead of increasing complexity on the child component(s).
 
 ## How it Works
 
@@ -257,7 +254,9 @@ The two utilities, `injectStyles` and `injectTemplate`, leverage Lit's internals
 
 The `injectStyles` utility will use the `adoptedStylesheets` API to append styles and fall back to appending a `<style>` tag injected with the styles to the element root if browsers do not support the API. This behavior matches the Lit library.
 
-The `injectTemplate` utility will create a `<template>` tag injected with the markup to the element root. It is up to the component (`lit-override`) to support `template` detection and rendering it using Lit's `template` directive.
+The `injectTemplate` utility will create and append a `<template>` tag injected with the markup to the element root. It is up to the component (`lit-override` or your own component) to support `template` detection and rendering it using Lit's `template` directive.
+
+You may notice that we are reliant on Lit's API. This decision was made so that the developer ergonomics of applying styles and markup overrides would be consistent with Lit. You can see this when you pass in your styles and markup into the utility functions, as you will need to wrap overrides in `css` and `html` literal tags. This does have a drawback of making the utility functions tied to Lit's API.
 
 The `lit-override` component will grab the `template` element if it exists; whether that is set in the light DOM by declaring the `<template></template>` element or programmatically via the `injectTemplate` utility.
 
@@ -269,7 +268,7 @@ In the child component's `connectedCallback`, emit an event so the parent compon
 
 To avoid too much noise from `connectedCallback` events being emitted, this feature is disabled by default which can be useful in situations where you have default styling and don't intend to override. You must pass in `emitConnectedCallback` prop as `true` to enable overriding.
 
-For situations where components are lazy-loaded, the solution above won't be enough. In `injectStyles` and `injectTemplate`, we use `whenDefined` to inject custom styles and markup only when elements become registered.
+For situations where components are lazy-loaded, the solution above won't be enough. In `injectStyles` and `injectTemplate`, we use `whenDefined` to inject custom styles and markup only when elements become registered. This also helps with error handling.
 
 In situations where we slot in a component with custom styles and markup from the light DOM using the `template` element, the native `slotchange` event will guarantee us access to the child component being slotted in. We can avoid race conditions and also do away with the `emitConnectedCallback` event in this situation.
 
