@@ -16,6 +16,7 @@
       "conventionalCommits": true,
       "changelogPreset": "angular",
       "createRelease": "github",
+      "excludeDependents": true,
       "exact": true,
       "ignoreChanges": ["**/CHANGELOG.md", "**/node_modules/**"],
       "message": "chore(release): publish",

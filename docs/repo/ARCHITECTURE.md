@@ -50,6 +50,8 @@ We limit automatic fixes to file formatting and linting when possible. For every
 
 All packages including `peerDependencies` are configured to use exact versions of packages. I prefer to have exact package versions to simplify debugging and reduce the likelihood of compatibility issues. I use `renovate` to automatically handle version updates.
 
+For versioning, we have `excludeDependents` set to `true` in our `lerna` config. This is to override lerna's default behavior for detecting changed packages that includes changes to transitive dependencies. This is to avoid extraneous package bumps when other workspace packages are updated. A common example is when an `eslint` dependency is upgraded by renovate. Since the `eslint-config-custom` package got bumped, so will all other packages in this monorepo that depend on it which can result in a lot of unncessary version bumps. Since all our workspace packages are installed using the `workspace:` protocol, the consuming host packages will always get the latest updates, making lerna's transitive dependency bump behavior completely unneeded.
+
 ## Package Testing
 
 Internal packages used in other packages are imported by referencing the `lib` / `src` subpath export and installed via `pnpm`'s `workspace:` protocol.

@@ -72,6 +72,7 @@ Create a `conflict` PR label. When you set the `conflict` label on a PR, Kodiak 
 
 Lerna does not support automation of initial version 1 packages. Follow the directions below to set up a manual version/changelog and publish:
 
+- Commit as you normally would by adding `fix`, `feat`, etc. with descriptive messaging.
 - Add a commit (type of `chore`) changing the version in `package.json` for your package from `0.x.x` to `1.0.0-1` as per this [comment](https://github.com/lerna/lerna/pull/2486#discussion_r389792137)
 - Graduate them to a release with `npx lerna version --conventional-graduate my-package` (will create release notes etc on GitHub)
 - Publish them to NPM with `npx lerna publish from-package`
