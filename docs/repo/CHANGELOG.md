@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.3](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.6.2...monorepo-docs@1.6.3) (2024-02-13)
+
+### Bug Fixes
+
+* **architecture.md:** disable lerna's transitive dependency behavior and document ([cd782e6](https://github.com/waldronmatt/groundwork/commit/cd782e637b7086ca28d94035ee9c10686cda46cf)) - by @waldronmatt
+
 ## [1.6.2](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.6.1...monorepo-docs@1.6.2) (2024-01-31)
 
 ### Bug Fixes

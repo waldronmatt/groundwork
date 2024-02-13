@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.6](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/parity@2.1.5...@waldronmatt/parity@2.1.6) (2024-02-13)
+
+### Bug Fixes
+
+* **package.json:** remove esbuild from dev deps ([4915116](https://github.com/waldronmatt/groundwork/commit/49151168fbcf1baefb1e16953882d5382a13eab5)) - by @waldronmatt
+
 ## [2.1.5](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/parity@2.1.4...@waldronmatt/parity@2.1.5) (2024-02-13)
 
 **Note:** Version bump only for package @waldronmatt/parity

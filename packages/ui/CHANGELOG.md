@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.6](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.3.5...@waldronmatt/demo-ui@3.3.6) (2024-02-13)
+
+### Bug Fixes
+
+* **readme.md:** add a section for how to use demo-ui in a next.js app ([de26a34](https://github.com/waldronmatt/groundwork/commit/de26a342343ac9bcf5d442d626fa9e5981da575c)) - by @waldronmatt
+
 ## [3.3.5](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.3.4...@waldronmatt/demo-ui@3.3.5) (2024-02-13)
 
 **Note:** Version bump only for package @waldronmatt/demo-ui
