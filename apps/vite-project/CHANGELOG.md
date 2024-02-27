@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.7](https://github.com/waldronmatt/groundwork/compare/vite-project@2.1.6...vite-project@2.1.7) (2024-02-27)
+
+### Bug Fixes
+
+* **global:** remove netlify ([c66a47a](https://github.com/waldronmatt/groundwork/commit/c66a47a020530a6c1f809e658c5d4f44ae98bf58)) - by @waldronmatt
+
 ## [2.1.6](https://github.com/waldronmatt/groundwork/compare/vite-project@2.1.5...vite-project@2.1.6) (2024-02-13)
 
 **Note:** Version bump only for package vite-project

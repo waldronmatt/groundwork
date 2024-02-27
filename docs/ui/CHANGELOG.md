@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.1](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.3.0...demo-ui-storybook@3.3.1) (2024-02-27)
+
+### Bug Fixes
+
+* **global:** remove netlify ([c66a47a](https://github.com/waldronmatt/groundwork/commit/c66a47a020530a6c1f809e658c5d4f44ae98bf58)) - by @waldronmatt
+
 # [3.3.0](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.2.4...demo-ui-storybook@3.3.0) (2024-02-13)
 
 ### Features
