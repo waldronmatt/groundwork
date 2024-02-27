@@ -2,7 +2,7 @@
 
 Utility functions for overriding styles and template markup in your Lit components.
 
-Check out this [live demo](https://studio.webcomponents.dev/view/XlfSrBJgu8hrptGm02hE)! Alternatively you can run `pnpm dev` to see the demo locally.
+Run `pnpm dev` to see the demo locally.
 
 ## Features
 
