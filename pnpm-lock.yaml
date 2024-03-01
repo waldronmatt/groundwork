@@ -57,8 +57,8 @@ importers:
         specifier: 9.0.11
         version: 9.0.11
       knip:
-        specifier: 4.6.0
-        version: 4.6.0(@types/node@20.11.20)(typescript@5.3.3)
+        specifier: 5.0.2
+        version: 5.0.2(@types/node@20.11.20)(typescript@5.3.3)
       lint-staged:
         specifier: 15.2.2
         version: 15.2.2
@@ -12434,8 +12434,8 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /knip@4.6.0(@types/node@20.11.20)(typescript@5.3.3):
-    resolution: {integrity: sha512-6slzggzmyAuvtr97nH56ob1RNlkrG2dGF7yn8PJ/LIF8bPsoM93TRNLWTbmuOg4/E1CImilSX4qy9fok0AKJyA==}
+  /knip@5.0.2(@types/node@20.11.20)(typescript@5.3.3):
+    resolution: {integrity: sha512-ylmXi/CaR1rjOl8KqLsei7075cCsHttMNFwoYlBM7WMvd2Rd4oOfic9KqJFkDONXedsEsiiwnI3+u6GT6KOUuw==}
     engines: {node: '>=18.6.0'}
     hasBin: true
     peerDependencies:
@@ -12466,7 +12466,7 @@ packages:
       summary: 2.1.0
       typescript: 5.3.3
       zod: 3.22.4
-      zod-validation-error: 3.0.0(zod@3.22.4)
+      zod-validation-error: 3.0.2(zod@3.22.4)
     transitivePeerDependencies:
       - bluebird
       - domexception
@@ -18066,8 +18066,8 @@ packages:
       commander: 9.5.0
     dev: true
 
-  /zod-validation-error@3.0.0(zod@3.22.4):
-    resolution: {integrity: sha512-x+agsJJG9rvC7axF0xqTEdZhJkLHyIZkdOAWDJSmwGPzxNHMHwtU6w2yDOAAP6yuSfTAUhAMJRBfhVGY64ySEQ==}
+  /zod-validation-error@3.0.2(zod@3.22.4):
+    resolution: {integrity: sha512-21xGaDmnU7lJZ4J63n5GXWqi+rTzGy3gDHbuZ1jP6xrK/DEQGyOqs/xW7eH96tIfCOYm+ecCuT0bfajBRKEVUw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       zod: ^3.18.0
