@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.4.0...eslint-config-custom@1.4.1) (2024-03-01)
+
+**Note:** Version bump only for package eslint-config-custom
+
 # [1.4.0](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.3.0...eslint-config-custom@1.4.0) (2024-02-13)
 
 ### Features

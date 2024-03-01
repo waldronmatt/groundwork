@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@1.0.3...@waldronmatt/lit-override@1.0.4) (2024-03-01)
+
+**Note:** Version bump only for package @waldronmatt/lit-override
+
 ## [1.0.3](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@1.0.2...@waldronmatt/lit-override@1.0.3) (2024-02-27)
 
 ### Bug Fixes

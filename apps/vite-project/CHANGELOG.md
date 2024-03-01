@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.8](https://github.com/waldronmatt/groundwork/compare/vite-project@2.1.7...vite-project@2.1.8) (2024-03-01)
+
+**Note:** Version bump only for package vite-project
+
 ## [2.1.7](https://github.com/waldronmatt/groundwork/compare/vite-project@2.1.6...vite-project@2.1.7) (2024-02-27)
 
 ### Bug Fixes
