@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.1.5...@waldronmatt/story-tokens-ui@1.1.6) (2024-03-01)
+
+### Bug Fixes
+
+* **deps:** update eslint ([#147](https://github.com/waldronmatt/groundwork/issues/147)) ([eee8c58](https://github.com/waldronmatt/groundwork/commit/eee8c58660c863f2588ed8a79ddd9259b1942aaf)) - by @renovate[bot]
+
 ## [1.1.5](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.1.4...@waldronmatt/story-tokens-ui@1.1.5) (2024-03-01)
 
 **Note:** Version bump only for package @waldronmatt/story-tokens-ui

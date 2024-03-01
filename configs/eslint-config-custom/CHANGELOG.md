@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.3](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.4.1...eslint-config-custom@1.4.3) (2024-03-01)
+
+### Bug Fixes
+
+* **deps:** update eslint ([#147](https://github.com/waldronmatt/groundwork/issues/147)) ([eee8c58](https://github.com/waldronmatt/groundwork/commit/eee8c58660c863f2588ed8a79ddd9259b1942aaf)) - by @renovate[bot]
+
 ## [1.4.1](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.4.0...eslint-config-custom@1.4.1) (2024-03-01)
 
 **Note:** Version bump only for package eslint-config-custom
