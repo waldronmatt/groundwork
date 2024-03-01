@@ -1,7 +1,7 @@
 {
   "name": "groundwork",
   "description": "A monorepo boilerplate using pnpm, nx, and lerna-lite.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "private": true,
   "author": "Matthew Waldron",
@@ -40,8 +40,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@commitlint/cli": "18.6.0",
-    "@commitlint/config-conventional": "18.6.0",
+    "@commitlint/cli": "18.6.1",
+    "@commitlint/config-conventional": "18.6.2",
     "@lerna-lite/changed": "3.2.1",
     "@lerna-lite/cli": "3.2.1",
     "@lerna-lite/list": "3.2.1",
