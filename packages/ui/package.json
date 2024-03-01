@@ -54,8 +54,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/react": "18.2.48",
-    "@types/react-dom": "18.2.18",
+    "@types/react": "18.2.59",
+    "@types/react-dom": "18.2.19",
     "@vitejs/plugin-react-swc": "3.5.0",
     "eslint": "8.56.0",
     "eslint-config-custom": "workspace:*",
