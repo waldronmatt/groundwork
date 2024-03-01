@@ -20,12 +20,12 @@
   "devDependencies": {
     "@types/react": "18.2.59",
     "@types/react-dom": "18.2.19",
-    "@vitejs/plugin-react-swc": "3.5.0",
+    "@vitejs/plugin-react-swc": "3.6.0",
     "eslint": "8.57.0",
     "eslint-config-custom": "workspace:*",
     "rimraf": "5.0.5",
     "tsconfig-config": "workspace:*",
     "typescript": "5.3.3",
-    "vite": "5.0.12"
+    "vite": "5.1.4"
   }
 }
