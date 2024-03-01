@@ -45,7 +45,7 @@
     "@types/jest": "29.5.12",
     "@web/dev-server": "0.4.3",
     "@web/dev-server-esbuild": "1.0.2",
-    "esbuild": "0.19.12",
+    "esbuild": "0.20.1",
     "eslint": "8.56.0",
     "eslint-config-custom": "workspace:*",
     "jest": "29.7.0",
