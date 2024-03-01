@@ -24,7 +24,7 @@
   "devDependencies": {
     "eslint": "8.56.0",
     "eslint-plugin-lit": "1.11.0",
-    "eslint-plugin-vitest": "0.3.20",
+    "eslint-plugin-vitest": "0.3.22",
     "eslint-plugin-wc": "2.0.4"
   },
   "peerDependencies": {
