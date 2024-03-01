@@ -353,8 +353,8 @@ importers:
   packages/lit-override:
     dependencies:
       lit:
-        specifier: 3.1.1
-        version: 3.1.1
+        specifier: 3.1.2
+        version: 3.1.2
     devDependencies:
       '@types/jest':
         specifier: 29.5.12
@@ -12443,8 +12443,8 @@ packages:
       lit-html: 2.8.0
     dev: true
 
-  /lit@3.1.1:
-    resolution: {integrity: sha512-hF1y4K58+Gqrz+aAPS0DNBwPqPrg6P04DuWK52eMkt/SM9Qe9keWLcFgRcEKOLuDlRZlDsDbNL37Vr7ew1VCuw==}
+  /lit@3.1.2:
+    resolution: {integrity: sha512-VZx5iAyMtX7CV4K8iTLdCkMaYZ7ipjJZ0JcSdJ0zIdGxxyurjIn7yuuSxNBD7QmjvcNJwr0JS4cAdAtsy7gZ6w==}
     dependencies:
       '@lit/reactive-element': 2.0.4
       lit-element: 4.0.4

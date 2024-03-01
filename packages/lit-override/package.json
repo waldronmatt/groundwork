@@ -57,6 +57,6 @@
     "typescript": "5.3.3"
   },
   "peerDependencies": {
-    "lit": "3.1.1"
+    "lit": "3.1.2"
   }
 }
