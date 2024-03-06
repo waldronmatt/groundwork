@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "prepare": "husky",
+    "preinstall": "npx only-allow pnpm",
     "commit": "git-cz",
     "delete": "rimraf pnpm-lock.yaml .nx node_modules",
     "lint:secrets": "npx secretlint **/*",

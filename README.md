@@ -6,8 +6,6 @@ Welcome to my personal monorepo, a curated collection of boilerplate projects an
 
 Install dependencies:
 
-**Note**: Will set up husky and hooks automatically via `prepare` lifecycle script.
-
 ```bash
 pnpm i
 ```
@@ -21,8 +19,6 @@ pnpm dev
 ```
 
 Lint files:
-
-**Note**: Append `--fix` to have `eslint` automatically fix issues
 
 ```bash
 pnpm lint
@@ -42,7 +38,7 @@ pnpm test:watch
 
 Compile files and build bundle:
 
-**Note**: It is recommended to run `pnpm clean` before `pnpm build`
+**Note**: Run `pnpm clean` before `pnpm build` to clear `dist` output
 
 ```bash
 pnpm build
