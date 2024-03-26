@@ -1,6 +1,6 @@
 {
   "name": "@waldronmatt/lit-override",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",

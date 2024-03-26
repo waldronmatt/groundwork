@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@1.2.0...@waldronmatt/lit-override@1.2.1) (2024-03-26)
+
+### Bug Fixes
+
+* **lit-override:** add prepare playwright script, add separate test watch scripts, fix readme link ([bb9055e](https://github.com/waldronmatt/groundwork/commit/bb9055e1909a0d06969462548a2a775d400f7acb)) - by @waldronmatt
+* **package.json:** revert prepare script, opt for manuall install ([5bf95aa](https://github.com/waldronmatt/groundwork/commit/5bf95aa04ac48295a74cd433421bbe79edbbc674)) - by @waldronmatt
+
 # [1.2.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@1.1.0...@waldronmatt/lit-override@1.2.0) (2024-03-26)
 
 ### Features
