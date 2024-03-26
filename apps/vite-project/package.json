@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --open",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "clean": "rimraf dist tsconfig.tsbuildinfo",
     "preview": "vite preview"
   },
