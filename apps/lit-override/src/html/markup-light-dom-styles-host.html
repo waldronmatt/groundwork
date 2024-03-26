@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="../ts/markup-light-dom-styles-host.ts" type="module"></script>
+  </head>
+
+  <body>
+    <h1>Markup slotted from the light dom and styles applied by the host app!</h1>
+    <host-app>
+      <lit-override>
+        <h3 slot="heading">A heading from a template in the <em>light dom</em>!</h3>
+        <p slot="content">A paragraph from a template in the <em>light dom</em>.</p>
+        <template>
+          <slot name="heading"></slot>
+          <slot name="content"></slot>
+        </template>
+      </lit-override>
+    </host-app>
+    <br />
+    <a href="./index.html">Go Back</a>
+  </body>
+</html>

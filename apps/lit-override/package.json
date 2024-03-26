@@ -1,0 +1,25 @@
+{
+  "name": "lit-override",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "devDependencies": {
+    "eslint": "8.57.0",
+    "eslint-config-custom": "workspace:*",
+    "rimraf": "5.0.5",
+    "tsconfig-config": "workspace:*",
+    "typescript": "5.3.3",
+    "vite": "5.1.4"
+  },
+  "dependencies": {
+    "@waldronmatt/lit-override": "workspace:*",
+    "lit": "3.1.2"
+  }
+}

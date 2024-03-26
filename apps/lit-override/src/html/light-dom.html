@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="../ts/light-dom.ts" type="module"></script>
+  </head>
+
+  <body>
+    <h1>Overriding applied by the light dom!</h1>
+    <host-app>
+      <lit-override>
+        <h3 slot="heading">A heading from a template in the <em>light dom</em>!</h3>
+        <p slot="content">A paragraph from a template in the <em>light dom</em>.</p>
+        <template>
+          <slot name="heading"></slot>
+          <slot name="content"></slot>
+          <style>
+            :host {
+              display: block;
+              background-color: #000000;
+              margin-top: 1rem;
+            }
+
+            ::slotted([slot='heading']) {
+              color: #ffffff;
+            }
+
+            ::slotted([slot='content']) {
+              color: #ffd700;
+            }
+          </style>
+        </template>
+      </lit-override>
+    </host-app>
+    <br />
+    <a href="./index.html">Go Back</a>
+  </body>
+</html>
