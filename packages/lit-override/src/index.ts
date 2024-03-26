@@ -1,3 +1,3 @@
-export { injectStyles } from './styles.js';
-export { injectTemplate } from './markup.js';
-export { LitOverride } from './lit-override.js';
+export * from './styles.js';
+export * from './markup.js';
+export * from './lit-override.js';

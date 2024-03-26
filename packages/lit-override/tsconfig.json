@@ -6,6 +6,6 @@
   "compilerOptions": {
     "baseUrl": "./",
     "experimentalDecorators": true,
-    "useDefineForClassFields": false,
-  },
+    "useDefineForClassFields": false
+  }
 }

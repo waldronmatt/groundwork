@@ -1,6 +1,6 @@
 import { LitElement, TemplateResult, html } from 'lit';
 import { templateContent } from 'lit/directives/template-content.js';
-import { customElement, property, state } from 'lit/decorators.js';
+import { property, state } from 'lit/decorators.js';
 import { emit } from './utils.js';
 
 /**
@@ -15,10 +15,9 @@ import { emit } from './utils.js';
  * @template - will auto detect a `<template>` element and render it per instance
  * @fires connected-callback - only if `emitConnectedCallback` prop is set
  */
-@customElement('lit-override')
 export class LitOverride extends LitElement {
   @property({ reflect: true, type: Boolean })
-  // eslint-disable-next-line @typescript-eslint/indent
+   
   emitConnectedCallback = false;
 
   @state()
@@ -38,6 +37,8 @@ export class LitOverride extends LitElement {
     return !this._template ? html`<slot></slot>` : (templateContent(this._template) as TemplateResult);
   }
 }
+
+customElements.define('lit-override', LitOverride);
 
 declare global {
   interface HTMLElementTagNameMap {
