@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@1.1.0...@waldronmatt/lit-override@1.2.0) (2024-03-26)
+
+### Features
+
+* **lit-override:** add lit-override component unit test and set up repo with playwright ([5feec87](https://github.com/waldronmatt/groundwork/commit/5feec87948a51fdafe2d94c4dd7b60d633d020c1)) - by @waldronmatt
+
 # [1.1.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@1.0.5...@waldronmatt/lit-override@1.1.0) (2024-03-26)
 
 ### Bug Fixes
