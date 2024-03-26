@@ -10,6 +10,12 @@ Install dependencies:
 pnpm i
 ```
 
+Run the `prepare` lifecycle hook recursively for all sub-packages
+
+```bash
+pnpm -r run prepare
+```
+
 ## Getting Started
 
 Run local development servers:
@@ -28,12 +34,6 @@ Run tests with coverage:
 
 ```bash
 pnpm test
-```
-
-Run tests in watch mode:
-
-```bash
-pnpm test:watch
 ```
 
 Compile files and build bundle:

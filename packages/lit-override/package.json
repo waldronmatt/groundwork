@@ -18,11 +18,13 @@
     "README.md"
   ],
   "scripts": {
+    "prepare": "npx playwright install",
     "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
     "test:components": "web-test-runner",
     "test:files": "jest --coverage",
     "test": "pnpm test:components && pnpm test:files",
-    "test:watch": "jest --watch",
+    "test:components:watch": "web-test-runner --watch",
+    "test:files:watch": "jest --watch",
     "build:dtsmaps": "tsc --project tsconfig.build.json",
     "build:src": "tsup src/*[!.spec].ts --format esm --sourcemap --onSuccess \"pnpm build:dtsmaps\"",
     "build": "pnpm build:src",

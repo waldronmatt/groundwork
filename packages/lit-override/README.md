@@ -2,7 +2,7 @@
 
 Utility functions for overriding styles and template markup in your Lit components.
 
-Go to the `lit-override` project under `apps` via [`apps/lit-override`](apps/lit-override) to see examples.
+Go to the `lit-override` project via [`apps/lit-override`](../../apps/lit-override) to see examples.
 
 ## Features
 
