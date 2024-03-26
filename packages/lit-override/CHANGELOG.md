@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@1.0.5...@waldronmatt/lit-override@1.1.0) (2024-03-26)
+
+### Bug Fixes
+
+* **examples:** remove example files and update configs ([43f0984](https://github.com/waldronmatt/groundwork/commit/43f09843ea64a932fc6a283a4cc8eec9a6bdb3a5)) - by @
+
+### Features
+
+* **lit-override:** remove example files to dedicated app, remove dev server, config updates ([0d86002](https://github.com/waldronmatt/groundwork/commit/0d86002bff3f816f019a81b9ddc6f3c28a480cdc)) - by @
+
 ## [1.0.5](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@1.0.4...@waldronmatt/lit-override@1.0.5) (2024-03-01)
 
 ### Bug Fixes

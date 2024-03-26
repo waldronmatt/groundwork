@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.11](https://github.com/waldronmatt/groundwork/compare/vite-project@2.1.10...vite-project@2.1.11) (2024-03-26)
+
+### Bug Fixes
+
+* **package.json:** remove unused tsc command ([a2949eb](https://github.com/waldronmatt/groundwork/commit/a2949eb54856f34ddc4832fcb8d909d59f6fd933)) - by @
+
 ## [2.1.10](https://github.com/waldronmatt/groundwork/compare/vite-project@2.1.9...vite-project@2.1.10) (2024-03-01)
 
 **Note:** Version bump only for package vite-project
