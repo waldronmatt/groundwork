@@ -5,4 +5,5 @@ module.exports = {
     '^@/(.*)\\.js$': '<rootDir>/src/$1',
   },
   testEnvironment: 'jsdom',
+  modulePathIgnorePatterns: ['<rootDir>/src/lit-override.spec.ts'],
 };
