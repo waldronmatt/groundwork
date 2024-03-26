@@ -10,10 +10,10 @@ Install dependencies:
 pnpm i
 ```
 
-Run the `prepare` lifecycle hook recursively for all sub-packages
+Install additional required dependencies
 
 ```bash
-pnpm -r run prepare
+npx playwright install
 ```
 
 ## Getting Started
