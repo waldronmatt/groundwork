@@ -179,8 +179,8 @@ importers:
         specifier: 27.9.0
         version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(typescript@5.4.3)
       eslint-plugin-jest-dom:
-        specifier: 5.1.1
-        version: 5.1.1(eslint@8.57.0)
+        specifier: 5.2.0
+        version: 5.2.0(eslint@8.57.0)
       eslint-plugin-jest-formatting:
         specifier: 3.1.0
         version: 3.1.0(eslint@8.57.0)
@@ -10030,8 +10030,8 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-jest-dom@5.1.1(eslint@8.57.0):
-    resolution: {integrity: sha512-HcZ+rpV5FqazjlAELk/ZnlAg+i3nrjU5SDIK92GO/ouEsa5i/Y4FxFJpCLrupdjOyHENkTkzAEDDnx1+oyGrhg==}
+  /eslint-plugin-jest-dom@5.2.0(eslint@8.57.0):
+    resolution: {integrity: sha512-ctnCP0MsLmUvbCyhnOQ+/1OmsZj+e7V6kFunazIx5728Yq7TQnuKI8HOsgPTStB+9iYEpiEa+VfKB09Lq7/3fA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0, npm: '>=6', yarn: '>=1'}
     peerDependencies:
       '@testing-library/dom': ^8.0.0 || ^9.0.0
