@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.7](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.4.3...eslint-config-custom@1.4.7) (2024-04-01)
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-jest-dom to v5.1.1 ([#165](https://github.com/waldronmatt/groundwork/issues/165)) ([6990165](https://github.com/waldronmatt/groundwork/commit/6990165eafa4d4e153cc9bc25bfbc5bf9b6f8101)) - by @renovate[bot]
+* **deps:** update dependency eslint-plugin-jest-dom to v5.2.0 ([#171](https://github.com/waldronmatt/groundwork/issues/171)) ([fa074c3](https://github.com/waldronmatt/groundwork/commit/fa074c3ccfc9c134da5350ba28536be97c4d672e)) - by @renovate[bot]
+* **deps:** update eslint ([#166](https://github.com/waldronmatt/groundwork/issues/166)) ([71c8910](https://github.com/waldronmatt/groundwork/commit/71c89107e18ae412398c0d53eb6083996bf45727)) - by @renovate[bot]
+
 ## [1.4.3](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.4.1...eslint-config-custom@1.4.3) (2024-03-01)
 
 ### Bug Fixes
