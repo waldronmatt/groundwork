@@ -59,7 +59,7 @@
     "tsconfig-config": "workspace:*",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
-    "typescript": "5.3.3"
+    "typescript": "5.4.3"
   },
   "peerDependencies": {
     "lit": "3.1.2"
