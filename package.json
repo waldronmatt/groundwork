@@ -1,7 +1,7 @@
 {
   "name": "groundwork",
   "description": "A monorepo boilerplate using pnpm, nx, and lerna-lite.",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "type": "module",
   "private": true,
   "author": "Matthew Waldron",
@@ -50,7 +50,7 @@
     "@lerna-lite/version": "3.3.1",
     "@manypkg/cli": "0.21.3",
     "@nrwl/cli": "15.9.3",
-    "@nrwl/nx-cloud": "16.5.2",
+    "@nrwl/nx-cloud": "17.0.0",
     "@secretlint/secretlint-rule-preset-recommend": "8.1.2",
     "@types/node": "20.11.30",
     "commitizen": "4.3.0",
