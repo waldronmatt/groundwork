@@ -1,3 +1,5 @@
+<img src="./docs/repo/assets/pnpm-nx-lerna-dragon-logo.png" alt="blue dragon" width="768" height="768" />
+
 # groundwork
 
 Welcome to my personal monorepo, a curated collection of boilerplate projects and reusable configurations. This repository serves as my go-to resource for quickly setting up new projects and experimenting with emerging technologies. Whether you're a fellow developer or just curious, feel free to explore and utilize these setups.
