@@ -4,7 +4,7 @@
 
 Follow the directions [here](https://pnpm.io/installation) to install pnpm.
 
-## Global Packages
+## Additional Packages
 
 Globally install the `rimraf` package via:
 
@@ -12,12 +12,20 @@ Globally install the `rimraf` package via:
 pnpm i -g rimraf
 ```
 
-## Git Hooks
-
-Install husky and hooks in your repo for the first time:
+Install `playwright` browser binaries:
 
 ```bash
-pnpm exec husky init
+npx playwright install
+```
+
+## Git Hooks
+
+Install husky hooks:
+
+**Note**: `pnpm` should automatically run `prepare` when installing
+
+```bash
+pnpm prepare
 ```
 
 ## NX
@@ -62,7 +70,7 @@ Create a `security` PR label. Renovate will automatically create a PR and apply 
 
 ## Kodiak
 
-Follow the directions [here](https://kodiakhq.com/docs/quickstart) to set up Kodiak.
+Follow the directions [here](https://kodiakhq.com/docs/quickstart) to set up Kodiak. Make sure to [configure GitHub branch protection](https://help.github.com/en/articles/configuring-protected-branches). Setup [required status checks](https://docs.github.com/en/github/administering-a-repository/enabling-required-status-checks) to prevent failing PRs from being merged.
 
 Create a `wip` PR label. When you set the `wip` label on a PR, Kodiak will not merge it.
 

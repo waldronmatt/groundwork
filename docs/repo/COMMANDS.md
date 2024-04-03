@@ -14,7 +14,7 @@ pnpm clean
 
 Delete workspace root `node_modules` and `pnpm-lock.yaml` files:
 
-**Note**: Follow the directions [here](docs/repo/SETUP.md#global-packages) to install `rimraf` globally so errors aren't thrown.
+**Note**: Follow the directions [here](docs/repo/SETUP.md#additional-packages) to install `rimraf` globally so errors aren't thrown.
 
 ```bash
 pnpm delete

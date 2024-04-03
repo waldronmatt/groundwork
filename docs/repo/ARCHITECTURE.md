@@ -54,7 +54,20 @@ For versioning, we have `excludeDependents` set to `true` in our `lerna` config.
 
 ## Package Testing
 
-Internal packages used in other packages are imported by referencing the `lib` / `src` subpath export and installed via `pnpm`'s `workspace:` protocol.
+Internal packages used in other packages are imported by referencing the `lib` / `src` subpath export and installed via `pnpm`'s `workspace:` protocol. An example subpath export setup for a package in this repo will typically look like this:
+
+`package.json`
+
+```json
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": "./dist/*",
+    "./src/*": "./lib/*"
+  },
+```
 
 For example, I have a react component library package that I reference in the storybook and vite-project apps. If I make updates to the react library, I want those changes to automatically refresh (hmr) in those apps. The `lib` / `src` subpath exports allow us to link to the source files so we can avoid rebuilding the component library to see changes.
 

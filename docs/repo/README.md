@@ -19,3 +19,7 @@
 [Setup](SETUP.md)
 
 [Syncpack Commands](SYNCPACK.md)
+
+## Other Documentation
+
+[Groundwork Mascot](MASCOT.md)

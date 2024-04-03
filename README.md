@@ -1,8 +1,12 @@
-<img src="https://github.com/waldronmatt/groundwork/blob/main/docs/repo/assets/pnpm-nx-lerna-dragon-logo.png?raw=true" alt="blue dragon" width="384" height="384" />
-
 # groundwork
 
 Welcome to my personal monorepo, a curated collection of boilerplate projects and reusable configurations. This repository serves as my go-to resource for quickly setting up new projects and experimenting with emerging technologies. Whether you're a fellow developer or just curious, feel free to explore and utilize these setups.
+
+## Prerequisites
+
+For cloning, follow the directions to install [pnpm](docs/repo/SETUP.md#pnpm), [additional packages](docs/repo/SETUP.md#additional-packages), and [nx](docs/repo/SETUP.md#nx).
+
+For forking, follow all the directions found in the [setup](docs/repo/SETUP.md) page.
 
 ## Installation
 
@@ -10,12 +14,6 @@ Install dependencies:
 
 ```bash
 pnpm i
-```
-
-Install additional required dependencies
-
-```bash
-npx playwright install
 ```
 
 ## Getting Started
@@ -40,8 +38,6 @@ pnpm test
 
 Compile files and build bundle:
 
-**Note**: Run `pnpm clean` before `pnpm build` to clear `dist` output
-
 ```bash
 pnpm build
 ```
@@ -56,7 +52,7 @@ pnpm preview
 
 ## Additional Documentation
 
-Additional project setup, commands and documentation can be [found here](docs/repo/README.md).
+Additional documentation for this repo can be [found here](docs/repo/README.md).
 
 ## License
 

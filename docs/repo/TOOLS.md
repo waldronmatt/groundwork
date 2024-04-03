@@ -34,6 +34,8 @@
 
 [`commitizen`](https://github.com/commitizen/cz-cli): For enabling `cz-conventional-changelog` via the command line
 
+[`only-allow`](https://github.com/pnpm/only-allow): For forcing a specific package manager to be used on a project
+
 ## CICD
 
 [`github actions`](https://docs.github.com/en/actions): For CI/CD
