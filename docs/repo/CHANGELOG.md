@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.7.0...monorepo-docs@1.7.1) (2024-04-03)
+
+### Bug Fixes
+
+* **repo:** typo fixes ([999d474](https://github.com/waldronmatt/groundwork/commit/999d47447601412efcbd0c1fe1b530626785075f)) - by @waldronmatt
+
 # [1.7.0](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.6.6...monorepo-docs@1.7.0) (2024-04-03)
 
 ### Features
