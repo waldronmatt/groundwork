@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/waldronmatt/groundwork/main/docs/repo/assets/pnpm-nx-lerna-dragon-logo.png" alt="blue dragon" width="384" height="384" />
+<img src="https://github.com/waldronmatt/groundwork/blob/main/docs/repo/assets/pnpm-nx-lerna-dragon-logo.png?raw=true" alt="blue dragon" width="384" height="384" />
 
 # groundwork
 
