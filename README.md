@@ -1,4 +1,4 @@
-<img src="./docs/repo/assets/pnpm-nx-lerna-dragon-logo.png" alt="blue dragon" width="768" height="768" />
+<img src="./docs/repo/assets/pnpm-nx-lerna-dragon-logo.png" alt="blue dragon" width="512" height="512" />
 
 # groundwork
 
