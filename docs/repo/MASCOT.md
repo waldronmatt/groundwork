@@ -1,6 +1,6 @@
-# Logo
+# Mascot
 
-![blue dragon](./assets/pnpm-nx-lerna-dragon-logo.png)
+<img src="./assets/pnpm-nx-lerna-dragon-logo.png" alt="blue dragon" width="512" height="512" />
 
 I had some fun with chatgpt's dall-e and fed it logos of pnpm, nx, and lerna; the core software this monorepo uses to manage multiple apps and packages. After several prompts and tweaks, I settled on this image of a blue dragon.
 

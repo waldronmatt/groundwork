@@ -65,7 +65,7 @@ Internal packages used in other packages are imported by referencing the `lib` /
       "import": "./dist/index.js"
     },
     "./*": "./dist/*",
-    "./src/*": "./lib/*"
+    "./lib/*": "./lib/*"
   },
 ```
 
