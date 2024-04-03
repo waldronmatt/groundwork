@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.4](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.6.3...monorepo-docs@1.6.4) (2024-04-03)
+
+**Note:** Version bump only for package monorepo-docs
+
 ## [1.6.3](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.6.2...monorepo-docs@1.6.3) (2024-02-13)
 
 ### Bug Fixes
