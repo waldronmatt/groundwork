@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.6.6...monorepo-docs@1.7.0) (2024-04-03)
+
+### Features
+
+* **repo:** add mascot doc and tweak doc files ([37d72fe](https://github.com/waldronmatt/groundwork/commit/37d72fef8b4e719c768956d0c0fe493fa1abfcde)) - by @waldronmatt
+
 ## [1.6.6](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.6.5...monorepo-docs@1.6.6) (2024-04-03)
 
 **Note:** Version bump only for package monorepo-docs
