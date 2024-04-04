@@ -1,16 +1,11 @@
 import { CSSResult } from 'lit';
 import { injectStyles } from './styles.js';
-import * as utils from './utils.js';
 
 jest.mock('lit', () => ({
   CSSResult: jest.fn().mockImplementation(() => ({
     cssText: 'div { color: red; }',
     styleSheet: new CSSStyleSheet(),
   })),
-}));
-
-jest.mock('./utils', () => ({
-  supportsAdoptingStyleSheets: jest.fn(),
 }));
 
 // must manually mock as it is not available via jest dom
@@ -110,8 +105,7 @@ describe('injectStyles', () => {
     cleanupMockElement(mockInvalidWebComponent);
   });
 
-  test('uses adoptedStyleSheets for browsers that support it', async () => {
-    jest.spyOn(utils, 'supportsAdoptingStyleSheets').mockImplementation(() => true);
+  test('uses adoptedStyleSheets to override styles', async () => {
     const mockAdoptedStylesWebComponent = createMockElement('mock-adopted-styles', true);
 
     injectStyles([mockAdoptedStylesWebComponent], style);
@@ -122,24 +116,8 @@ describe('injectStyles', () => {
     cleanupMockElement(mockAdoptedStylesWebComponent);
   });
 
-  test('falls back to appending style tags for unsupported browsers', async () => {
-    jest.spyOn(utils, 'supportsAdoptingStyleSheets').mockImplementation(() => false);
-    const mockNativeStylesWebComponent = createMockElement('mock-native-styles', true);
-
-    injectStyles([mockNativeStylesWebComponent], style);
-    // Wait for the asynchronous code from injectStyles to complete
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    const styleTag = mockNativeStylesWebComponent.renderRoot.querySelector('style')!;
-
-    expect(styleTag).toBeInstanceOf(HTMLStyleElement);
-    // eslint-disable-next-line jest-dom/prefer-to-have-text-content
-    expect(styleTag.textContent).toBe(style.cssText);
-    cleanupMockElement(mockNativeStylesWebComponent);
-  });
-
   test('logs an error for failed component registration', async () => {
     const consoleSpy = jest.spyOn(console, 'error');
-    jest.spyOn(utils, 'supportsAdoptingStyleSheets').mockImplementation(() => false);
 
     const mockFailedRegistrationWebComponent = createMockElement('mock-failed-registration', true);
     window.customElements.whenDefined = jest.fn().mockRejectedValue(new Error('Component registration failed'));

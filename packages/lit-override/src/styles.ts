@@ -1,5 +1,4 @@
 import { LitElement, CSSResult } from 'lit';
-import { supportsAdoptingStyleSheets } from './utils.js';
 
 /**
  * Applies the given style using `adoptedStyleSheets`. Behavior adopted from `adoptStyles`:
@@ -30,17 +29,10 @@ export const injectStyles = (elements: NodeListOf<Element> | Array<Element>, sty
       customElements
         .whenDefined(name)
         .then(() => {
-          if (supportsAdoptingStyleSheets()) {
-            ((element as LitElement).renderRoot as ShadowRoot).adoptedStyleSheets = [
-              ...((element as LitElement).renderRoot as ShadowRoot).adoptedStyleSheets,
-              style.styleSheet!,
-            ];
-          } else {
-            const styleEl = document.createElement('style');
-            // style.cssText is fragile because this relies on Lit's interal API
-            styleEl.textContent = style.cssText;
-            (element as LitElement).renderRoot.appendChild(styleEl);
-          }
+          ((element as LitElement).renderRoot as ShadowRoot).adoptedStyleSheets = [
+            ...((element as LitElement).renderRoot as ShadowRoot).adoptedStyleSheets,
+            style.styleSheet!,
+          ];
         })
         .catch((error) => {
           console.error(`There was an error with component registration: ${error}`);

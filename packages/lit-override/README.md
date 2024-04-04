@@ -61,7 +61,7 @@ With these override utilities, we have a reliable way to define our override sty
 
 The two utilities, `injectStyles` and `injectTemplate`, leverage Lit's internals to inject styles and markup.
 
-The `injectStyles` utility will use the `adoptedStylesheets` API to append styles and fall back to appending a `<style>` tag injected with the styles to the element root if browsers do not support the API. This behavior matches the Lit library.
+The `injectStyles` utility will use the `adoptedStylesheets` API to append styles.
 
 The `injectTemplate` utility will create and append a `<template>` tag injected with the markup to the element root. It is up to the component (`lit-override` or your own component) to support `template` detection and rendering it using Lit's `template` directive.
 
