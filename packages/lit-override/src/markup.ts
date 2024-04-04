@@ -32,6 +32,10 @@ export const injectTemplate = (elements: NodeListOf<Element> | Array<Element>, t
       customElements
         .whenDefined(name)
         .then(() => {
+          // making sure we clean out any existing elements for a cleaner DOM
+          while ((element as LitElement).renderRoot.firstChild) {
+            (element as LitElement).renderRoot.removeChild((element as LitElement).renderRoot.firstChild!);
+          }
           const templateElement = document.createElement('template');
           // template.strings[0] is fragile because this relies on Lit's interal API
           templateElement.innerHTML = template.strings[0];

@@ -93,12 +93,22 @@ describe('injectTemplate', () => {
     document.body.appendChild(mockCustomElement);
     const mockTemplate = htmlMock`<slot name="heading"></slot>`;
 
+    // Add initial children to the renderRoot
+    const initialChild = document.createElement('span');
+    initialChild.textContent = 'Initial child';
+    mockCustomElement.renderRoot.appendChild(initialChild);
+
+    // Ensure the initial child is in the renderRoot
+    expect(mockCustomElement.renderRoot.contains(initialChild)).toBe(true);
+
     injectTemplate([mockCustomElement], mockTemplate);
     // Wait for asynchronous tasks in injectTemplate to complete
     await new Promise((resolve) => setTimeout(resolve, 0));
 
-    expect(mockCustomElement.innerHTML).toContain('<h3 slot="heading">A heading from a template in the light dom</h3>');
-    expect(mockCustomElement.shadowRoot?.innerHTML).toContain('<slot name="heading"></slot>');
+    // Ensure the initial child is removed
+    expect(mockCustomElement.renderRoot.contains(initialChild)).toBe(false);
+    expect(mockCustomElement.innerHTML).toEqual('<h3 slot="heading">A heading from a template in the light dom</h3>');
+    expect(mockCustomElement.shadowRoot?.innerHTML).toEqual('<slot name="heading"></slot>');
     cleanupMockElement(mockCustomElement);
   });
 
