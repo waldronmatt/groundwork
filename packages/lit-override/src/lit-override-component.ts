@@ -1,5 +1,6 @@
 import { LitElement, TemplateResult, html } from 'lit';
 import { templateContent } from 'lit/directives/template-content.js';
+import { when } from 'lit/directives/when.js';
 import { property, state } from 'lit/decorators.js';
 import { emit } from './utils.js';
 
@@ -33,6 +34,10 @@ export class LitOverride extends LitElement {
   }
 
   protected render() {
-    return !this._template ? html`<slot></slot>` : (templateContent(this._template) as TemplateResult);
+    return when(
+      this._template,
+      () => templateContent(this._template!) as TemplateResult,
+      () => html`<slot></slot>`,
+    );
   }
 }
