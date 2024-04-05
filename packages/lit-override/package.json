@@ -21,7 +21,7 @@
     "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
     "test:components": "web-test-runner",
     "test:files": "jest --coverage",
-    "test": "pnpm test:components && pnpm test:files",
+    "test": "pnpm pnpm test:files",
     "test:components:watch": "web-test-runner --watch",
     "test:files:watch": "jest --watch",
     "build:dtsmaps": "tsc --project tsconfig.build.json",
