@@ -2,6 +2,7 @@ import { html, css, LitElement } from 'lit';
 import { repeat } from 'lit/directives/repeat.js';
 import { until } from 'lit/directives/until.js';
 import { injectStyles, injectTemplate } from '@waldronmatt/lit-override/src/index.js';
+import './child-component.js';
 
 export class HostApp extends LitElement {
   private list = fetch('https://jsonplaceholder.typicode.com/users')
@@ -40,16 +41,18 @@ export class HostApp extends LitElement {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             (item: any) => item.id,
             (item) => html`
-              <lit-override
+              <child-component
                 emitConnectedCallback
                 @connected-callback=${(event: { target: LitElement }) => {
-                  injectStyles([event.target], this.applyStyleOverride);
-                  injectTemplate([event.target], this.renderMarkupOverride());
+                  injectStyles([event.target], this.applyStyleOverride, item.id % 2 === 0 ? false : true);
+                  if (item.id % 2 === 0) {
+                    injectTemplate([event.target], this.renderMarkupOverride());
+                  }
                 }}
               >
                 <h3 slot="heading">${item.name}</h3>
                 <p slot="content">${item.company.catchPhrase}</p>
-              </lit-override>
+              </child-component>
             `,
           )}`;
         }),
