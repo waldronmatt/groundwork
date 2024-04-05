@@ -8,8 +8,13 @@ import { LitElement, CSSResult } from 'lit';
  *
  * @param elements iterable of elements to apply styles to
  * @param style CSSResult
+ * @param replace replace the original styles or preserve them when overriding. Defaults to `false`.
  */
-export const injectStyles = (elements: NodeListOf<Element> | Array<Element>, style: CSSResult): void => {
+export const injectStyles = (
+  elements: NodeListOf<Element> | Array<Element>,
+  style: CSSResult,
+  replace: boolean = false,
+): void => {
   if (!elements || !elements.length || !style) {
     return;
   }
@@ -29,10 +34,10 @@ export const injectStyles = (elements: NodeListOf<Element> | Array<Element>, sty
       customElements
         .whenDefined(name)
         .then(() => {
-          ((element as LitElement).renderRoot as ShadowRoot).adoptedStyleSheets = [
-            ...((element as LitElement).renderRoot as ShadowRoot).adoptedStyleSheets,
-            style.styleSheet!,
-          ];
+          const litElement = element as LitElement;
+          const shadowRoot = litElement.renderRoot as ShadowRoot;
+          const newStyleSheet = style.styleSheet!;
+          shadowRoot.adoptedStyleSheets = replace ? [newStyleSheet] : [...shadowRoot.adoptedStyleSheets, newStyleSheet];
         })
         .catch((error) => {
           console.error(`There was an error with component registration: ${error}`);

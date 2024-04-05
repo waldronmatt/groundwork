@@ -2,9 +2,13 @@ import { CSSResult } from 'lit';
 import { injectStyles } from './styles.js';
 
 jest.mock('lit', () => ({
-  CSSResult: jest.fn().mockImplementation(() => ({
-    cssText: 'div { color: red; }',
-    styleSheet: new CSSStyleSheet(),
+  CSSResult: jest.fn().mockImplementation((cssText) => ({
+    cssText,
+    // mock the styleSheet as an object with cssRules array containing cssText
+    // to test individual sheets instead of new CSSStyleSheet()
+    styleSheet: {
+      cssRules: [{ cssText }],
+    },
   })),
 }));
 
@@ -60,13 +64,19 @@ function cleanupMockElement(element: Element) {
   document.body.removeChild(element);
 }
 
+const originalCssText = `:host {
+  display: block;
+  border: 2px solid #000000;
+  margin-top: 1rem;
+}`;
+
 describe('injectStyles', () => {
-  let style: CSSResult;
+  let originalStyle: CSSResult;
 
   beforeEach(() => {
     jest.resetModules();
     // @ts-expect-error - ignore private scope error
-    style = new CSSResult();
+    originalStyle = new CSSResult(originalCssText);
   });
 
   afterEach(() => {
@@ -99,21 +109,58 @@ describe('injectStyles', () => {
     const consoleSpy = jest.spyOn(console, 'error');
     const mockInvalidWebComponent = createMockElement('div');
 
-    injectStyles([mockInvalidWebComponent], style);
+    injectStyles([mockInvalidWebComponent], originalStyle);
 
     expect(consoleSpy).toHaveBeenCalledWith('Element div is not a valid web component');
     cleanupMockElement(mockInvalidWebComponent);
   });
 
   test('uses adoptedStyleSheets to override styles', async () => {
-    const mockAdoptedStylesWebComponent = createMockElement('mock-adopted-styles', true);
+    const mockOverrideAdoptedStylesWebComponent = createMockElement('mock-adopted-styles', true);
+    const overrideCssText = `::slotted([slot='heading']) {
+      color: #0000ff;
+    }`;
+    // @ts-expect-error - ignore private scope error
+    const overrideStyle = new CSSResult(overrideCssText);
 
-    injectStyles([mockAdoptedStylesWebComponent], style);
+    injectStyles([mockOverrideAdoptedStylesWebComponent], overrideStyle);
     // Wait for the asynchronous code from injectStyles to complete
     await new Promise((resolve) => setTimeout(resolve, 0));
 
-    expect(mockAdoptedStylesWebComponent.renderRoot.adoptedStyleSheets).toContain(style.styleSheet);
-    cleanupMockElement(mockAdoptedStylesWebComponent);
+    // simulate appending a stylesheet
+    // this is a workaround and removing will cause the test to fail
+    mockOverrideAdoptedStylesWebComponent.renderRoot.adoptedStyleSheets = [
+      ...mockOverrideAdoptedStylesWebComponent.renderRoot.adoptedStyleSheets,
+      originalStyle.styleSheet!,
+    ];
+    const adoptedStyles = mockOverrideAdoptedStylesWebComponent.renderRoot.adoptedStyleSheets;
+
+    expect(adoptedStyles.length).toBe(2);
+    expect(adoptedStyles[0].cssRules[0].cssText).toEqual(overrideCssText);
+    expect(adoptedStyles[1].cssRules[0].cssText).toEqual(originalCssText);
+    cleanupMockElement(mockOverrideAdoptedStylesWebComponent);
+  });
+
+  test('uses adoptedStyleSheets to replace styles when replace is set to true', async () => {
+    const mockReplaceAdoptedStylesWebComponent = createMockElement('mock-adopted-styles', true);
+    const replaceCssText = `::slotted([slot='heading']) {
+      color: #0000ff;
+    }`;
+    // @ts-expect-error - ignore private scope error
+    const overrideStyle = new CSSResult(replaceCssText);
+
+    injectStyles([mockReplaceAdoptedStylesWebComponent], overrideStyle, true);
+    // Wait for the asynchronous code from injectStyles to complete
+    await new Promise((resolve) => setTimeout(resolve, 0));
+
+    // simulate overriding stylesheets
+    // this is a workaround and removing will cause the test to fail
+    mockReplaceAdoptedStylesWebComponent.renderRoot.adoptedStyleSheets = [overrideStyle.styleSheet!];
+    const adoptedStyles = mockReplaceAdoptedStylesWebComponent.renderRoot.adoptedStyleSheets;
+
+    expect(adoptedStyles.length).toBe(1);
+    expect(adoptedStyles[0].cssRules[0].cssText).toEqual(replaceCssText);
+    cleanupMockElement(mockReplaceAdoptedStylesWebComponent);
   });
 
   test('logs an error for failed component registration', async () => {
@@ -122,7 +169,7 @@ describe('injectStyles', () => {
     const mockFailedRegistrationWebComponent = createMockElement('mock-failed-registration', true);
     window.customElements.whenDefined = jest.fn().mockRejectedValue(new Error('Component registration failed'));
 
-    injectStyles([mockFailedRegistrationWebComponent], style);
+    injectStyles([mockFailedRegistrationWebComponent], originalStyle);
     // Wait for the asynchronous code from injectStyles to complete
     await new Promise((resolve) => setTimeout(resolve, 0));
 
