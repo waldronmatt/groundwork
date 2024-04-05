@@ -45,11 +45,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-
       - name: Install dependencies
         run: pnpm bootstrap:ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
 
       - name: NX Affected
         uses: nrwl/nx-set-shas@v4
