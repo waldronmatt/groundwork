@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@1.2.2...@waldronmatt/lit-override@1.3.0) (2024-04-05)
+
+### Bug Fixes
+
+* **index.ts:** expose utilites for direct use ([629345a](https://github.com/waldronmatt/groundwork/commit/629345a1654423fbd8477ba5e32ab0d14f07538f)) - by @waldronmatt
+* **lit-override-component.ts:** use when directive as convenience wrapper for ternary ([f335167](https://github.com/waldronmatt/groundwork/commit/f3351679025cc7312905ada928e0569fe020cbd7)) - by @waldronmatt
+* **markup.ts:** clean up leftover markup before applying markup overrides ([708a257](https://github.com/waldronmatt/groundwork/commit/708a2577b5b9dbf80c395da8990be2c82a4b6795)) - by @waldronmatt
+* **markup.ts:** fix bug so styles aren't removed during dom cleanup ([5e78891](https://github.com/waldronmatt/groundwork/commit/5e78891ba7f88902e1823121760b5c155c0eb4df)) - by @waldronmatt
+* **styles:** deprecate style tag injection fallback, adoptedStyleSheets has good browser support ([9c124a5](https://github.com/waldronmatt/groundwork/commit/9c124a5165f9b649c79686e3f0bb61d7daf20d5e)) - by @waldronmatt
+
+### Features
+
+* **style.ts:** add option to completely remove original styles ([a993d80](https://github.com/waldronmatt/groundwork/commit/a993d803ab7f3285684a2973a5f88e753f8a7798)) - by @waldronmatt
+
 ## [1.2.2](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@1.2.1...@waldronmatt/lit-override@1.2.2) (2024-04-01)
 
 **Note:** Version bump only for package @waldronmatt/lit-override
