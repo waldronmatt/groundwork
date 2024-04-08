@@ -1,6 +1,6 @@
 module.exports = {
   preset: 'jest-config',
-  testMatch: ['<rootDir>/src/**?(*.)+(spec|test).+(ts|tsx)'],
+  testMatch: ['<rootDir>/src/utils/**?(*.)+(spec|test).+(ts|tsx)'],
   moduleNameMapper: {
     '^@/(.*)\\.js$': '<rootDir>/src/$1',
   },

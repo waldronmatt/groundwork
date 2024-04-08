@@ -13,18 +13,40 @@ describe('lit-override', () => {
   });
 
   it('renders content from the template when provided', async () => {
+    document.body.innerHTML = `
+      <template id="overrideTemplate">
+        <slot name="content"></slot>
+      </template>
+    `;
+
     const el = await fixture<LitOverride>(html`
-      <lit-override>
+      <lit-override templateId="overrideTemplate">
         <p slot="content">A paragraph coming from a custom template</p>
-        <template>
-          <slot name="content"></slot>
-        </template>
       </lit-override>
     `);
 
     await expect(el).to.be.accessible();
     expect(el.innerHTML).to.contain('<p slot="content">A paragraph coming from a custom template</p>');
     expect(el.shadowRoot!.innerHTML).to.contain('<slot name="content"></slot>');
+  });
+
+  it('applies style tag styles as adoptedStyleSheets', async () => {
+    document.body.innerHTML = `
+      <template id="overrideTemplate">
+        <style>
+          :host {
+            color: red;
+          }
+        </style>
+      </template>
+    `;
+
+    const el = await fixture<LitOverride>(html`<lit-override templateId="overrideTemplate"></lit-override>`);
+
+    const adoptedStyles = el.shadowRoot?.adoptedStyleSheets;
+
+    expect(adoptedStyles?.length).to.equal(1);
+    expect(el.innerHTML).to.not.contain('<style></style>');
   });
 
   it('emits connected-callback event if emitConnectedCallback is true', async () => {

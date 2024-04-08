@@ -1,19 +1,19 @@
 import { LitElement, CSSResult } from 'lit';
 
 /**
- * Applies the given style using `adoptedStyleSheets`. Behavior adopted from `adoptStyles`:
- * https://github.com/lit/lit/blob/main/packages/reactive-element/src/css-tag.ts#L170
- *
- * **Note**: Appends the style to the `shadowroot` of elements for browser fallback.
+ * Applies the given style using `adoptedStyleSheets`.
  *
  * @param elements iterable of elements to apply styles to
  * @param style CSSResult
- * @param replace replace the original styles or preserve them when overriding. Defaults to `false`.
+ * @param clearStyles replace or preserve original styles. Defaults to `false`.
+ *
+ * **Note**: `clearStyles` can be destructive if you are inheriting multiple styles
+ * from other components/mixins. Use cautiously.
  */
 export const injectStyles = (
   elements: NodeListOf<Element> | Array<Element>,
   style: CSSResult,
-  replace: boolean = false,
+  clearStyles: boolean = false,
 ): void => {
   if (!elements || !elements.length || !style) {
     return;
@@ -37,7 +37,9 @@ export const injectStyles = (
           const litElement = element as LitElement;
           const shadowRoot = litElement.renderRoot as ShadowRoot;
           const newStyleSheet = style.styleSheet!;
-          shadowRoot.adoptedStyleSheets = replace ? [newStyleSheet] : [...shadowRoot.adoptedStyleSheets, newStyleSheet];
+          shadowRoot.adoptedStyleSheets = clearStyles
+            ? [newStyleSheet]
+            : [...shadowRoot.adoptedStyleSheets, newStyleSheet];
         })
         .catch((error) => {
           console.error(`There was an error with component registration: ${error}`);

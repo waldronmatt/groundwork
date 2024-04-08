@@ -2,12 +2,10 @@
 
 Utility functions for overriding styles and markup in your Lit components.
 
-Go to the `lit-override` project via [`apps/lit-override`](../../apps/lit-override) to see examples.
-
 ## Features
 
 - Easily override styles and markup
-- Set overrides from a Lit component or from the Light DOM
+- Set overrides from the light DOM and shadow DOM
 - Apply overrides to child components reliably with no race conditions
 - Apply overrides to dynamically loaded/lazy-loaded components
 
@@ -19,55 +17,148 @@ Install dependencies:
 pnpm add @waldronmatt/lit-override lit
 ```
 
-## Getting Started
+## Shadow DOM
 
-Before using the utilities, create a prop called `emitConnectedCallback` and copy the `connectedCallback` logic below in your child component:
+Add the following to the component you want to override styles and markup on:
 
-`my-component.ts`
+`child-component.ts`
 
 ```ts
-import { emit } from '@waldronmatt/lit-override';
+import { EmitConnectedCallback } from '@waldronmatt/lit-override/mixins/emit-connected-callback.js';
 
-...
-
-@property({ reflect: true, type: Boolean })
-emitConnectedCallback = false;
-
-connectedCallback() {
-  super.connectedCallback();
-
-  if (this.emitConnectedCallback) {
-    emit(this, 'connected-callback');
-  }
-}
-
-...
-
+export class ChildComponent extends EmitConnectedCallback(LitElement) {}
 ```
 
-In your lit app, set `emitConnectedCallback` on `my-component` and call the override utility functions inside `@connected-callback`:
+In your lit app, set `emitConnectedCallback` on `child-component` and call the override utility functions inside `@connected-callback`:
 
-`my-app.ts`
+`host-app.ts`
 
 ```ts
-import { injectStyles, injectTemplate } from '@waldronmatt/lit-override';
+import { injectStyles, injectTemplate } from '@waldronmatt/lit-override/utils/index.js';
 
-render(): TemplateResult {
+render() {
   return html`
-    <my-component
+    <child-component
       emitConnectedCallback
       @connected-callback=${(event: { target: HTMLElement }) => {
-        injectStyles([event.target], css`:host { border: 2px solid #000000; }`);
+        injectStyles([event.target], css`::slotted([slot='heading']) { color: #fff; }`);
         injectTemplate([event.target], html`<slot name="heading"></slot>`);
       }}
     >
-      <h3 slot="heading">This is a heading!</h3>
-    </my-component>
+      <h3 slot="heading">Custom markup from the shadow dom!</h3>
+    </child-component>
   `;
 }
 ```
 
-**Note**: This library includes an optional shell `lit-override` component which renders a custom template if found. You can use this in place of `my-component` if you want a generic lit component to do overriding on.
+## Light DOM
+
+Add the following to the component you want to override styles and markup on:
+
+`child-component.ts`
+
+```ts
+import { LitElement, html } from 'lit';
+import { property } from 'lit/decorators.js';
+import { templateContentWithFallback } from '@waldronmatt/lit-override/directives/template-content-with-fallback.js';
+import { AdoptedStyleSheetsConverter } from '@waldronmatt/lit-override/controllers/adopted-stylesheets-converter.js';
+
+export class ChildComponent extends LitElement {
+  @property({ reflect: true, type: String })
+  templateId!: string;
+
+  connectedCallback() {
+    super.connectedCallback();
+    new AdoptedStyleSheetsConverter(this, { id: this.templateId });
+  }
+
+  protected render() {
+    return html`${templateContentWithFallback({ fallback: html`<p>Default markup</p>`, id: this.templateId })}`;
+  }
+}
+
+customElements.define('child-component', ChildComponent);
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'child-component': ChildComponent;
+  }
+}
+```
+
+Set `templateId` on `child-component` to point to the template from which to add styles and markup overrides from:
+
+`index.html`
+
+```html
+<body>
+  <template id="childTemplate">
+    <slot name="heading"></slot>
+    <style>
+      ::slotted([slot='heading']) {
+        color: #fff;
+      }
+    </style>
+  </template>
+  <host-app>
+    <child-component templateId="childTemplate">
+      <h3 slot="heading">Custom markup from the light dom!</h3>
+    </child-component>
+  </host-app>
+</body>
+```
+
+### Lit Override Component
+
+The `<lit-override>` component provides an all-in-one approach to override markup and styles in the light DOM and shadow DOM:
+
+#### Shadow DOM
+
+`host-app.ts`
+
+```ts
+import '@waldronmatt/lit-override/components/lit-override.js';
+
+render() {
+  return html`
+    <lit-override
+      emitConnectedCallback
+      @connected-callback=${(event: { target: HTMLElement }) => {
+        injectStyles([event.target], css`::slotted([slot='heading']) { color: #fff; }`);
+        injectTemplate([event.target], html`<slot name="heading"></slot>`);
+      }}
+    >
+      <h3 slot="heading">Custom markup from the shadow dom!</h3>
+    </lit-override>
+  `;
+}
+```
+
+#### Light DOM
+
+`index.html`
+
+```html
+<body>
+  <template id="childTemplate">
+    <slot name="heading"></slot>
+    <style>
+      ::slotted([slot='heading']) {
+        color: #fff;
+      }
+    </style>
+  </template>
+  <host-app>
+    <lit-override templateId="childTemplate">
+      <h3 slot="heading">Custom markup from the light dom!</h3>
+    </lit-override>
+  </host-app>
+</body>
+```
+
+**Note**: Go to the `lit-override` project via [`apps/lit-override`](../../apps/lit-override) to see more examples.
+
+For a similar native web component implementation, check out [this article](https://css-tricks.com/encapsulating-style-and-structure-with-shadow-dom/#aa-the-best-of-both-worlds) and associated [codepen](https://codepen.io/calebdwilliams/pen/rROadR).
 
 ## Background
 
@@ -79,21 +170,7 @@ One option would be to break this out into a separate component, but this can cr
 
 With these override utilities, we have a reliable way to define our override styles and markup at the host instead of increasing complexity on the child component(s).
 
-## How it Works
-
-### Lit Component and Utilities
-
-The two utilities, `injectStyles` and `injectTemplate`, leverage Lit's internals to inject styles and markup.
-
-The `injectStyles` utility will use the `adoptedStylesheets` API to append styles.
-
-The `injectTemplate` utility will create and append a `<template>` tag injected with the markup to the element root.
-
-If you are using templates to inject custom markup and styles in the light dom, it is up to the component (`lit-override` or your own component) to support `template` detection and rendering it using Lit's `template` directive.
-
-You may notice that we are reliant on Lit's API. This decision was made so that the developer ergonomics of applying styles and markup overrides would be consistent with Lit. You can see this when you pass in your styles and markup into the utility functions, as you will need to wrap overrides in `css` and `html` literal tags. This does have a drawback of making the utility functions tied to Lit's API.
-
-### Styling Difficulties
+## Styling Difficulties
 
 Originally I planned on using the `::part` css pseudo-element and exposing an api for consumers to customize, but this quickly grew out of hand due to the sheer volume of different requests to customize nearly every aspect of a component. Additionally `::part` has limitations with not being able to style inner elements, no support for pseuod-class combinations like `:hover`, and also doesn't support parent/sibling selectors.
 
@@ -103,9 +180,9 @@ Then I discovered `adoptedStyleSheets` which allows for applying stylesheets to 
 
 While significantly better than other options, `adoptedStyleSheets` came with a few minor disadvantages. First, not all browsers supported it, so polyfilling it required a less-performant style tag injection method. In recent years, this is less of an issue now that all major browsers support it. This utility no longer supports polyfilling this behavior for older browsers.
 
-Secondly, if you want to preserve the original styles, you might need to use `!important` to override css properties shared between the two stylesheets. This can be mitigated if you remove the original stylesheet entirely.
+Secondly, if you want to preserve the original styles, you might need to use `!important` to override css properties shared between the two stylesheets. This can be mitigated if you remove the original stylesheet entirely. The tools here are built with this option in mind.
 
-### The whenDefined Promise and connectedCallback/slotchange Events
+## Race Conditions
 
 In order for overriding to work, the parent component needs a reliable way to know when `connectedCallback` has fired for child components. This has been a pressing topic in the web component community as seen in [this thread](https://github.com/WICG/webcomponents/issues/619). Luckily there is an easy workaround.
 
@@ -121,24 +198,7 @@ In situations where we slot in a component with custom styles and markup from th
 
 ## Limitations
 
-- This project assumes you are overriding styles and markup on initial load via `connectedCallback`. Additional work would need to be done to support overriding if state changes (for example, if you decide to inject styles and markup at a later point in the component's/app's lifecycle or after an action).
-
-- Emitting `connectedCallback` might be considered an anti-pattern, especially when abused. Performance can become an issue when attempting to override an excessive amount of components' styles and markup.
-
-`injectTemplate`
-
-- Props fed into your custom markup will not work. Only static markdown is supported.
-- DOM cleanup might become expensive when there are an excessive amount of elements to remove.
-- This utility is fragile because it relies on Lit's internal `template` to set the markup overrides.
-
-`injectStyles`
-
-- You may need to use `!important` on your custom css to override styles if you leave `replace` set to the default value of `false`.
-- This utility is fragile because the fallback behavior relies on Lit's internal `style` to set the style overrides.
-
-## Native Web Components
-
-For a similar native web component implementation, check out [this article](https://css-tricks.com/encapsulating-style-and-structure-with-shadow-dom/#aa-the-best-of-both-worlds) and associated [codepen](https://codepen.io/calebdwilliams/pen/rROadR).
+This project assumes you are overriding styles and markup on initial load via `connectedCallback` and/or `slotchange`. Additional work would need to be done to support overriding if state changes (for example, if you decide to inject styles and markup at a later point in the component's/app's lifecycle or after an action).
 
 ## Caution
 
@@ -150,11 +210,9 @@ Please also note that you should first try to align with teams on a design syste
 
 I'm always open to new ideas and improvements. PRs welcome!
 
-## Web Component Limitations
+## Addendum
 
-I've had the privilege developing a large web component library viewed by millions of people every month. The journey to make a web component library that is design and markup flexible, accessible, i18n enabled, and compatible across all major browsers was a difficult.
-
-In my persuit to make web components work, below are the issues/proposals/utility work-arounds that I personally find important for the web component community to help solve that will facilitate greater adoption:
+Below are the issues/proposals/utility work-arounds that I personally find important for the web component community to help solve that will facilitate greater adoption:
 
 ### Community Protocols
 

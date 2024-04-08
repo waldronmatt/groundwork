@@ -1,5 +1,6 @@
 import { html, LitElement } from 'lit';
-import '@waldronmatt/lit-override/src/lit-override.js';
+import '@waldronmatt/lit-override/src/components/index.js';
+import './child-component.js';
 
 export class HostApp extends LitElement {
   render() {

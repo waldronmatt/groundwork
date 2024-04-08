@@ -6,30 +6,34 @@
   </head>
 
   <body>
+    <template id="childTemplate">
+      <slot name="heading"></slot>
+      <slot name="sub-heading"></slot>
+      <style>
+        :host {
+          display: block;
+          background-color: #000000;
+          margin-top: 1rem;
+        }
+
+        ::slotted([slot='heading']) {
+          color: #ffffff;
+        }
+
+        ::slotted([slot='sub-heading']) {
+          color: #ffd700;
+        }
+      </style>
+    </template>
     <h1>Overriding applied by the light dom!</h1>
     <host-app>
-      <lit-override>
+      <child-component templateId="childTemplate">
         <h3 slot="heading">A heading from a template in the <em>light dom</em>!</h3>
-        <p slot="content">A paragraph from a template in the <em>light dom</em>.</p>
-        <template>
-          <slot name="heading"></slot>
-          <slot name="content"></slot>
-          <style>
-            :host {
-              display: block;
-              background-color: #000000;
-              margin-top: 1rem;
-            }
-
-            ::slotted([slot='heading']) {
-              color: #ffffff;
-            }
-
-            ::slotted([slot='content']) {
-              color: #ffd700;
-            }
-          </style>
-        </template>
+        <p slot="sub-heading">A paragraph from a template in the <em>light dom</em>.</p>
+      </child-component>
+      <lit-override templateId="childTemplate">
+        <h3 slot="heading">A heading from a template in the <em>light dom</em>!</h3>
+        <p slot="sub-heading">A paragraph from a template in the <em>light dom</em>.</p>
       </lit-override>
     </host-app>
     <br />

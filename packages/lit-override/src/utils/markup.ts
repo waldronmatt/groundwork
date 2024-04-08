@@ -1,14 +1,16 @@
 import { LitElement, TemplateResult } from 'lit';
 
 /**
- * Applies the given template to the `shadowRoot` of elements. Behavior adopted from `TemplateContentDirective`:
- * https://github.com/lit/lit/blob/main/packages/lit-html/src/directives/template-content.ts#L10
- *
- * **Note**: Custom elements provided must be configured to accept templates via the
- * `templateContent` directive: `templateContent(this.querySelector("template"))`
+ * Applies the given template to the `shadowRoot` of elements.
  *
  * @param elements iterable of elements to apply markup to
  * @param template TemplateResult
+ *
+ * **Note**: Only static markdown is supported.
+ *
+ * **Note**: This utility clears DOM nodes which can cause performance bottlenecks if there are a lot
+ * of components and/or existing DOM elements. Use cautiously.
+ *
  */
 export const injectTemplate = (elements: NodeListOf<Element> | Array<Element>, template: TemplateResult): void => {
   if (!elements || !elements.length || !template) {
@@ -33,14 +35,7 @@ export const injectTemplate = (elements: NodeListOf<Element> | Array<Element>, t
         .whenDefined(name)
         .then(() => {
           const litElement = element as LitElement;
-          const { renderRoot } = litElement;
-          // making sure we clean out any existing elements for a cleaner DOM
-          let firstChild = renderRoot.firstChild;
-          while (firstChild && firstChild.nodeName !== 'STYLE') {
-            // performance might be a concern if we are removing many elements
-            renderRoot.removeChild(firstChild);
-            firstChild = renderRoot.firstChild;
-          }
+          (litElement.renderRoot as LitElement).innerHTML = '';
           const templateElement = document.createElement('template');
           // template.strings[0] is fragile because this relies on Lit's interal API
           templateElement.innerHTML = template.strings[0];

@@ -5,6 +5,10 @@
   </head>
 
   <body>
+    <template id="childTemplate">
+      <slot name="heading"></slot>
+      <slot name="sub-heading"></slot>
+    </template>
     <h1>Override markup and styles on lazy loaded components!</h1>
     <div id="component-container"></div>
     <br />

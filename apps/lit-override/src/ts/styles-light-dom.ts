@@ -1,11 +1,13 @@
 import { html, LitElement } from 'lit';
-import { injectTemplate } from '@waldronmatt/lit-override/src/index.js';
+import { injectTemplate } from '@waldronmatt/lit-override/src/utils/index.js';
+import '@waldronmatt/lit-override/src/components/index.js';
+import './child-component.js';
 
 export class HostApp extends LitElement {
   private renderMarkupOverride() {
     return html`
       <slot name="heading"></slot>
-      <slot name="content"></slot>
+      <slot name="sub-heading"></slot>
     `;
   }
 

@@ -1,36 +1,40 @@
 import { LitElement, css, html } from 'lit';
 import { property } from 'lit/decorators.js';
-import { emit } from '@waldronmatt/lit-override/src/utils.js';
+import { EmitConnectedCallback } from '@waldronmatt/lit-override/src/mixins/index.js';
+import { templateContentWithFallback } from '@waldronmatt/lit-override/src/directives/index.js';
+import { AdoptedStyleSheetsConverter } from '@waldronmatt/lit-override/src/controllers/index.js';
 
-export class ChildComponent extends LitElement {
+export class ChildComponent extends EmitConnectedCallback(LitElement) {
   static styles = css`
     ::slotted([slot='heading']) {
-      color: teal;
-      background-color: lightgray;
+      color: blue;
+      background-color: gray;
     }
 
     ::slotted([slot='content']) {
-      color: teal;
+      color: red;
       background-color: black;
     }
   `;
 
-  @property({ reflect: true, type: Boolean })
-  emitConnectedCallback = false;
+  @property({ reflect: true, type: String })
+  templateId!: string;
 
   connectedCallback() {
     super.connectedCallback();
+    new AdoptedStyleSheetsConverter(this, { id: this.templateId });
+  }
 
-    if (this.emitConnectedCallback) {
-      emit(this, 'connected-callback');
-    }
+  markup() {
+    return html`<section>
+      <slot name="heading"></slot>
+      <slot name="content"></slot>
+      <small>This is default markup from the custom child component!</small>
+    </section>`;
   }
 
   protected render() {
-    return html`<div>
-      <p>This is default markup from the custom child component!</p>
-      <slot name="heading"></slot> <slot name="content"></slot>
-    </div>`;
+    return html`${templateContentWithFallback({ fallback: this.markup(), id: this.templateId })}`;
   }
 }
 

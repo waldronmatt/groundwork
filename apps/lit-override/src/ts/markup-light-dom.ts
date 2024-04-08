@@ -1,5 +1,7 @@
 import { html, css, LitElement } from 'lit';
-import { injectStyles } from '@waldronmatt/lit-override/src/index.js';
+import { injectStyles } from '@waldronmatt/lit-override/src/utils/index.js';
+import '@waldronmatt/lit-override/src/components/index.js';
+import './child-component.js';
 
 export class HostApp extends LitElement {
   private applyStyleOverride = css`
@@ -13,7 +15,7 @@ export class HostApp extends LitElement {
       color: #0000ff;
     }
 
-    ::slotted([slot='content']) {
+    ::slotted([slot='sub-heading']) {
       color: #ff0000;
     }
   `;

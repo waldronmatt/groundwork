@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="../ts/styles-light-dom.ts" type="module"></script>
+  </head>
+
+  <body>
+    <template id="childTemplate">
+      <style>
+        :host {
+          display: block;
+          background-color: #000000;
+          margin-top: 1rem;
+        }
+
+        ::slotted([slot='heading']) {
+          color: #ffffff;
+        }
+
+        ::slotted([slot='sub-heading']) {
+          color: #ffd700;
+        }
+      </style>
+    </template>
+    <h1>Styles slotted from the light dom and markup applied by the host app!</h1>
+    <host-app>
+      <child-component id="childTemplate">
+        <h3 slot="heading">A child component heading from a Lit template in the <em>host app</em>!</h3>
+        <p slot="sub-heading">A child component paragraph from a Lit template in the <em>host app</em>.</p>
+      </child-component>
+      <lit-override id="childTemplate">
+        <h3 slot="heading">A lit override component heading from a Lit template in the <em>host app</em>!</h3>
+        <p slot="sub-heading">A lit override component paragraph from a Lit template in the <em>host app</em>.</p>
+      </lit-override>
+    </host-app>
+    <br />
+    <a href="./index.html">Go Back</a>
+  </body>
+</html>
