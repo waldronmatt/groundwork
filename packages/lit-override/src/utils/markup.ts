@@ -8,9 +8,6 @@ import { LitElement, TemplateResult } from 'lit';
  *
  * **Note**: Only static markdown is supported.
  *
- * **Note**: This utility clears DOM nodes which can cause performance bottlenecks if there are a lot
- * of components and/or existing DOM elements. Use cautiously.
- *
  */
 export const injectTemplate = (elements: NodeListOf<Element> | Array<Element>, template: TemplateResult): void => {
   if (!elements || !elements.length || !template) {

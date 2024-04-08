@@ -46,8 +46,8 @@ class TemplateContentWithFallbackDirective extends Directive {
  * Will fallback to your component's markup provided as an argument.
  *
  *
- * @param {TemplateResult} fallback renders markup if a `template` element is not found. Defaults to `<slot></slot>`.
- * @param {string} id unique identifier that points to the id of a `template` element. Defaults to empty string.
+ * @param fallback renders markup if a `template` element is not found. Defaults to `<slot></slot>`.
+ * @param id unique identifier that points to the id of a `template` element. Defaults to empty string.
  */
 // @ts-expect-error - ignore typing error
 export const templateContentWithFallback = directive(TemplateContentWithFallbackDirective);

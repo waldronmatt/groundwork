@@ -11,8 +11,7 @@ export declare class EmitConnectedCallbackInterface {
 /**
  * LitOverrideMixin
  *
- * A mixin that enables your component to emit `connected-callback` if
- * `emitConnectedCallback` prop is set.
+ * Enables your component to emit `connected-callback` if `emitConnectedCallback` prop is set.
  *
  * @fires connected-callback when `emitConnectedCallback` is `true`
  * @property {boolean} emitConnectedCallback - Set prop to use `connected-callback` event. Defaults to `false`.

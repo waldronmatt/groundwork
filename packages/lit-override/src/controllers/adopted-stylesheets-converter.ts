@@ -8,11 +8,11 @@ interface AdoptedStyleSheetsConverterParams {
 /**
  * AdoptedStyleSheetsConverter
  *
- * A custom controller that detects a `style` tag inside a `template` element from
- * the light DOM and then converts and adds it to the component's `adoptedStyleSheets` array.
+ * Detects a `style` tag inside a `template` element from the light DOM, converts the styles,
+ * and adds it to the component's `adoptedStyleSheets`.
  *
- * @param {boolean} clearStyles replace or preserve original styles. Defaults to `false`.
- * @param {string} id unique identifier that points to the id of a `template` element. Defaults to empty string.
+ * @param clearStyles replace or preserve original styles. Defaults to `false`.
+ * @param id unique identifier that points to the id of a `template` element. Defaults to empty string.
  */
 export class AdoptedStyleSheetsConverter implements ReactiveController {
   host: ReactiveControllerHost;
@@ -40,6 +40,10 @@ export class AdoptedStyleSheetsConverter implements ReactiveController {
     this.removeComponentStyleTag();
   }
 
+  private getTemplateElement(): HTMLTemplateElement | null {
+    return document.querySelector(`template${this.id ? '#' + this.id : ''}`) || document.querySelector('template');
+  }
+
   private removeComponentStyleTag() {
     if (!this._template) {
       return;
@@ -52,10 +56,6 @@ export class AdoptedStyleSheetsConverter implements ReactiveController {
     }
 
     shadowRoot.removeChild(styleElement);
-  }
-
-  private getTemplateElement(): HTMLTemplateElement | null {
-    return document.querySelector(`template${this.id ? '#' + this.id : ''}`) || document.querySelector('template');
   }
 
   private handleAdoptedStyleSheets(styleElement: HTMLStyleElement) {

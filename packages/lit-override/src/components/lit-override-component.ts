@@ -9,10 +9,10 @@ import { property } from 'lit/decorators.js';
  *
  * A shell component for overriding styles and markup.
  *
- * @fires connected-callback - when `emitConnectedCallback` is `true`
+ * @fires connected-callback when `emitConnectedCallback` is `true`
  * @property {boolean} emitConnectedCallback - Set prop to use `connected-callback` event. Defaults to `false`.
- * @param {string} id unique identifier that points to the id of a `template` element. Defaults to empty string.
- * @slot `<slot></slot>` fallback rendering behavior if `<template>` element is not found
+ * @property {string} id - unique identifier that points to the id of a `template` element. Defaults to empty string.
+ * @slot `<slot></slot>` is rendered as fallback if `<template>` element is not found
  */
 export class LitOverride extends EmitConnectedCallback(LitElement) {
   @property({ reflect: true, type: String })
