@@ -6,9 +6,6 @@ import { LitElement, CSSResult } from 'lit';
  * @param elements iterable of elements to apply styles to
  * @param style CSSResult
  * @param clearStyles replace or preserve original styles. Defaults to `false`.
- *
- * **Note**: `clearStyles` can be destructive if you are inheriting multiple styles
- * from other components/mixins. Use cautiously.
  */
 export const injectStyles = (
   elements: NodeListOf<Element> | Array<Element>,
@@ -16,11 +13,6 @@ export const injectStyles = (
   clearStyles: boolean = false,
 ): void => {
   if (!elements || !elements.length || !style) {
-    return;
-  }
-
-  if (!style.cssText) {
-    console.error("The property 'cssText' on 'style' does not exist. Please check if this is still supported by Lit.");
     return;
   }
 

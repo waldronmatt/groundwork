@@ -91,20 +91,6 @@ describe('injectStyles', () => {
     expect(consoleSpy).not.toHaveBeenCalled();
   });
 
-  test('logs an error if style.cssText is missing', () => {
-    const consoleSpy = jest.spyOn(console, 'error');
-    const mockElement = createMockElement('mock-element', true);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const mockInvalidLitStyles = { strings: [] } as any;
-
-    injectStyles([mockElement], mockInvalidLitStyles);
-
-    expect(consoleSpy).toHaveBeenCalledWith(
-      "The property 'cssText' on 'style' does not exist. Please check if this is still supported by Lit.",
-    );
-    cleanupMockElement(mockElement);
-  });
-
   test('logs an error for invalid web components', () => {
     const consoleSpy = jest.spyOn(console, 'error');
     const mockInvalidWebComponent = createMockElement('div');
