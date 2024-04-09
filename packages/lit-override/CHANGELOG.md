@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.0.0...@waldronmatt/lit-override@2.0.1) (2024-04-09)
+
+### Bug Fixes
+
+* **styles.ts:** remove old check and test suite for fallback support ([2da0c9a](https://github.com/waldronmatt/groundwork/commit/2da0c9aa5db8ab777417581a375a5456f297f242)) - by @waldronmatt
+
 # [2.0.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@1.3.0...@waldronmatt/lit-override@2.0.0) (2024-04-08)
 
 ### Features
