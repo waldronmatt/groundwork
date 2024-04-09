@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/waldronmatt/groundwork/compare/lit-override@2.0.1...lit-override@2.0.2) (2024-04-09)
+
+### Bug Fixes
+
+* **lit-override:** set lit-html as peer dep for package, install lit-html for app ([2751fc3](https://github.com/waldronmatt/groundwork/commit/2751fc30a59edb94c442b1407fcf6c9991d8f299)) - by @waldronmatt
+
 ## [2.0.1](https://github.com/waldronmatt/groundwork/compare/lit-override@2.0.0...lit-override@2.0.1) (2024-04-09)
 
 ### Bug Fixes
