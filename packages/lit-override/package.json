@@ -63,5 +63,8 @@
   },
   "peerDependencies": {
     "lit": "3.1.2"
+  },
+  "dependencies": {
+    "lit-html": "3.1.2"
   }
 }

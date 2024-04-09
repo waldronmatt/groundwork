@@ -1,4 +1,5 @@
 import { LitElement, TemplateResult } from 'lit';
+import { render } from 'lit-html';
 
 /**
  * Applies the given template to the `shadowRoot` of elements.
@@ -7,17 +8,9 @@ import { LitElement, TemplateResult } from 'lit';
  * @param template TemplateResult
  *
  * **Note**: Only static markdown is supported.
- *
  */
 export const injectTemplate = (elements: NodeListOf<Element> | Array<Element>, template: TemplateResult): void => {
   if (!elements || !elements.length || !template) {
-    return;
-  }
-
-  if (!template.strings[0]) {
-    console.error(
-      "The property 'strings[0]' on 'template' does not exist. Please check if this is still supported by Lit.",
-    );
     return;
   }
 
@@ -30,15 +23,7 @@ export const injectTemplate = (elements: NodeListOf<Element> | Array<Element>, t
       }
       customElements
         .whenDefined(name)
-        .then(() => {
-          const litElement = element as LitElement;
-          (litElement.renderRoot as LitElement).innerHTML = '';
-          const templateElement = document.createElement('template');
-          // template.strings[0] is fragile because this relies on Lit's interal API
-          templateElement.innerHTML = template.strings[0];
-          const content = document.importNode(templateElement.content, true);
-          (element as LitElement).renderRoot.appendChild(content);
-        })
+        .then(() => render(template, (element as LitElement).renderRoot))
         .catch((error) => {
           console.error(`There was an error with component registration: ${error}`);
           return;

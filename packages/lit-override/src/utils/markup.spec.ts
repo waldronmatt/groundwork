@@ -9,6 +9,18 @@ const htmlMock = (strings: TemplateStringsArray): TemplateResult => {
   };
 };
 
+jest.mock('lit-html', () => ({
+  html: jest.fn().mockImplementation(String.raw),
+  render: jest.fn((template, container) => {
+    // simulate rendering by setting innerHTML of the container
+    if (container.shadowRoot) {
+      container.shadowRoot.innerHTML = template.strings.join('');
+    } else {
+      container.innerHTML = template.strings.join('');
+    }
+  }),
+}));
+
 const createMockElement = (tagName: string, isCustom = false): HTMLElement & { renderRoot: ShadowRoot } => {
   let elementClass;
   let element;
@@ -30,7 +42,7 @@ const createMockElement = (tagName: string, isCustom = false): HTMLElement & { r
     const h3 = document.createElement('h3');
     h3.setAttribute('slot', 'heading');
     h3.textContent = 'A heading from a template in the light dom';
-    // Append the slot to the shadow DOM
+    // append the slot to the shadow DOM
     element.appendChild(h3);
   } else {
     element = document.createElement(tagName) as HTMLElement & { renderRoot: ShadowRoot };
@@ -63,20 +75,6 @@ describe('injectTemplate', () => {
     expect(consoleSpy).not.toHaveBeenCalled();
   });
 
-  test('logs an error if template.strings[0] is missing', () => {
-    const consoleSpy = jest.spyOn(console, 'error');
-    const mockElement = createMockElement('mock-something', true);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const mockInvalidTemplate = { strings: [] } as any;
-
-    injectTemplate([mockElement], mockInvalidTemplate);
-
-    expect(consoleSpy).toHaveBeenCalledWith(
-      "The property 'strings[0]' on 'template' does not exist. Please check if this is still supported by Lit.",
-    );
-    cleanupMockElement(mockElement);
-  });
-
   test('logs an error for invalid web components', () => {
     const consoleSpy = jest.spyOn(console, 'error');
     const mockElement = createMockElement('div');
@@ -93,19 +91,19 @@ describe('injectTemplate', () => {
     document.body.appendChild(mockCustomElement);
     const mockTemplate = htmlMock`<slot name="heading"></slot>`;
 
-    // Add initial children to the renderRoot
+    // add initial children to the renderRoot
     const initialChild = document.createElement('span');
     initialChild.textContent = 'Initial child';
     mockCustomElement.renderRoot.appendChild(initialChild);
 
-    // Ensure the initial child is in the renderRoot
+    // ensure the initial child is in the renderRoot
     expect(mockCustomElement.renderRoot.contains(initialChild)).toBe(true);
 
     injectTemplate([mockCustomElement], mockTemplate);
-    // Wait for asynchronous tasks in injectTemplate to complete
+    // wait for asynchronous tasks in injectTemplate to complete
     await new Promise((resolve) => setTimeout(resolve, 0));
 
-    // Ensure the initial child is removed
+    // ensure `render` removes the initial child
     expect(mockCustomElement.renderRoot.contains(initialChild)).toBe(false);
     expect(mockCustomElement.innerHTML).toEqual('<h3 slot="heading">A heading from a template in the light dom</h3>');
     expect(mockCustomElement.shadowRoot?.innerHTML).toEqual('<slot name="heading"></slot>');
@@ -121,7 +119,7 @@ describe('injectTemplate', () => {
 
     window.customElements.whenDefined = jest.fn().mockRejectedValue(new Error('Component registration failed'));
     injectTemplate([mockFailedRegistrationWebComponent], mockTemplate);
-    // Wait for asynchronous tasks in injectTemplate to complete
+    // wait for asynchronous tasks in injectTemplate to complete
     await new Promise((resolve) => setTimeout(resolve, 0));
 
     expect(consoleSpy).toHaveBeenCalledWith(

@@ -110,7 +110,7 @@ describe('injectStyles', () => {
     const overrideStyle = new CSSResult(overrideCssText);
 
     injectStyles([mockOverrideAdoptedStylesWebComponent], overrideStyle);
-    // Wait for the asynchronous code from injectStyles to complete
+    // wait for the asynchronous code from injectStyles to complete
     await new Promise((resolve) => setTimeout(resolve, 0));
 
     // simulate appending a stylesheet
@@ -156,7 +156,7 @@ describe('injectStyles', () => {
     window.customElements.whenDefined = jest.fn().mockRejectedValue(new Error('Component registration failed'));
 
     injectStyles([mockFailedRegistrationWebComponent], originalStyle);
-    // Wait for the asynchronous code from injectStyles to complete
+    // wait for the asynchronous code from injectStyles to complete
     await new Promise((resolve) => setTimeout(resolve, 0));
 
     expect(consoleSpy).toHaveBeenCalledWith(
