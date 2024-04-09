@@ -6,6 +6,14 @@
   </head>
 
   <body>
+    <style>
+      host-app:not(:defined) {
+        display: block;
+        height: 100vh;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+    </style>
     <h1>Override markup and styles on dynamically generated components!</h1>
     <host-app></host-app>
     <br />
