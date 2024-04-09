@@ -76,14 +76,6 @@ export class ChildComponent extends LitElement {
     return html`${templateContentWithFallback({ fallback: html`<p>Default markup</p>`, id: this.templateId })}`;
   }
 }
-
-customElements.define('child-component', ChildComponent);
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'child-component': ChildComponent;
-  }
-}
 ```
 
 Set `templateId` on `child-component` to point to the template from which to add styles and markup overrides from:
@@ -157,8 +149,6 @@ render() {
 ```
 
 **Note**: Go to the `lit-override` project via [`apps/lit-override`](../../apps/lit-override) to see more examples.
-
-For a similar native web component implementation, check out [this article](https://css-tricks.com/encapsulating-style-and-structure-with-shadow-dom/#aa-the-best-of-both-worlds) and associated [codepen](https://codepen.io/calebdwilliams/pen/rROadR).
 
 ## Background
 
