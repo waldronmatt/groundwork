@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.0.1...@waldronmatt/lit-override@2.1.0) (2024-04-09)
+
+### Bug Fixes
+
+* **adopted-stylesheets-converter.ts:** remove unnecessary template check for style tag removal ([44d146f](https://github.com/waldronmatt/groundwork/commit/44d146fb705ee2edaa52de90a23ec9235cc50c8d)) - by @waldronmatt
+
+### Features
+
+* **markup.ts:** use lit-html render for markup utility ([202bc27](https://github.com/waldronmatt/groundwork/commit/202bc27e786b80cbb7f03e46d211a3d1d5b88e0c)) - by @waldronmatt
+
 ## [2.0.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.0.0...@waldronmatt/lit-override@2.0.1) (2024-04-09)
 
 ### Bug Fixes
