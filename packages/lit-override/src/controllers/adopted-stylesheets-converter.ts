@@ -36,7 +36,8 @@ export class AdoptedStyleSheetsConverter implements ReactiveController {
   }
 
   hostUpdated() {
-    // clean up style tags when template is injected in component root
+    // clean up style tags if template is injected in component root
+    // by the templateContentWithFallback directive
     this.removeComponentStyleTag();
   }
 
@@ -45,10 +46,6 @@ export class AdoptedStyleSheetsConverter implements ReactiveController {
   }
 
   private removeComponentStyleTag() {
-    if (!this._template) {
-      return;
-    }
-
     const shadowRoot = (this.host as LitElement).renderRoot;
     const styleElement = shadowRoot.querySelector('style');
     if (!styleElement) {
