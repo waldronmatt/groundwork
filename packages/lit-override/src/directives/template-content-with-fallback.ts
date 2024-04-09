@@ -19,15 +19,15 @@ class TemplateContentWithFallbackDirective extends Directive {
     }
   }
 
+  private getTemplateElement(id: string): HTMLTemplateElement | null {
+    return document.querySelector(`template${id ? '#' + id : ''}`) || document.querySelector('template');
+  }
+
   // @ts-expect-error - ignore typing error
   override update(part: ChildPart, [params]: [TemplateContentWithFallbackParams?] = []) {
     const { fallback = html`<slot></slot>`, id = '' } = params || {};
     this._template = this.getTemplateElement(id);
     return this.render(fallback);
-  }
-
-  private getTemplateElement(id: string): HTMLTemplateElement | null {
-    return document.querySelector(`template${id ? '#' + id : ''}`) || document.querySelector('template');
   }
 
   render(fallback: TemplateResult) {
