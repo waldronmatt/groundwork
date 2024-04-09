@@ -14,7 +14,7 @@ Utility functions for overriding styles and markup in your Lit components.
 Install dependencies:
 
 ```bash
-pnpm add @waldronmatt/lit-override lit
+pnpm add @waldronmatt/lit-override lit lit-html
 ```
 
 ## Shadow DOM
