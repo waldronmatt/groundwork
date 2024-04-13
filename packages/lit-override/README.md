@@ -109,6 +109,7 @@ The `<lit-override>` component provides an all-in-one approach to override marku
 `host-app.ts`
 
 ```ts
+import { injectStyles, injectTemplate } from '@waldronmatt/lit-override/utils/index.js';
 import '@waldronmatt/lit-override/components/lit-override.js';
 
 render() {
