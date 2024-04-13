@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.1.1...@waldronmatt/lit-override@2.1.2) (2024-04-13)
+
+### Bug Fixes
+
+* **package.json:** add sinon types ([cee8c70](https://github.com/waldronmatt/groundwork/commit/cee8c70ea07644093a18f9748bf1edc2f1b07e12)) - by @waldronmatt
+* **readme.md:** add missing import in example ([d342132](https://github.com/waldronmatt/groundwork/commit/d3421321152f78a0f23e97ca5ad720b74cc2ae23)) - by @waldronmatt
+* **src:** more robust unit tests ([61af60e](https://github.com/waldronmatt/groundwork/commit/61af60e94b4f1e34da9e48030b0f3a2694c82595)) - by @waldronmatt
+
 ## [2.1.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.1.0...@waldronmatt/lit-override@2.1.1) (2024-04-09)
 
 ### Bug Fixes
