@@ -23,7 +23,10 @@ export const injectTemplate = (elements: NodeListOf<Element> | Array<Element>, t
       }
       customElements
         .whenDefined(name)
-        .then(() => render(template, (element as LitElement).renderRoot))
+        .then(() => {
+          const shadowRoot = (element as LitElement).renderRoot;
+          render(template, shadowRoot);
+        })
         .catch((error) => {
           console.error(`There was an error with component registration: ${error}`);
           return;
