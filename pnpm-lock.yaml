@@ -396,6 +396,9 @@ importers:
       '@types/jest':
         specifier: 29.5.12
         version: 29.5.12
+      '@types/sinon':
+        specifier: 17.0.3
+        version: 17.0.3
       '@web/dev-server-esbuild':
         specifier: 1.0.2
         version: 1.0.2
