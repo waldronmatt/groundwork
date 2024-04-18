@@ -1,0 +1,11 @@
+name: 'Setup Node.js'
+inputs:
+  node-version:
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}

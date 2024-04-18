@@ -1,0 +1,9 @@
+name: 'Install Playwright and Dependencies'
+
+runs:
+  using: 'composite'
+  steps:
+    # - name: Install Playwright Browsers
+    #   run: npx playwright install --with-deps
+    - name: Install dependencies
+      run: pnpm install

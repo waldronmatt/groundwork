@@ -1,0 +1,10 @@
+name: 'Run NX Affected'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: NX Affected
+      uses: nrwl/nx-set-shas@v4
+
+    - name: Build, Lint, Test
+      run: npx nx affected -t build,lint,test --parallel=3

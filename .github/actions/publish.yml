@@ -1,0 +1,27 @@
+name: 'Release'
+
+inputs:
+  github-token:
+    required: true
+  npm-token:
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Config Git User
+      run: |
+        git config --global user.name "${{ github.actor }}"
+        git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+
+    - name: NPM Registry Authentication
+      run: |
+        npm config set '//registry.npmjs.org/:_authToken' ${{ inputs.npm-token }}
+
+    - name: Bump Versions
+      run: pnpm version:ci
+
+    - name: Publish Packages
+      run: pnpm publish:ci
