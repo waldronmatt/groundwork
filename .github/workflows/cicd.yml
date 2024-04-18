@@ -20,7 +20,9 @@ jobs:
         pnpm-version: [8]
     steps:
       - name: Checkout Code
-        uses: ./.github/actions/checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: ./.github/actions/setup-node
