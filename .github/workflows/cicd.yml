@@ -20,27 +20,27 @@ jobs:
         pnpm-version: [8]
     steps:
       - name: Checkout Code
-        uses: ../actions/checkout.yml
+        uses: ./.github/actions/checkout.yml
 
       - name: Setup Node.js
-        uses: ../actions/setup-node.yml
+        uses: ./.github/actions/setup-node.yml
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Setup pnpm and Cache
-        uses: ../actions/setup-pnpm.yml
+        uses: ./.github/actions/setup-pnpm.yml
         with:
           pnpm-version: ${{ matrix.pnpm-version }}
 
       - name: Install Playwright and Dependencies
-        uses: ../actions/install-deps.yml
+        uses: ./.github/actions/install-deps.yml
 
       - name: Run NX Affected Commands
-        uses: ../actions/run-affected.yml
+        uses: ./.github/actions/run-affected.yml
 
       - name: Publish Packages
         if: github.event_name == 'push'
-        uses: ../actions/publish.yml
+        uses: ./.github/actions/publish.yml
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           npm-token: ${{ secrets.NPM_TOKEN }}
