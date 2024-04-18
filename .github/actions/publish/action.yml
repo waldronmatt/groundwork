@@ -13,15 +13,19 @@ runs:
       run: |
         git config --global user.name "${{ github.actor }}"
         git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+      shell: bash
       env:
         GITHUB_TOKEN: ${{ inputs.github-token }}
 
     - name: NPM Registry Authentication
       run: |
         npm config set '//registry.npmjs.org/:_authToken' ${{ inputs.npm-token }}
+      shell: bash
 
     - name: Bump Versions
       run: pnpm version:ci
+      shell: bash
 
     - name: Publish Packages
       run: pnpm publish:ci
+      shell: bash
