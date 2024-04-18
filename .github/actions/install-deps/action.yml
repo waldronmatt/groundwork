@@ -7,3 +7,4 @@ runs:
     #   run: npx playwright install --with-deps
     - name: Install dependencies
       run: pnpm install
+      shell: bash
