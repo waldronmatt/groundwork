@@ -8,3 +8,4 @@ runs:
 
     - name: Build, Lint, Test
       run: npx nx affected -t build,lint,test --parallel=3
+      shell: bash
