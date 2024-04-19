@@ -25,6 +25,8 @@ runs:
     - name: Bump Versions
       run: pnpm version:ci
       shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
 
     - name: Publish Packages
       run: pnpm publish:ci
