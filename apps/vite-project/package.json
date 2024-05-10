@@ -11,9 +11,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@waldronmatt/basic-math": "workspace:*",
     "@waldronmatt/demo-ui": "workspace:*",
-    "@waldronmatt/parity": "workspace:*",
+    "@waldronmatt/library": "workspace:*",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

@@ -1,6 +1,6 @@
 {
-  "name": "@waldronmatt/basic-math",
-  "version": "2.1.10",
+  "name": "@waldronmatt/library",
+  "version": "0.0.1",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
@@ -33,14 +33,14 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/waldronmatt/groundwork.git",
-    "directory": "packages/basic-math"
+    "directory": "packages/library"
   },
   "author": "Matthew Waldron",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/waldronmatt/groundwork/issues"
   },
-  "homepage": "https://github.com/waldronmatt/groundwork/tree/main/packages/basic-math#readme",
+  "homepage": "https://github.com/waldronmatt/groundwork/tree/main/packages/library#readme",
   "devDependencies": {
     "@types/jest": "29.5.12",
     "eslint": "8.57.0",

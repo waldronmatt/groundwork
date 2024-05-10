@@ -1,19 +1,19 @@
 # Basic Math
 
-A utility helper to do addition and subtraction.
+A demo package implementing modern defaults and tooling for publishing a package to `npm`.
 
 ## Installation
 
 Install dependencies:
 
 ```bash
-pnpm add @waldronmatt/basic-math
+pnpm add @waldronmatt/library
 ```
 
 ## Getting Started
 
 ```ts
-import { addition } from '@waldronmatt/basic-math/addition.js';
+import { addition } from '@waldronmatt/library/addition.js';
 
 console.log(addition(1, 2)); // Output: 3
 ```
@@ -23,7 +23,7 @@ console.log(addition(1, 2)); // Output: 3
 For use inside this monorepo, we import via below so we can use directly from source files.
 
 ```ts
-import { addition } from '@waldronmatt/basic-math/src/addition.js';
+import { addition } from '@waldronmatt/library/src/addition.js';
 ```
 
 ## License

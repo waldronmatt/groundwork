@@ -117,15 +117,12 @@ importers:
 
   apps/vite-project:
     dependencies:
-      '@waldronmatt/basic-math':
-        specifier: workspace:*
-        version: link:../../packages/basic-math
       '@waldronmatt/demo-ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@waldronmatt/parity':
+      '@waldronmatt/library':
         specifier: workspace:*
-        version: link:../../packages/parity
+        version: link:../../packages/library
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -348,7 +345,7 @@ importers:
         specifier: 1.4.0
         version: 1.4.0(@types/node@20.11.30)
 
-  packages/basic-math:
+  packages/library:
     devDependencies:
       '@types/jest':
         specifier: 29.5.12
@@ -431,39 +428,6 @@ importers:
       sinon:
         specifier: 17.0.1
         version: 17.0.1
-      tsconfig-config:
-        specifier: workspace:*
-        version: link:../../configs/tsconfig-config
-      tslib:
-        specifier: 2.6.2
-        version: 2.6.2
-      tsup:
-        specifier: 8.0.2
-        version: 8.0.2(typescript@5.4.3)
-      typescript:
-        specifier: 5.4.3
-        version: 5.4.3
-
-  packages/parity:
-    devDependencies:
-      '@types/jest':
-        specifier: 29.5.12
-        version: 29.5.12
-      eslint:
-        specifier: 8.57.0
-        version: 8.57.0
-      eslint-config-custom:
-        specifier: workspace:*
-        version: link:../../configs/eslint-config-custom
-      jest:
-        specifier: 29.7.0
-        version: 29.7.0(@types/node@20.11.30)
-      jest-config:
-        specifier: workspace:*
-        version: link:../../configs/jest-config
-      rimraf:
-        specifier: 5.0.5
-        version: 5.0.5
       tsconfig-config:
         specifier: workspace:*
         version: link:../../configs/tsconfig-config
