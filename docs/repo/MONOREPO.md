@@ -1,6 +1,6 @@
 # Monorepo Commands
 
-Lint your monorepo (executes all commands below):
+Lint the monorepo (executes all commands below):
 
 ```bash
 pnpm lint:mr
@@ -18,7 +18,7 @@ Check files for formatting issues:
 pnpm lint:format
 ```
 
-Validate package publishing best practices:
+Validate package publishing best practices (applies to projects in `packages` folder):
 
 ```bash
 pnpm lint:packages
@@ -34,10 +34,4 @@ Verify monorepo best practice:
 
 ```bash
 pnpm lint:monorepo
-```
-
-Find unused exports:
-
-```bash
-pnpm lint:knip
 ```

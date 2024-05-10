@@ -4,6 +4,6 @@
   "include": ["src"],
   "exclude": ["node_modules", "dist", "coverage"],
   "compilerOptions": {
-    "types": ["vitest/globals"],
-  },
+    "types": ["vitest/globals"]
+  }
 }

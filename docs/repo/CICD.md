@@ -6,6 +6,18 @@ Installer command to ensure that the exact versions of dependencies specified in
 pnpm bootstrap:ci
 ```
 
+Lint the monorepo:
+
+```bash
+pnpm lint:mr
+```
+
+Found in the workflow `.yml` cicd files, this command will run all three tasks in parallel for only affected files:
+
+```bash
+npx nx affected -t build,lint,test,lint:knip --parallel=4
+```
+
 Versioning command that will bypass prompts for avoiding manual intervention:
 
 ```bash
@@ -16,10 +28,4 @@ Publishing command that will bypass prompts for avoiding manual intervention:
 
 ```bash
 pnpm publish:ci
-```
-
-Found in the workflow `.yml` cicd files, this command will run all three tasks in parallel for only affected files:
-
-```bash
-npx nx affected -t build,lint,test --parallel=3
 ```

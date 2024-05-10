@@ -20,6 +20,12 @@ Delete workspace root `node_modules` and `pnpm-lock.yaml` files:
 pnpm delete
 ```
 
+Find unused exports (applies to projects in `packages` folder):
+
+```bash
+pnpm lint:knip
+```
+
 Visualize the project structure/dependencies:
 
 ```bash

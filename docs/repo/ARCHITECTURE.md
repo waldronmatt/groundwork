@@ -41,10 +41,14 @@ We are using `lint-staged` to run linting and tests on staged files. This is the
 
 1. Check for secrets (`secretlint`)
 2. Fix file formatting (`prettier`)
-3. Lint and fix issues of affected `.ts` and related files (`eslint` and `nx`)
-4. Run tests of affected files (`jest`/`vitest` and `nx`)
+3. Lint `package.json` files for package, dependency, and monorepo best practices
+4. Lint and fix issues of affected `.ts` and related files (`eslint` and `nx`)
+5. Run tests of affected files (`jest`/`vitest` and `nx`)
+6. Lint exports on all `.ts` files (`knip` and `nx`)
 
 We limit automatic fixes to file formatting and linting when possible. For everything else, we let the user to decide on actions to take if there are errors.
+
+We also use Github actions as an extra safeguard in case users bypass `lint-staged`.
 
 ## Versioning
 
@@ -84,3 +88,7 @@ import { Button, type ButtonProps } from '@waldronmatt/demo-ui/lib/index.js';
 ```
 
 There are other ways to do this such as symlinking and/or stubbing via third-party packages, but I personally ran into issues using these other methods. Alternatively, some may choose to refernce them via a registry (`npm`) with specified versions so that changes do not break other apps in the monorepo. This may be preferred for larger teams and organizations.
+
+## ESM and CJS File Naming Conventions
+
+For the rare instances where I have both `esm` and `cjs` bundles, I set specific file extensions like `.cjs` for `cjs` and use the standard `.js` extension for `esm`. ESM is the module system industry standard and I would prefer to not label them specifically with a `.mjs` extension. Labelling `cjs` files differently helps to remind developers to upgrade in the future if both module systems must be supported.
