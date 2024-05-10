@@ -1,4 +1,4 @@
-# Basic Math
+# Library
 
 A demo package implementing modern defaults and tooling for publishing a package to `npm`.
 
