@@ -37,11 +37,12 @@ jobs:
       - name: Install Playwright and Dependencies
         uses: ./.github/actions/install-deps
 
+      - name: Run NX Affected Commands
+        uses: ./.github/actions/run-affected
+
       - name: Lint Monorepo
         uses: ./.github/actions/lint-mr
 
-      - name: Run NX Affected Commands
-        uses: ./.github/actions/run-affected
       - name: Publish Packages
         if: github.event_name == 'push'
         uses: ./.github/actions/publish
