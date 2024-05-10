@@ -5,3 +5,4 @@ runs:
   steps:
     - name: Lint Monorepo
       run: pnpm lint:mr
+      shell: bash
