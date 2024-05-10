@@ -18,6 +18,7 @@
     "README.md"
   ],
   "scripts": {
+    "lint:knip": "knip --exports",
     "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
     "test:components": "web-test-runner",
     "test:files": "jest --coverage",
@@ -56,6 +57,8 @@
     "eslint-config-custom": "workspace:*",
     "jest": "29.7.0",
     "jest-config": "workspace:*",
+    "lit": "3.1.2",
+    "lit-html": "3.1.2",
     "rimraf": "5.0.5",
     "sinon": "17.0.1",
     "tsconfig-config": "workspace:*",
