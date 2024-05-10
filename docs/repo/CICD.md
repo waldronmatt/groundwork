@@ -9,13 +9,7 @@ pnpm bootstrap:ci
 Found in the workflow `.yml` cicd files, this command will run all three tasks in parallel for only affected files:
 
 ```bash
-npx nx affected -t build,lint,test,lint:knip --parallel=4
-```
-
-Lint the monorepo:
-
-```bash
-pnpm lint:mr
+npx nx affected -t build,lint,test --parallel=3
 ```
 
 Versioning command that will bypass prompts for avoiding manual intervention:

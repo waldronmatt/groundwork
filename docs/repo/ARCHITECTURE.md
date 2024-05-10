@@ -46,9 +46,7 @@ We are using `lint-staged` to run linting and tests on staged files. This is the
 5. Run tests of affected files (`jest`/`vitest` and `nx`)
 6. Lint exports on all `.ts` files (`knip` and `nx`)
 
-We limit automatic fixes to file formatting and linting when possible. For everything else, we let the user to decide on actions to take if there are errors.
-
-We also use Github actions as an extra safeguard in case users bypass `lint-staged`.
+We auto format and apply linting fixes when possible. For everything else, we let the user to decide on actions to take if there are errors.
 
 ## Versioning
 
