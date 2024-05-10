@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.4](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.7.3...monorepo-docs@1.7.4) (2024-05-10)
+
+### Bug Fixes
+
+* **docs:** update text with new cicd action setup ([e878894](https://github.com/waldronmatt/groundwork/commit/e87889463e98c2d68b96035f9b7d63cb72d4f798)) - by @waldronmatt
+
 ## [1.7.3](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.7.2...monorepo-docs@1.7.3) (2024-05-10)
 
 ### Bug Fixes

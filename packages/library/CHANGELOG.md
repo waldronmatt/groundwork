@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/library@1.0.0...@waldronmatt/library@1.0.1) (2024-05-10)
+
+### Bug Fixes
+
+* **readme.md:** update title ([d57220e](https://github.com/waldronmatt/groundwork/commit/d57220ee78cfb9eeb2c1ea6e07965a5cbd1035d3)) - by @waldronmatt
+
 # 1.0.0 (2024-05-10)
 
 ### Features
