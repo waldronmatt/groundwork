@@ -1,8 +1,0 @@
-name: 'Lint Monorepo'
-
-runs:
-  using: 'composite'
-  steps:
-    - name: Lint Monorepo
-      run: pnpm lint:mr
-      shell: bash

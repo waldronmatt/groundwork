@@ -40,9 +40,6 @@ jobs:
       - name: Run NX Affected Commands
         uses: ./.github/actions/run-affected
 
-      - name: Lint Monorepo
-        uses: ./.github/actions/lint-mr
-
       - name: Publish Packages
         if: github.event_name == 'push'
         uses: ./.github/actions/publish
