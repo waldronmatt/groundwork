@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.3](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.1.2...@waldronmatt/lit-override@2.1.3) (2024-05-10)
+
+### Bug Fixes
+
+* **package.json:** add lit and lit-html as dev deps ([7430b2f](https://github.com/waldronmatt/groundwork/commit/7430b2f0127e280c74ca7766e01f3fa5494625e9)) - by @waldronmatt
+
 ## [2.1.2](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.1.1...@waldronmatt/lit-override@2.1.2) (2024-04-13)
 
 ### Bug Fixes

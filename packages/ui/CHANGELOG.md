@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.3.12...@waldronmatt/demo-ui@3.4.0) (2024-05-10)
+
+### Features
+
+* **ui:** update dts plugin to output separate esm and cjs type bundles per TS v5 recommendation ([db7dc1b](https://github.com/waldronmatt/groundwork/commit/db7dc1b2e38e020457bad8564a13b357e7876644)) - by @waldronmatt
+
 ## [3.3.12](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.3.11...@waldronmatt/demo-ui@3.3.12) (2024-04-01)
 
 **Note:** Version bump only for package @waldronmatt/demo-ui
