@@ -5,12 +5,15 @@ A demo react component library. Heavily inspired by [this article](https://dev.t
 ## Features
 
 - Fully tree shakeable (`js` and `css`)
-- Outputs both `esm` and `cjs` bundles
-- Component library is written in TypeScript
-- Compiled CSS modules (consuming app is not required to support css modules)
-- Bundle auto generates declaration files (`.d.ts`), source maps for declaration files (`.d.ts.map`), and source maps for JavaScript files (`.js.map`)
-- Subpath exports for explicit path referencing. Will automatically map to the right module system (`esm` and `cjs`)
-- Component updates auto reflect (hmr) in monorepos when referenced via the `lib` subpath export and installed via the `workspace:` protocol
+- SSR compatible
+- Outputs:
+  - `esm` and `cjs` source files
+  - source maps for JavaScript files (`.js.map`)
+  - `esm` and `cjs` declaration files (`.d.ts` and `.c.ts`)
+  - `esm` and `cjs` source maps for declaration files (`.d.ts.map` and `.c.ts.map`)
+  - compiled CSS modules (consuming app is not required to support css modules)
+- Subpath exports for explicit path referencing. Will auto map to the right module system
+- Component updates auto reflect (hmr) in monorepos when referenced via the `lib` subpath export installed via the `workspace:` protocol
 - Libraries are externalized for a lighter bundle size (`react`, `react/jsx-runtime`)
 
 ## Installation

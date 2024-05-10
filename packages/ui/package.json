@@ -1,24 +1,34 @@
 {
   "name": "@waldronmatt/demo-ui",
   "version": "3.3.12",
-  "main": "./dist/cjs/index.js",
+  "types": "./dist/types/esm/index.d.ts",
   "module": "./dist/esm/index.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "./dist/cjs/index.cjs",
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
-      "require": "./dist/cjs/index.js",
-      "import": "./dist/esm/index.js"
+      "import": {
+        "types": "./dist/types/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/cjs/index.c.ts",
+        "default": "./dist/cjs/index.cjs"
+      }
     },
     "./*": {
-      "types": "./dist/types/*",
-      "require": "./dist/cjs/*",
-      "import": "./dist/esm/*"
+      "import": {
+        "types": "./dist/types/esm/*",
+        "default": "./dist/esm/*"
+      },
+      "require": {
+        "types": "./dist/types/cjs/*",
+        "default": "./dist/cjs/*"
+      }
     },
     "./styles/*": {
-      "require": "./dist/styles/*",
-      "import": "./dist/styles/*"
+      "import": "./dist/styles/*",
+      "require": "./dist/styles/*"
     },
     "./lib/*": "./lib/*"
   },
@@ -31,6 +41,7 @@
     "**/*.css"
   ],
   "scripts": {
+    "lint:knip": "knip --exports",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "build": "tsc --p ./tsconfig.build.json && vite build",
     "clean": "rimraf dist tsconfig.build.tsbuildinfo"
@@ -59,6 +70,7 @@
     "@vitejs/plugin-react-swc": "3.6.0",
     "eslint": "8.57.0",
     "eslint-config-custom": "workspace:*",
+    "fs-extra": "11.2.0",
     "glob": "10.3.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",

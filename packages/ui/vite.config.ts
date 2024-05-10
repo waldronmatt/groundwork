@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import fs from 'fs-extra';
 import react from '@vitejs/plugin-react-swc';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
@@ -19,8 +20,29 @@ export default defineConfig({
     // `declarationMap` will generate .d.ts.map files
     // we also declare `declaration` or else TS will throw errors even though
     // this is redudant since we are using dts plugin below to do this
+    // dts({
+    //   outDir: ['dist/types'],
+    // }),
     dts({
-      outDir: ['dist/types'],
+      // create two type folders, one for esm and cjs
+      outDir: ['dist/types/esm', 'dist/types/cjs'],
+      // modify type files after they have been written
+      afterBuild: async () => {
+        // Fetch all .d.ts files recursively from the dist/types/cjs directory
+        const files = glob.sync('dist/types/cjs/**/*.d.{ts,ts.map}', { nodir: true });
+        // Since TypeScript 5.0, it has emphasized that type files (*.d.ts) are also affected by its ESM and CJS context.
+        // This means that you can't share a single type file for both ESM and CJS exports of your library.
+        // You need to have two type files when dual-publishing your library.
+        // see https://publint.dev/rules#export_types_invalid_format
+        await Promise.all(
+          files.map(async (file) => {
+            // Generate the new files with the new .c.ts/.c.ts.map naming
+            const newFilePath = file.replace(/\.d\.ts(\.map)?$/, '.c.ts$1');
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+            await fs.move(file, newFilePath, { overwrite: true });
+          }),
+        );
+      },
     }),
     // generates a separate CSS file for each chunk and includes an import statement
     // at the beginning of each chunk's output file
@@ -38,12 +60,13 @@ export default defineConfig({
             exports: 'named',
             entryFileNames: 'esm/[name].js',
             // this is defined twice so the css files output in the desired styles folder
+            // this is slightly inefficient as the compilation for styles occurs twice
             assetFileNames: 'styles/[name][extname]',
           },
           {
             format: 'cjs',
             exports: 'named',
-            entryFileNames: 'cjs/[name].js',
+            entryFileNames: 'cjs/[name].cjs',
             assetFileNames: 'styles/[name][extname]',
           },
         ],
