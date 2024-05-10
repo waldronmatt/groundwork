@@ -36,7 +36,7 @@
     "build": "npx nx run-many -t build",
     "preview": "npx nx run-many -t preview",
     "bootstrap:ci": "pnpm i --frozen-lockfile",
-    "version:ci": "lerna version --yes --no-verify",
+    "version:ci": "HUSKY=0 lerna version --yes",
     "publish:ci": "lerna publish from-package --yes"
   },
   "license": "MIT",
