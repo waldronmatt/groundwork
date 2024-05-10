@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/waldronmatt/groundwork/compare/vite-project@2.1.14...vite-project@2.2.0) (2024-05-10)
+
+### Features
+
+* **library:** add new library package to showcase and replace basic-math and parity ([750f35a](https://github.com/waldronmatt/groundwork/commit/750f35aa2e11b25d779c74a353ef233b07cd9962)) - by @
+
 ## [2.1.14](https://github.com/waldronmatt/groundwork/compare/vite-project@2.1.13...vite-project@2.1.14) (2024-04-01)
 
 **Note:** Version bump only for package vite-project
