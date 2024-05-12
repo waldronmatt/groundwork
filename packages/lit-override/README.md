@@ -51,6 +51,27 @@ render() {
 }
 ```
 
+Alternatively, you can use the `onConnectedCallback` callback function if performance is a concern with emitting an event on `connectedCallback`:
+
+`host-app.ts`
+
+```ts
+import { injectStyles, injectTemplate } from '@waldronmatt/lit-override/utils/index.js';
+
+render() {
+  return html`
+    <child-component
+      .onConnectedCallback=${(thisChild: LitElement) => {
+        injectStyles([thisChild], css`::slotted([slot='heading']) { color: #fff; }`);
+        injectTemplate([thisChild], html`<slot name="heading"></slot>`);
+      }}
+    >
+      <h3 slot="heading">Custom markup from the shadow dom!</h3>
+    </child-component>
+  `;
+}
+```
+
 ## Light DOM
 
 Add the following to the component you want to override styles and markup on:
@@ -181,7 +202,7 @@ In the child component's `connectedCallback`, emit an event so the parent compon
 
 This beahvior follows Lit's recommendations to pass information up the tree to the parent component. Instead of passing information in response to user interaction, this would be when a child component's `connectedCallback` fires.
 
-To avoid too much noise from `connectedCallback` events being emitted, this feature is disabled by default which can be useful in situations where you have default styling and don't intend to override. You must pass in `emitConnectedCallback` prop as `true` to enable overriding.
+To avoid too much noise from `connectedCallback` events being emitted, this feature is disabled by default which can be useful in situations where you have default styling and don't intend to override. You must pass in `emitConnectedCallback` prop as `true` to enable overriding. You can also use the `onConnectedCallback` callback function if performance is a concern with emitting an event on `connectedCallback`.
 
 For situations where components are lazy-loaded, the solution above won't be enough. In `injectStyles` and `injectTemplate`, we use `whenDefined` to inject custom styles and markup only when elements become registered. This also helps with error handling.
 

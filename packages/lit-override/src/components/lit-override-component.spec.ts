@@ -63,6 +63,17 @@ describe('lit-override', () => {
     expect(el.shadowRoot?.querySelector('style')).to.not.exist;
   });
 
+  it('calls onConnectedCallback appropriately', async () => {
+    const callbackSpy = sinon.spy();
+    const el = await fixture<LitOverride>(html`<lit-override></lit-override>`);
+    // @ts-expect-error - this is already defined on the component
+    el.onConnectedCallback = callbackSpy;
+    el.connectedCallback();
+    await aTimeout(50);
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    expect(callbackSpy).to.have.been.calledOnce;
+  });
+
   it('does not emit connected-callback event when emitConnectedCallback is false', async () => {
     const el = await fixture<LitOverride>(html`<lit-override></lit-override>`);
     const eventSpy = sinon.spy();

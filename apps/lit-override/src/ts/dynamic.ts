@@ -86,7 +86,6 @@ customElements.define('host-app', HostApp);
 
 declare global {
   interface HTMLElementTagNameMap {
-    // @ts-expect-error - ignore duplicate declaration warning
     'host-app': HostApp;
   }
 }
