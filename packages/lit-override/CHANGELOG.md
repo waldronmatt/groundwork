@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.2.0...@waldronmatt/lit-override@2.2.1) (2024-05-13)
+
+### Bug Fixes
+
+* **readme.md:** add link to api docs ([2983e3d](https://github.com/waldronmatt/groundwork/commit/2983e3dfe8862bed1afc4ffffc9ff2445d29b560)) - by @waldronmatt
+
 # [2.2.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.1.3...@waldronmatt/lit-override@2.2.0) (2024-05-13)
 
 ### Bug Fixes
