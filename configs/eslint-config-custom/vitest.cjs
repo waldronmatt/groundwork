@@ -2,6 +2,6 @@ module.exports = {
   globals: {
     vi: true,
   },
-  plugins: ['vitest'],
-  extends: ['plugin:vitest/recommended'],
+  // plugins: ['vitest'],
+  // extends: ['plugin:vitest/recommended'],
 };
