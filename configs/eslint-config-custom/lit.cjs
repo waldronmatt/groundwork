@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['plugin:wc/recommended', 'plugin:lit/recommended'],
-  plugins: ['lit'],
+  plugins: ['lit', 'lit-a11y'],
+  extends: ['plugin:wc/recommended', 'plugin:lit/recommended', 'plugin:lit-a11y/recommended'],
 };

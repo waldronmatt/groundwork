@@ -1,7 +1,6 @@
 module.exports = {
   root: true,
   extends: ['custom/ts.cjs', 'custom/lit.cjs'],
-  plugins: ['lit'],
   ignorePatterns: ['dist/**'],
   parserOptions: {
     ecmaVersion: 'latest',

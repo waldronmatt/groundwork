@@ -59,7 +59,6 @@ describe('lit-override', () => {
     const adoptedStyles = el.shadowRoot?.adoptedStyleSheets;
     expect(adoptedStyles?.length).to.equal(1);
     expect(el.innerHTML).to.not.contain('<style></style>');
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     expect(el.shadowRoot?.querySelector('style')).to.not.exist;
   });
 
@@ -70,7 +69,6 @@ describe('lit-override', () => {
     el.onConnectedCallback = callbackSpy;
     el.connectedCallback();
     await aTimeout(50);
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     expect(callbackSpy).to.have.been.calledOnce;
   });
 
@@ -80,7 +78,6 @@ describe('lit-override', () => {
     el.addEventListener('connected-callback', eventSpy);
     setTimeout(() => el.connectedCallback());
     await aTimeout(50);
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     expect(eventSpy).not.to.have.been.called;
   });
 
@@ -88,7 +85,6 @@ describe('lit-override', () => {
     const el = await fixture<LitOverride>(html`<lit-override emitConnectedCallback></lit-override>`);
     setTimeout(() => el.connectedCallback());
     const ev = await oneEvent(el, 'connected-callback', true);
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     expect(ev).to.exist;
   });
 });
