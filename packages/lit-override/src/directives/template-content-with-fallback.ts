@@ -3,7 +3,7 @@ import { templateContent } from 'lit/directives/template-content.js';
 import { ChildPart, html, TemplateResult } from 'lit';
 import { when } from 'lit/directives/when.js';
 
-interface TemplateContentWithFallbackParams {
+export interface TemplateContentWithFallbackParams {
   fallback?: TemplateResult;
   id?: string;
 }

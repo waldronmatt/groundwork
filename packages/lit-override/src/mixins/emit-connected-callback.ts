@@ -4,12 +4,12 @@ import { property } from 'lit/decorators.js';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Constructor<T> = new (...args: any[]) => T;
 
-export interface ChildInfoInterface {
+export interface EmitConnectedCallbackInfo {
   name: string;
   isConnected: boolean;
 }
 
-export declare class EmitConnectedCallbackInterface {
+export declare class EmitConnectedCallbackProps {
   emitConnectedCallback: boolean;
 }
 
@@ -30,12 +30,12 @@ export const EmitConnectedCallback = <T extends Constructor<LitElement>>(superCl
 
     @property({ reflect: false })
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    onConnectedCallback = (_thisChild: LitElement, _childInfo: ChildInfoInterface) => {};
+    onConnectedCallback = (_thisChild: LitElement, _childInfo: EmitConnectedCallbackInfo) => {};
 
     connectedCallback() {
       super.connectedCallback();
 
-      const childInfo: ChildInfoInterface = {
+      const childInfo: EmitConnectedCallbackInfo = {
         name: this.constructor.name,
         isConnected: this.isConnected,
       };
@@ -55,5 +55,5 @@ export const EmitConnectedCallback = <T extends Constructor<LitElement>>(superCl
     }
   }
 
-  return EmitConnectedCallbackMixin as Constructor<EmitConnectedCallbackInterface> & T;
+  return EmitConnectedCallbackMixin as Constructor<EmitConnectedCallbackProps> & T;
 };

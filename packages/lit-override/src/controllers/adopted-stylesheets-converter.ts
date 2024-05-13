@@ -1,6 +1,6 @@
 import { LitElement, ReactiveController, ReactiveControllerHost } from 'lit';
 
-interface AdoptedStyleSheetsConverterParams {
+export interface AdoptedStyleSheetsConverterParams {
   clearStyles?: boolean;
   id?: string;
 }

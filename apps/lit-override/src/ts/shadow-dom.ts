@@ -1,6 +1,6 @@
 import { html, css, LitElement } from 'lit';
 import { injectStyles, injectTemplate } from '@waldronmatt/lit-override/src/utils/index.js';
-import type { ChildInfoInterface } from '@waldronmatt/lit-override/src/index.js';
+import type { EmitConnectedCallbackInfo } from '@waldronmatt/lit-override/src/index.js';
 import '@waldronmatt/lit-override/src/components/index.js';
 import './child-component.js';
 export class HostApp extends LitElement {
@@ -34,7 +34,7 @@ export class HostApp extends LitElement {
         <p>Using the ConnectedCallback Event</p>
         <child-component
           emitConnectedCallback
-          @connected-callback=${(event: { target: HTMLElement; detail: ChildInfoInterface }) => {
+          @connected-callback=${(event: { target: HTMLElement; detail: EmitConnectedCallbackInfo }) => {
             console.log(`Component ${event.detail.name} is connected by event: ${event.detail.isConnected}`);
             injectStyles([event.target], this.applyStyleOverride);
             injectTemplate([event.target], this.renderMarkupOverride());
@@ -45,7 +45,7 @@ export class HostApp extends LitElement {
         </child-component>
         <p>Using the ConnectedCallback Callback Function</p>
         <child-component
-          .onConnectedCallback=${(thisChild: LitElement, childInfo: ChildInfoInterface) => {
+          .onConnectedCallback=${(thisChild: LitElement, childInfo: EmitConnectedCallbackInfo) => {
             console.log(`Component ${childInfo.name} is connected by callback: ${childInfo.isConnected}`);
             injectStyles([thisChild], this.applyStyleOverride);
             injectTemplate([thisChild], this.renderMarkupOverride());
@@ -60,7 +60,7 @@ export class HostApp extends LitElement {
         <p>Using the ConnectedCallback Event</p>
         <lit-override
           emitConnectedCallback
-          @connected-callback=${(event: { target: HTMLElement; detail: ChildInfoInterface }) => {
+          @connected-callback=${(event: { target: HTMLElement; detail: EmitConnectedCallbackInfo }) => {
             console.log(`Component ${event.detail.name} is connected by event: ${event.detail.isConnected}`);
             injectStyles([event.target], this.applyStyleOverride);
             injectTemplate([event.target], this.renderMarkupOverride());
@@ -71,7 +71,7 @@ export class HostApp extends LitElement {
         </lit-override>
         <p>Using the ConnectedCallback Callback Function</p>
         <lit-override
-          .onConnectedCallback=${(thisChild: LitElement, childInfo: ChildInfoInterface) => {
+          .onConnectedCallback=${(thisChild: LitElement, childInfo: EmitConnectedCallbackInfo) => {
             console.log(`Component ${childInfo.name} is connected by callback: ${childInfo.isConnected}`);
             injectStyles([thisChild], this.applyStyleOverride);
             injectTemplate([thisChild], this.renderMarkupOverride());
