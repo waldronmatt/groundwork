@@ -1,6 +1,6 @@
 # Lit Override
 
-Utility functions for overriding styles and markup in your Lit components.
+Utility functions for overriding styles and markup in your Lit components. See the [API docs](custom-elements.md) for more info.
 
 ## Features
 
