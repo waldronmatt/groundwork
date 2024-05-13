@@ -84,7 +84,7 @@ describe('lit-override', () => {
   it('emits connected-callback event when emitConnectedCallback is true', async () => {
     const el = await fixture<LitOverride>(html`<lit-override emitConnectedCallback></lit-override>`);
     setTimeout(() => el.connectedCallback());
-    const ev = await oneEvent(el, 'connected-callback', true);
+    const ev = await oneEvent(el, 'connected-callback');
     expect(ev).to.exist;
   });
 });

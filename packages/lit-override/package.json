@@ -62,6 +62,7 @@
     "jest-config": "workspace:*",
     "lit": "3.1.2",
     "lit-html": "3.1.2",
+    "playwright": "1.44.0",
     "rimraf": "5.0.5",
     "sinon": "17.0.1",
     "tsconfig-config": "workspace:*",
