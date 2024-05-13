@@ -25,6 +25,7 @@
     "test": "pnpm pnpm test:files",
     "test:components:watch": "web-test-runner --watch",
     "test:files:watch": "jest --watch",
+    "analyze": "cem analyze --litelement --exclude \"dist/**\" --exclude \"src/**/*.spec.ts\" && node custom-elements-manifest.config.js",
     "build:dtsmaps": "tsc --project tsconfig.build.json",
     "build:src": "tsup src/*[!.spec].ts --format esm --sourcemap --onSuccess \"pnpm build:dtsmaps\"",
     "build": "pnpm build:src",
@@ -45,6 +46,8 @@
   },
   "homepage": "https://github.com/waldronmatt/groundwork/tree/main/packages/lit-override#readme",
   "devDependencies": {
+    "@custom-elements-manifest/analyzer": "0.10.2",
+    "@custom-elements-manifest/to-markdown": "0.1.0",
     "@open-wc/testing": "4.0.0",
     "@types/jest": "29.5.12",
     "@types/sinon": "17.0.3",

@@ -1,0 +1,654 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./components/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./controllers/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./directives/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./mixins/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./utils/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "coverage/lcov-report/block-navigation.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "coverage/lcov-report/prettify.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "coverage/lcov-report/sorter.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./lit-override.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/lit-override-component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "LitOverride - `<lit-override>`\n\nA shell component for overriding styles and markup.",
+          "name": "LitOverride",
+          "slots": [
+            {
+              "description": "is rendered as fallback if `<template>` element is not found",
+              "name": "`<slot></slot>`"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "templateId",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "templateId",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "emitConnectedCallback",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "emitConnectedCallback",
+              "reflects": true,
+              "description": "Set prop to use `connected-callback` event. Defaults to `false`.",
+              "inheritedFrom": {
+                "name": "EmitConnectedCallback",
+                "module": "src/mixins/emit-connected-callback.ts"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "onConnectedCallback",
+              "attribute": "onConnectedCallback",
+              "type": {
+                "text": "function"
+              },
+              "description": "A callback function called when connected to the DOM.",
+              "inheritedFrom": {
+                "name": "EmitConnectedCallback",
+                "module": "src/mixins/emit-connected-callback.ts"
+              }
+            },
+            {
+              "type": {
+                "text": "string"
+              },
+              "description": "unique identifier that points to the id of a `template` element. Defaults to empty string.",
+              "name": "id",
+              "kind": "field"
+            }
+          ],
+          "events": [
+            {
+              "description": "when `emitConnectedCallback` is `true`",
+              "name": "connected-callback"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "templateId",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "templateId"
+            },
+            {
+              "name": "emitConnectedCallback",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "emitConnectedCallback",
+              "inheritedFrom": {
+                "name": "EmitConnectedCallback",
+                "module": "src/mixins/emit-connected-callback.ts"
+              }
+            },
+            {
+              "name": "onConnectedCallback",
+              "fieldName": "onConnectedCallback",
+              "inheritedFrom": {
+                "name": "EmitConnectedCallback",
+                "module": "src/mixins/emit-connected-callback.ts"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "EmitConnectedCallback",
+              "module": "/src/mixins/emit-connected-callback.js"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "lit-override",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LitOverride",
+          "declaration": {
+            "name": "LitOverride",
+            "module": "src/components/lit-override-component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/lit-override.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./lit-override-component.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "LitOverride",
+            "module": "src/components/lit-override.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "lit-override",
+          "declaration": {
+            "name": "LitOverride",
+            "module": "/src/components/lit-override-component.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/controllers/adopted-stylesheets-converter.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "AdoptedStyleSheetsConverter\n\nDetects a `style` tag inside a `template` element from the light DOM, converts the styles,\nand adds it to the component's `adoptedStyleSheets`.",
+          "name": "AdoptedStyleSheetsConverter",
+          "members": [
+            {
+              "kind": "field",
+              "name": "host",
+              "type": {
+                "text": "ReactiveControllerHost"
+              },
+              "default": "host"
+            },
+            {
+              "kind": "field",
+              "name": "_template",
+              "type": {
+                "text": "HTMLTemplateElement | null"
+              },
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "clearStyles",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "clearStyles"
+            },
+            {
+              "kind": "field",
+              "name": "id",
+              "type": {
+                "text": "string"
+              },
+              "default": "id"
+            },
+            {
+              "kind": "method",
+              "name": "hostConnected"
+            },
+            {
+              "kind": "method",
+              "name": "hostUpdated"
+            },
+            {
+              "kind": "method",
+              "name": "getTemplateElement",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "HTMLTemplateElement | null"
+                }
+              }
+            },
+            {
+              "kind": "method",
+              "name": "removeComponentStyleTag",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "handleAdoptedStyleSheets",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "styleElement",
+                  "type": {
+                    "text": "HTMLStyleElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "updateStylesheet",
+              "privacy": "private"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AdoptedStyleSheetsConverter",
+          "declaration": {
+            "name": "AdoptedStyleSheetsConverter",
+            "module": "src/controllers/adopted-stylesheets-converter.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/controllers/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./adopted-stylesheets-converter.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/directives/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./template-content-with-fallback.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/directives/template-content-with-fallback.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TemplateContentWithFallbackDirective",
+          "members": [
+            {
+              "kind": "field",
+              "name": "_template",
+              "type": {
+                "text": "HTMLTemplateElement | null"
+              },
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "method",
+              "name": "getTemplateElement",
+              "privacy": "private",
+              "return": {
+                "type": {
+                  "text": "HTMLTemplateElement | null"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "id",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            }
+          ],
+          "superclass": {
+            "name": "Directive",
+            "package": "lit/directive.js"
+          }
+        },
+        {
+          "kind": "variable",
+          "name": "templateContentWithFallback",
+          "description": "TemplateContentWithFallbackDirective\n\nDetects a `template` element from the light DOM and renders it.\nWill fallback to your component's markup provided as an argument.",
+          "parameters": [
+            {
+              "description": "renders markup if a `template` element is not found. Defaults to `<slot></slot>`.",
+              "name": "fallback"
+            },
+            {
+              "description": "unique identifier that points to the id of a `template` element. Defaults to empty string.",
+              "name": "id"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "templateContentWithFallback",
+          "declaration": {
+            "name": "templateContentWithFallback",
+            "module": "src/directives/template-content-with-fallback.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "TemplateContentWithFallbackDirective",
+          "declaration": {
+            "name": "TemplateContentWithFallbackDirective",
+            "module": "src/directives/template-content-with-fallback.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/mixins/emit-connected-callback.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "EmitConnectedCallbackProps",
+          "members": [
+            {
+              "kind": "field",
+              "name": "emitConnectedCallback",
+              "type": {
+                "text": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "kind": "mixin",
+          "description": "LitOverrideMixin\n\nEnables your component to emit `connected-callback` if `emitConnectedCallback` prop is set.\nAlternatively, use `onConnectedCallback` if performance is a concern.",
+          "name": "EmitConnectedCallback",
+          "members": [
+            {
+              "kind": "field",
+              "name": "emitConnectedCallback",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "emitConnectedCallback",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "onConnectedCallback",
+              "attribute": "onConnectedCallback"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "emitConnectedCallback",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "emitConnectedCallback"
+            },
+            {
+              "name": "onConnectedCallback",
+              "fieldName": "onConnectedCallback"
+            }
+          ],
+          "parameters": [
+            {
+              "name": "superClass",
+              "type": {
+                "text": "T"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "EmitConnectedCallbackProps",
+          "declaration": {
+            "name": "EmitConnectedCallbackProps",
+            "module": "src/mixins/emit-connected-callback.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "EmitConnectedCallback",
+          "declaration": {
+            "name": "EmitConnectedCallback",
+            "module": "src/mixins/emit-connected-callback.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/mixins/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./emit-connected-callback.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./styles.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./markup.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/markup.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "injectTemplate",
+          "return": {
+            "type": {
+              "text": "void"
+            }
+          },
+          "parameters": [
+            {
+              "name": "elements",
+              "type": {
+                "text": "NodeListOf<Element> | Array<Element>"
+              },
+              "description": "iterable of elements to apply markup to"
+            },
+            {
+              "name": "template",
+              "type": {
+                "text": "TemplateResult"
+              },
+              "description": "TemplateResult\n\n**Note**: Only static markdown is supported."
+            }
+          ],
+          "description": "Applies the given template to the `shadowRoot` of elements."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "injectTemplate",
+          "declaration": {
+            "name": "injectTemplate",
+            "module": "src/utils/markup.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/styles.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "injectStyles",
+          "return": {
+            "type": {
+              "text": "void"
+            }
+          },
+          "parameters": [
+            {
+              "name": "elements",
+              "type": {
+                "text": "NodeListOf<Element> | Array<Element>"
+              },
+              "description": "iterable of elements to apply styles to"
+            },
+            {
+              "name": "style",
+              "type": {
+                "text": "CSSResult"
+              },
+              "description": "CSSResult"
+            },
+            {
+              "name": "clearStyles",
+              "default": "false",
+              "type": {
+                "text": "boolean"
+              },
+              "description": "replace or preserve original styles. Defaults to `false`."
+            }
+          ],
+          "description": "Applies the given style using `adoptedStyleSheets`."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "injectStyles",
+          "declaration": {
+            "name": "injectStyles",
+            "module": "src/utils/styles.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
