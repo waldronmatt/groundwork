@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.4.8...eslint-config-custom@1.5.0) (2024-05-13)
+
+### Features
+
+* **eslint-config-custom:** add new eslint chai plugins and move to deps from devdeps ([fd48f8d](https://github.com/waldronmatt/groundwork/commit/fd48f8db669d59fcee7306ea9310ac0de78439be)) - by @waldronmatt
+
 ## [1.4.8](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.4.7...eslint-config-custom@1.4.8) (2024-04-01)
 
 ### Bug Fixes

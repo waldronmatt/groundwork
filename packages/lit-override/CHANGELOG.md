@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.1.3...@waldronmatt/lit-override@2.2.0) (2024-05-13)
+
+### Bug Fixes
+
+* **lit-override:** export interfaces, update interface names ([9e0767e](https://github.com/waldronmatt/groundwork/commit/9e0767e3944886027d25649a54ce18bdf388a054)) - by @waldronmatt
+* **lit-override:** install playwright as dev dep, fix unit test ([1fb1994](https://github.com/waldronmatt/groundwork/commit/1fb19945cc019e53d7b346bd0d368c21e54e611f)) - by @waldronmatt
+
+### Features
+
+* **emit-connected-callback.ts:** add connectedCallback callback function as alt to emitting event ([490d84c](https://github.com/waldronmatt/groundwork/commit/490d84c0d4e1191b23c7fb7adfb9926445392746)) - by @waldronmatt
+* **eslint-config-custom:** add new eslint chai plugins and move to deps from devdeps ([fd48f8d](https://github.com/waldronmatt/groundwork/commit/fd48f8db669d59fcee7306ea9310ac0de78439be)) - by @waldronmatt
+* **lit-override:** add manifest packages to generate schema metadata ([8972706](https://github.com/waldronmatt/groundwork/commit/897270638de0a3db44933fb613a95558bc72e348)) - by @waldronmatt
+
 ## [2.1.3](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.1.2...@waldronmatt/lit-override@2.1.3) (2024-05-10)
 
 ### Bug Fixes
