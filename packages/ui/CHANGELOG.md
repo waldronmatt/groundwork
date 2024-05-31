@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.0...@waldronmatt/demo-ui@3.5.1) (2024-05-31)
+
+### Bug Fixes
+
+* **package.json:** add back missing resolution fields to publishConfig ([6434be7](https://github.com/waldronmatt/groundwork/commit/6434be77870cb1cbb44977f35001963b3fe697c9)) - by @waldronmatt
+* **readme.md:** update readme with live types info, reorganize features list ([83930dd](https://github.com/waldronmatt/groundwork/commit/83930dd6dc80298878c55f7160eae924c023f4f7)) - by @waldronmatt
+
 # [3.5.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.4.0...@waldronmatt/demo-ui@3.5.0) (2024-05-31)
 
 ### Bug Fixes
