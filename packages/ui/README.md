@@ -11,8 +11,8 @@ This includes many modern best practices for publishing and consuming in monorep
 - Outputs:
   - `esm` and `cjs` source files
   - source maps for JavaScript files (`.js.map`)
-  - separate `esm` and `cjs` declaration files (`.d.ts`)
-  - separate `esm` and `cjs` source maps for declaration files (`.d.ts.map`)
+  - separate `esm` and `cjs` declaration files (`.d.ts` and `.d.cts`)
+  - separate `esm` and `cjs` source maps for declaration files (`.d.ts.map` and `.d.cts.map`)
   - compiled CSS modules (consuming app is not required to support css modules)
 - Subpath exports for explicit path referencing. Will auto map to the right module system
 - Live monorepo hmr supported:

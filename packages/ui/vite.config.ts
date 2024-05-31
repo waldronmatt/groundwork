@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import fs from 'fs-extra';
 import react from '@vitejs/plugin-react-swc';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
@@ -23,12 +24,26 @@ export default defineConfig({
     //   outDir: ['dist/types'],
     // }),
     dts({
-      // Since TypeScript 5.0, it has emphasized that type files (*.d.ts) are also affected by its ESM and CJS context.
-      // This means that you can't share a single type file for both ESM and CJS exports of your library.
-      // You need to have two type files when dual-publishing your library.
-      // see https://www.typescriptlang.org/docs/handbook/modules/reference.html#node16-nodenext and
-      // https://publint.dev/rules#export_types_invalid_format
+      // create two type folders, one for esm and cjs
       outDir: ['dist/types/esm', 'dist/types/cjs'],
+      // modify type files after they have been written
+      afterBuild: async () => {
+        // Fetch all .d.ts files recursively from the dist/types/cjs directory
+        const files = glob.sync('dist/types/cjs/**/*.d.{ts,ts.map}', { nodir: true });
+        // Since TypeScript 5.0, it has emphasized that type files (*.d.ts) are also affected by its ESM and CJS context.
+        // This means that you can't share a single type file for both ESM and CJS exports of your library.
+        // You need to have two type files when dual-publishing your library.
+        // see https://www.typescriptlang.org/docs/handbook/modules/reference.html#node16-nodenext and
+        // https://publint.dev/rules#export_types_invalid_format
+        await Promise.all(
+          files.map(async (file) => {
+            // Generate the new files with the new .c.ts/.c.ts.map naming
+            const newFilePath = file.replace(/\.d\.ts(\.map)?$/, '.d.cts$1');
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
+            await fs.move(file, newFilePath, { overwrite: true });
+          }),
+        );
+      },
     }),
     // generates a separate CSS file for each chunk and includes an import statement
     // at the beginning of each chunk's output file
