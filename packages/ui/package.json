@@ -1,36 +1,38 @@
 {
   "name": "@waldronmatt/demo-ui",
   "version": "3.4.0",
-  "types": "./dist/types/esm/index.d.ts",
-  "module": "./dist/esm/index.js",
-  "main": "./dist/cjs/index.cjs",
   "type": "module",
   "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/types/esm/index.d.ts",
-        "default": "./dist/esm/index.js"
-      },
-      "require": {
-        "types": "./dist/types/cjs/index.d.cts",
-        "default": "./dist/cjs/index.cjs"
-      }
-    },
-    "./*": {
-      "import": {
-        "types": "./dist/types/esm/*",
-        "default": "./dist/esm/*"
-      },
-      "require": {
-        "types": "./dist/types/cjs/*",
-        "default": "./dist/cjs/*"
-      }
-    },
-    "./styles/*": {
-      "import": "./dist/styles/*",
-      "require": "./dist/styles/*"
-    },
     "./lib/*": "./lib/*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": {
+        "import": {
+          "types": "./dist/types/esm/index.d.ts",
+          "default": "./dist/esm/index.js"
+        },
+        "require": {
+          "types": "./dist/types/cjs/index.d.cts",
+          "default": "./dist/cjs/index.cjs"
+        }
+      },
+      "./*": {
+        "import": {
+          "types": "./dist/types/esm/*",
+          "default": "./dist/esm/*"
+        },
+        "require": {
+          "types": "./dist/types/cjs/*",
+          "default": "./dist/cjs/*"
+        }
+      },
+      "./styles/*": {
+        "import": "./dist/styles/*",
+        "require": "./dist/styles/*"
+      }
+    }
   },
   "files": [
     "dist",
@@ -45,9 +47,6 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "build": "tsc --p ./tsconfig.build.json && vite build",
     "clean": "rimraf dist tsconfig.build.tsbuildinfo"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "repository": {
     "type": "git",
