@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.12](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.1.11...@waldronmatt/story-tokens-ui@1.1.12) (2024-05-31)
+
+### Bug Fixes
+
+* **index.js:** add explicit filename and ext ([3b936a8](https://github.com/waldronmatt/groundwork/commit/3b936a8f31822bd2777666b5fff05d5ab5084fa0)) - by @waldronmatt
+
 ## [1.1.11](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.1.10...@waldronmatt/story-tokens-ui@1.1.11) (2024-05-10)
 
 **Note:** Version bump only for package @waldronmatt/story-tokens-ui

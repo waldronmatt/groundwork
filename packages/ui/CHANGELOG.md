@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.3](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.2...@waldronmatt/demo-ui@3.5.3) (2024-05-31)
+
+### Bug Fixes
+
+* **package.json:** add back types field for node10 resolution ([80640ad](https://github.com/waldronmatt/groundwork/commit/80640ad5162256103bfa06c1c9465166879a04f5)) - by @waldronmatt
+
 ## [3.5.2](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.1...@waldronmatt/demo-ui@3.5.2) (2024-05-31)
 
 ### Bug Fixes

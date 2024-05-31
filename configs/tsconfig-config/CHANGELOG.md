@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/waldronmatt/groundwork/compare/tsconfig-config@1.1.4...tsconfig-config@1.1.5) (2024-05-31)
+
+### Bug Fixes
+
+* **vite.json:** change to NodeNext for greater flexibility between browser and node ([3a53f93](https://github.com/waldronmatt/groundwork/commit/3a53f932fad035b20d6bf2a766a48e46aafe3bee)) - by @waldronmatt
+
 ## [1.1.4](https://github.com/waldronmatt/groundwork/compare/tsconfig-config@1.1.2...tsconfig-config@1.1.4) (2024-01-30)
 
 ### Bug Fixes

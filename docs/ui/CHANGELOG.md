@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.9](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.3.8...demo-ui-storybook@3.3.9) (2024-05-31)
+
+### Bug Fixes
+
+* **labeledinput.spec.tsx:** add file ext to fix linting errors ([0a0d16d](https://github.com/waldronmatt/groundwork/commit/0a0d16d9f31f6ba6144ff621a9d818d35c416857)) - by @waldronmatt
+
 ## [3.3.8](https://github.com/waldronmatt/groundwork/compare/demo-ui-storybook@3.3.7...demo-ui-storybook@3.3.8) (2024-05-10)
 
 **Note:** Version bump only for package demo-ui-storybook
