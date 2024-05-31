@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.4.0...@waldronmatt/demo-ui@3.5.0) (2024-05-31)
+
+### Bug Fixes
+
+* **vite.config.ts:** generate valid cjs .d.ts files by fixing the invalid ext ([cfdae68](https://github.com/waldronmatt/groundwork/commit/cfdae68e7673e7c6431a7738c7e832ade2b6d0c3)) - by @waldronmatt
+
+### Features
+
+* **package.json:** use exports to define live types in mr and publishConfig for publish overrides ([dfe28ad](https://github.com/waldronmatt/groundwork/commit/dfe28ad6c65d332c6eaac3efb80a4e1c6a793808)) - by @waldronmatt
+
 # [3.4.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.3.12...@waldronmatt/demo-ui@3.4.0) (2024-05-10)
 
 ### Features
