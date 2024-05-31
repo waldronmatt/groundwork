@@ -7,6 +7,7 @@
   },
   "publishConfig": {
     "access": "public",
+    "types": "./dist/types/esm/index.d.ts",
     "module": "./dist/esm/index.js",
     "main": "./dist/cjs/index.cjs",
     "exports": {
