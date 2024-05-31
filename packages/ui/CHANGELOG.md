@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.7](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.6...@waldronmatt/demo-ui@3.5.7) (2024-05-31)
+
+### Bug Fixes
+
+* **vite.config.ts:** generated .d.cts files should reference their .cjs file counterparts ([f97efae](https://github.com/waldronmatt/groundwork/commit/f97efae9ae6ac5e350f73500f42a9d9742215676)) - by @waldronmatt
+
 ## [3.5.6](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.5...@waldronmatt/demo-ui@3.5.6) (2024-05-31)
 
 ### Bug Fixes
