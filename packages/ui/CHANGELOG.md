@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.5](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.4...@waldronmatt/demo-ui@3.5.5) (2024-05-31)
+
+### Bug Fixes
+
+* **readme.md:** update readme ([ae0af11](https://github.com/waldronmatt/groundwork/commit/ae0af11505a00d8c892c75d7334817ba0eee867d)) - by @waldronmatt
+* **ui:** revert prior change, still specify different .d.ts file ext ([c06bb3b](https://github.com/waldronmatt/groundwork/commit/c06bb3b57baa7db3373f8cd8063b10c55b69ac74)) - by @waldronmatt
+
 ## [3.5.4](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.3...@waldronmatt/demo-ui@3.5.4) (2024-05-31)
 
 ### Bug Fixes
