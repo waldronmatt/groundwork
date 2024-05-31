@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.4](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.3...@waldronmatt/demo-ui@3.5.4) (2024-05-31)
+
+### Bug Fixes
+
+* **vite.config.ts:** don't output cjs-specific .d.ts file ext to fix npm types errors ([e15c4a9](https://github.com/waldronmatt/groundwork/commit/e15c4a9627bed71a190037726fc0eb7f7253f83a)) - by @waldronmatt
+
 ## [3.5.3](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.2...@waldronmatt/demo-ui@3.5.3) (2024-05-31)
 
 ### Bug Fixes
