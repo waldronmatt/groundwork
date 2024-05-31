@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { defineConfig } from 'vite';
 import fs from 'fs-extra';
 import react from '@vitejs/plugin-react-swc';
@@ -36,11 +40,28 @@ export default defineConfig({
         // see https://www.typescriptlang.org/docs/handbook/modules/reference.html#node16-nodenext and
         // https://publint.dev/rules#export_types_invalid_format
         await Promise.all(
+          // Ideally, this plugin will support different types in the future
+          // See https://github.com/qmhc/vite-plugin-dts/issues/267
           files.map(async (file) => {
             // Generate the new files with the new .c.ts/.c.ts.map naming
             const newFilePath = file.replace(/\.d\.ts(\.map)?$/, '.d.cts$1');
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
             await fs.move(file, newFilePath, { overwrite: true });
+
+            // Update sourceMappingURL references
+            if (newFilePath.endsWith('.d.cts')) {
+              const content = await fs.readFile(newFilePath, 'utf-8');
+              const updatedContent = content.replace(/\/\/# sourceMappingURL=.*\.d\.ts\.map/g, (match) =>
+                match.replace('.d.ts.map', '.d.cts.map'),
+              );
+              await fs.writeFile(newFilePath, updatedContent, 'utf-8');
+            }
+
+            // Update source map file references
+            if (newFilePath.endsWith('.d.cts.map')) {
+              const content = await fs.readJson(newFilePath);
+              content.file = content.file.replace('.d.ts', '.d.cts');
+              await fs.writeJson(newFilePath, content);
+            }
           }),
         );
       },
