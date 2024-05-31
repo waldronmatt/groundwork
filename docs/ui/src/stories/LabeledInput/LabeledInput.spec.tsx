@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import { describe, beforeEach, it, expect, vi } from 'vitest';
-import * as LabelModule from '../__mocks__/Label.mock';
-import * as InputModule from '../__mocks__/Input.mock';
+import * as LabelModule from '../__mocks__/Label.mock.js';
+import * as InputModule from '../__mocks__/Input.mock.js';
 
 vi.mock('@waldronmatt/demo-ui/lib/components/Label/index.js', () => LabelModule);
 vi.mock('@waldronmatt/demo-ui/lib/components/Input/index.js', () => InputModule);
