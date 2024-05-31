@@ -2,6 +2,8 @@
 
 A demo react component library. Heavily inspired by [this article](https://dev.to/receter/how-to-create-a-react-component-library-using-vites-library-mode-4lma).
 
+This includes many modern best practices for publishing and consuming in monorepos.
+
 ## Features
 
 - Fully tree shakeable (`js` and `css`)
@@ -9,11 +11,16 @@ A demo react component library. Heavily inspired by [this article](https://dev.t
 - Outputs:
   - `esm` and `cjs` source files
   - source maps for JavaScript files (`.js.map`)
-  - `esm` and `cjs` declaration files (`.d.ts` and `.c.ts`)
+  - `esm` and `cjs` declaration files (`.d.ts` and `.d.cts`)
   - `esm` and `cjs` source maps for declaration files (`.d.ts.map` and `.c.ts.map`)
   - compiled CSS modules (consuming app is not required to support css modules)
 - Subpath exports for explicit path referencing. Will auto map to the right module system
-- Component updates auto reflect (hmr) in monorepos when referenced via the `lib` subpath export installed via the `workspace:` protocol
+- Live monorepo hmr supported:
+  - sub-packages in this monorepo install this package via the `pnpm` `workspace:` protocol
+  - sub-packages in this monorepo reference this package's `lib` subpath export (can be `lib/index.js` or any files under `lib`)
+- Live monorepo types supported (approach [detailed here](https://colinhacks.com/essays/live-types-typescript-monorepo)):
+  - top-level `exports` field defines types for source files
+  - `publishConfig` defines types for production (will override `exports` when publishing to `npm`)
 - Libraries are externalized for a lighter bundle size (`react`, `react/jsx-runtime`)
 
 ## Installation
