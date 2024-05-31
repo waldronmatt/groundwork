@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.2](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.1...@waldronmatt/demo-ui@3.5.2) (2024-05-31)
+
+### Bug Fixes
+
+* **index.ts:** explictly reference index files for each component ([30a0faf](https://github.com/waldronmatt/groundwork/commit/30a0fafb14132e1277b9681d7be413e0bdf844cc)) - by @waldronmatt
+* **package.json:** remove types field in favor of exports to support cjs and esm ([ee42b46](https://github.com/waldronmatt/groundwork/commit/ee42b465daea6b29eab499076dc06fd630faa40e)) - by @waldronmatt
+
 ## [3.5.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.0...@waldronmatt/demo-ui@3.5.1) (2024-05-31)
 
 ### Bug Fixes

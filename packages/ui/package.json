@@ -1,6 +1,6 @@
 {
   "name": "@waldronmatt/demo-ui",
-  "version": "3.5.1",
+  "version": "3.5.2",
   "type": "module",
   "exports": {
     "./lib/*": "./lib/*"
