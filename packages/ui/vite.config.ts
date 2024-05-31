@@ -50,9 +50,11 @@ export default defineConfig({
             // Update sourceMappingURL references
             if (newFilePath.endsWith('.d.cts')) {
               const content = await fs.readFile(newFilePath, 'utf-8');
-              const updatedContent = content.replace(/\/\/# sourceMappingURL=.*\.d\.ts\.map/g, (match) =>
+              let updatedContent = content.replace(/\/\/# sourceMappingURL=.*\.d\.ts\.map/g, (match) =>
                 match.replace('.d.ts.map', '.d.cts.map'),
               );
+              // Update .js references to .cjs
+              updatedContent = updatedContent.replace(/(from\s+['"].*?)\.js(['"])/g, '$1.cjs$2');
               await fs.writeFile(newFilePath, updatedContent, 'utf-8');
             }
 
