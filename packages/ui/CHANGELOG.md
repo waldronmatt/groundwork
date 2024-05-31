@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.6](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.5...@waldronmatt/demo-ui@3.5.6) (2024-05-31)
+
+### Bug Fixes
+
+* **vite.config.ts:** try manually fixing the sourcemap url refs in .d.cts files ([e375b45](https://github.com/waldronmatt/groundwork/commit/e375b454f7d772b7e5496182400d62d48800ba09)) - by @waldronmatt
+
 ## [3.5.5](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.4...@waldronmatt/demo-ui@3.5.5) (2024-05-31)
 
 ### Bug Fixes
