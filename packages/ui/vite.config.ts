@@ -33,11 +33,12 @@ export default defineConfig({
         // Since TypeScript 5.0, it has emphasized that type files (*.d.ts) are also affected by its ESM and CJS context.
         // This means that you can't share a single type file for both ESM and CJS exports of your library.
         // You need to have two type files when dual-publishing your library.
-        // see https://publint.dev/rules#export_types_invalid_format
+        // see https://www.typescriptlang.org/docs/handbook/modules/reference.html#node16-nodenext and
+        // https://publint.dev/rules#export_types_invalid_format
         await Promise.all(
           files.map(async (file) => {
             // Generate the new files with the new .c.ts/.c.ts.map naming
-            const newFilePath = file.replace(/\.d\.ts(\.map)?$/, '.c.ts$1');
+            const newFilePath = file.replace(/\.d\.ts(\.map)?$/, '.d.cts$1');
             // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
             await fs.move(file, newFilePath, { overwrite: true });
           }),
