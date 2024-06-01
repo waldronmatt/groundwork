@@ -1,6 +1,6 @@
 {
   "name": "demo-ui-storybook",
-  "version": "3.3.9",
+  "version": "3.3.10",
   "private": true,
   "type": "module",
   "scripts": {
@@ -15,8 +15,8 @@
   "dependencies": {
     "@waldronmatt/demo-ui": "workspace:*",
     "@waldronmatt/story-tokens-ui": "workspace:*",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
     "@geometricpanda/storybook-addon-badges": "2.0.2",
@@ -36,8 +36,8 @@
     "@testing-library/jest-dom": "6.4.5",
     "@testing-library/react": "14.3.1",
     "@testing-library/user-event": "14.5.2",
-    "@types/react": "18.2.79",
-    "@types/react-dom": "18.2.25",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
     "@vitest/coverage-v8": "1.6.0",
     "eslint": "8.57.0",
     "eslint-config-custom": "workspace:*",
