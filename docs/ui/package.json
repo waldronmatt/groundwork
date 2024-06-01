@@ -44,7 +44,7 @@
     "rimraf": "5.0.7",
     "serve": "14.2.3",
     "storybook": "7.6.19",
-    "storybook-addon-pseudo-states": "2.2.1",
+    "storybook-addon-pseudo-states": "3.1.1",
     "storybook-dark-mode": "3.0.3",
     "tsconfig-config": "workspace:*",
     "typescript": "5.4.5",

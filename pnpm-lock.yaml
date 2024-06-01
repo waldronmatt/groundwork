@@ -336,8 +336,8 @@ importers:
         specifier: 7.6.19
         version: 7.6.19
       storybook-addon-pseudo-states:
-        specifier: 2.2.1
-        version: 2.2.1(@storybook/components@7.6.19)(@storybook/core-events@7.6.19)(@storybook/manager-api@7.6.19)(@storybook/preview-api@7.6.19)(@storybook/theming@7.6.19)(react-dom@18.3.1)(react@18.3.1)
+        specifier: 3.1.1
+        version: 3.1.1
       storybook-dark-mode:
         specifier: 3.0.3
         version: 3.0.3(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
@@ -17907,29 +17907,8 @@ packages:
     resolution: {integrity: sha512-4QcZ+yx7nzEFiV4BMLnr/pRa5HYzNITX2ri0Zh6sT9EyQHbBHacC6YigllUPU9X3D0f/22QCgfokpKs52YRrUg==}
     dev: true
 
-  /storybook-addon-pseudo-states@2.2.1(@storybook/components@7.6.19)(@storybook/core-events@7.6.19)(@storybook/manager-api@7.6.19)(@storybook/preview-api@7.6.19)(@storybook/theming@7.6.19)(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-4LoaiML0BM9sZcQbXjDhRh9jUUKIRTWEQMl91ihP2wIE10n+rL/5c8IBpNiMZLV1rnm24degEncSMY9ck+bpgg==}
-    peerDependencies:
-      '@storybook/components': ^7.4.6
-      '@storybook/core-events': ^7.4.6
-      '@storybook/manager-api': ^7.4.6
-      '@storybook/preview-api': ^7.4.6
-      '@storybook/theming': ^7.4.6
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      '@storybook/components': 7.6.19(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1)
-      '@storybook/core-events': 7.6.19
-      '@storybook/manager-api': 7.6.19(react-dom@18.3.1)(react@18.3.1)
-      '@storybook/preview-api': 7.6.19
-      '@storybook/theming': 7.6.19(react-dom@18.3.1)(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+  /storybook-addon-pseudo-states@3.1.1:
+    resolution: {integrity: sha512-08JNTfsiSfj0GgNV4q6+v6iU+Acp7ib/MdySPDb8p+C8N/e+kf6lnM7kIiE/GnTPXlg3dfV6FMaWgGYVfdTcLw==}
     dev: true
 
   /storybook-dark-mode@3.0.3(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1)(react@18.3.1):
