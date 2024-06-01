@@ -39,8 +39,8 @@ importers:
         specifier: 18.0.1
         version: 18.0.1
       '@secretlint/secretlint-rule-preset-recommend':
-        specifier: 8.1.2
-        version: 8.1.2
+        specifier: 8.2.4
+        version: 8.2.4
       '@types/node':
         specifier: 20.12.12
         version: 20.12.12
@@ -75,8 +75,8 @@ importers:
         specifier: 0.2.8
         version: 0.2.8
       secretlint:
-        specifier: 8.1.2
-        version: 8.1.2
+        specifier: 8.2.4
+        version: 8.2.4
       syncpack:
         specifier: 12.3.2
         version: 12.3.2(typescript@5.4.5)
@@ -5399,8 +5399,8 @@ packages:
     resolution: {integrity: sha512-KfRGWf7R4tAxJwk7Ojoa8n53yLh3zmM1hmG1Nh/xWkSXsatTF5qi7bfyi3+QjAxhBZRaz6aR9JbX8PS3JGon1w==}
     dev: false
 
-  /@secretlint/secretlint-rule-preset-recommend@8.1.2:
-    resolution: {integrity: sha512-JSbpTNhcyB/Ox/CXptK2ihjqoWZvcpJu2Ev3XYgO3/yRwx3O64jWGqHn2axGh6fcaIfUGgwoUVQa5GanlqKAWg==}
+  /@secretlint/secretlint-rule-preset-recommend@8.2.4:
+    resolution: {integrity: sha512-Ifaz0ngkgP911TfJkkIXrP9dCpxQGCDAISZ/sG0mdOOg9KO8jF9pnGKzCOuVX4q97v6MDtELXjYAxnPa8xV4Ow==}
     engines: {node: ^14.13.1 || >=16.0.0}
     dev: false
 
@@ -17335,8 +17335,8 @@ packages:
     dependencies:
       loose-envify: 1.4.0
 
-  /secretlint@8.1.2:
-    resolution: {integrity: sha512-YJf1WoIu+bevQdAwc1YnK9KdytOJ+5g9lRa90nmTyC2WlhIBK7s6CEVw46kUzxn4y+UVEF9POn7vDsyThqrQQQ==}
+  /secretlint@8.2.4:
+    resolution: {integrity: sha512-XkNuzlIX2RWhZwGZ6HEV/JsMv/jI0Po20Gs9HPPkXRaVuSrmLTO+iqg/8PyAKPWFMlVNXZ2DHkLTKCxVwCLI5A==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
