@@ -39,12 +39,12 @@ pnpm-workspace.yaml
 
 We are using `lint-staged` to run linting and tests on staged files. This is the ordering:
 
-1. Check for secrets (`secretlint`)
-2. Fix file formatting (`prettier`)
-3. Lint `package.json` files for package, dependency, and monorepo best practices
+1. Check for secrets (`secretlint`) and fix file formatting (`prettier`) on all files
+2. Lint `package.json` files for dependency and monorepo best practices (`syncpack` and `manypkg`)
+3. Lint `package.json` inside the `/packages` folder for package publishing best practices (`publint`)
 4. Lint and fix issues of affected `.ts` and related files (`eslint` and `nx`)
-5. Run tests of affected files (`jest`/`vitest` and `nx`)
-6. Lint exports on all `.ts` files (`knip` and `nx`)
+5. Run tests of affected `.ts` and related files (`jest`/`vitest` and `nx`)
+6. Lint exports on all `.ts` and related files inside the `/packages` folder (`knip` and `nx`)
 
 We auto format and apply linting fixes when possible. For everything else, we let the user to decide on actions to take if there are errors.
 
