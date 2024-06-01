@@ -176,8 +176,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0(eslint@8.57.0)
       eslint-plugin-chai-friendly:
-        specifier: 0.8.0
-        version: 0.8.0(eslint@8.57.0)
+        specifier: 0.7.4
+        version: 0.7.4(eslint@8.57.0)
       eslint-plugin-import:
         specifier: 2.29.1
         version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)
@@ -10542,8 +10542,8 @@ packages:
       eslint: 8.57.0
     dev: false
 
-  /eslint-plugin-chai-friendly@0.8.0(eslint@8.57.0):
-    resolution: {integrity: sha512-d9W92QHA606QRhxEvPTzGFeZU+CHL5bsyfk7DvaXcxgpfEOny5Pem1G3X2274J1dxStlX/DotuanrQofULhl4g==}
+  /eslint-plugin-chai-friendly@0.7.4(eslint@8.57.0):
+    resolution: {integrity: sha512-PGPjJ8diYgX1mjLxGJqRop2rrGwZRKImoEOwUOgoIhg0p80MkTaqvmFLe5TF7/iagZHggasvIfQlUyHIhK/PYg==}
     engines: {node: '>=0.10.0'}
     peerDependencies:
       eslint: '>=3.0.0'

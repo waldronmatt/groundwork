@@ -43,6 +43,7 @@
       "enabled": true,
       "schedule": "on the 2nd day of the month"
     },
+    "ignoreDeps": ["eslint-plugin-chai-friendly"],
     "packageRules": [
       {
         "groupName": "dependencies",
