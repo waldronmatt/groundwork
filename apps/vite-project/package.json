@@ -22,9 +22,9 @@
     "@vitejs/plugin-react-swc": "3.6.0",
     "eslint": "8.57.0",
     "eslint-config-custom": "workspace:*",
-    "rimraf": "5.0.5",
+    "rimraf": "5.0.7",
     "tsconfig-config": "workspace:*",
-    "typescript": "5.4.3",
+    "typescript": "5.4.5",
     "vite": "5.2.6"
   }
 }
