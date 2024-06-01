@@ -67,14 +67,14 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/node": "20.11.30",
+    "@types/node": "20.12.12",
     "@types/react": "18.2.79",
     "@types/react-dom": "18.2.25",
     "@vitejs/plugin-react-swc": "3.6.0",
     "eslint": "8.57.0",
     "eslint-config-custom": "workspace:*",
     "fs-extra": "11.2.0",
-    "glob": "10.3.16",
+    "glob": "10.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rimraf": "5.0.7",

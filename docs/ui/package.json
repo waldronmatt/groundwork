@@ -38,7 +38,7 @@
     "@testing-library/user-event": "14.5.2",
     "@types/react": "18.2.79",
     "@types/react-dom": "18.2.25",
-    "@vitest/coverage-v8": "1.4.0",
+    "@vitest/coverage-v8": "1.6.0",
     "eslint": "8.57.0",
     "eslint-config-custom": "workspace:*",
     "rimraf": "5.0.7",
