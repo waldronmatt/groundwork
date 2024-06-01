@@ -15,20 +15,20 @@ importers:
         specifier: 18.6.3
         version: 18.6.3
       '@lerna-lite/changed':
-        specifier: 3.3.3
-        version: 3.3.3(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5)
+        specifier: 3.4.0
+        version: 3.4.0(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5)
       '@lerna-lite/cli':
-        specifier: 3.3.3
-        version: 3.3.3(@lerna-lite/list@3.3.3)(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5)
+        specifier: 3.4.0
+        version: 3.4.0(@lerna-lite/list@3.4.0)(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5)
       '@lerna-lite/list':
-        specifier: 3.3.3
-        version: 3.3.3(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5)
+        specifier: 3.4.0
+        version: 3.4.0(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5)
       '@lerna-lite/publish':
-        specifier: 3.3.3
-        version: 3.3.3(@lerna-lite/list@3.3.3)(typescript@5.4.5)
+        specifier: 3.4.0
+        version: 3.4.0(@lerna-lite/list@3.4.0)(typescript@5.4.5)
       '@lerna-lite/version':
-        specifier: 3.3.3
-        version: 3.3.3(@lerna-lite/list@3.3.3)(@lerna-lite/publish@3.3.3)(typescript@5.4.5)
+        specifier: 3.4.0
+        version: 3.4.0(@lerna-lite/list@3.4.0)(@lerna-lite/publish@3.4.0)(typescript@5.4.5)
       '@manypkg/cli':
         specifier: 0.21.4
         version: 0.21.4
@@ -3432,14 +3432,14 @@ packages:
     resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: true
 
-  /@lerna-lite/changed@3.3.3(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5):
-    resolution: {integrity: sha512-2taponAYkRQ/hcLWjrgjM8ZtGxa3MOlWxVuWEDgtswCJ4O+7Hmjm5y9a57n1CZfcI5GqscE1M9HMS00NMU5YvQ==}
+  /@lerna-lite/changed@3.4.0(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-S+D8hiJsny+r39WVcjEEMi4Xbo62ZmXz8rWgw7NeB9y0gbPNn8ER1h+aJnv+BQsmm3Jhhkku90GWp6IN1QN/lg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/cli': 3.3.3(@lerna-lite/list@3.3.3)(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5)
-      '@lerna-lite/core': 3.3.3(typescript@5.4.5)
-      '@lerna-lite/list': 3.3.3(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5)
-      '@lerna-lite/listable': 3.3.3(typescript@5.4.5)
+      '@lerna-lite/cli': 3.4.0(@lerna-lite/list@3.4.0)(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5)
+      '@lerna-lite/core': 3.4.0(typescript@5.4.5)
+      '@lerna-lite/list': 3.4.0(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5)
+      '@lerna-lite/listable': 3.4.0(typescript@5.4.5)
     transitivePeerDependencies:
       - '@lerna-lite/exec'
       - '@lerna-lite/publish'
@@ -3452,8 +3452,8 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/cli@3.3.3(@lerna-lite/list@3.3.3)(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5):
-    resolution: {integrity: sha512-RKV4M2gYGBu4luaBruIdoN1COaIUMFBaDpZuatxtEIyR5VSYYUbS7RpPQh7FKmiA7hwBnpikrBQt446cgnSPpg==}
+  /@lerna-lite/cli@3.4.0(@lerna-lite/list@3.4.0)(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-8T7WsUFhCIO9sm+cY7IfkngHZVEKi1Jcu1+vVExnInO9ONEaaX+XBclDwfQXR5U3wrJR43jSq45C9djYigJ/7w==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -3477,11 +3477,11 @@ packages:
       '@lerna-lite/watch':
         optional: true
     dependencies:
-      '@lerna-lite/core': 3.3.3(typescript@5.4.5)
-      '@lerna-lite/init': 3.3.3(typescript@5.4.5)
-      '@lerna-lite/list': 3.3.3(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5)
-      '@lerna-lite/publish': 3.3.3(@lerna-lite/list@3.3.3)(typescript@5.4.5)
-      '@lerna-lite/version': 3.3.3(@lerna-lite/list@3.3.3)(@lerna-lite/publish@3.3.3)(typescript@5.4.5)
+      '@lerna-lite/core': 3.4.0(typescript@5.4.5)
+      '@lerna-lite/init': 3.4.0(typescript@5.4.5)
+      '@lerna-lite/list': 3.4.0(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5)
+      '@lerna-lite/publish': 3.4.0(@lerna-lite/list@3.4.0)(typescript@5.4.5)
+      '@lerna-lite/version': 3.4.0(@lerna-lite/list@3.4.0)(@lerna-lite/publish@3.4.0)(typescript@5.4.5)
       dedent: 1.5.3
       dotenv: 16.4.5
       import-local: 3.1.0
@@ -3495,11 +3495,11 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/core@3.3.3(typescript@5.4.5):
-    resolution: {integrity: sha512-khsEfwZUUp7c+iQ9Q/0dbWxiQeT26PMRsTkoR1Qw1Gai33i3R7v2qCNYGDSO0Xi36VPj6QdNmEizZfGBScHnyA==}
+  /@lerna-lite/core@3.4.0(typescript@5.4.5):
+    resolution: {integrity: sha512-IFN8wojsl77zKQ5pe0DEW8BYr4qdbyNJCZEa9E9mE3Gh+N7JeB7doGlTqg1pu5eigaSh/UP4SeHvV2jq3Cm4Tg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@npmcli/run-script': 7.0.4
+      '@npmcli/run-script': 8.1.0
       chalk: 5.3.0
       clone-deep: 4.0.1
       config-chain: 1.1.13
@@ -3532,11 +3532,11 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/filter-packages@3.3.3(typescript@5.4.5):
-    resolution: {integrity: sha512-GBI9cSzfttOeUobO/qeIMH2lZBUL8BBVocV76O2aOi2+Bu4ETSf0ZfdaUuQYbaZFQN7UxL3JfsAVaN6z6wunIQ==}
+  /@lerna-lite/filter-packages@3.4.0(typescript@5.4.5):
+    resolution: {integrity: sha512-/oYcdZd7nuFUoAh4c6AMfkeKliL3KKR0bEazAOmG2WyWLXuZ1Jt+Thi7V5ZsyIp3bVzsUa6ZifdwITkks8FxSQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/core': 3.3.3(typescript@5.4.5)
+      '@lerna-lite/core': 3.4.0(typescript@5.4.5)
       multimatch: 7.0.0
       npmlog: 7.0.1
     transitivePeerDependencies:
@@ -3546,11 +3546,11 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/init@3.3.3(typescript@5.4.5):
-    resolution: {integrity: sha512-zjOcnQLcWbPuLyvjnuUHlHRLOiYbxw2zx8c//SwXWZ4TzWANDijVO3I88+IwEMfOO78X3ROsd75IaiQoTiTrOQ==}
+  /@lerna-lite/init@3.4.0(typescript@5.4.5):
+    resolution: {integrity: sha512-5lKL0Ab5vsk8PVNEUby6IVlgA3OxC+9pRH/jWhDMdgDKci9apCuTGoKMhVY8ixsbKvg9+ObRs3eIuMlxs4mvWw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/core': 3.3.3(typescript@5.4.5)
+      '@lerna-lite/core': 3.4.0(typescript@5.4.5)
       fs-extra: 11.2.0
       p-map: 7.0.2
       write-json-file: 5.0.0
@@ -3561,14 +3561,14 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/list@3.3.3(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5):
-    resolution: {integrity: sha512-NxDEHdOe5gISlUbHi+TKIaiO22Y18lF8m55F4PimgNbJ6P2z+YJmA401YnGSIpUmE9RqPDr8gW4isfDlKRh4XA==}
+  /@lerna-lite/list@3.4.0(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-zfx18kh/1Et5qBPqinLs3xKqLhwwalAVLjYZMS1ZlUjaUxDvhy/hGbqavXFEDBYYcL7XG0EaPvA/0hZq90852g==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/cli': 3.3.3(@lerna-lite/list@3.3.3)(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5)
-      '@lerna-lite/core': 3.3.3(typescript@5.4.5)
-      '@lerna-lite/filter-packages': 3.3.3(typescript@5.4.5)
-      '@lerna-lite/listable': 3.3.3(typescript@5.4.5)
+      '@lerna-lite/cli': 3.4.0(@lerna-lite/list@3.4.0)(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5)
+      '@lerna-lite/core': 3.4.0(typescript@5.4.5)
+      '@lerna-lite/filter-packages': 3.4.0(typescript@5.4.5)
+      '@lerna-lite/listable': 3.4.0(typescript@5.4.5)
     transitivePeerDependencies:
       - '@lerna-lite/exec'
       - '@lerna-lite/publish'
@@ -3581,11 +3581,11 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/listable@3.3.3(typescript@5.4.5):
-    resolution: {integrity: sha512-JMqSlssWFK6Q7U+nFEgTWnzsZqMOjqAFeqC9ECoXRLffTv2UoLCwandxiNt7dDEhMJE4k7xmj7RfgLL8efr35g==}
+  /@lerna-lite/listable@3.4.0(typescript@5.4.5):
+    resolution: {integrity: sha512-C78iA7Yi/RxYUWEyumaECGCJSFkp6N1sGE1nCkwxkvKUMGUSFL0wFqRJMvnxeyTJNu2UCKZi/d7ek1lKeUYa/A==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/core': 3.3.3(typescript@5.4.5)
+      '@lerna-lite/core': 3.4.0(typescript@5.4.5)
       chalk: 5.3.0
       columnify: 1.6.0
     transitivePeerDependencies:
@@ -3595,29 +3595,29 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/publish@3.3.3(@lerna-lite/list@3.3.3)(typescript@5.4.5):
-    resolution: {integrity: sha512-u1TF53hNptzm2C4IWb98bjZ/kt43VNDxlo1TPmQtXCHbg5OGE7WdkMSBQS546yRqSnZSbDXvKCDzSdOnTgmsXw==}
+  /@lerna-lite/publish@3.4.0(@lerna-lite/list@3.4.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-BiWDdV1vKhdxumXX4uSrhauvD7qV8TpImAYFyR3XxKEOv8SQt4O5ZlAIKG8yH1i365zIsS6DOPfBdamMFKB9hw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/cli': 3.3.3(@lerna-lite/list@3.3.3)(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5)
-      '@lerna-lite/core': 3.3.3(typescript@5.4.5)
-      '@lerna-lite/version': 3.3.3(@lerna-lite/list@3.3.3)(@lerna-lite/publish@3.3.3)(typescript@5.4.5)
+      '@lerna-lite/cli': 3.4.0(@lerna-lite/list@3.4.0)(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5)
+      '@lerna-lite/core': 3.4.0(typescript@5.4.5)
+      '@lerna-lite/version': 3.4.0(@lerna-lite/list@3.4.0)(@lerna-lite/publish@3.4.0)(typescript@5.4.5)
       byte-size: 8.1.1
       chalk: 5.3.0
       columnify: 1.6.0
       fs-extra: 11.2.0
-      glob: 10.3.16
+      glob: 10.4.1
       has-unicode: 2.0.1
       libnpmaccess: 8.0.5
       libnpmpublish: 9.0.7
       normalize-path: 3.0.0
       npm-package-arg: 11.0.2
       npm-packlist: 5.1.3
-      npm-registry-fetch: 16.2.1
+      npm-registry-fetch: 17.0.1
       npmlog: 7.0.1
       p-map: 7.0.2
       p-pipe: 4.0.0
-      pacote: 17.0.7
+      pacote: 18.0.6
       pify: 6.1.0
       read-package-json: 7.0.1
       semver: 7.6.2
@@ -3635,12 +3635,12 @@ packages:
       - typescript
     dev: false
 
-  /@lerna-lite/version@3.3.3(@lerna-lite/list@3.3.3)(@lerna-lite/publish@3.3.3)(typescript@5.4.5):
-    resolution: {integrity: sha512-0cpBbjkRwEClu4AxqG19sw0WN+YMLU1hLTXO3Id1xsDVTVtRecuuxbVllF7WYGftrc9f/zWMTtra7ndTHcKBMA==}
+  /@lerna-lite/version@3.4.0(@lerna-lite/list@3.4.0)(@lerna-lite/publish@3.4.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-LQ265fmNCkJ9s1ndM4idttMB7PhO2ndKdxUciXe6+0PJLIkEOmWJ5v3fVHyDiOMtzFGC4LgCw4HISGgEU5ELLA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dependencies:
-      '@lerna-lite/cli': 3.3.3(@lerna-lite/list@3.3.3)(@lerna-lite/publish@3.3.3)(@lerna-lite/version@3.3.3)(typescript@5.4.5)
-      '@lerna-lite/core': 3.3.3(typescript@5.4.5)
+      '@lerna-lite/cli': 3.4.0(@lerna-lite/list@3.4.0)(@lerna-lite/publish@3.4.0)(@lerna-lite/version@3.4.0)(typescript@5.4.5)
+      '@lerna-lite/core': 3.4.0(typescript@5.4.5)
       '@octokit/plugin-enterprise-rest': 6.0.1
       '@octokit/rest': 20.1.1
       chalk: 5.3.0
@@ -3656,7 +3656,7 @@ packages:
       graceful-fs: 4.2.11
       is-stream: 4.0.1
       load-json-file: 7.0.1
-      make-dir: 4.0.0
+      make-dir: 5.0.0
       minimatch: 9.0.4
       new-github-release-url: 2.0.0
       node-fetch: 3.3.2
@@ -3986,24 +3986,20 @@ packages:
       which: 4.0.0
     dev: false
 
-  /@npmcli/redact@1.1.0:
-    resolution: {integrity: sha512-PfnWuOkQgu7gCbnSsAisaX7hKOdZ4wSAhAzH3/ph5dSGau52kCRrMMGbiSQLwyTZpgldkZ49b0brkOr1AzGBHQ==}
-    engines: {node: ^16.14.0 || >=18.0.0}
-    dev: false
-
   /@npmcli/redact@2.0.0:
     resolution: {integrity: sha512-SEjCPAVHWYUIQR+Yn03kJmrJjZDtJLYpj300m3HV9OTRZNpC5YpbMsM3eTkECyT4aWj8lDr9WeY6TWefpubtYQ==}
     engines: {node: ^16.14.0 || >=18.0.0}
     dev: false
 
-  /@npmcli/run-script@7.0.4:
-    resolution: {integrity: sha512-9ApYM/3+rBt9V80aYg6tZfzj3UWdiYyCt7gJUD1VJKvWF5nwKDSICXbYIQbspFTq6TOpbsEtIC0LArB8d9PFmg==}
+  /@npmcli/run-script@8.1.0:
+    resolution: {integrity: sha512-y7efHHwghQfk28G2z3tlZ67pLG0XdfYbcVG26r7YIXALRsrVQcTq4/tdenSmdOrEsNahIYA/eh8aEVROWGFUDg==}
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
       '@npmcli/node-gyp': 3.0.0
       '@npmcli/package-json': 5.1.0
       '@npmcli/promise-spawn': 7.0.2
       node-gyp: 10.1.0
+      proc-log: 4.2.0
       which: 4.0.0
     transitivePeerDependencies:
       - bluebird
@@ -8707,7 +8703,7 @@ packages:
       fs-minipass: 3.0.3
       glob: 10.4.1
       lru-cache: 10.2.2
-      minipass: 7.1.1
+      minipass: 7.1.2
       minipass-collect: 2.0.1
       minipass-flush: 1.0.5
       minipass-pipeline: 1.2.4
@@ -11422,7 +11418,7 @@ packages:
     resolution: {integrity: sha512-XUBA9XClHbnJWSfBzjkm6RvPsyg3sryZt06BEQoXcF7EK/xpGaQYJgQKDJSUH5SGZ76Y7pFx1QBnXz09rU5Fbw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      minipass: 7.1.1
+      minipass: 7.1.2
     dev: false
 
   /fs.realpath@1.0.0:
@@ -11668,6 +11664,7 @@ packages:
       minimatch: 9.0.4
       minipass: 7.1.1
       path-scurry: 1.11.1
+    dev: true
 
   /glob@10.4.1:
     resolution: {integrity: sha512-2jelhlq3E4ho74ZyVLN03oKdAZVUa6UDZzFLVH1H7dnoax+y9qyaq8zBkfDIggjniU19z0wU18y16jMB2eyVIw==}
@@ -13961,6 +13958,11 @@ packages:
     dependencies:
       semver: 7.6.2
 
+  /make-dir@5.0.0:
+    resolution: {integrity: sha512-G0yBotnlWVonPClw+tq+xi4K7DZC9n96HjGTBDdHkstAVsDkfZhi1sTvZypXLpyQTbISBkDtK0E5XlUqDsShQg==}
+    engines: {node: '>=18'}
+    dev: false
+
   /make-error@1.3.6:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
     dev: false
@@ -13973,7 +13975,7 @@ packages:
       cacache: 18.0.3
       http-cache-semantics: 4.1.1
       is-lambda: 1.0.1
-      minipass: 7.1.1
+      minipass: 7.1.2
       minipass-fetch: 3.0.5
       minipass-flush: 1.0.5
       minipass-pipeline: 1.2.4
@@ -15032,14 +15034,14 @@ packages:
     resolution: {integrity: sha512-D7V8PO9oaz7PWGLbCACuI1qEOsq7UKfLotx/C0Aet43fCUB/wfQ7DYeq2oR/svFJGYDHPr38SHATeaj/ZoKHKw==}
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
-      minipass: 7.1.1
+      minipass: 7.1.2
     dev: false
 
   /minipass-fetch@3.0.5:
     resolution: {integrity: sha512-2N8elDQAtSnFV0Dk7gt15KHsS0Fyz6CbYZ360h0WTYV1Ty46li3rAXVOQj1THMNLdmrD9Vt5pBPtWtVkpwGBqg==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      minipass: 7.1.1
+      minipass: 7.1.2
       minipass-sized: 1.0.3
       minizlib: 2.1.2
     optionalDependencies:
@@ -15087,6 +15089,7 @@ packages:
   /minipass@7.1.1:
     resolution: {integrity: sha512-UZ7eQ+h8ywIRAW1hIEl2AqdwzJucU/Kp59+8kkZeSvafXhZjul247BvIJjEVFVeON6d7lM46XX1HXCduKAS8VA==}
     engines: {node: '>=16 || 14 >=14.17'}
+    dev: true
 
   /minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
@@ -15425,29 +15428,13 @@ packages:
       semver: 7.6.2
     dev: false
 
-  /npm-registry-fetch@16.2.1:
-    resolution: {integrity: sha512-8l+7jxhim55S85fjiDGJ1rZXBWGtRLi1OSb4Z3BPLObPuIaeKRlPRiYMSHU4/81ck3t71Z+UwDDl47gcpmfQQA==}
-    engines: {node: ^16.14.0 || >=18.0.0}
-    dependencies:
-      '@npmcli/redact': 1.1.0
-      make-fetch-happen: 13.0.1
-      minipass: 7.1.1
-      minipass-fetch: 3.0.5
-      minipass-json-stream: 1.0.1
-      minizlib: 2.1.2
-      npm-package-arg: 11.0.2
-      proc-log: 4.2.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /npm-registry-fetch@17.0.1:
     resolution: {integrity: sha512-fLu9MTdZTlJAHUek/VLklE6EpIiP3VZpTiuN7OOMCt2Sd67NCpSEetMaxHHEZiZxllp8ZLsUpvbEszqTFEc+wA==}
     engines: {node: ^16.14.0 || >=18.0.0}
     dependencies:
       '@npmcli/redact': 2.0.0
       make-fetch-happen: 13.0.1
-      minipass: 7.1.1
+      minipass: 7.1.2
       minipass-fetch: 3.0.5
       minipass-json-stream: 1.0.1
       minizlib: 2.1.2
@@ -15981,26 +15968,25 @@ packages:
       semver: 7.6.2
     dev: false
 
-  /pacote@17.0.7:
-    resolution: {integrity: sha512-sgvnoUMlkv9xHwDUKjKQFXVyUi8dtJGKp3vg6sYy+TxbDic5RjZCHF3ygv0EJgNRZ2GfRONjlKPUfokJ9lDpwQ==}
+  /pacote@18.0.6:
+    resolution: {integrity: sha512-+eK3G27SMwsB8kLIuj4h1FUhHtwiEUo21Tw8wNjmvdlpOEr613edv+8FUsTj/4F/VN5ywGE19X18N7CC2EJk6A==}
     engines: {node: ^16.14.0 || >=18.0.0}
     hasBin: true
     dependencies:
       '@npmcli/git': 5.0.7
       '@npmcli/installed-package-contents': 2.1.0
+      '@npmcli/package-json': 5.1.0
       '@npmcli/promise-spawn': 7.0.2
-      '@npmcli/run-script': 7.0.4
+      '@npmcli/run-script': 8.1.0
       cacache: 18.0.3
       fs-minipass: 3.0.3
-      minipass: 7.1.1
+      minipass: 7.1.2
       npm-package-arg: 11.0.2
       npm-packlist: 8.0.2
       npm-pick-manifest: 9.0.1
-      npm-registry-fetch: 16.2.1
+      npm-registry-fetch: 17.0.1
       proc-log: 4.2.0
       promise-retry: 2.0.1
-      read-package-json: 7.0.1
-      read-package-json-fast: 3.0.2
       sigstore: 2.3.0
       ssri: 10.0.6
       tar: 6.2.1
@@ -16176,7 +16162,7 @@ packages:
     engines: {node: '>=16 || 14 >=14.18'}
     dependencies:
       lru-cache: 10.2.2
-      minipass: 7.1.1
+      minipass: 7.1.2
 
   /path-temp@2.1.0:
     resolution: {integrity: sha512-cMMJTAZlion/RWRRC48UbrDymEIt+/YSD/l8NqjneyDw2rDOBQcP5yRkMB4CYGn47KMhZvbblBP7Z79OsMw72w==}
@@ -17741,14 +17727,14 @@ packages:
     resolution: {integrity: sha512-bSf16tAFkGeRlUNDjXu8FzaMQt6g2HZJrun7mtMbIPOddxt3GLMSz5VWUWcqTJUPfLEaDIepGxv+bYQW49596A==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      minipass: 7.1.1
+      minipass: 7.1.2
     dev: false
 
   /ssri@10.0.6:
     resolution: {integrity: sha512-MGrFH9Z4NP9Iyhqn16sDtBpRRNJ0Y2hNa6D65h736fVSaPCHr4DM4sWUNvVaSuC+0OBGhwsrydQwmgfg5LncqQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      minipass: 7.1.1
+      minipass: 7.1.2
     dev: false
 
   /stack-utils@2.0.6:
