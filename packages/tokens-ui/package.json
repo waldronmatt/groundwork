@@ -25,6 +25,7 @@
   ],
   "scripts": {
     "lint:knip": "knip --exports",
+    "lint:types": "attw --from-npm @waldronmatt/story-tokens-ui --ignore-rules cjs-resolves-to-esm",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "build": "tsc --p ./tsconfig.build.json && vite build",
     "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo"

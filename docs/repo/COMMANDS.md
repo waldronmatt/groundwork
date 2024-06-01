@@ -26,6 +26,12 @@ Find unused exports (applies to projects in `packages` folder):
 pnpm lint:knip
 ```
 
+Analyzing TypeScript types of npm packages (applies to projects in `packages` folder):
+
+```bash
+pnpm lint:types
+```
+
 Visualize the project structure/dependencies:
 
 ```bash

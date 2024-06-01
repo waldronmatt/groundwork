@@ -19,6 +19,7 @@
   ],
   "scripts": {
     "lint:knip": "knip --exports",
+    "lint:types": "attw --from-npm @waldronmatt/lit-override --ignore-rules cjs-resolves-to-esm",
     "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
     "test:components": "web-test-runner",
     "test:files": "jest --coverage",

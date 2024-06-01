@@ -8,7 +8,9 @@
 
 [`lerna-lite`](https://github.com/lerna-lite/lerna-lite): Publisher that supports conventional commits for versioning and is smaller and more lightweight than Lerna
 
-## Linters
+## Linters / Formatters
+
+[`editorconfig`](https://github.com/editorconfig/editorconfig): For maintaining consistent coding styles across various editors and IDEs
 
 [`commitlint`](https://github.com/conventional-changelog/commitlint): For linting commit messages
 
@@ -18,9 +20,11 @@
 
 [`syncpack`](https://github.com/JamieMason/syncpack): For linting dependency versions
 
+[`manypkg`](https://github.com/Thinkmill/manypkg): For linting monorepo best practices
+
 [`publint`](https://github.com/bluwy/publint): For linting package publishing best practices
 
-[`manypkg`](https://github.com/Thinkmill/manypkg): For linting monorepo best practices
+[`arethetypeswrong`](https://github.com/arethetypeswrong/arethetypeswrong.github.io) For analyzing TypeScript types of npm packages
 
 [`knip`](https://github.com/webpro/knip): For finding unused files, dependencies, and exports
 

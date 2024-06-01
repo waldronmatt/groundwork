@@ -29,6 +29,7 @@
     "list:changed": "lerna changed -l -all",
     "dev": "npx nx run-many -t dev",
     "lint:knip": "npx nx run-many -t lint:knip",
+    "lint:types": "npx nx run-many -t lint:types",
     "lint": "npx nx run-many -t lint",
     "test": "npx nx run-many -t test",
     "test:watch": "npx nx run-many -t test:watch",
@@ -41,6 +42,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@arethetypeswrong/cli": "0.15.3",
     "@commitlint/cli": "18.6.1",
     "@commitlint/config-conventional": "18.6.3",
     "@lerna-lite/changed": "3.4.0",

@@ -19,6 +19,7 @@
   ],
   "scripts": {
     "lint:knip": "knip --exports",
+    "lint:types": "attw --from-npm @waldronmatt/library --ignore-rules cjs-resolves-to-esm",
     "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
     "test": "jest --coverage",
     "test:watch": "jest --watch",

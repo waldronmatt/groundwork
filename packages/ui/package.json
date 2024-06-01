@@ -47,6 +47,7 @@
   ],
   "scripts": {
     "lint:knip": "knip --exports",
+    "lint:types": "attw --from-npm @waldronmatt/demo-ui",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "build": "tsc --p ./tsconfig.build.json && vite build",
     "clean": "rimraf dist tsconfig.build.tsbuildinfo"

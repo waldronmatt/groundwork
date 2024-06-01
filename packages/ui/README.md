@@ -21,7 +21,7 @@ This includes many modern best practices for publishing and consuming in monorep
 - Live monorepo types supported (approach [detailed here](https://colinhacks.com/essays/live-types-typescript-monorepo)):
   - top-level `exports` field defines types for source files
   - `publishConfig` defines types for production (will override `exports` when publishing to `npm`)
-- Passes most [publint](https://github.com/bluwy/publint) and [arethetypeswrong](https://arethetypeswrong.github.io/) audits.
+- Passes all [publint](https://github.com/bluwy/publint) and [arethetypeswrong](https://arethetypeswrong.github.io/) audits.
 - Libraries are externalized for a lighter bundle size (`react`, `react/jsx-runtime`)
 
 ## Installation
