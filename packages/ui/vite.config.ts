@@ -125,7 +125,7 @@ export default defineConfig({
       //
       // directory structures are also preserved
       input: Object.fromEntries(
-        glob.sync('lib/**/*.{ts,tsx}').map((file) => [
+        glob.sync('lib/**/*.{ts,tsx}', { ignore: ['lib/vite-env.d.ts'] }).map((file) => [
           // The name of the entry point
           // lib/nested/foo.ts becomes nested/foo
           relative('lib', file.slice(0, file.length - extname(file).length)),
