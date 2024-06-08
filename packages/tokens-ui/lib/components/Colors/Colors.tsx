@@ -2,6 +2,7 @@ import { FC, useEffect, useState, useCallback } from 'react';
 import { getCSSVariables } from '../../utils/getCSSVariables.js';
 import { capitalizeFirstLetter } from '../../utils/functions.js';
 import docStyles from './Colors.module.css';
+import type { Storybook } from '@localTypes/storybook.js';
 
 const extractWordSeparatedByDash = /[a-zA-Z0-9]+/g;
 

@@ -3,6 +3,7 @@ import { getCSSVariables } from '../../utils/getCSSVariables.js';
 import { capitalizeFirstLetter } from '../../utils/functions.js';
 import docStyles from './Typography.module.css';
 import '../../styles/Table.module.css';
+import type { Storybook } from '@localTypes/storybook.js';
 
 const FontSize: FC<{ variable: string; typography: string }> = ({ variable, typography }) => (
   <tr>

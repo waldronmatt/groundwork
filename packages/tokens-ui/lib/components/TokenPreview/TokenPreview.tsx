@@ -3,6 +3,7 @@ import { getCSSVariables } from '../../utils/getCSSVariables.js';
 import { capitalizeFirstLetter } from '../../utils/functions.js';
 import docStyles from './TokenPreview.module.css';
 import '../../styles/Table.module.css';
+import type { Storybook } from '@localTypes/storybook.js';
 
 const Space: FC<{ variable: string; tokenValue: string }> = ({ variable, tokenValue }) => (
   <tr>

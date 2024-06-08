@@ -1,3 +1,5 @@
+import type { Storybook } from '@localTypes/storybook.js';
+
 interface CSSVariables {
   [key: string]: string;
 }

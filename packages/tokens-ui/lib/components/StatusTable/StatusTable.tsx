@@ -7,7 +7,7 @@ export const StatusTable = () => {
   const [selectedBadge, setSelectedBadge] = useState<string | null>(null);
   const [filterComponentName, setFilterComponentName] = useState<string>('');
 
-  const store = window.__STORYBOOK_STORY_STORE__ as Storybook.StorybookAPI;
+  const store = window.__STORYBOOK_STORY_STORE__;
   const { data, loading, error, fetchSuccess } = useStorybookData(store, 'stories');
 
   const renderStatusEmoji = (status: string) => {
@@ -26,8 +26,9 @@ export const StatusTable = () => {
   };
 
   const badgeOptions: string[] = [];
-  Object.keys(data).forEach((item) => {
-    const { badges } = data[item].meta.parameters;
+  Object.keys(data).forEach((key) => {
+    const item = data[key];
+    const { badges } = item.meta.parameters;
     if (badges) {
       badges.forEach((badge) => {
         if (!badgeOptions.includes(badge)) {
@@ -41,9 +42,10 @@ export const StatusTable = () => {
     setFilterComponentName(event.target.value);
   };
 
-  const filteredData = Object.keys(data).filter((item) => {
-    const { badges } = data[item].meta.parameters;
-    const componentName = data[item].meta.title.split('/').pop();
+  const filteredData = Object.keys(data).filter((key) => {
+    const item = data[key];
+    const { badges } = item.meta.parameters;
+    const componentName = item.meta.title.split('/').pop();
 
     return (
       (!selectedBadge || badges?.includes(selectedBadge)) &&
@@ -95,9 +97,10 @@ export const StatusTable = () => {
             </tr>
           </thead>
           <tbody>
-            {filteredData.map((item) => {
-              const { title, id } = data[item].meta;
-              const { badges, design } = data[item].meta.parameters;
+            {filteredData.map((key) => {
+              const item = data[key];
+              const { title, id } = item.meta;
+              const { badges, design } = item.meta.parameters;
               return (
                 <tr key={id}>
                   <td>{title.split('/').pop()}</td>

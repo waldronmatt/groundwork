@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import type { Storybook } from '@localTypes/storybook.js';
 
 export const useStorybookData = (store: Storybook.StorybookAPI, filter: string) => {
   const [data, setData] = useState<Record<string, Storybook.StorybookDataItem>>({});

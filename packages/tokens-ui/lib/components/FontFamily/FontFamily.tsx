@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { getCSSVariables } from '../../utils/getCSSVariables.js';
 import { capitalizeFirstLetter } from '../../utils/functions.js';
 import docStyles from './FontFamily.module.css';
+import type { Storybook } from '@localTypes/storybook.js';
 
 const extractTypeAndName = (variable: string): { type: string; name: string } => {
   const extractWordSeparatedByDash = /[a-zA-Z0-9]+/g;

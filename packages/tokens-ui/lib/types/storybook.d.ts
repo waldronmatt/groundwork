@@ -1,11 +1,17 @@
-declare namespace Storybook {
+export declare namespace Storybook {
   interface StorybookAPI {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any;
     cacheAllCSFFiles: () => Promise<void>;
-    cachedCSFFiles: {
-      [key: string]: StorybookDataItem;
-    };
+    cachedCSFFiles: StorybookData;
+  }
+
+  interface Window {
+    __STORYBOOK_STORY_STORE__: StorybookAPI;
+  }
+
+  interface StorybookData {
+    [key: string]: StorybookDataItem;
   }
 
   interface StorybookDataItem {

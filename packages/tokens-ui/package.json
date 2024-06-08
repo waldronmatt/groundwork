@@ -1,19 +1,24 @@
 {
   "name": "@waldronmatt/story-tokens-ui",
   "version": "1.1.12",
-  "module": "./dist/index.js",
-  "types": "./dist/types/index.d.ts",
   "type": "module",
   "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "./*": {
-      "types": "./dist/types/*",
-      "import": "./dist/*"
-    },
     "./lib/*": "./lib/*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "types": "./dist/index.d.ts",
+    "module": "./dist/index.js",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "./*": {
+        "types": "./dist/*",
+        "import": "./dist/*"
+      }
+    }
   },
   "files": [
     "dist",
@@ -29,9 +34,6 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "build": "tsc --p ./tsconfig.build.json && vite build",
     "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "repository": {
     "type": "git",

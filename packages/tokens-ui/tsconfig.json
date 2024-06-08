@@ -4,6 +4,9 @@
   "include": ["lib"],
   "exclude": ["node_modules", "dist", "coverage"],
   "compilerOptions": {
+    "paths": {
+      "@localTypes/*": ["lib/types/*"]
+    },
     "outDir": "dist",
     "baseUrl": "./",
     "declaration": true,

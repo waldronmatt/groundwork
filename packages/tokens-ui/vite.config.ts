@@ -19,7 +19,8 @@ export default defineConfig({
     // we also declare `declaration` or else TS will throw errors even though
     // this is redudant since we are using dts plugin below to do this
     dts({
-      outDir: ['dist/types'],
+      copyDtsFiles: true,
+      outDir: ['dist'],
     }),
     // generates a separate CSS file for each chunk and includes an import statement
     // at the beginning of each chunk's output file
