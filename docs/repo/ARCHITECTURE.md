@@ -54,24 +54,23 @@ All packages including `peerDependencies` are configured to use exact versions o
 
 For versioning, we have `excludeDependents` set to `true` in our `lerna` config. This is to override lerna's default behavior for detecting changed packages that includes changes to transitive dependencies. This is to avoid extraneous package bumps when other workspace packages are updated. A common example is when an `eslint` dependency is upgraded by renovate. Since the `eslint-config-custom` package got bumped, so will all other packages in this monorepo that depend on it which can result in a lot of unncessary version bumps. Since all our workspace packages are installed using the `workspace:` protocol, the consuming host packages will always get the latest updates, making lerna's transitive dependency bump behavior completely unneeded.
 
-## Package Testing
+## Package Usage
 
-Internal packages used in other packages are imported by referencing the `lib` / `src` subpath export and installed via `pnpm`'s `workspace:` protocol. An example subpath export setup for a package in this repo will typically look like this:
+Internal packages used in other packages are imported by referencing the `lib` / `src` subpath `export` and installed via `pnpm`'s `workspace:` protocol.
+
+This has the added benefit of [reflecting "live" types across package boundaries](https://colinhacks.com/essays/live-types-typescript-monorepo). For example, when code and types are updated, the effects of that change propagate to all files that import it instantaneously, with no build step. This is easier to set up and requires less overhead than `custom-condition` and `tsconfig-paths`.
+
+An example subpath export setup for a package in this repo will typically look like this:
 
 `package.json`
 
 ```json
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "./*": "./dist/*",
     "./lib/*": "./lib/*"
   },
 ```
 
-For example, I have a react component library package that I reference in the storybook and vite-project apps. If I make updates to the react library, I want those changes to automatically refresh (hmr) in those apps. The `lib` / `src` subpath exports allow us to link to the source files so we can avoid rebuilding the component library to see changes.
+For example, I have a react component library package that I reference in the storybook and vite-project apps. If I make updates to the react library, I want those changes and types to automatically refresh in those apps. The `lib` / `src` subpath exports allow us to link to the source files so we can avoid rebuilding the component library to see changes.
 
 **Example**:
 
@@ -85,7 +84,48 @@ pnpm add @waldronmatt/demo-ui --workspace --filter vite-project
 import { Button, type ButtonProps } from '@waldronmatt/demo-ui/lib/index.js';
 ```
 
-There are other ways to do this such as symlinking and/or stubbing via third-party packages, but I personally ran into issues using these other methods. Alternatively, some may choose to refernce them via a registry (`npm`) with specified versions so that changes do not break other apps in the monorepo. This may be preferred for larger teams and organizations.
+Alternatively, some may choose to refernce them via a registry (`npm`) with specified versions so that changes do not break other apps in the monorepo. This may be preferred for larger teams and organizations.
+
+There are other ways to do this such as symlinking and/or stubbing via third-party packages, but I personally ran into issues using these other methods.
+
+## Types
+
+Published packages use `publishConfig` to define `exports`, `types`, `module`, and `main`. This allows us to use top level `exports` for source files to support "live typing" in the approach above. When a package is published to `npm`, `publishConfig` will overwrite top level `exports` for proper consumption in different module systems.
+
+A single `.` defines the default entrypoint. In the example below we define separate entries for `esm` and `cjs` via `import` and `require`. We do this to support different type declaration files for different module systems. This is a new [TypeScript 5 recommendation](https://www.typescriptlang.org/docs/handbook/modules/reference.html#node16-nodenext). We can use the `./*` glob to define wildcard exports and map multiple files and directories to corresponding import paths automatically without needing to explicitly define them.
+
+`package.json`
+
+```json
+  "publishConfig": {
+    "access": "public",
+    "types": "./dist/types/esm/index.d.ts",
+    "module": "./dist/esm/index.js",
+    "main": "./dist/cjs/index.cjs",
+    "exports": {
+      ".": {
+        "import": {
+          "types": "./dist/types/esm/index.d.ts",
+          "default": "./dist/esm/index.js"
+        },
+        "require": {
+          "types": "./dist/types/cjs/index.d.cts",
+          "default": "./dist/cjs/index.cjs"
+        }
+      },
+      "./*": {
+        "import": {
+          "types": "./dist/types/esm/*",
+          "default": "./dist/esm/*"
+        },
+        "require": {
+          "types": "./dist/types/cjs/*",
+          "default": "./dist/cjs/*"
+        }
+      }
+    }
+  },
+```
 
 ## ESM and CJS File Naming Conventions
 
