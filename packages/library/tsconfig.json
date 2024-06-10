@@ -4,6 +4,11 @@
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist", "coverage"],
   "compilerOptions": {
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/core/*"],
+      "@localTypes/*": ["src/types/*"]
+    },
+    "tsBuildInfoFile": "./.tsbuildinfo"
   }
 }

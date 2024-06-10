@@ -1,4 +1,4 @@
-import { addition } from './addition.js';
+import { addition } from '@/addition.js';
 
 test('Value with no arguments passed should be zero', () => {
   expect(addition()).toBe(0);

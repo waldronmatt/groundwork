@@ -1,16 +1,21 @@
 {
   "name": "@waldronmatt/library",
   "version": "1.0.1",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "type": "module",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "./*": "./dist/*",
     "./src/*": "./src/*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "types": "./dist/index.d.ts",
+    "module": "./dist/index.js",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
+      },
+      "./*": "./dist/*"
+    }
   },
   "files": [
     "dist/*",
@@ -24,12 +29,9 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "build:dtsmaps": "tsc --project tsconfig.build.json",
-    "build:src": "tsup src/*[!.spec].ts --format esm --sourcemap --onSuccess \"pnpm build:dtsmaps\"",
+    "build:src": "tsup --onSuccess \"pnpm build:dtsmaps\"",
     "build": "pnpm build:src",
-    "clean": "rimraf dist coverage tsconfig.build.tsbuildinfo"
-  },
-  "publishConfig": {
-    "access": "public"
+    "clean": "rimraf dist coverage .tsbuildinfo tsconfig.build.tsbuildinfo"
   },
   "repository": {
     "type": "git",
