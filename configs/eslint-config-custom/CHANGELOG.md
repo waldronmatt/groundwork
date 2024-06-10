@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.5](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.5.1...eslint-config-custom@1.5.5) (2024-06-10)
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-jest-dom to v5.4.0 ([#192](https://github.com/waldronmatt/groundwork/issues/192)) ([da3b636](https://github.com/waldronmatt/groundwork/commit/da3b6362d761d4d78518e0330a4dc042c9c59a5a)) - by @renovate[bot]
+* **deps:** update eslint ([#185](https://github.com/waldronmatt/groundwork/issues/185)) ([14ee292](https://github.com/waldronmatt/groundwork/commit/14ee2927788eb94fd49e278a88288a3d3d5df55d)) - by @renovate[bot]
+* **deps:** update eslint ([#193](https://github.com/waldronmatt/groundwork/issues/193)) ([5b117e9](https://github.com/waldronmatt/groundwork/commit/5b117e9157e1b536bacdb0150bf750df16632776)) - by @renovate[bot]
+* **eslint-config-custom:** lock chai-friendly and use vitest legacy plugin for eslint 8 support ([7aeb2f6](https://github.com/waldronmatt/groundwork/commit/7aeb2f66238da014ec4bc747a01eb62338f02a38)) - by @waldronmatt
+
 ## [1.5.1](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.5.0...eslint-config-custom@1.5.1) (2024-05-15)
 
 **Note:** Version bump only for package eslint-config-custom

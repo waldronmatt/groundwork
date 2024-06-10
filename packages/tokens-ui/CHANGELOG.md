@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.1.12...@waldronmatt/story-tokens-ui@1.2.0) (2024-06-10)
+
+### Bug Fixes
+
+* **packages:** add npm package type linting ([cf10b22](https://github.com/waldronmatt/groundwork/commit/cf10b228d90d1850726ad19013bfa4ced5aff018)) - by @waldronmatt
+* **vite.config.ts:** ignore types and vite-env files ([67c1af7](https://github.com/waldronmatt/groundwork/commit/67c1af78460a9a29b76da01f8a596f7c9831d727)) - by @waldronmatt
+
+### Features
+
+* **tokens-ui:** add types explicitly for dist output ([9e49bf3](https://github.com/waldronmatt/groundwork/commit/9e49bf324efc4d29a427125d000d7b417c5139be)) - by @waldronmatt
+
 ## [1.1.12](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.1.11...@waldronmatt/story-tokens-ui@1.1.12) (2024-05-31)
 
 ### Bug Fixes

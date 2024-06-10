@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.2.1...@waldronmatt/lit-override@2.2.2) (2024-06-10)
+
+### Bug Fixes
+
+* **package.json:** use publishConfig for npm package module resolution ([6e866f3](https://github.com/waldronmatt/groundwork/commit/6e866f33c2906c65f085ff98f24e9cae21b0ded6)) - by @waldronmatt
+* **packages:** add npm package type linting ([cf10b22](https://github.com/waldronmatt/groundwork/commit/cf10b228d90d1850726ad19013bfa4ced5aff018)) - by @waldronmatt
+
 ## [2.2.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.2.0...@waldronmatt/lit-override@2.2.1) (2024-05-13)
 
 ### Bug Fixes

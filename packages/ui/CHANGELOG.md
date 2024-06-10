@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.8](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.7...@waldronmatt/demo-ui@3.5.8) (2024-06-10)
+
+### Bug Fixes
+
+* **packages:** add npm package type linting ([cf10b22](https://github.com/waldronmatt/groundwork/commit/cf10b228d90d1850726ad19013bfa4ced5aff018)) - by @waldronmatt
+* **vite.config.ts:** exclude vite.env file from dist ([1e828a3](https://github.com/waldronmatt/groundwork/commit/1e828a39f2e7decb86438a8756d20eb7b7fc78f5)) - by @waldronmatt
+
 ## [3.5.7](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.6...@waldronmatt/demo-ui@3.5.7) (2024-05-31)
 
 ### Bug Fixes

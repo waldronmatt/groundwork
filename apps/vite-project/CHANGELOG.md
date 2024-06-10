@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2](https://github.com/waldronmatt/groundwork/compare/vite-project@2.2.0...vite-project@2.2.2) (2024-06-10)
+
+### Bug Fixes
+
+* **vite-project:** support aliases from library package ([df22e84](https://github.com/waldronmatt/groundwork/commit/df22e849157d76f0591ea628212416a1051eb7df)) - by @waldronmatt
+
 # [2.2.0](https://github.com/waldronmatt/groundwork/compare/vite-project@2.1.14...vite-project@2.2.0) (2024-05-10)
 
 ### Features

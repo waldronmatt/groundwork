@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.5](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.7.4...monorepo-docs@1.7.5) (2024-06-10)
+
+### Bug Fixes
+
+* **architecture.md:** add section on live typing and updated subpath exports section ([1092a8e](https://github.com/waldronmatt/groundwork/commit/1092a8eb94c56cecda69c75c4bb99c76f0277e1b)) - by @waldronmatt
+* **architecture.md:** update staged files text ([0c6dd03](https://github.com/waldronmatt/groundwork/commit/0c6dd03c32b1d44c71cbce8a5463a24289031ddd)) - by @waldronmatt
+* **packages:** add npm package type linting ([cf10b22](https://github.com/waldronmatt/groundwork/commit/cf10b228d90d1850726ad19013bfa4ced5aff018)) - by @waldronmatt
+
 ## [1.7.4](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.7.3...monorepo-docs@1.7.4) (2024-05-10)
 
 ### Bug Fixes
