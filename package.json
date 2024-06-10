@@ -15,7 +15,7 @@
     "prepare": "husky",
     "preinstall": "npx only-allow pnpm",
     "commit": "git-cz",
-    "delete": "rimraf pnpm-lock.yaml .nx node_modules",
+    "delete": "rimraf pnpm-lock.yaml .nx lerna-debug.log node_modules",
     "lint:secrets": "npx secretlint **/*",
     "lint:format": "prettier --write .",
     "lint:packages": "node ./publint.js",
