@@ -2,5 +2,11 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "tsconfig-config/vite.json",
   "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["../../packages/library/src/core/*"],
+      "@localTypes/*": ["../../packages/library/src/types/*"]
+    }
+  }
 }
