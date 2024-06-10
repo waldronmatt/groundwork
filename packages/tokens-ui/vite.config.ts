@@ -20,6 +20,7 @@ export default defineConfig({
     // this is redudant since we are using dts plugin below to do this
     dts({
       copyDtsFiles: true,
+      exclude: ['lib/types/index.d.ts'],
       outDir: ['dist'],
     }),
     // generates a separate CSS file for each chunk and includes an import statement
@@ -61,7 +62,7 @@ export default defineConfig({
       //
       // directory structures are also preserved
       input: Object.fromEntries(
-        glob.sync('lib/**/*.{ts,tsx}', {}).map((file) => [
+        glob.sync('lib/**/*.{ts,tsx}', { ignore: ['lib/types/**', 'lib/vite-env.d.ts'] }).map((file) => [
           // The name of the entry point
           // lib/nested/foo.ts becomes nested/foo
           relative('lib', file.slice(0, file.length - extname(file).length)),
