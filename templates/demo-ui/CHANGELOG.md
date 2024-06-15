@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.9](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.8...@waldronmatt/demo-ui@3.5.9) (2024-06-15)
+
+### Bug Fixes
+
+* **global:** new directory structure ([830895f](https://github.com/waldronmatt/groundwork/commit/830895f9c1559f540c56b791febbb80cc56ec5d6)) - by @waldronmatt
+
 ## [3.5.8](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.7...@waldronmatt/demo-ui@3.5.8) (2024-06-10)
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 {
   "name": "demo-ui-storybook",
-  "version": "3.3.11",
+  "version": "3.3.12",
   "private": true,
   "type": "module",
   "scripts": {

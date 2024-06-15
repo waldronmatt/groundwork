@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.6](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.7.5...monorepo-docs@1.7.6) (2024-06-15)
+
+### Bug Fixes
+
+* **architecture:** update docs on directory structure in other sections ([2cf6f35](https://github.com/waldronmatt/groundwork/commit/2cf6f35699f810e6f76b71991c16fa1fc88eefb4)) - by @waldronmatt
+* **global:** new directory structure ([830895f](https://github.com/waldronmatt/groundwork/commit/830895f9c1559f540c56b791febbb80cc56ec5d6)) - by @waldronmatt
+
 ## [1.7.5](https://github.com/waldronmatt/groundwork/compare/monorepo-docs@1.7.4...monorepo-docs@1.7.5) (2024-06-10)
 
 ### Bug Fixes

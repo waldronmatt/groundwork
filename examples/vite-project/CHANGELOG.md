@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.3](https://github.com/waldronmatt/groundwork/compare/vite-project@2.2.2...vite-project@2.2.3) (2024-06-15)
+
+### Bug Fixes
+
+* **global:** new directory structure ([830895f](https://github.com/waldronmatt/groundwork/commit/830895f9c1559f540c56b791febbb80cc56ec5d6)) - by @waldronmatt
+
 ## [2.2.2](https://github.com/waldronmatt/groundwork/compare/vite-project@2.2.0...vite-project@2.2.2) (2024-06-10)
 
 ### Bug Fixes
