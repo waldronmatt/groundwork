@@ -8,19 +8,19 @@ The repository setup and folder structure is heavily inspired by the turborepo [
 
 ```plaintext
 ├── apps
-│   └── (Contains standalone applications / SPAs used to demo code in `packages`)
+│   └── (Contains standalone apps / apps used to demo code in `packages`)
 │
 ├── configs
 │   └── (Contains linters / configurations such as `eslint` / `tsconfig`)
 │
 ├── docs
-│   └── (Contains documentation for this repo and various programming topics)
+│   └── (Contains monorepo documentation and various topics)
 │
 ├── examples
-│   └── (Similar to `apps`; contains applications used to demo code in `templates`)
+│   └── (Similar to `apps`; contains apps used to demo code in `templates`)
 │
 ├── packages
-│   └── (Contains my personal utilities and tools published to `npm`)
+│   └── (Contains my personal libraries published to `npm`)
 │
 └── templates
     └── (Similar to `packages`; contains reusable setups published to `npm`)
@@ -28,14 +28,10 @@ The repository setup and folder structure is heavily inspired by the turborepo [
 
 ## Turborepo Differences
 
-- Tooling and configurations such as `eslint` and `tsconfig` are included in their own `config` folder. This is a personal preference to separate from the `packages` folder where reusable packages and utilities shared across projects are stored.
-- Configurations such as `eslint` and `tsconfig` in the `config` folder do not reference other shareable configurations, for example, my own personal `eslint` config I use across projects. This is a personal preference so that configuration complexity and inheritence is kept to a minimum. This keeps configuration code more readable and self contained to the monorepo.
+- Tooling and configurations such as `eslint` and `tsconfig` are included in their own `config` folder and serve as the base configs for the monorepo. This is a personal preference to separate from the `packages` folder where libraries are stored and to reduce config complexity.
 - Package naming for public packages published to `npm` have the `@` alias scoping while private packages do not have an alias. This is a personal preference to maintain the distinction between published and non-published packages more easily.
-- The `apps` and `docs` folders remain separate and both are top-level folders. This is a personal preference to make the distinction between SPA and UI component documentation code / other documentation. I opt for more top-level folders.
-
-## Turborepo Similarities
-
-- Under `docs` is where `storybook` component code is stored, however it is common to house this along with the UI component for simplicity. If kept together, you would need to update the project to ignore `storybook` files when building and publishing the UI components to `npm`.
+- The `apps` and `docs` folders remain separate and both are top-level folders. This is a personal preference to make the distinction between SPA and documentation.
+- The `examples` and `templates` folders are new folder additions. This is a personal preference to contain reusable templates and apps showcasing these templates separate from my libraries and apps.
 
 ## Staged Files
 
@@ -43,10 +39,10 @@ We are using `lint-staged` to run linting and tests on staged files. This is the
 
 1. Check for secrets (`secretlint`) and fix file formatting (`prettier`) on all files
 2. Lint `package.json` files for dependency and monorepo best practices (`syncpack` and `manypkg`)
-3. Lint `package.json` inside the `/packages` folder for package publishing and types best practices (`publint` and `arethetypeswrong`)
+3. Lint `package.json` inside the `/packages` and `/templates` folders for package publishing and types best practices (`publint` and `arethetypeswrong`)
 4. Lint and fix issues of affected `.ts` and related files (`eslint` and `nx`)
 5. Run tests of affected `.ts` and related files (`jest`/`vitest` and `nx`)
-6. Lint exports on all `.ts` and related files inside the `/packages` folder (`knip` and `nx`)
+6. Lint exports on all `.ts` and related files inside the `/packages` and `/templates` folders (`knip` and `nx`)
 
 We auto format and apply linting fixes when possible. For everything else, we let the user to decide on actions to take if there are errors.
 
