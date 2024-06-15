@@ -36,7 +36,7 @@ const config = {
         alias: [
           {
             find: '@demo-ui',
-            replacement: path.resolve(__dirname, '../../../packages/ui'),
+            replacement: path.resolve(__dirname, '../../../templates/demo-ui'),
           },
         ],
       },

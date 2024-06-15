@@ -55,14 +55,14 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/waldronmatt/groundwork.git",
-    "directory": "packages/ui"
+    "directory": "templates/demo-ui"
   },
   "author": "Matthew Waldron",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/waldronmatt/groundwork/issues"
   },
-  "homepage": "https://github.com/waldronmatt/groundwork/tree/main/packages/ui#readme",
+  "homepage": "https://github.com/waldronmatt/groundwork/tree/main/templates/demo-ui#readme",
   "peerDependencies": {
     "react": "18.3.1",
     "react-dom": "18.3.1"

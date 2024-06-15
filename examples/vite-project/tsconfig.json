@@ -5,8 +5,8 @@
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
     "paths": {
-      "@/*": ["../../packages/library/src/core/*"],
-      "@localTypes/*": ["../../packages/library/src/types/*"]
+      "@/*": ["../../templates/library/src/core/*"],
+      "@localTypes/*": ["../../templates/library/src/types/*"]
     }
   }
 }

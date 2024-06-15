@@ -2,4 +2,6 @@ packages:
   - 'apps/*'
   - 'configs/*'
   - 'docs/*'
+  - 'examples/*'
   - 'packages/*'
+  - 'templates/*'

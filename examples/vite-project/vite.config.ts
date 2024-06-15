@@ -11,11 +11,11 @@ export default defineConfig({
     alias: [
       {
         find: /^@\/(.*)$/,
-        replacement: `${path.resolve('../../packages/library')}/src/core/$1`,
+        replacement: `${path.resolve('../../templates/library')}/src/core/$1`,
       },
       {
         find: /^@localTypes\/(.*)$/,
-        replacement: `${path.resolve('../../packages/library')}/src/types/$1`,
+        replacement: `${path.resolve('../../templates/library')}/src/types/$1`,
       },
     ],
   },

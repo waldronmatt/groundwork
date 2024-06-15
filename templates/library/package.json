@@ -36,14 +36,14 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/waldronmatt/groundwork.git",
-    "directory": "packages/library"
+    "directory": "templates/library"
   },
   "author": "Matthew Waldron",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/waldronmatt/groundwork/issues"
   },
-  "homepage": "https://github.com/waldronmatt/groundwork/tree/main/packages/library#readme",
+  "homepage": "https://github.com/waldronmatt/groundwork/tree/main/templates/library#readme",
   "devDependencies": {
     "@types/jest": "29.5.12",
     "eslint": "8.57.0",

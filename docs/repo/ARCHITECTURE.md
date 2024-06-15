@@ -6,23 +6,25 @@ The repository setup and folder structure is heavily inspired by the turborepo [
 
 ## Folder Structure
 
-```bash
-apps/
-configs/
-docs/
-packages/
-...
-package.json
-pnpm-workspace.yaml
+```plaintext
+├── apps
+│   └── (Contains standalone applications / SPAs used to demo code in `packages`)
+│
+├── configs
+│   └── (Contains linters / configurations such as `eslint` / `tsconfig`)
+│
+├── docs
+│   └── (Contains documentation for this repo and various programming topics)
+│
+├── examples
+│   └── (Similar to `apps`; contains applications used to demo code in `templates`)
+│
+├── packages
+│   └── (Contains my personal utilities and tools published to `npm`)
+│
+└── templates
+    └── (Similar to `packages`; contains reusable setups published to `npm`)
 ```
-
-**`apps`** - Contains standalone applications / SPAs that can consume modules in `packages`
-
-**`configs`** - Contains linters / configurations such as `eslint` / `tsconfig` shared across the monorepo
-
-**`docs`** - Contains documentation for ui components and workspace documentation
-
-**`packages`** - Contains utilities and tools published to `npm` that are used across the monorepo
 
 ## Turborepo Differences
 

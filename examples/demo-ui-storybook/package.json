@@ -9,7 +9,7 @@
     "test": "vitest run --coverage -u",
     "test:watch": "vitest --watch -u",
     "build": "storybook build",
-    "clean": "rimraf storybook-static",
+    "clean": "rimraf storybook-static coverage",
     "preview": "serve storybook-static"
   },
   "dependencies": {
