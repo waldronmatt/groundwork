@@ -65,13 +65,13 @@
     "jest-config": "workspace:*",
     "lit": "3.1.4",
     "lit-html": "3.1.4",
-    "playwright": "1.44.1",
+    "playwright": "1.45.0",
     "rimraf": "5.0.7",
     "sinon": "17.0.1",
     "tsconfig-config": "workspace:*",
     "tslib": "2.6.3",
-    "tsup": "8.0.2",
-    "typescript": "5.4.5"
+    "tsup": "8.1.0",
+    "typescript": "5.5.2"
   },
   "peerDependencies": {
     "lit": "3.1.4",
