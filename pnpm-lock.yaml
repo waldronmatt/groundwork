@@ -133,8 +133,8 @@ importers:
         specifier: 17.1.0
         version: 17.1.0(@typescript-eslint/eslint-plugin@6.21.0)(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-chai-expect:
-        specifier: 3.0.0
-        version: 3.0.0(eslint@8.57.0)
+        specifier: 3.1.0
+        version: 3.1.0(eslint@8.57.0)
       eslint-plugin-chai-friendly:
         specifier: 0.7.4
         version: 0.7.4(eslint@8.57.0)
@@ -151,8 +151,8 @@ importers:
         specifier: 3.1.0
         version: 3.1.0(eslint@8.57.0)
       eslint-plugin-lit:
-        specifier: 1.13.0
-        version: 1.13.0(eslint@8.57.0)
+        specifier: 1.14.0
+        version: 1.14.0(eslint@8.57.0)
       eslint-plugin-lit-a11y:
         specifier: 1.1.0
         version: 1.1.0(eslint@8.57.0)
@@ -10946,11 +10946,11 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-chai-expect@3.0.0(eslint@8.57.0):
-    resolution: {integrity: sha512-NS0YBcToJl+BRKBSMCwRs/oHJIX67fG5Gvb4tGked+9Wnd1/PzKijd82B2QVKcSSOwRe+pp4RAJ2AULeck4eQw==}
-    engines: {node: 10.* || 12.* || >= 14.*}
+  /eslint-plugin-chai-expect@3.1.0(eslint@8.57.0):
+    resolution: {integrity: sha512-a9F8b38hhJsR7fgDEfyMxppZXCnCW6OOHj7cQfygsm9guXqdSzfpwrHX5FT93gSExDqD71HQglF1lLkGBwhJ+g==}
+    engines: {node: 10.* || 12.* || || 14.* || 16.* || >= 18.*}
     peerDependencies:
-      eslint: '>=2.0.0 <= 8.x'
+      eslint: '>=2.0.0 <= 9.x'
     dependencies:
       eslint: 8.57.0
     dev: false
@@ -11062,8 +11062,8 @@ packages:
       requireindex: 1.2.0
     dev: false
 
-  /eslint-plugin-lit@1.13.0(eslint@8.57.0):
-    resolution: {integrity: sha512-vKc67q6YQ+naYO1QuFpqMoTs3535yp8+0WB/8bzZRLr5NSOb4C6vZrD4se7S9XZtym5TxSVlIqa9QTWYISykQg==}
+  /eslint-plugin-lit@1.14.0(eslint@8.57.0):
+    resolution: {integrity: sha512-J4w+CgO31621GreLFCdTUbTr5yeV2/RJ/M0myw0dykD5p9FGGIRLityQiNa6SG+JpVbmeQTQPJy4pNFmiurJ/w==}
     engines: {node: '>= 12'}
     peerDependencies:
       eslint: '>= 5'
