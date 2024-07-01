@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.8](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.5.5...eslint-config-custom@1.5.8) (2024-07-01)
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-react to v7.34.3 ([#202](https://github.com/waldronmatt/groundwork/issues/202)) ([8468bab](https://github.com/waldronmatt/groundwork/commit/8468bab7ebb6643c5e5edcb4e8e2dbd7aa035940)) - by @renovate[bot]
+* **deps:** update eslint ([#206](https://github.com/waldronmatt/groundwork/issues/206)) ([4635c53](https://github.com/waldronmatt/groundwork/commit/4635c537e83a00d6a9246dee21d6ae0fd58fbf5b)) - by @renovate[bot]
+
 ## [1.5.5](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.5.1...eslint-config-custom@1.5.5) (2024-06-10)
 
 ### Bug Fixes

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.10](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.9...@waldronmatt/demo-ui@3.5.10) (2024-07-01)
+
+**Note:** Version bump only for package @waldronmatt/demo-ui
+
 ## [3.5.9](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/demo-ui@3.5.8...@waldronmatt/demo-ui@3.5.9) (2024-06-15)
 
 ### Bug Fixes

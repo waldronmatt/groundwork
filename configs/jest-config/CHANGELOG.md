@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.34](https://github.com/waldronmatt/groundwork/compare/jest-config@1.1.32...jest-config@1.1.34) (2024-07-01)
+
+### Bug Fixes
+
+* **deps:** update dependencies ([#201](https://github.com/waldronmatt/groundwork/issues/201)) ([6f76d97](https://github.com/waldronmatt/groundwork/commit/6f76d97be48a9dcf511733195ccc340710d41f4d)) - by @renovate[bot]
+
 ## [1.1.32](https://github.com/waldronmatt/groundwork/compare/jest-config@1.1.30...jest-config@1.1.32) (2024-06-10)
 
 ### Bug Fixes

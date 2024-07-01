@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.4](https://github.com/waldronmatt/groundwork/compare/lit-override@2.1.2...lit-override@2.1.4) (2024-07-01)
+
+### Bug Fixes
+
+* **deps:** update dependencies ([#201](https://github.com/waldronmatt/groundwork/issues/201)) ([6f76d97](https://github.com/waldronmatt/groundwork/commit/6f76d97be48a9dcf511733195ccc340710d41f4d)) - by @renovate[bot]
+
 ## [2.1.2](https://github.com/waldronmatt/groundwork/compare/lit-override@2.1.0...lit-override@2.1.2) (2024-06-10)
 
 ### Bug Fixes
