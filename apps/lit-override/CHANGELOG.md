@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/waldronmatt/groundwork/compare/lit-override@2.1.4...lit-override@2.2.0) (2024-08-31)
+
+### Features
+
+* **lit-override:** add custom decorator to get template element by id ([6a07702](https://github.com/waldronmatt/groundwork/commit/6a07702b6fd5e2974c7c924286e1ec6c9663c362)) - by @waldronmatt
+
 ## [2.1.4](https://github.com/waldronmatt/groundwork/compare/lit-override@2.1.2...lit-override@2.1.4) (2024-07-01)
 
 ### Bug Fixes
