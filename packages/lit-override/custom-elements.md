@@ -6,6 +6,7 @@
 | ---- | ---- | ----------- | ------ | ---------------------- |
 | `js` | `*`  | \*          |        | ./components/index.js  |
 | `js` | `*`  | \*          |        | ./controllers/index.js |
+| `js` | `*`  | \*          |        | ./decorators/index.js  |
 | `js` | `*`  | \*          |        | ./directives/index.js  |
 | `js` | `*`  | \*          |        | ./mixins/index.js      |
 | `js` | `*`  | \*          |        | ./utils/index.js       |
@@ -30,12 +31,12 @@
 
 #### Fields
 
-| Name                    | Privacy | Type       | Default | Description                                                                                  | Inherited From        |
-| ----------------------- | ------- | ---------- | ------- | -------------------------------------------------------------------------------------------- | --------------------- |
-| `templateId`            |         | `string`   |         |                                                                                              |                       |
-| `emitConnectedCallback` |         | `boolean`  | `false` | Set prop to use \`connected-callback\` event. Defaults to \`false\`.                         | EmitConnectedCallback |
-| `onConnectedCallback`   |         | `function` |         | A callback function called when connected to the DOM.                                        | EmitConnectedCallback |
-| `id`                    |         | `string`   |         | unique identifier that points to the id of a \`template\` element. Defaults to empty string. |                       |
+| Name                    | Privacy | Type                          | Default | Description                                                                                  | Inherited From        |
+| ----------------------- | ------- | ----------------------------- | ------- | -------------------------------------------------------------------------------------------- | --------------------- |
+| `templateId`            |         | `HTMLTemplateElement \| null` |         |                                                                                              |                       |
+| `emitConnectedCallback` |         | `boolean`                     | `false` | Set prop to use \`connected-callback\` event. Defaults to \`false\`.                         | EmitConnectedCallback |
+| `onConnectedCallback`   |         | `function`                    |         | A callback function called when connected to the DOM.                                        | EmitConnectedCallback |
+| `id`                    |         | `string`                      |         | unique identifier that points to the id of a \`template\` element. Defaults to empty string. |                       |
 
 #### Events
 
@@ -47,7 +48,6 @@
 
 | Name                    | Field                 | Inherited From        |
 | ----------------------- | --------------------- | --------------------- |
-| `templateId`            | templateId            |                       |
 | `emitConnectedCallback` | emitConnectedCallback | EmitConnectedCallback |
 | `onConnectedCallback`   | onConnectedCallback   | EmitConnectedCallback |
 
@@ -81,23 +81,22 @@
 
 #### Fields
 
-| Name          | Privacy | Type                          | Default       | Description | Inherited From |
-| ------------- | ------- | ----------------------------- | ------------- | ----------- | -------------- |
-| `host`        |         | `ReactiveControllerHost`      | `host`        |             |                |
-| `_template`   | private | `HTMLTemplateElement \| null` | `null`        |             |                |
-| `clearStyles` |         | `boolean`                     | `clearStyles` |             |                |
-| `id`          |         | `string`                      | `id`          |             |                |
+| Name          | Privacy | Type                                               | Default                                | Description | Inherited From |
+| ------------- | ------- | -------------------------------------------------- | -------------------------------------- | ----------- | -------------- |
+| `host`        |         | `ReactiveControllerHost`                           | `host`                                 |             |                |
+| `clearStyles` |         | `AdoptedStyleSheetsConverterParams['clearStyles']` | `clearStyles`                          |             |                |
+| `templateEl`  |         | `AdoptedStyleSheetsConverterParams['templateEl']`  | `templateEl`                           |             |                |
+| `_shadowRoot` |         | `ShadowRoot`                                       | `(this.host as LitElement).renderRoot` |             |                |
 
 #### Methods
 
-| Name                       | Privacy | Description | Parameters                       | Return                        | Inherited From |
-| -------------------------- | ------- | ----------- | -------------------------------- | ----------------------------- | -------------- |
-| `hostConnected`            |         |             |                                  |                               |                |
-| `hostUpdated`              |         |             |                                  |                               |                |
-| `getTemplateElement`       | private |             |                                  | `HTMLTemplateElement \| null` |                |
-| `removeComponentStyleTag`  | private |             |                                  |                               |                |
-| `handleAdoptedStyleSheets` | private |             | `styleElement: HTMLStyleElement` |                               |                |
-| `updateStylesheet`         | private |             |                                  |                               |                |
+| Name                      | Privacy | Description | Parameters                       | Return | Inherited From |
+| ------------------------- | ------- | ----------- | -------------------------------- | ------ | -------------- |
+| `hostConnected`           |         |             |                                  |        |                |
+| `hostUpdated`             |         |             |                                  |        |                |
+| `updateStylesheet`        | private |             |                                  |        |                |
+| `setAdoptedStyleSheets`   | private |             | `styleElement: HTMLStyleElement` |        |                |
+| `removeComponentStyleTag` | private |             |                                  |        |                |
 
 <hr/>
 
@@ -115,6 +114,30 @@
 | ---- | ---- | ----------- | ------ | ---------------------------------- |
 | `js` | `*`  | \*          |        | ./adopted-stylesheets-converter.js |
 
+## `src/decorators/index.ts`:
+
+### Exports
+
+| Kind | Name | Declaration | Module | Package                   |
+| ---- | ---- | ----------- | ------ | ------------------------- |
+| `js` | `*`  | \*          |        | ./query-template-by-id.js |
+
+## `src/decorators/query-template-by-id.ts`:
+
+### Functions
+
+| Name                | Description                                                                                                                                                        | Parameters                                               | Return |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------ |
+| `queryTemplateById` | queryTemplateById&#xA;&#xA;Gets a template element by id that is provided to the \`templateId\` property.&#xA;Will cache the template element on successful query. | `{ fallback = false }: { fallback?: boolean }, fallback` |        |
+
+<hr/>
+
+### Exports
+
+| Kind | Name                | Declaration       | Module                                 | Package |
+| ---- | ------------------- | ----------------- | -------------------------------------- | ------- |
+| `js` | `queryTemplateById` | queryTemplateById | src/decorators/query-template-by-id.ts |         |
+
 ## `src/directives/index.ts`:
 
 ### Exports
@@ -126,18 +149,6 @@
 ## `src/directives/template-content-with-fallback.ts`:
 
 ### class: `TemplateContentWithFallbackDirective`
-
-#### Fields
-
-| Name        | Privacy | Type                          | Default | Description | Inherited From |
-| ----------- | ------- | ----------------------------- | ------- | ----------- | -------------- |
-| `_template` | private | `HTMLTemplateElement \| null` | `null`  |             |                |
-
-#### Methods
-
-| Name                 | Privacy | Description | Parameters   | Return                        | Inherited From |
-| -------------------- | ------- | ----------- | ------------ | ----------------------------- | -------------- |
-| `getTemplateElement` | private |             | `id: string` | `HTMLTemplateElement \| null` |                |
 
 <hr/>
 

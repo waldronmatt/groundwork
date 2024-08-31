@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit';
 import { EmitConnectedCallback } from '../mixins/emit-connected-callback.js';
 import { templateContentWithFallback } from '../directives/template-content-with-fallback.js';
 import { AdoptedStyleSheetsConverter } from '../controllers/adopted-stylesheets-converter.js';
-import { property } from 'lit/decorators.js';
+import { queryTemplateById } from '../decorators/query-template-by-id.js';
 
 /**
  * LitOverride - `<lit-override>`
@@ -16,15 +16,15 @@ import { property } from 'lit/decorators.js';
  * @slot `<slot></slot>` is rendered as fallback if `<template>` element is not found
  */
 export class LitOverride extends EmitConnectedCallback(LitElement) {
-  @property({ reflect: true, type: String })
-  templateId!: string;
+  @queryTemplateById({ fallback: true })
+  templateId!: HTMLTemplateElement | null;
 
   connectedCallback() {
     super.connectedCallback();
-    new AdoptedStyleSheetsConverter(this, { id: this.templateId });
+    new AdoptedStyleSheetsConverter(this, { templateEl: this.templateId });
   }
 
   protected render() {
-    return html`${templateContentWithFallback({ id: this.templateId })}`;
+    return html`${templateContentWithFallback({ templateEl: this.templateId })}`;
   }
 }

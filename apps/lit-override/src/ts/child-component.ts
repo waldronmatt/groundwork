@@ -1,8 +1,8 @@
 import { LitElement, css, html } from 'lit';
-import { property } from 'lit/decorators.js';
 import { EmitConnectedCallback } from '@waldronmatt/lit-override/src/mixins/index.js';
 import { templateContentWithFallback } from '@waldronmatt/lit-override/src/directives/index.js';
 import { AdoptedStyleSheetsConverter } from '@waldronmatt/lit-override/src/controllers/index.js';
+import { queryTemplateById } from '@waldronmatt/lit-override/src/decorators/index.js';
 
 export class ChildComponent extends EmitConnectedCallback(LitElement) {
   static styles = css`
@@ -17,12 +17,12 @@ export class ChildComponent extends EmitConnectedCallback(LitElement) {
     }
   `;
 
-  @property({ reflect: true, type: String })
-  templateId!: string;
+  @queryTemplateById()
+  templateId!: HTMLTemplateElement | null;
 
   connectedCallback() {
     super.connectedCallback();
-    new AdoptedStyleSheetsConverter(this, { id: this.templateId });
+    new AdoptedStyleSheetsConverter(this, { templateEl: this.templateId });
   }
 
   markup() {
@@ -34,7 +34,7 @@ export class ChildComponent extends EmitConnectedCallback(LitElement) {
   }
 
   protected render() {
-    return html`${templateContentWithFallback({ fallback: this.markup(), id: this.templateId })}`;
+    return html`${templateContentWithFallback({ fallback: this.markup(), templateEl: this.templateId })}`;
   }
 }
 

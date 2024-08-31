@@ -47,7 +47,7 @@ export const EmitConnectedCallback = <T extends Constructor<LitElement>>(superCl
           bubbles: true,
           composed: true,
           cancelable: false,
-          detail: { name: this.constructor.name, isConnected: this.isConnected },
+          detail: { ...childInfo },
         });
 
         this.dispatchEvent(event);

@@ -2,7 +2,7 @@ import { LitElement, ReactiveController, ReactiveControllerHost } from 'lit';
 
 export interface AdoptedStyleSheetsConverterParams {
   clearStyles?: boolean;
-  id?: string;
+  templateEl?: HTMLTemplateElement | null;
 }
 
 /**
@@ -12,26 +12,30 @@ export interface AdoptedStyleSheetsConverterParams {
  * and adds it to the component's `adoptedStyleSheets`.
  *
  * @param clearStyles replace or preserve original styles. Defaults to `false`.
- * @param id unique identifier that points to the id of a `template` element. Defaults to empty string.
+ * @param templateEl a `template` element. Defaults to null.
  */
 export class AdoptedStyleSheetsConverter implements ReactiveController {
   host: ReactiveControllerHost;
 
-  private _template: HTMLTemplateElement | null = null;
+  clearStyles: AdoptedStyleSheetsConverterParams['clearStyles'];
 
-  clearStyles: boolean;
+  templateEl: AdoptedStyleSheetsConverterParams['templateEl'];
 
-  id: string;
+  _shadowRoot: ShadowRoot;
 
-  constructor(host: ReactiveControllerHost, { clearStyles = false, id = '' }: AdoptedStyleSheetsConverterParams = {}) {
+  constructor(
+    host: ReactiveControllerHost,
+    { clearStyles = false, templateEl = null }: AdoptedStyleSheetsConverterParams = {},
+  ) {
     this.host = host;
     this.clearStyles = clearStyles;
-    this.id = id;
+    this.templateEl = templateEl;
+    this._shadowRoot = (this.host as LitElement).renderRoot as ShadowRoot;
+
     this.host.addController(this);
   }
 
   hostConnected() {
-    this._template = this.getTemplateElement();
     this.updateStylesheet();
   }
 
@@ -41,43 +45,35 @@ export class AdoptedStyleSheetsConverter implements ReactiveController {
     this.removeComponentStyleTag();
   }
 
-  private getTemplateElement(): HTMLTemplateElement | null {
-    return document.querySelector(`template${this.id ? '#' + this.id : ''}`) || document.querySelector('template');
-  }
+  private updateStylesheet() {
+    if (!this.templateEl) {
+      return;
+    }
 
-  private removeComponentStyleTag() {
-    const shadowRoot = (this.host as LitElement).renderRoot;
-    const styleElement = shadowRoot.querySelector('style');
+    const styleElement = this.templateEl.content.querySelector('style');
     if (!styleElement) {
       return;
     }
 
-    shadowRoot.removeChild(styleElement);
+    this.setAdoptedStyleSheets(styleElement);
   }
 
-  private handleAdoptedStyleSheets(styleElement: HTMLStyleElement) {
-    const litElement = this.host as LitElement;
-    const shadowRoot = litElement.renderRoot as ShadowRoot;
+  private setAdoptedStyleSheets(styleElement: HTMLStyleElement) {
     const styleContent = styleElement.textContent || '';
-
     const newStyleSheet = new CSSStyleSheet();
     newStyleSheet.replaceSync(styleContent);
 
-    shadowRoot.adoptedStyleSheets = this.clearStyles
+    this._shadowRoot.adoptedStyleSheets = this.clearStyles
       ? [newStyleSheet]
-      : [...shadowRoot.adoptedStyleSheets, newStyleSheet];
+      : [...this._shadowRoot.adoptedStyleSheets, newStyleSheet];
   }
 
-  private updateStylesheet() {
-    if (!this._template) {
-      return;
-    }
-
-    const styleElement = this._template.content.querySelector('style');
+  private removeComponentStyleTag() {
+    const styleElement = this._shadowRoot.querySelector('style');
     if (!styleElement) {
       return;
     }
 
-    this.handleAdoptedStyleSheets(styleElement);
+    this._shadowRoot.removeChild(styleElement);
   }
 }

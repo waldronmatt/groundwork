@@ -6,8 +6,6 @@ import { render } from 'lit-html';
  *
  * @param elements iterable of elements to apply markup to
  * @param template TemplateResult
- *
- * **Note**: Only static markdown is supported.
  */
 export const injectTemplate = (elements: NodeListOf<Element> | Array<Element>, template: TemplateResult): void => {
   if (!elements || !elements.length || !template) {

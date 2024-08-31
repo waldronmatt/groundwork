@@ -28,6 +28,14 @@
           "name": "*",
           "declaration": {
             "name": "*",
+            "package": "./decorators/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
             "package": "./directives/index.js"
           }
         },
@@ -101,10 +109,8 @@
               "kind": "field",
               "name": "templateId",
               "type": {
-                "text": "string"
-              },
-              "attribute": "templateId",
-              "reflects": true
+                "text": "HTMLTemplateElement | null"
+              }
             },
             {
               "kind": "field",
@@ -149,14 +155,19 @@
               "name": "connected-callback"
             }
           ],
-          "attributes": [
+          "mixins": [
             {
-              "name": "templateId",
-              "type": {
-                "text": "string"
-              },
-              "fieldName": "templateId"
-            },
+              "name": "EmitConnectedCallback",
+              "module": "/src/mixins/emit-connected-callback.js"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "lit-override",
+          "customElement": true,
+          "attributes": [
             {
               "name": "emitConnectedCallback",
               "type": {
@@ -177,19 +188,7 @@
                 "module": "src/mixins/emit-connected-callback.ts"
               }
             }
-          ],
-          "mixins": [
-            {
-              "name": "EmitConnectedCallback",
-              "module": "/src/mixins/emit-connected-callback.js"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit"
-          },
-          "tagName": "lit-override",
-          "customElement": true
+          ]
         }
       ],
       "exports": [
@@ -253,28 +252,27 @@
             },
             {
               "kind": "field",
-              "name": "_template",
-              "type": {
-                "text": "HTMLTemplateElement | null"
-              },
-              "privacy": "private",
-              "default": "null"
-            },
-            {
-              "kind": "field",
               "name": "clearStyles",
               "type": {
-                "text": "boolean"
+                "text": "AdoptedStyleSheetsConverterParams['clearStyles']"
               },
               "default": "clearStyles"
             },
             {
               "kind": "field",
-              "name": "id",
+              "name": "templateEl",
               "type": {
-                "text": "string"
+                "text": "AdoptedStyleSheetsConverterParams['templateEl']"
               },
-              "default": "id"
+              "default": "templateEl"
+            },
+            {
+              "kind": "field",
+              "name": "_shadowRoot",
+              "type": {
+                "text": "ShadowRoot"
+              },
+              "default": "(this.host as LitElement).renderRoot"
             },
             {
               "kind": "method",
@@ -286,22 +284,12 @@
             },
             {
               "kind": "method",
-              "name": "getTemplateElement",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "HTMLTemplateElement | null"
-                }
-              }
-            },
-            {
-              "kind": "method",
-              "name": "removeComponentStyleTag",
+              "name": "updateStylesheet",
               "privacy": "private"
             },
             {
               "kind": "method",
-              "name": "handleAdoptedStyleSheets",
+              "name": "setAdoptedStyleSheets",
               "privacy": "private",
               "parameters": [
                 {
@@ -314,7 +302,7 @@
             },
             {
               "kind": "method",
-              "name": "updateStylesheet",
+              "name": "removeComponentStyleTag",
               "privacy": "private"
             }
           ]
@@ -348,6 +336,55 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/decorators/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./query-template-by-id.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/decorators/query-template-by-id.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "queryTemplateById",
+          "parameters": [
+            {
+              "name": "{ fallback = false }",
+              "default": "{}",
+              "type": {
+                "text": "{ fallback?: boolean }"
+              }
+            },
+            {
+              "description": "gets a template element if an id is not provided (not cached). Defaults to `false`.",
+              "name": "fallback"
+            }
+          ],
+          "description": "queryTemplateById\n\nGets a template element by id that is provided to the `templateId` property.\nWill cache the template element on successful query."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "queryTemplateById",
+          "declaration": {
+            "name": "queryTemplateById",
+            "module": "src/decorators/query-template-by-id.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/directives/index.ts",
       "declarations": [],
       "exports": [
@@ -369,35 +406,7 @@
           "kind": "class",
           "description": "",
           "name": "TemplateContentWithFallbackDirective",
-          "members": [
-            {
-              "kind": "field",
-              "name": "_template",
-              "type": {
-                "text": "HTMLTemplateElement | null"
-              },
-              "privacy": "private",
-              "default": "null"
-            },
-            {
-              "kind": "method",
-              "name": "getTemplateElement",
-              "privacy": "private",
-              "return": {
-                "type": {
-                  "text": "HTMLTemplateElement | null"
-                }
-              },
-              "parameters": [
-                {
-                  "name": "id",
-                  "type": {
-                    "text": "string"
-                  }
-                }
-              ]
-            }
-          ],
+          "members": [],
           "superclass": {
             "name": "Directive",
             "package": "lit/directive.js"
@@ -413,8 +422,8 @@
               "name": "fallback"
             },
             {
-              "description": "unique identifier that points to the id of a `template` element. Defaults to empty string.",
-              "name": "id"
+              "description": "a `template` element. Defaults to null.",
+              "name": "templateEl"
             }
           ]
         }
@@ -583,7 +592,7 @@
               "type": {
                 "text": "TemplateResult"
               },
-              "description": "TemplateResult\n\n**Note**: Only static markdown is supported."
+              "description": "TemplateResult"
             }
           ],
           "description": "Applies the given template to the `shadowRoot` of elements."

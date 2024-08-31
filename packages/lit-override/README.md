@@ -83,18 +83,27 @@ import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
 import { templateContentWithFallback } from '@waldronmatt/lit-override/directives/template-content-with-fallback.js';
 import { AdoptedStyleSheetsConverter } from '@waldronmatt/lit-override/controllers/adopted-stylesheets-converter.js';
+import { queryTemplateById } from '@waldronmatt/lit-override/decorators/query-template-by-id.js';
 
 export class ChildComponent extends LitElement {
-  @property({ reflect: true, type: String })
-  templateId!: string;
+  @queryTemplateById({ fallback: true })
+  templateId!: HTMLTemplateElement | null;
 
   connectedCallback() {
     super.connectedCallback();
-    new AdoptedStyleSheetsConverter(this, { id: this.templateId });
+    new AdoptedStyleSheetsConverter(this, {
+      clearStyes: true,
+      templateEl: this.templateId,
+    });
   }
 
   protected render() {
-    return html`${templateContentWithFallback({ fallback: html`<p>Default markup</p>`, id: this.templateId })}`;
+    return html`
+      ${templateContentWithFallback({
+        fallback: html`<p>Default markup</p>`,
+        templateEl: this.templateId,
+      })}
+    `;
   }
 }
 ```

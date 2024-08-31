@@ -25,11 +25,11 @@
     </template>
     <h1>Styles slotted from the light dom and markup applied by the host app!</h1>
     <host-app>
-      <child-component id="childTemplate">
+      <child-component templateId="childTemplate">
         <h3 slot="heading">A child component heading from a Lit template in the <em>host app</em>!</h3>
         <p slot="sub-heading">A child component paragraph from a Lit template in the <em>host app</em>.</p>
       </child-component>
-      <lit-override id="childTemplate">
+      <lit-override templateId="childTemplate">
         <h3 slot="heading">A lit override component heading from a Lit template in the <em>host app</em>!</h3>
         <p slot="sub-heading">A lit override component paragraph from a Lit template in the <em>host app</em>.</p>
       </lit-override>
