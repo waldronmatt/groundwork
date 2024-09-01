@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit';
 import { EmitConnectedCallback } from '../mixins/emit-connected-callback.js';
 import { templateContentWithFallback } from '../directives/template-content-with-fallback.js';
 import { AdoptedStyleSheetsConverter } from '../controllers/adopted-stylesheets-converter.js';
-import { queryTemplateById } from '../decorators/query-template-by-id.js';
+import { queryTemplateById, TemplateIdProperty } from '../decorators/query-template-by-id.js';
 
 /**
  * LitOverride - `<lit-override>`
@@ -17,7 +17,7 @@ import { queryTemplateById } from '../decorators/query-template-by-id.js';
  */
 export class LitOverride extends EmitConnectedCallback(LitElement) {
   @queryTemplateById({ fallback: true })
-  templateId!: HTMLTemplateElement | null;
+  templateId!: TemplateIdProperty['templateIdGetter'];
 
   connectedCallback() {
     super.connectedCallback();

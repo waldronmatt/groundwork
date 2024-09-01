@@ -1,9 +1,14 @@
 import { property } from 'lit/decorators.js';
 import { ReactiveElement } from 'lit';
 
+export interface TemplateIdProperty {
+  get templateIdGetter(): HTMLTemplateElement | null;
+  set templateIdSetter(value: string | null);
+}
+
 interface ExtendedElement extends ReactiveElement {
-  [key: symbol]: string | null;
-  _templateCache?: Record<string, HTMLTemplateElement | null>;
+  [key: symbol]: TemplateIdProperty['templateIdSetter'];
+  _templateCache?: Record<string, TemplateIdProperty['templateIdGetter']>;
 }
 
 export interface QueryTemplateByIdParams {
@@ -25,7 +30,7 @@ export const queryTemplateById = ({ fallback = false }: QueryTemplateByIdParams 
     property({ reflect: true, type: String })(proto, propName);
 
     Object.defineProperty(proto, 'templateId', {
-      get(this: ExtendedElement): HTMLTemplateElement | null {
+      get(this: ExtendedElement): TemplateIdProperty['templateIdGetter'] {
         const id = this[internalKey];
 
         if (!this._templateCache) {
@@ -38,7 +43,6 @@ export const queryTemplateById = ({ fallback = false }: QueryTemplateByIdParams 
 
         if (typeof id === 'string' && id) {
           const templateElement = document.querySelector(`template#${id}`) as HTMLTemplateElement | null;
-
           if (!templateElement) {
             console.error(`Template id ${id} could not be found`);
             return null;
@@ -50,12 +54,15 @@ export const queryTemplateById = ({ fallback = false }: QueryTemplateByIdParams 
 
         return fallback ? document.querySelector('template') : null;
       },
-      set(this: ExtendedElement, value: string | null) {
+      set(this: ExtendedElement, value: TemplateIdProperty['templateIdSetter']) {
+        const oldValue = this[internalKey];
         this[internalKey] = value;
 
-        if (this._templateCache && value) {
-          delete this._templateCache[value];
+        if (this._templateCache && oldValue) {
+          delete this._templateCache[oldValue];
         }
+
+        this.requestUpdate('templateId', oldValue);
       },
       enumerable: true,
       configurable: true,

@@ -74,6 +74,30 @@
 | `js`                        | `default`      | LitOverride | src/components/lit-override.ts            |                             |
 | `custom-element-definition` | `lit-override` | LitOverride | /src/components/lit-override-component.js |                             |
 
+## `src/decorators/index.ts`:
+
+### Exports
+
+| Kind | Name | Declaration | Module | Package                   |
+| ---- | ---- | ----------- | ------ | ------------------------- |
+| `js` | `*`  | \*          |        | ./query-template-by-id.js |
+
+## `src/decorators/query-template-by-id.ts`:
+
+### Functions
+
+| Name                | Description                                                                                                                                                        | Parameters                                                | Return |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------- | ------ |
+| `queryTemplateById` | queryTemplateById&#xA;&#xA;Gets a template element by id that is provided to the \`templateId\` property.&#xA;Will cache the template element on successful query. | `{ fallback = false }: QueryTemplateByIdParams, fallback` |        |
+
+<hr/>
+
+### Exports
+
+| Kind | Name                | Declaration       | Module                                 | Package |
+| ---- | ------------------- | ----------------- | -------------------------------------- | ------- |
+| `js` | `queryTemplateById` | queryTemplateById | src/decorators/query-template-by-id.ts |         |
+
 ## `src/controllers/adopted-stylesheets-converter.ts`:
 
 ### class: `AdoptedStyleSheetsConverter`
@@ -133,30 +157,6 @@
 | ---- | -------------------------------------- | ------------------------------------ | ------------------------------------------------ | ------- |
 | `js` | `templateContentWithFallback`          | templateContentWithFallback          | src/directives/template-content-with-fallback.ts |         |
 | `js` | `TemplateContentWithFallbackDirective` | TemplateContentWithFallbackDirective | src/directives/template-content-with-fallback.ts |         |
-
-## `src/decorators/index.ts`:
-
-### Exports
-
-| Kind | Name | Declaration | Module | Package                   |
-| ---- | ---- | ----------- | ------ | ------------------------- |
-| `js` | `*`  | \*          |        | ./query-template-by-id.js |
-
-## `src/decorators/query-template-by-id.ts`:
-
-### Functions
-
-| Name                | Description                                                                                                                                                        | Parameters                                                | Return |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------- | ------ |
-| `queryTemplateById` | queryTemplateById&#xA;&#xA;Gets a template element by id that is provided to the \`templateId\` property.&#xA;Will cache the template element on successful query. | `{ fallback = false }: QueryTemplateByIdParams, fallback` |        |
-
-<hr/>
-
-### Exports
-
-| Kind | Name                | Declaration       | Module                                 | Package |
-| ---- | ------------------- | ----------------- | -------------------------------------- | ------- |
-| `js` | `queryTemplateById` | queryTemplateById | src/decorators/query-template-by-id.ts |         |
 
 ## `src/mixins/emit-connected-callback.ts`:
 

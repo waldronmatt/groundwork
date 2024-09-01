@@ -228,6 +228,55 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/decorators/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./query-template-by-id.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/decorators/query-template-by-id.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "queryTemplateById",
+          "parameters": [
+            {
+              "name": "{ fallback = false }",
+              "default": "{}",
+              "type": {
+                "text": "QueryTemplateByIdParams"
+              }
+            },
+            {
+              "description": "gets a template element if an id is not provided (not cached). Defaults to `false`.",
+              "name": "fallback"
+            }
+          ],
+          "description": "queryTemplateById\n\nGets a template element by id that is provided to the `templateId` property.\nWill cache the template element on successful query."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "queryTemplateById",
+          "declaration": {
+            "name": "queryTemplateById",
+            "module": "src/decorators/query-template-by-id.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/controllers/adopted-stylesheets-converter.ts",
       "declarations": [
         {
@@ -387,55 +436,6 @@
           "declaration": {
             "name": "TemplateContentWithFallbackDirective",
             "module": "src/directives/template-content-with-fallback.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/decorators/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./query-template-by-id.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/decorators/query-template-by-id.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "queryTemplateById",
-          "parameters": [
-            {
-              "name": "{ fallback = false }",
-              "default": "{}",
-              "type": {
-                "text": "QueryTemplateByIdParams"
-              }
-            },
-            {
-              "description": "gets a template element if an id is not provided (not cached). Defaults to `false`.",
-              "name": "fallback"
-            }
-          ],
-          "description": "queryTemplateById\n\nGets a template element by id that is provided to the `templateId` property.\nWill cache the template element on successful query."
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "queryTemplateById",
-          "declaration": {
-            "name": "queryTemplateById",
-            "module": "src/decorators/query-template-by-id.ts"
           }
         }
       ]

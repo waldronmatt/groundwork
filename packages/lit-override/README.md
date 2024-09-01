@@ -80,14 +80,13 @@ Add the following to the component you want to override styles and markup on:
 
 ```ts
 import { LitElement, html } from 'lit';
-import { property } from 'lit/decorators.js';
 import { templateContentWithFallback } from '@waldronmatt/lit-override/directives/template-content-with-fallback.js';
 import { AdoptedStyleSheetsConverter } from '@waldronmatt/lit-override/controllers/adopted-stylesheets-converter.js';
-import { queryTemplateById } from '@waldronmatt/lit-override/decorators/query-template-by-id.js';
+import { queryTemplateById, TemplateIdProperty } from '@waldronmatt/lit-override/decorators/query-template-by-id.js';
 
 export class ChildComponent extends LitElement {
   @queryTemplateById({ fallback: true })
-  templateId!: HTMLTemplateElement | null;
+  templateId!: TemplateIdProperty['templateIdGetter'];
 
   connectedCallback() {
     super.connectedCallback();
@@ -128,6 +127,26 @@ Set `templateId` on `child-component` to point to the template from which to add
     </child-component>
   </host-app>
 </body>
+```
+
+**Note**: You can assign `templateId` an id that references a different template programtically using type assertion:
+
+`child-component.ts`
+
+```ts
+import { LitElement } from 'lit';
+import { queryTemplateById, TemplateIdProperty } from '@waldronmatt/lit-override/decorators/query-template-by-id.js';
+
+export class ChildComponent extends LitElement {
+  @queryTemplateById({ fallback: true })
+  templateId!: TemplateIdProperty['templateIdGetter'];
+
+  connectedCallback() {
+    super.connectedCallback();
+
+    (this.templateId as TemplateIdProperty['templateIdSetter']) = 'otherChildTemplate';
+  }
+}
 ```
 
 ### Lit Override Component
