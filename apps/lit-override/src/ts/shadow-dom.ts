@@ -23,7 +23,7 @@ export class HostApp extends LitElement {
   private renderMarkupOverride() {
     const message = 'Hello world';
     return html`
-      <p>Templating support from lit-html: ${message}</p>
+      <p>Templating support from lit-html: ${message}!</p>
       <slot name="heading"></slot>
       <slot name="sub-heading"></slot>
     `;

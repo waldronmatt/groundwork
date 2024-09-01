@@ -11,6 +11,45 @@
 | `js` | `*`  | \*          |        | ./mixins/index.js      |
 | `js` | `*`  | \*          |        | ./utils/index.js       |
 
+## `src/controllers/adopted-stylesheets-converter.ts`:
+
+### class: `AdoptedStyleSheetsConverter`
+
+#### Fields
+
+| Name          | Privacy | Type                                               | Default                                | Description | Inherited From |
+| ------------- | ------- | -------------------------------------------------- | -------------------------------------- | ----------- | -------------- |
+| `host`        |         | `ReactiveControllerHost`                           | `host`                                 |             |                |
+| `clearStyles` |         | `AdoptedStyleSheetsConverterParams['clearStyles']` | `clearStyles`                          |             |                |
+| `templateEl`  |         | `AdoptedStyleSheetsConverterParams['templateEl']`  | `templateEl`                           |             |                |
+| `_shadowRoot` |         | `ShadowRoot`                                       | `(this.host as LitElement).renderRoot` |             |                |
+
+#### Methods
+
+| Name                      | Privacy | Description | Parameters                       | Return | Inherited From |
+| ------------------------- | ------- | ----------- | -------------------------------- | ------ | -------------- |
+| `hostConnected`           |         |             |                                  |        |                |
+| `hostUpdated`             |         |             |                                  |        |                |
+| `updateStylesheet`        | private |             |                                  |        |                |
+| `setAdoptedStyleSheets`   | private |             | `styleElement: HTMLStyleElement` |        |                |
+| `removeComponentStyleTag` | private |             |                                  |        |                |
+
+<hr/>
+
+### Exports
+
+| Kind | Name                          | Declaration                 | Module                                           | Package |
+| ---- | ----------------------------- | --------------------------- | ------------------------------------------------ | ------- |
+| `js` | `AdoptedStyleSheetsConverter` | AdoptedStyleSheetsConverter | src/controllers/adopted-stylesheets-converter.ts |         |
+
+## `src/controllers/index.ts`:
+
+### Exports
+
+| Kind | Name | Declaration | Module | Package                            |
+| ---- | ---- | ----------- | ------ | ---------------------------------- |
+| `js` | `*`  | \*          |        | ./adopted-stylesheets-converter.js |
+
 ## `src/components/index.ts`:
 
 ### Exports
@@ -74,6 +113,27 @@
 | `js`                        | `default`      | LitOverride | src/components/lit-override.ts            |                             |
 | `custom-element-definition` | `lit-override` | LitOverride | /src/components/lit-override-component.js |                             |
 
+## `src/directives/index.ts`:
+
+### Exports
+
+| Kind | Name | Declaration | Module | Package                             |
+| ---- | ---- | ----------- | ------ | ----------------------------------- |
+| `js` | `*`  | \*          |        | ./template-content-with-fallback.js |
+
+## `src/directives/template-content-with-fallback.ts`:
+
+### class: `TemplateContentWithFallbackDirective`
+
+<hr/>
+
+### Exports
+
+| Kind | Name                                   | Declaration                          | Module                                           | Package |
+| ---- | -------------------------------------- | ------------------------------------ | ------------------------------------------------ | ------- |
+| `js` | `templateContentWithFallback`          | templateContentWithFallback          | src/directives/template-content-with-fallback.ts |         |
+| `js` | `TemplateContentWithFallbackDirective` | TemplateContentWithFallbackDirective | src/directives/template-content-with-fallback.ts |         |
+
 ## `src/decorators/index.ts`:
 
 ### Exports
@@ -97,66 +157,6 @@
 | Kind | Name                | Declaration       | Module                                 | Package |
 | ---- | ------------------- | ----------------- | -------------------------------------- | ------- |
 | `js` | `queryTemplateById` | queryTemplateById | src/decorators/query-template-by-id.ts |         |
-
-## `src/controllers/adopted-stylesheets-converter.ts`:
-
-### class: `AdoptedStyleSheetsConverter`
-
-#### Fields
-
-| Name          | Privacy | Type                                               | Default                                | Description | Inherited From |
-| ------------- | ------- | -------------------------------------------------- | -------------------------------------- | ----------- | -------------- |
-| `host`        |         | `ReactiveControllerHost`                           | `host`                                 |             |                |
-| `clearStyles` |         | `AdoptedStyleSheetsConverterParams['clearStyles']` | `clearStyles`                          |             |                |
-| `templateEl`  |         | `AdoptedStyleSheetsConverterParams['templateEl']`  | `templateEl`                           |             |                |
-| `_shadowRoot` |         | `ShadowRoot`                                       | `(this.host as LitElement).renderRoot` |             |                |
-
-#### Methods
-
-| Name                      | Privacy | Description | Parameters                       | Return | Inherited From |
-| ------------------------- | ------- | ----------- | -------------------------------- | ------ | -------------- |
-| `hostConnected`           |         |             |                                  |        |                |
-| `hostUpdated`             |         |             |                                  |        |                |
-| `updateStylesheet`        | private |             |                                  |        |                |
-| `setAdoptedStyleSheets`   | private |             | `styleElement: HTMLStyleElement` |        |                |
-| `removeComponentStyleTag` | private |             |                                  |        |                |
-
-<hr/>
-
-### Exports
-
-| Kind | Name                          | Declaration                 | Module                                           | Package |
-| ---- | ----------------------------- | --------------------------- | ------------------------------------------------ | ------- |
-| `js` | `AdoptedStyleSheetsConverter` | AdoptedStyleSheetsConverter | src/controllers/adopted-stylesheets-converter.ts |         |
-
-## `src/controllers/index.ts`:
-
-### Exports
-
-| Kind | Name | Declaration | Module | Package                            |
-| ---- | ---- | ----------- | ------ | ---------------------------------- |
-| `js` | `*`  | \*          |        | ./adopted-stylesheets-converter.js |
-
-## `src/directives/index.ts`:
-
-### Exports
-
-| Kind | Name | Declaration | Module | Package                             |
-| ---- | ---- | ----------- | ------ | ----------------------------------- |
-| `js` | `*`  | \*          |        | ./template-content-with-fallback.js |
-
-## `src/directives/template-content-with-fallback.ts`:
-
-### class: `TemplateContentWithFallbackDirective`
-
-<hr/>
-
-### Exports
-
-| Kind | Name                                   | Declaration                          | Module                                           | Package |
-| ---- | -------------------------------------- | ------------------------------------ | ------------------------------------------------ | ------- |
-| `js` | `templateContentWithFallback`          | templateContentWithFallback          | src/directives/template-content-with-fallback.ts |         |
-| `js` | `TemplateContentWithFallbackDirective` | TemplateContentWithFallbackDirective | src/directives/template-content-with-fallback.ts |         |
 
 ## `src/mixins/emit-connected-callback.ts`:
 

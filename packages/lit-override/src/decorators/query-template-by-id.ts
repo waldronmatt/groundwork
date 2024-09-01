@@ -25,6 +25,7 @@ export interface QueryTemplateByIdParams {
  */
 export const queryTemplateById = ({ fallback = false }: QueryTemplateByIdParams = {}) => {
   return <T extends ReactiveElement>(proto: T, propName: string) => {
+    // this is a 'wrapper' around a custom property accessor: https://lit.dev/docs/components/properties/#accessors
     const internalKey = Symbol(`_${String(propName)}`);
 
     property({ reflect: true, type: String })(proto, propName);

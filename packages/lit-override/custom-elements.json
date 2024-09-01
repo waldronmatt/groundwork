@@ -77,6 +77,107 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/controllers/adopted-stylesheets-converter.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "AdoptedStyleSheetsConverter\n\nDetects a `style` tag inside a `template` element from the light DOM, converts the styles,\nand adds it to the component's `adoptedStyleSheets`.",
+          "name": "AdoptedStyleSheetsConverter",
+          "members": [
+            {
+              "kind": "field",
+              "name": "host",
+              "type": {
+                "text": "ReactiveControllerHost"
+              },
+              "default": "host"
+            },
+            {
+              "kind": "field",
+              "name": "clearStyles",
+              "type": {
+                "text": "AdoptedStyleSheetsConverterParams['clearStyles']"
+              },
+              "default": "clearStyles"
+            },
+            {
+              "kind": "field",
+              "name": "templateEl",
+              "type": {
+                "text": "AdoptedStyleSheetsConverterParams['templateEl']"
+              },
+              "default": "templateEl"
+            },
+            {
+              "kind": "field",
+              "name": "_shadowRoot",
+              "type": {
+                "text": "ShadowRoot"
+              },
+              "default": "(this.host as LitElement).renderRoot"
+            },
+            {
+              "kind": "method",
+              "name": "hostConnected"
+            },
+            {
+              "kind": "method",
+              "name": "hostUpdated"
+            },
+            {
+              "kind": "method",
+              "name": "updateStylesheet",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "setAdoptedStyleSheets",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "styleElement",
+                  "type": {
+                    "text": "HTMLStyleElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "removeComponentStyleTag",
+              "privacy": "private"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AdoptedStyleSheetsConverter",
+          "declaration": {
+            "name": "AdoptedStyleSheetsConverter",
+            "module": "src/controllers/adopted-stylesheets-converter.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/controllers/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./adopted-stylesheets-converter.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/index.ts",
       "declarations": [],
       "exports": [
@@ -228,156 +329,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/decorators/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./query-template-by-id.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/decorators/query-template-by-id.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "queryTemplateById",
-          "parameters": [
-            {
-              "name": "{ fallback = false }",
-              "default": "{}",
-              "type": {
-                "text": "QueryTemplateByIdParams"
-              }
-            },
-            {
-              "description": "gets a template element if an id is not provided (not cached). Defaults to `false`.",
-              "name": "fallback"
-            }
-          ],
-          "description": "queryTemplateById\n\nGets a template element by id that is provided to the `templateId` property.\nWill cache the template element on successful query."
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "queryTemplateById",
-          "declaration": {
-            "name": "queryTemplateById",
-            "module": "src/decorators/query-template-by-id.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/controllers/adopted-stylesheets-converter.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "AdoptedStyleSheetsConverter\n\nDetects a `style` tag inside a `template` element from the light DOM, converts the styles,\nand adds it to the component's `adoptedStyleSheets`.",
-          "name": "AdoptedStyleSheetsConverter",
-          "members": [
-            {
-              "kind": "field",
-              "name": "host",
-              "type": {
-                "text": "ReactiveControllerHost"
-              },
-              "default": "host"
-            },
-            {
-              "kind": "field",
-              "name": "clearStyles",
-              "type": {
-                "text": "AdoptedStyleSheetsConverterParams['clearStyles']"
-              },
-              "default": "clearStyles"
-            },
-            {
-              "kind": "field",
-              "name": "templateEl",
-              "type": {
-                "text": "AdoptedStyleSheetsConverterParams['templateEl']"
-              },
-              "default": "templateEl"
-            },
-            {
-              "kind": "field",
-              "name": "_shadowRoot",
-              "type": {
-                "text": "ShadowRoot"
-              },
-              "default": "(this.host as LitElement).renderRoot"
-            },
-            {
-              "kind": "method",
-              "name": "hostConnected"
-            },
-            {
-              "kind": "method",
-              "name": "hostUpdated"
-            },
-            {
-              "kind": "method",
-              "name": "updateStylesheet",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "setAdoptedStyleSheets",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "styleElement",
-                  "type": {
-                    "text": "HTMLStyleElement"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "removeComponentStyleTag",
-              "privacy": "private"
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "AdoptedStyleSheetsConverter",
-          "declaration": {
-            "name": "AdoptedStyleSheetsConverter",
-            "module": "src/controllers/adopted-stylesheets-converter.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/controllers/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./adopted-stylesheets-converter.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/directives/index.ts",
       "declarations": [],
       "exports": [
@@ -436,6 +387,55 @@
           "declaration": {
             "name": "TemplateContentWithFallbackDirective",
             "module": "src/directives/template-content-with-fallback.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/decorators/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./query-template-by-id.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/decorators/query-template-by-id.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "queryTemplateById",
+          "parameters": [
+            {
+              "name": "{ fallback = false }",
+              "default": "{}",
+              "type": {
+                "text": "QueryTemplateByIdParams"
+              }
+            },
+            {
+              "description": "gets a template element if an id is not provided (not cached). Defaults to `false`.",
+              "name": "fallback"
+            }
+          ],
+          "description": "queryTemplateById\n\nGets a template element by id that is provided to the `templateId` property.\nWill cache the template element on successful query."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "queryTemplateById",
+          "declaration": {
+            "name": "queryTemplateById",
+            "module": "src/decorators/query-template-by-id.ts"
           }
         }
       ]
