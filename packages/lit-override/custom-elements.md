@@ -31,18 +31,17 @@
 
 #### Fields
 
-| Name                    | Privacy | Type                          | Default | Description                                                                                  | Inherited From        |
-| ----------------------- | ------- | ----------------------------- | ------- | -------------------------------------------------------------------------------------------- | --------------------- |
-| `templateId`            |         | `HTMLTemplateElement \| null` |         |                                                                                              |                       |
-| `emitConnectedCallback` |         | `boolean`                     | `false` | Set prop to use \`connected-callback\` event. Defaults to \`false\`.                         | EmitConnectedCallback |
-| `onConnectedCallback`   |         | `function`                    |         | A callback function called when connected to the DOM.                                        | EmitConnectedCallback |
-| `id`                    |         | `string`                      |         | unique identifier that points to the id of a \`template\` element. Defaults to empty string. |                       |
+| Name                    | Privacy | Type       | Default | Description                                                                               | Inherited From        |
+| ----------------------- | ------- | ---------- | ------- | ----------------------------------------------------------------------------------------- | --------------------- |
+| `templateId`            |         | `string`   |         | Set an id referencing a \`template\` element. Defaults to a generic \`template\` element. |                       |
+| `emitConnectedCallback` |         | `boolean`  | `false` | Set prop to use \`connected-callback\` event. Defaults to \`false\`.                      | EmitConnectedCallback |
+| `onConnectedCallback`   |         | `function` |         | A callback function called when connected to the DOM.                                     | EmitConnectedCallback |
 
 #### Events
 
-| Name                 | Type | Description                                | Inherited From |
-| -------------------- | ---- | ------------------------------------------ | -------------- |
-| `connected-callback` |      | when \`emitConnectedCallback\` is \`true\` |                |
+| Name                 | Type | Description                                 | Inherited From |
+| -------------------- | ---- | ------------------------------------------- | -------------- |
+| `connected-callback` |      | when \`emitConnectedCallback\` is \`true\`. |                |
 
 #### Attributes
 
@@ -53,9 +52,9 @@
 
 #### Slots
 
-| Name                  | Description                                                     |
-| --------------------- | --------------------------------------------------------------- |
-| `` `<slot></slot>` `` | is rendered as fallback if \`\<template>\` element is not found |
+| Name                  | Description                                                      |
+| --------------------- | ---------------------------------------------------------------- |
+| `` `<slot></slot>` `` | is rendered as fallback if \`\<template>\` element is not found. |
 
 <hr/>
 
@@ -114,30 +113,6 @@
 | ---- | ---- | ----------- | ------ | ---------------------------------- |
 | `js` | `*`  | \*          |        | ./adopted-stylesheets-converter.js |
 
-## `src/decorators/index.ts`:
-
-### Exports
-
-| Kind | Name | Declaration | Module | Package                   |
-| ---- | ---- | ----------- | ------ | ------------------------- |
-| `js` | `*`  | \*          |        | ./query-template-by-id.js |
-
-## `src/decorators/query-template-by-id.ts`:
-
-### Functions
-
-| Name                | Description                                                                                                                                                        | Parameters                                               | Return |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | ------ |
-| `queryTemplateById` | queryTemplateById&#xA;&#xA;Gets a template element by id that is provided to the \`templateId\` property.&#xA;Will cache the template element on successful query. | `{ fallback = false }: { fallback?: boolean }, fallback` |        |
-
-<hr/>
-
-### Exports
-
-| Kind | Name                | Declaration       | Module                                 | Package |
-| ---- | ------------------- | ----------------- | -------------------------------------- | ------- |
-| `js` | `queryTemplateById` | queryTemplateById | src/decorators/query-template-by-id.ts |         |
-
 ## `src/directives/index.ts`:
 
 ### Exports
@@ -158,6 +133,30 @@
 | ---- | -------------------------------------- | ------------------------------------ | ------------------------------------------------ | ------- |
 | `js` | `templateContentWithFallback`          | templateContentWithFallback          | src/directives/template-content-with-fallback.ts |         |
 | `js` | `TemplateContentWithFallbackDirective` | TemplateContentWithFallbackDirective | src/directives/template-content-with-fallback.ts |         |
+
+## `src/decorators/index.ts`:
+
+### Exports
+
+| Kind | Name | Declaration | Module | Package                   |
+| ---- | ---- | ----------- | ------ | ------------------------- |
+| `js` | `*`  | \*          |        | ./query-template-by-id.js |
+
+## `src/decorators/query-template-by-id.ts`:
+
+### Functions
+
+| Name                | Description                                                                                                                                                        | Parameters                                                | Return |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------- | ------ |
+| `queryTemplateById` | queryTemplateById&#xA;&#xA;Gets a template element by id that is provided to the \`templateId\` property.&#xA;Will cache the template element on successful query. | `{ fallback = false }: QueryTemplateByIdParams, fallback` |        |
+
+<hr/>
+
+### Exports
+
+| Kind | Name                | Declaration       | Module                                 | Package |
+| ---- | ------------------- | ----------------- | -------------------------------------- | ------- |
+| `js` | `queryTemplateById` | queryTemplateById | src/decorators/query-template-by-id.ts |         |
 
 ## `src/mixins/emit-connected-callback.ts`:
 

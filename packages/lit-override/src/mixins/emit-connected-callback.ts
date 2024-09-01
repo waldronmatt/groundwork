@@ -19,7 +19,7 @@ export declare class EmitConnectedCallbackProps {
  * Enables your component to emit `connected-callback` if `emitConnectedCallback` prop is set.
  * Alternatively, use `onConnectedCallback` if performance is a concern.
  *
- * @fires connected-callback when `emitConnectedCallback` is `true`
+ * @fires connected-callback when `emitConnectedCallback` is `true`.
  * @property {boolean} emitConnectedCallback - Set prop to use `connected-callback` event. Defaults to `false`.
  * @property {function} onConnectedCallback - A callback function called when connected to the DOM.
  */

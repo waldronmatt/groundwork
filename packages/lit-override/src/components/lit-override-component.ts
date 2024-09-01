@@ -9,11 +9,11 @@ import { queryTemplateById } from '../decorators/query-template-by-id.js';
  *
  * A shell component for overriding styles and markup.
  *
- * @fires connected-callback when `emitConnectedCallback` is `true`
+ * @fires connected-callback when `emitConnectedCallback` is `true`.
  * @property {boolean} emitConnectedCallback - Set prop to use `connected-callback` event. Defaults to `false`.
  * @property {function} onConnectedCallback - A callback function called when connected to the DOM.
- * @property {string} id - unique identifier that points to the id of a `template` element. Defaults to empty string.
- * @slot `<slot></slot>` is rendered as fallback if `<template>` element is not found
+ * @property {string} templateId - Set an id referencing a `template` element. Defaults to a generic `template` element.
+ * @slot `<slot></slot>` is rendered as fallback if `<template>` element is not found.
  */
 export class LitOverride extends EmitConnectedCallback(LitElement) {
   @queryTemplateById({ fallback: true })

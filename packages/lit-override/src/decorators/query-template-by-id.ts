@@ -1,9 +1,13 @@
 import { property } from 'lit/decorators.js';
 import { ReactiveElement } from 'lit';
 
-export interface ExtendedElement extends ReactiveElement {
+interface ExtendedElement extends ReactiveElement {
   [key: symbol]: string | null;
   _templateCache?: Record<string, HTMLTemplateElement | null>;
+}
+
+export interface QueryTemplateByIdParams {
+  fallback?: boolean;
 }
 
 /**
@@ -14,7 +18,7 @@ export interface ExtendedElement extends ReactiveElement {
  *
  * @param fallback gets a template element if an id is not provided (not cached). Defaults to `false`.
  */
-export const queryTemplateById = ({ fallback = false }: { fallback?: boolean } = {}) => {
+export const queryTemplateById = ({ fallback = false }: QueryTemplateByIdParams = {}) => {
   return <T extends ReactiveElement>(proto: T, propName: string) => {
     const internalKey = Symbol(`_${String(propName)}`);
 
@@ -44,7 +48,7 @@ export const queryTemplateById = ({ fallback = false }: { fallback?: boolean } =
           return templateElement;
         }
 
-        return fallback ? (document.querySelector('template') as HTMLTemplateElement | null) : null;
+        return fallback ? document.querySelector('template') : null;
       },
       set(this: ExtendedElement, value: string | null) {
         this[internalKey] = value;
