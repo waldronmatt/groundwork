@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/waldronmatt/groundwork/compare/lit-override@2.2.0...lit-override@2.2.1) (2024-09-01)
+
+### Bug Fixes
+
+* **lit-override:** add decorator interface, naming cleanup, add const in markup example ([e7ec054](https://github.com/waldronmatt/groundwork/commit/e7ec054cfdaa93262fe35963072d8d0f3814668e)) - by @waldronmatt
+
 # [2.2.0](https://github.com/waldronmatt/groundwork/compare/lit-override@2.1.4...lit-override@2.2.0) (2024-08-31)
 
 ### Features
