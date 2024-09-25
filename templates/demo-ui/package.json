@@ -81,7 +81,7 @@
     "rimraf": "5.0.7",
     "tsconfig-config": "workspace:*",
     "typescript": "5.5.2",
-    "vite": "5.4.0",
+    "vite": "5.4.6",
     "vite-plugin-dts": "3.9.1",
     "vite-plugin-lib-inject-css": "1.3.0",
     "vite-plugin-static-copy": "1.0.5"
