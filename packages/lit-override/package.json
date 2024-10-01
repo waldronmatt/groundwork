@@ -67,7 +67,7 @@
     "lit-html": "3.1.4",
     "playwright": "1.45.0",
     "rimraf": "5.0.7",
-    "sinon": "17.0.1",
+    "sinon": "18.0.1",
     "tsconfig-config": "workspace:*",
     "tslib": "2.6.3",
     "tsup": "8.1.0",
