@@ -39,7 +39,7 @@ export class HostApp extends LitElement {
           @connected-callback=${(event: { target: HTMLElement; detail: EmitConnectedCallbackInfo }) => {
             console.log(`Component ${event.detail.name} is connected by event: ${event.detail.isConnected}`);
             injectStyles([event.target], this.applyStyleOverride);
-            injectTemplate([event.target], this.renderMarkupOverride());
+            injectTemplate([event.target], this.renderMarkupOverride);
           }}
         >
           <h3 slot="heading">This is a heading from the <em>host app</em>!</h3>
@@ -50,7 +50,7 @@ export class HostApp extends LitElement {
           .onConnectedCallback=${(thisChild: LitElement, childInfo: EmitConnectedCallbackInfo) => {
             console.log(`Component ${childInfo.name} is connected by callback: ${childInfo.isConnected}`);
             injectStyles([thisChild], this.applyStyleOverride);
-            injectTemplate([thisChild], this.renderMarkupOverride());
+            injectTemplate([thisChild], this.renderMarkupOverride);
           }}
         >
           <h3 slot="heading">This is a heading from the <em>host app</em>!</h3>
@@ -65,7 +65,7 @@ export class HostApp extends LitElement {
           @connected-callback=${(event: { target: HTMLElement; detail: EmitConnectedCallbackInfo }) => {
             console.log(`Component ${event.detail.name} is connected by event: ${event.detail.isConnected}`);
             injectStyles([event.target], this.applyStyleOverride);
-            injectTemplate([event.target], this.renderMarkupOverride());
+            injectTemplate([event.target], this.renderMarkupOverride);
           }}
         >
           <h3 slot="heading">This is a heading from the <em>host app</em>!</h3>
@@ -76,7 +76,7 @@ export class HostApp extends LitElement {
           .onConnectedCallback=${(thisChild: LitElement, childInfo: EmitConnectedCallbackInfo) => {
             console.log(`Component ${childInfo.name} is connected by callback: ${childInfo.isConnected}`);
             injectStyles([thisChild], this.applyStyleOverride);
-            injectTemplate([thisChild], this.renderMarkupOverride());
+            injectTemplate([thisChild], this.renderMarkupOverride);
           }}
         >
           <h3 slot="heading">This is a heading from the <em>host app</em>!</h3>

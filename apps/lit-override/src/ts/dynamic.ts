@@ -54,7 +54,7 @@ export class HostApp extends LitElement {
                         emitConnectedCallback
                         @connected-callback=${(event: { target: LitElement }) => {
                           injectStyles([event.target], this.applyStyleOverride);
-                          injectTemplate([event.target], this.renderMarkupOverride());
+                          injectTemplate([event.target], this.renderMarkupOverride);
                         }}
                       >
                         <h3 slot="heading">${item.name}</h3>
@@ -72,7 +72,7 @@ export class HostApp extends LitElement {
                         emitConnectedCallback
                         @connected-callback=${(event: { target: LitElement }) => {
                           injectStyles([event.target], this.applyStyleOverride);
-                          injectTemplate([event.target], this.renderMarkupOverride());
+                          injectTemplate([event.target], this.renderMarkupOverride);
                         }}
                       >
                         <h3 slot="heading">${item.name}</h3>

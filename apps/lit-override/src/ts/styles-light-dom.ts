@@ -15,7 +15,7 @@ export class HostApp extends LitElement {
     return html`
       <slot
         @slotchange=${(event: { target: HTMLSlotElement }) => {
-          injectTemplate(event.target.assignedElements(), this.renderMarkupOverride());
+          injectTemplate(event.target.assignedElements(), this.renderMarkupOverride);
         }}
       >
       </slot>
