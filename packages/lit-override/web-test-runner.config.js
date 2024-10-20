@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 
 export default {
   rootDir: '.',
-  files: ['src/components/lit-override.component.spec.ts', 'src/context/context.spec.ts'],
+  files: ['src/components/**/**.spec.ts', 'src/context/**/**.spec.ts'],
   concurrentBrowsers: 3,
   nodeResolve: {
     exportConditions: ['production', 'default'],

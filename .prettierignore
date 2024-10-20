@@ -3,3 +3,5 @@ coverage
 .nx
 pnpm-lock.yaml
 CHANGELOG.md
+packages/lit-override/custom-elements.json
+packages/lit-override/custom-elements.md
