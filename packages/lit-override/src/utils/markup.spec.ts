@@ -28,12 +28,12 @@ const createMockElement = (tagName: string, isCustom = false) => {
 };
 
 describe('injectTemplate', () => {
-  let overrideMarkup: TemplateResult;
+  let overrideMarkup: () => TemplateResult;
 
   beforeEach(() => {
     jest.resetModules();
 
-    overrideMarkup = html`<slot name="heading"></slot>`;
+    overrideMarkup = () => html`<slot name="heading"></slot>`;
   });
 
   afterEach(() => {
@@ -62,7 +62,7 @@ describe('injectTemplate', () => {
     const mockElement = createMockElement('mock-element', true);
     injectTemplate([mockElement], overrideMarkup);
     await customElements.whenDefined('mock-element');
-    expect(render).toHaveBeenCalledWith(overrideMarkup, mockElement.renderRoot);
+    expect(render).toHaveBeenCalledWith(overrideMarkup(), mockElement.renderRoot);
   });
 
   test('logs an error for failed component registration', async () => {

@@ -7,7 +7,10 @@ import { render } from 'lit-html';
  * @param elements iterable of elements to apply markup to
  * @param template TemplateResult
  */
-export const injectTemplate = (elements: NodeListOf<Element> | Array<Element>, template: TemplateResult): void => {
+export const injectTemplate = (
+  elements: NodeListOf<Element> | Array<Element>,
+  template: () => TemplateResult,
+): void => {
   if (!elements || !elements.length || !template) {
     return;
   }
@@ -23,7 +26,7 @@ export const injectTemplate = (elements: NodeListOf<Element> | Array<Element>, t
         .whenDefined(name)
         .then(() => {
           const shadowRoot = (element as LitElement).renderRoot;
-          render(template, shadowRoot);
+          render(template(), shadowRoot);
         })
         .catch((error) => {
           console.error(`There was an error with component registration: ${error}`);
