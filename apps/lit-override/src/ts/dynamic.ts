@@ -1,9 +1,10 @@
 import { html, css, LitElement } from 'lit';
 import { repeat } from 'lit/directives/repeat.js';
 import { until } from 'lit/directives/until.js';
-import { when } from 'lit/directives/when.js';
+import { choose } from 'lit/directives/choose.js';
 import { injectStyles, injectTemplate } from '@waldronmatt/lit-override/src/utils/index.js';
 import '@waldronmatt/lit-override/src/components/index.js';
+import '@waldronmatt/lit-override/src/context/index.js';
 import './child-component.js';
 
 export class HostApp extends LitElement {
@@ -43,37 +44,63 @@ export class HostApp extends LitElement {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             (item: any) => item.id,
             (item) =>
-              when(
-                item.id % 2 === 0,
-                () => {
-                  return html`
-                    <child-component
-                      emitConnectedCallback
-                      @connected-callback=${(event: { target: LitElement }) => {
-                        injectStyles([event.target], this.applyStyleOverride);
-                        injectTemplate([event.target], this.renderMarkupOverride());
-                      }}
-                    >
-                      <h3 slot="heading">${item.name}</h3>
-                      <p slot="sub-heading">${item.company.catchPhrase}</p>
-                    </child-component>
-                  `;
-                },
-                () => {
-                  return html`
-                    <lit-override
-                      emitConnectedCallback
-                      @connected-callback=${(event: { target: LitElement }) => {
-                        injectStyles([event.target], this.applyStyleOverride);
-                        injectTemplate([event.target], this.renderMarkupOverride());
-                      }}
-                    >
-                      <h3 slot="heading">${item.name}</h3>
-                      <p slot="sub-heading">${item.company.catchPhrase}</p>
-                    </lit-override>
-                  `;
-                },
-              ),
+              choose(item.id % 3, [
+                [
+                  0,
+                  () => html`
+                    <section>
+                      <h2>From Child Component:</h2>
+                      <child-component
+                        emitConnectedCallback
+                        @connected-callback=${(event: { target: LitElement }) => {
+                          injectStyles([event.target], this.applyStyleOverride);
+                          injectTemplate([event.target], this.renderMarkupOverride());
+                        }}
+                      >
+                        <h3 slot="heading">${item.name}</h3>
+                        <p slot="sub-heading">${item.company.catchPhrase}</p>
+                      </child-component>
+                    </section>
+                  `,
+                ],
+                [
+                  1,
+                  () => html`
+                    <section>
+                      <h2>From Lit Override:</h2>
+                      <lit-override
+                        emitConnectedCallback
+                        @connected-callback=${(event: { target: LitElement }) => {
+                          injectStyles([event.target], this.applyStyleOverride);
+                          injectTemplate([event.target], this.renderMarkupOverride());
+                        }}
+                      >
+                        <h3 slot="heading">${item.name}</h3>
+                        <p slot="sub-heading">${item.company.catchPhrase}</p>
+                      </lit-override>
+                    </section>
+                  `,
+                ],
+                [
+                  2,
+                  () => html`
+                    <section>
+                      <h2>From Context Provider:</h2>
+                      <lit-override-provider
+                        .override=${{
+                          styles: this.applyStyleOverride,
+                          markup: this.renderMarkupOverride,
+                        }}
+                      >
+                        <lit-override-consumer>
+                          <h3 slot="heading">${item.name}</h3>
+                          <p slot="sub-heading">${item.company.catchPhrase}</p>
+                        </lit-override-consumer>
+                      </lit-override-provider>
+                    </section>
+                  `,
+                ],
+              ]),
           )}`;
         }),
         html`<p>Loading...</p>`,
@@ -86,6 +113,7 @@ customElements.define('host-app', HostApp);
 
 declare global {
   interface HTMLElementTagNameMap {
+    // @ts-expect-error - ignore duplicate declaration warning
     'host-app': HostApp;
   }
 }

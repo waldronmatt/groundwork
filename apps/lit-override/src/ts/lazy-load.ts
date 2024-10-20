@@ -1,6 +1,6 @@
 document.getElementById('load-component')?.addEventListener('click', () => {
   // Dynamically import the web component
-  import('./lazy-loaded').then(() => {
+  import('./lazy-loaded.js').then(() => {
     // Once the component is loaded, you can create and add it to the DOM
     const container = document.getElementById('component-container');
     const component = document.createElement('host-app');

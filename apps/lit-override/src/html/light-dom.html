@@ -27,14 +27,20 @@
     </template>
     <h1>Overriding applied by the light dom!</h1>
     <host-app>
-      <child-component templateId="childTemplate">
-        <h3 slot="heading">A heading from a template in the <em>light dom</em>!</h3>
-        <p slot="sub-heading">A paragraph from a template in the <em>light dom</em>.</p>
-      </child-component>
-      <lit-override templateId="childTemplate">
-        <h3 slot="heading">A heading from a template in the <em>light dom</em>!</h3>
-        <p slot="sub-heading">A paragraph from a template in the <em>light dom</em>.</p>
-      </lit-override>
+      <section>
+        <h2>Child Component</h2>
+        <child-component templateId="childTemplate">
+          <h3 slot="heading">A heading from a template in the <em>light dom</em>!</h3>
+          <p slot="sub-heading">A paragraph from a template in the <em>light dom</em>.</p>
+        </child-component>
+      </section>
+      <section>
+        <h2>Lit Override</h2>
+        <lit-override templateId="childTemplate">
+          <h3 slot="heading">A heading from a template in the <em>light dom</em>!</h3>
+          <p slot="sub-heading">A paragraph from a template in the <em>light dom</em>.</p>
+        </lit-override>
+      </section>
     </host-app>
     <br />
     <a href="./index.html">Go Back</a>
