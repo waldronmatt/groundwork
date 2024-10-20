@@ -77,107 +77,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/controllers/adopted-stylesheets-converter.ts",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "AdoptedStyleSheetsConverter\n\nDetects a `style` tag inside a `template` element from the light DOM, converts the styles,\nand adds it to the component's `adoptedStyleSheets`.",
-          "name": "AdoptedStyleSheetsConverter",
-          "members": [
-            {
-              "kind": "field",
-              "name": "host",
-              "type": {
-                "text": "ReactiveControllerHost"
-              },
-              "default": "host"
-            },
-            {
-              "kind": "field",
-              "name": "clearStyles",
-              "type": {
-                "text": "AdoptedStyleSheetsConverterParams['clearStyles']"
-              },
-              "default": "clearStyles"
-            },
-            {
-              "kind": "field",
-              "name": "templateEl",
-              "type": {
-                "text": "AdoptedStyleSheetsConverterParams['templateEl']"
-              },
-              "default": "templateEl"
-            },
-            {
-              "kind": "field",
-              "name": "_shadowRoot",
-              "type": {
-                "text": "ShadowRoot"
-              },
-              "default": "(this.host as LitElement).renderRoot"
-            },
-            {
-              "kind": "method",
-              "name": "hostConnected"
-            },
-            {
-              "kind": "method",
-              "name": "hostUpdated"
-            },
-            {
-              "kind": "method",
-              "name": "updateStylesheet",
-              "privacy": "private"
-            },
-            {
-              "kind": "method",
-              "name": "setAdoptedStyleSheets",
-              "privacy": "private",
-              "parameters": [
-                {
-                  "name": "styleElement",
-                  "type": {
-                    "text": "HTMLStyleElement"
-                  }
-                }
-              ]
-            },
-            {
-              "kind": "method",
-              "name": "removeComponentStyleTag",
-              "privacy": "private"
-            }
-          ]
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "AdoptedStyleSheetsConverter",
-          "declaration": {
-            "name": "AdoptedStyleSheetsConverter",
-            "module": "src/controllers/adopted-stylesheets-converter.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/controllers/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./adopted-stylesheets-converter.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/index.ts",
       "declarations": [],
       "exports": [
@@ -329,6 +228,348 @@
     },
     {
       "kind": "javascript-module",
+      "path": "src/context/consumer-component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "LitOverrideConsumer - `<lit-override-consumer>`\n\nContext consumer of custom styles and markup. Renders `nothing` by default.\n\nExample:\n\n```js\nconst customStyles = css`\n ::slotted([slot='heading']) {\n   text-decoration: underline;\n }\n`;\n\nconst customMarkup = () => {\n return html`<slot name=\"heading\"></slot>`;\n};\n\nhtml`\n  <lit-override-provider\n   .override=${{ styles: customStyles, markup: customMarkup }}\n  >\n   <lit-override-consumer>\n     <h3 slot=\"heading\">Hello World!</h3>\n   </lit-override-consumer>\n  </lit-override-provider>\n`\n```",
+          "name": "LitOverrideConsumer",
+          "members": [
+            {
+              "kind": "field",
+              "name": "override",
+              "type": {
+                "text": "Partial<LitOverrideContextProps> | undefined"
+              },
+              "privacy": "public"
+            },
+            {
+              "kind": "method",
+              "name": "setAdoptedStyleSheets",
+              "privacy": "private"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "lit-override-consumer",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LitOverrideConsumer",
+          "declaration": {
+            "name": "LitOverrideConsumer",
+            "module": "src/context/consumer-component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/context/consumer.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./consumer-component.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "LitOverrideConsumer",
+            "module": "src/context/consumer.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "lit-override-consumer",
+          "declaration": {
+            "name": "LitOverrideConsumer",
+            "module": "/src/context/consumer-component.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/context/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./provider.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./consumer.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/context/key.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "litOverrideContext"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "litOverrideContext",
+          "declaration": {
+            "name": "litOverrideContext",
+            "module": "src/context/key.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/context/provider-component.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "LitOverrideProvider - `<lit-override-provider>`\n\nContext provider of custom styles and markup.",
+          "name": "LitOverrideProvider",
+          "slots": [
+            {
+              "description": "renders `<lit-override-consumer>`. Example: ```js const customStyles = css` ::slotted([slot='heading']) { text-decoration: underline; } `; const customMarkup = () => { return html`<slot name=\"heading\"></slot>`; }; html` <lit-override-provider .override=${{ styles: customStyles, markup: customMarkup }} > <lit-override-consumer> <h3 slot=\"heading\">Hello World!</h3> </lit-override-consumer> </lit-override-provider> ` ```",
+              "name": "`<slot></slot>`"
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "override",
+              "type": {
+                "text": "object"
+              },
+              "privacy": "public",
+              "default": "{}",
+              "description": "Set custom `styles` and `markup`."
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "lit-override-provider",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LitOverrideProvider",
+          "declaration": {
+            "name": "LitOverrideProvider",
+            "module": "src/context/provider-component.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/context/provider.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./provider-component.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "LitOverrideProvider",
+            "module": "src/context/provider.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "lit-override-provider",
+          "declaration": {
+            "name": "LitOverrideProvider",
+            "module": "/src/context/provider-component.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/controllers/adopted-stylesheets-converter.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "AdoptedStyleSheetsConverter\n\nDetects a `style` tag inside a `template` element from the light DOM, converts the styles,\nand adds it to the component's `adoptedStyleSheets`.",
+          "name": "AdoptedStyleSheetsConverter",
+          "members": [
+            {
+              "kind": "field",
+              "name": "host",
+              "type": {
+                "text": "ReactiveControllerHost"
+              },
+              "default": "host"
+            },
+            {
+              "kind": "field",
+              "name": "clearStyles",
+              "type": {
+                "text": "AdoptedStyleSheetsConverterParams['clearStyles']"
+              },
+              "default": "clearStyles"
+            },
+            {
+              "kind": "field",
+              "name": "templateEl",
+              "type": {
+                "text": "AdoptedStyleSheetsConverterParams['templateEl']"
+              },
+              "default": "templateEl"
+            },
+            {
+              "kind": "field",
+              "name": "_shadowRoot",
+              "type": {
+                "text": "ShadowRoot"
+              },
+              "default": "(this.host as LitElement).renderRoot"
+            },
+            {
+              "kind": "method",
+              "name": "hostConnected"
+            },
+            {
+              "kind": "method",
+              "name": "hostUpdated"
+            },
+            {
+              "kind": "method",
+              "name": "updateStylesheet",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "setAdoptedStyleSheets",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "styleElement",
+                  "type": {
+                    "text": "HTMLStyleElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "removeComponentStyleTag",
+              "privacy": "private"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AdoptedStyleSheetsConverter",
+          "declaration": {
+            "name": "AdoptedStyleSheetsConverter",
+            "module": "src/controllers/adopted-stylesheets-converter.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/controllers/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./adopted-stylesheets-converter.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/decorators/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./query-template-by-id.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/decorators/query-template-by-id.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "queryTemplateById",
+          "parameters": [
+            {
+              "name": "{ fallback = false }",
+              "default": "{}",
+              "type": {
+                "text": "QueryTemplateByIdParams"
+              }
+            },
+            {
+              "description": "gets a template element if an id is not provided (not cached). Defaults to `false`.",
+              "name": "fallback"
+            }
+          ],
+          "description": "queryTemplateById\n\nGets a template element by id that is provided to the `templateId` property.\nWill cache the template element on successful query."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "queryTemplateById",
+          "declaration": {
+            "name": "queryTemplateById",
+            "module": "src/decorators/query-template-by-id.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/directives/index.ts",
       "declarations": [],
       "exports": [
@@ -387,55 +628,6 @@
           "declaration": {
             "name": "TemplateContentWithFallbackDirective",
             "module": "src/directives/template-content-with-fallback.ts"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/decorators/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./query-template-by-id.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/decorators/query-template-by-id.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "queryTemplateById",
-          "parameters": [
-            {
-              "name": "{ fallback = false }",
-              "default": "{}",
-              "type": {
-                "text": "QueryTemplateByIdParams"
-              }
-            },
-            {
-              "description": "gets a template element if an id is not provided (not cached). Defaults to `false`.",
-              "name": "fallback"
-            }
-          ],
-          "description": "queryTemplateById\n\nGets a template element by id that is provided to the `templateId` property.\nWill cache the template element on successful query."
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "queryTemplateById",
-          "declaration": {
-            "name": "queryTemplateById",
-            "module": "src/decorators/query-template-by-id.ts"
           }
         }
       ]
@@ -648,6 +840,39 @@
           "declaration": {
             "name": "injectStyles",
             "module": "src/utils/styles.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/context/__fixtures__/context-data.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "customStyles",
+          "default": "css` ::slotted([slot='heading']) { text-decoration: underline; } `"
+        },
+        {
+          "kind": "function",
+          "name": "customMarkup"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "customStyles",
+          "declaration": {
+            "name": "customStyles",
+            "module": "src/context/__fixtures__/context-data.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "customMarkup",
+          "declaration": {
+            "name": "customMarkup",
+            "module": "src/context/__fixtures__/context-data.ts"
           }
         }
       ]

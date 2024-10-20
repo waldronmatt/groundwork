@@ -11,45 +11,6 @@
 | `js` | `*`  | \*          |        | ./mixins/index.js      |
 | `js` | `*`  | \*          |        | ./utils/index.js       |
 
-## `src/controllers/adopted-stylesheets-converter.ts`:
-
-### class: `AdoptedStyleSheetsConverter`
-
-#### Fields
-
-| Name          | Privacy | Type                                               | Default                                | Description | Inherited From |
-| ------------- | ------- | -------------------------------------------------- | -------------------------------------- | ----------- | -------------- |
-| `host`        |         | `ReactiveControllerHost`                           | `host`                                 |             |                |
-| `clearStyles` |         | `AdoptedStyleSheetsConverterParams['clearStyles']` | `clearStyles`                          |             |                |
-| `templateEl`  |         | `AdoptedStyleSheetsConverterParams['templateEl']`  | `templateEl`                           |             |                |
-| `_shadowRoot` |         | `ShadowRoot`                                       | `(this.host as LitElement).renderRoot` |             |                |
-
-#### Methods
-
-| Name                      | Privacy | Description | Parameters                       | Return | Inherited From |
-| ------------------------- | ------- | ----------- | -------------------------------- | ------ | -------------- |
-| `hostConnected`           |         |             |                                  |        |                |
-| `hostUpdated`             |         |             |                                  |        |                |
-| `updateStylesheet`        | private |             |                                  |        |                |
-| `setAdoptedStyleSheets`   | private |             | `styleElement: HTMLStyleElement` |        |                |
-| `removeComponentStyleTag` | private |             |                                  |        |                |
-
-<hr/>
-
-### Exports
-
-| Kind | Name                          | Declaration                 | Module                                           | Package |
-| ---- | ----------------------------- | --------------------------- | ------------------------------------------------ | ------- |
-| `js` | `AdoptedStyleSheetsConverter` | AdoptedStyleSheetsConverter | src/controllers/adopted-stylesheets-converter.ts |         |
-
-## `src/controllers/index.ts`:
-
-### Exports
-
-| Kind | Name | Declaration | Module | Package                            |
-| ---- | ---- | ----------- | ------ | ---------------------------------- |
-| `js` | `*`  | \*          |        | ./adopted-stylesheets-converter.js |
-
 ## `src/components/index.ts`:
 
 ### Exports
@@ -113,26 +74,129 @@
 | `js`                        | `default`      | LitOverride | src/components/lit-override.ts            |                             |
 | `custom-element-definition` | `lit-override` | LitOverride | /src/components/lit-override-component.js |                             |
 
-## `src/directives/index.ts`:
+## `src/context/consumer-component.ts`:
 
-### Exports
+### class: `LitOverrideConsumer`, `lit-override-consumer`
 
-| Kind | Name | Declaration | Module | Package                             |
-| ---- | ---- | ----------- | ------ | ----------------------------------- |
-| `js` | `*`  | \*          |        | ./template-content-with-fallback.js |
+#### Fields
 
-## `src/directives/template-content-with-fallback.ts`:
+| Name       | Privacy | Type                                            | Default | Description | Inherited From |
+| ---------- | ------- | ----------------------------------------------- | ------- | ----------- | -------------- |
+| `override` | public  | `Partial<LitOverrideContextProps> \| undefined` |         |             |                |
 
-### class: `TemplateContentWithFallbackDirective`
+#### Methods
+
+| Name                    | Privacy | Description | Parameters | Return | Inherited From |
+| ----------------------- | ------- | ----------- | ---------- | ------ | -------------- |
+| `setAdoptedStyleSheets` | private |             |            |        |                |
 
 <hr/>
 
 ### Exports
 
-| Kind | Name                                   | Declaration                          | Module                                           | Package |
-| ---- | -------------------------------------- | ------------------------------------ | ------------------------------------------------ | ------- |
-| `js` | `templateContentWithFallback`          | templateContentWithFallback          | src/directives/template-content-with-fallback.ts |         |
-| `js` | `TemplateContentWithFallbackDirective` | TemplateContentWithFallbackDirective | src/directives/template-content-with-fallback.ts |         |
+| Kind | Name                  | Declaration         | Module                            | Package |
+| ---- | --------------------- | ------------------- | --------------------------------- | ------- |
+| `js` | `LitOverrideConsumer` | LitOverrideConsumer | src/context/consumer-component.ts |         |
+
+## `src/context/consumer.ts`:
+
+### Exports
+
+| Kind                        | Name                    | Declaration         | Module                             | Package                 |
+| --------------------------- | ----------------------- | ------------------- | ---------------------------------- | ----------------------- |
+| `js`                        | `*`                     | \*                  |                                    | ./consumer-component.js |
+| `js`                        | `default`               | LitOverrideConsumer | src/context/consumer.ts            |                         |
+| `custom-element-definition` | `lit-override-consumer` | LitOverrideConsumer | /src/context/consumer-component.js |                         |
+
+## `src/context/index.ts`:
+
+### Exports
+
+| Kind | Name | Declaration | Module | Package       |
+| ---- | ---- | ----------- | ------ | ------------- |
+| `js` | `*`  | \*          |        | ./provider.js |
+| `js` | `*`  | \*          |        | ./consumer.js |
+
+## `src/context/key.ts`:
+
+### Exports
+
+| Kind | Name                 | Declaration        | Module             | Package |
+| ---- | -------------------- | ------------------ | ------------------ | ------- |
+| `js` | `litOverrideContext` | litOverrideContext | src/context/key.ts |         |
+
+## `src/context/provider-component.ts`:
+
+### class: `LitOverrideProvider`, `lit-override-provider`
+
+#### Fields
+
+| Name       | Privacy | Type     | Default | Description                           | Inherited From |
+| ---------- | ------- | -------- | ------- | ------------------------------------- | -------------- |
+| `override` | public  | `object` | `{}`    | Set custom \`styles\` and \`markup\`. |                |
+
+#### Slots
+
+| Name                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `` `<slot></slot>` `` | renders \`\<lit-override-consumer>\`. Example: \`\`\`js const customStyles = css\` ::slotted(\[slot='heading']) { text-decoration: underline; } \`; const customMarkup = () => { return html\`\<slot name="heading">\</slot>\`; }; html\` \<lit-override-provider .override=${{ styles: customStyles, markup: customMarkup }} > \<lit-override-consumer> \<h3 slot="heading">Hello World!\</h3> \</lit-override-consumer> \</lit-override-provider> \` \`\`\` |
+
+<hr/>
+
+### Exports
+
+| Kind | Name                  | Declaration         | Module                            | Package |
+| ---- | --------------------- | ------------------- | --------------------------------- | ------- |
+| `js` | `LitOverrideProvider` | LitOverrideProvider | src/context/provider-component.ts |         |
+
+## `src/context/provider.ts`:
+
+### Exports
+
+| Kind                        | Name                    | Declaration         | Module                             | Package                 |
+| --------------------------- | ----------------------- | ------------------- | ---------------------------------- | ----------------------- |
+| `js`                        | `*`                     | \*                  |                                    | ./provider-component.js |
+| `js`                        | `default`               | LitOverrideProvider | src/context/provider.ts            |                         |
+| `custom-element-definition` | `lit-override-provider` | LitOverrideProvider | /src/context/provider-component.js |                         |
+
+## `src/controllers/adopted-stylesheets-converter.ts`:
+
+### class: `AdoptedStyleSheetsConverter`
+
+#### Fields
+
+| Name          | Privacy | Type                                               | Default                                | Description | Inherited From |
+| ------------- | ------- | -------------------------------------------------- | -------------------------------------- | ----------- | -------------- |
+| `host`        |         | `ReactiveControllerHost`                           | `host`                                 |             |                |
+| `clearStyles` |         | `AdoptedStyleSheetsConverterParams['clearStyles']` | `clearStyles`                          |             |                |
+| `templateEl`  |         | `AdoptedStyleSheetsConverterParams['templateEl']`  | `templateEl`                           |             |                |
+| `_shadowRoot` |         | `ShadowRoot`                                       | `(this.host as LitElement).renderRoot` |             |                |
+
+#### Methods
+
+| Name                      | Privacy | Description | Parameters                       | Return | Inherited From |
+| ------------------------- | ------- | ----------- | -------------------------------- | ------ | -------------- |
+| `hostConnected`           |         |             |                                  |        |                |
+| `hostUpdated`             |         |             |                                  |        |                |
+| `updateStylesheet`        | private |             |                                  |        |                |
+| `setAdoptedStyleSheets`   | private |             | `styleElement: HTMLStyleElement` |        |                |
+| `removeComponentStyleTag` | private |             |                                  |        |                |
+
+<hr/>
+
+### Exports
+
+| Kind | Name                          | Declaration                 | Module                                           | Package |
+| ---- | ----------------------------- | --------------------------- | ------------------------------------------------ | ------- |
+| `js` | `AdoptedStyleSheetsConverter` | AdoptedStyleSheetsConverter | src/controllers/adopted-stylesheets-converter.ts |         |
+
+## `src/controllers/index.ts`:
+
+### Exports
+
+| Kind | Name | Declaration | Module | Package                            |
+| ---- | ---- | ----------- | ------ | ---------------------------------- |
+| `js` | `*`  | \*          |        | ./adopted-stylesheets-converter.js |
 
 ## `src/decorators/index.ts`:
 
@@ -157,6 +221,27 @@
 | Kind | Name                | Declaration       | Module                                 | Package |
 | ---- | ------------------- | ----------------- | -------------------------------------- | ------- |
 | `js` | `queryTemplateById` | queryTemplateById | src/decorators/query-template-by-id.ts |         |
+
+## `src/directives/index.ts`:
+
+### Exports
+
+| Kind | Name | Declaration | Module | Package                             |
+| ---- | ---- | ----------- | ------ | ----------------------------------- |
+| `js` | `*`  | \*          |        | ./template-content-with-fallback.js |
+
+## `src/directives/template-content-with-fallback.ts`:
+
+### class: `TemplateContentWithFallbackDirective`
+
+<hr/>
+
+### Exports
+
+| Kind | Name                                   | Declaration                          | Module                                           | Package |
+| ---- | -------------------------------------- | ------------------------------------ | ------------------------------------------------ | ------- |
+| `js` | `templateContentWithFallback`          | templateContentWithFallback          | src/directives/template-content-with-fallback.ts |         |
+| `js` | `TemplateContentWithFallbackDirective` | TemplateContentWithFallbackDirective | src/directives/template-content-with-fallback.ts |         |
 
 ## `src/mixins/emit-connected-callback.ts`:
 
@@ -225,3 +310,20 @@
 | Kind | Name           | Declaration  | Module              | Package |
 | ---- | -------------- | ------------ | ------------------- | ------- |
 | `js` | `injectStyles` | injectStyles | src/utils/styles.ts |         |
+
+## `src/context/__fixtures__/context-data.ts`:
+
+### Functions
+
+| Name           | Description | Parameters | Return |
+| -------------- | ----------- | ---------- | ------ |
+| `customMarkup` |             |            |        |
+
+<hr/>
+
+### Exports
+
+| Kind | Name           | Declaration  | Module                                       | Package |
+| ---- | -------------- | ------------ | -------------------------------------------- | ------- |
+| `js` | `customStyles` | customStyles | src/context/\_\_fixtures\_\_/context-data.ts |         |
+| `js` | `customMarkup` | customMarkup | src/context/\_\_fixtures\_\_/context-data.ts |         |
