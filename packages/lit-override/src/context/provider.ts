@@ -1,6 +1,6 @@
-import { LitOverrideProvider } from './provider-component.js';
+import { LitOverrideProvider } from './provider.component.js';
 
-export * from './provider-component.js';
+export * from './provider.component.js';
 export default LitOverrideProvider;
 
 customElements.define('lit-override-provider', LitOverrideProvider);

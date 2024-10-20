@@ -1,6 +1,6 @@
-import { LitOverride } from './lit-override-component.js';
+import { LitOverride } from './lit-override.component.js';
 
-export * from './lit-override-component.js';
+export * from './lit-override.component.js';
 export default LitOverride;
 
 customElements.define('lit-override', LitOverride);

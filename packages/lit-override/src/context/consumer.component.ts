@@ -21,21 +21,23 @@ import { property } from 'lit/decorators.js';
  *  return html`<slot name="heading"></slot>`;
  * };
  *
- * html`
- *   <lit-override-provider
- *    .override=${{ styles: customStyles, markup: customMarkup }}
- *   >
- *    <lit-override-consumer>
- *      <h3 slot="heading">Hello World!</h3>
- *    </lit-override-consumer>
- *   </lit-override-provider>
- * `
+ * render() {
+ *  return html`
+ *    <lit-override-provider
+ *      .override=${{ styles: customStyles, markup: customMarkup }}
+ *    >
+ *      <lit-override-consumer>
+ *        <h3 slot="heading">Hello World!</h3>
+ *      </lit-override-consumer>
+ *    </lit-override-provider>
+ *  `
+ * }
  * ```
  */
 export class LitOverrideConsumer extends LitElement {
   @consume({ context: litOverrideContext, subscribe: true })
   @property({ attribute: false })
-  public override?: Partial<LitOverrideContextProps>;
+  override?: Partial<LitOverrideContextProps>;
 
   private setAdoptedStyleSheets() {
     if (this.override?.styles) {
@@ -51,7 +53,7 @@ export class LitOverrideConsumer extends LitElement {
     this.setAdoptedStyleSheets();
   }
 
-  protected render() {
+  render() {
     if (this.override?.markup) {
       return this.override.markup?.();
     }

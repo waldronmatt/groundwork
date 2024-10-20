@@ -2,7 +2,7 @@ import { LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type Constructor<T> = new (...args: any[]) => T;
+export type Constructor<T> = new (...args: any[]) => T;
 
 export interface EmitConnectedCallbackInfo {
   name: string;
@@ -28,20 +28,11 @@ export const EmitConnectedCallback = <T extends Constructor<LitElement>>(superCl
     @property({ reflect: true, type: Boolean })
     emitConnectedCallback = false;
 
-    @property({ reflect: false })
+    @property({ attribute: false })
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     onConnectedCallback = (_thisChild: LitElement, _childInfo: EmitConnectedCallbackInfo) => {};
 
-    connectedCallback() {
-      super.connectedCallback();
-
-      const childInfo: EmitConnectedCallbackInfo = {
-        name: this.constructor.name,
-        isConnected: this.isConnected,
-      };
-
-      this.onConnectedCallback(this, childInfo);
-
+    private setEmitConnectedCallback(childInfo: EmitConnectedCallbackInfo) {
       if (this.emitConnectedCallback) {
         const event = new CustomEvent('connected-callback', {
           bubbles: true,
@@ -52,6 +43,18 @@ export const EmitConnectedCallback = <T extends Constructor<LitElement>>(superCl
 
         this.dispatchEvent(event);
       }
+    }
+
+    connectedCallback() {
+      super.connectedCallback();
+
+      const childInfo: EmitConnectedCallbackInfo = {
+        name: this.constructor.name,
+        isConnected: this.isConnected,
+      };
+
+      this.onConnectedCallback(this, childInfo);
+      this.setEmitConnectedCallback(childInfo);
     }
   }
 

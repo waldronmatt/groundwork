@@ -21,7 +21,7 @@ export class AdoptedStyleSheetsConverter implements ReactiveController {
 
   templateEl: AdoptedStyleSheetsConverterParams['templateEl'];
 
-  _shadowRoot: ShadowRoot;
+  private _shadowRoot: ShadowRoot;
 
   constructor(
     host: ReactiveControllerHost,
@@ -33,16 +33,6 @@ export class AdoptedStyleSheetsConverter implements ReactiveController {
     this._shadowRoot = (this.host as LitElement).renderRoot as ShadowRoot;
 
     this.host.addController(this);
-  }
-
-  hostConnected() {
-    this.updateStylesheet();
-  }
-
-  hostUpdated() {
-    // clean up style tags if template is injected in component root
-    // by the templateContentWithFallback directive
-    this.removeComponentStyleTag();
   }
 
   private updateStylesheet() {
@@ -75,5 +65,15 @@ export class AdoptedStyleSheetsConverter implements ReactiveController {
     }
 
     this._shadowRoot.removeChild(styleElement);
+  }
+
+  hostConnected() {
+    this.updateStylesheet();
+  }
+
+  hostUpdated() {
+    // clean up style tags if template is injected in component root
+    // by the templateContentWithFallback directive
+    this.removeComponentStyleTag();
   }
 }

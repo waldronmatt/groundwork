@@ -24,7 +24,7 @@ export class LitOverride extends EmitConnectedCallback(LitElement) {
     new AdoptedStyleSheetsConverter(this, { templateEl: this.templateId });
   }
 
-  protected render() {
+  render() {
     return html`${templateContentWithFallback({ templateEl: this.templateId })}`;
   }
 }

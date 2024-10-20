@@ -43,7 +43,7 @@ describe('lit-override', () => {
       </lit-override-consumer>
     `);
 
-    await fixture<LitElement>(html` <lit-override-provider>${elConsumer}</lit-override-provider> `);
+    await fixture<LitElement>(html`<lit-override-provider>${elConsumer}</lit-override-provider>`);
 
     expect(elConsumer.shadowRoot!.innerHTML).to.contain('');
     const adoptedStyles = elConsumer.shadowRoot?.adoptedStyleSheets;

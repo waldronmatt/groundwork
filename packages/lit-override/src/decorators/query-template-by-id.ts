@@ -6,9 +6,9 @@ export interface TemplateIdProperty {
   set templateIdSetter(value: string | null);
 }
 
-interface ExtendedElement extends ReactiveElement {
-  [key: symbol]: TemplateIdProperty['templateIdSetter'];
+export interface ExtendedElement extends ReactiveElement {
   _templateCache?: Record<string, TemplateIdProperty['templateIdGetter']>;
+  [key: symbol]: TemplateIdProperty['templateIdSetter'];
 }
 
 export interface QueryTemplateByIdParams {
