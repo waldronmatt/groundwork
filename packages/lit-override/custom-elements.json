@@ -20,6 +20,14 @@
           "name": "*",
           "declaration": {
             "name": "*",
+            "package": "./context/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
             "package": "./controllers/index.js"
           }
         },
@@ -92,7 +100,7 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/lit-override-component.ts",
+      "path": "src/components/lit-override.component.ts",
       "declarations": [
         {
           "kind": "class",
@@ -131,11 +139,27 @@
             {
               "kind": "field",
               "name": "onConnectedCallback",
-              "attribute": "onConnectedCallback",
               "type": {
                 "text": "function"
               },
               "description": "A callback function called when connected to the DOM.",
+              "inheritedFrom": {
+                "name": "EmitConnectedCallback",
+                "module": "src/mixins/emit-connected-callback.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "setEmitConnectedCallback",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "childInfo",
+                  "type": {
+                    "text": "EmitConnectedCallbackInfo"
+                  }
+                }
+              ],
               "inheritedFrom": {
                 "name": "EmitConnectedCallback",
                 "module": "src/mixins/emit-connected-callback.ts"
@@ -172,14 +196,6 @@
                 "name": "EmitConnectedCallback",
                 "module": "src/mixins/emit-connected-callback.ts"
               }
-            },
-            {
-              "name": "onConnectedCallback",
-              "fieldName": "onConnectedCallback",
-              "inheritedFrom": {
-                "name": "EmitConnectedCallback",
-                "module": "src/mixins/emit-connected-callback.ts"
-              }
             }
           ]
         }
@@ -190,7 +206,7 @@
           "name": "LitOverride",
           "declaration": {
             "name": "LitOverride",
-            "module": "src/components/lit-override-component.ts"
+            "module": "src/components/lit-override.component.ts"
           }
         }
       ]
@@ -205,7 +221,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./lit-override-component.js"
+            "package": "./lit-override.component.js"
           }
         },
         {
@@ -221,18 +237,18 @@
           "name": "lit-override",
           "declaration": {
             "name": "LitOverride",
-            "module": "/src/components/lit-override-component.js"
+            "module": "/src/components/lit-override.component.js"
           }
         }
       ]
     },
     {
       "kind": "javascript-module",
-      "path": "src/context/consumer-component.ts",
+      "path": "src/context/consumer.component.ts",
       "declarations": [
         {
           "kind": "class",
-          "description": "LitOverrideConsumer - `<lit-override-consumer>`\n\nContext consumer of custom styles and markup. Renders `nothing` by default.\n\nExample:\n\n```js\nconst customStyles = css`\n ::slotted([slot='heading']) {\n   text-decoration: underline;\n }\n`;\n\nconst customMarkup = () => {\n return html`<slot name=\"heading\"></slot>`;\n};\n\nhtml`\n  <lit-override-provider\n   .override=${{ styles: customStyles, markup: customMarkup }}\n  >\n   <lit-override-consumer>\n     <h3 slot=\"heading\">Hello World!</h3>\n   </lit-override-consumer>\n  </lit-override-provider>\n`\n```",
+          "description": "LitOverrideConsumer - `<lit-override-consumer>`\n\nContext consumer of custom styles and markup. Renders `nothing` by default.\n\nExample:\n\n```js\nconst customStyles = css`\n ::slotted([slot='heading']) {\n   text-decoration: underline;\n }\n`;\n\nconst customMarkup = () => {\n return html`<slot name=\"heading\"></slot>`;\n};\n\nrender() {\n return html`\n   <lit-override-provider\n     .override=${{ styles: customStyles, markup: customMarkup }}\n   >\n     <lit-override-consumer>\n       <h3 slot=\"heading\">Hello World!</h3>\n     </lit-override-consumer>\n   </lit-override-provider>\n `\n}\n```",
           "name": "LitOverrideConsumer",
           "members": [
             {
@@ -240,8 +256,7 @@
               "name": "override",
               "type": {
                 "text": "Partial<LitOverrideContextProps> | undefined"
-              },
-              "privacy": "public"
+              }
             },
             {
               "kind": "method",
@@ -263,7 +278,7 @@
           "name": "LitOverrideConsumer",
           "declaration": {
             "name": "LitOverrideConsumer",
-            "module": "src/context/consumer-component.ts"
+            "module": "src/context/consumer.component.ts"
           }
         }
       ]
@@ -278,7 +293,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./consumer-component.js"
+            "package": "./consumer.component.js"
           }
         },
         {
@@ -294,7 +309,7 @@
           "name": "lit-override-consumer",
           "declaration": {
             "name": "LitOverrideConsumer",
-            "module": "/src/context/consumer-component.js"
+            "module": "/src/context/consumer.component.js"
           }
         }
       ]
@@ -344,28 +359,20 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/context/provider-component.ts",
+      "path": "src/context/provider.component.ts",
       "declarations": [
         {
           "kind": "class",
-          "description": "LitOverrideProvider - `<lit-override-provider>`\n\nContext provider of custom styles and markup.",
+          "description": "LitOverrideProvider - `<lit-override-provider>`\n\nContext provider of custom styles and markup.\n\n**Note**: Set `clearStyles` to `true` to replace existing styles.\n\nExample:\n\n```js\nconst customStyles = css`\n ::slotted([slot='heading']) {\n   text-decoration: underline;\n }\n`;\n\nconst customMarkup = () => {\n return html`<slot name=\"heading\"></slot>`;\n};\n\nrender() {\n return html`\n   <lit-override-provider\n     .override=${{ styles: customStyles, markup: customMarkup }}\n   >\n     <lit-override-consumer>\n       <h3 slot=\"heading\">Hello World!</h3>\n     </lit-override-consumer>\n   </lit-override-provider>\n `\n}\n```",
           "name": "LitOverrideProvider",
-          "slots": [
-            {
-              "description": "renders `<lit-override-consumer>`. Example: ```js const customStyles = css` ::slotted([slot='heading']) { text-decoration: underline; } `; const customMarkup = () => { return html`<slot name=\"heading\"></slot>`; }; html` <lit-override-provider .override=${{ styles: customStyles, markup: customMarkup }} > <lit-override-consumer> <h3 slot=\"heading\">Hello World!</h3> </lit-override-consumer> </lit-override-provider> ` ```",
-              "name": "`<slot></slot>`"
-            }
-          ],
           "members": [
             {
               "kind": "field",
               "name": "override",
               "type": {
-                "text": "object"
+                "text": "Partial<LitOverrideContextProps>"
               },
-              "privacy": "public",
-              "default": "{}",
-              "description": "Set custom `styles` and `markup`."
+              "default": "{}"
             }
           ],
           "superclass": {
@@ -382,7 +389,7 @@
           "name": "LitOverrideProvider",
           "declaration": {
             "name": "LitOverrideProvider",
-            "module": "src/context/provider-component.ts"
+            "module": "src/context/provider.component.ts"
           }
         }
       ]
@@ -397,7 +404,7 @@
           "name": "*",
           "declaration": {
             "name": "*",
-            "package": "./provider-component.js"
+            "package": "./provider.component.js"
           }
         },
         {
@@ -413,7 +420,7 @@
           "name": "lit-override-provider",
           "declaration": {
             "name": "LitOverrideProvider",
-            "module": "/src/context/provider-component.js"
+            "module": "/src/context/provider.component.js"
           }
         }
       ]
@@ -457,15 +464,8 @@
               "type": {
                 "text": "ShadowRoot"
               },
+              "privacy": "private",
               "default": "(this.host as LitElement).renderRoot"
-            },
-            {
-              "kind": "method",
-              "name": "hostConnected"
-            },
-            {
-              "kind": "method",
-              "name": "hostUpdated"
             },
             {
               "kind": "method",
@@ -489,6 +489,14 @@
               "kind": "method",
               "name": "removeComponentStyleTag",
               "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "hostConnected"
+            },
+            {
+              "kind": "method",
+              "name": "hostUpdated"
             }
           ]
         }
@@ -543,11 +551,15 @@
           "name": "queryTemplateById",
           "parameters": [
             {
-              "name": "{ fallback = false }",
+              "name": "{ cache = true, fallback = false }",
               "default": "{}",
               "type": {
                 "text": "QueryTemplateByIdParams"
               }
+            },
+            {
+              "description": "caches the template element between component renders when enabled. Defaults to `true`.",
+              "name": "cache"
             },
             {
               "description": "gets a template element if an id is not provided (not cached). Defaults to `false`.",
@@ -667,8 +679,20 @@
             },
             {
               "kind": "field",
-              "name": "onConnectedCallback",
-              "attribute": "onConnectedCallback"
+              "name": "onConnectedCallback"
+            },
+            {
+              "kind": "method",
+              "name": "setEmitConnectedCallback",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "childInfo",
+                  "type": {
+                    "text": "EmitConnectedCallbackInfo"
+                  }
+                }
+              ]
             }
           ],
           "attributes": [
@@ -679,10 +703,6 @@
               },
               "default": "false",
               "fieldName": "emitConnectedCallback"
-            },
-            {
-              "name": "onConnectedCallback",
-              "fieldName": "onConnectedCallback"
             }
           ],
           "parameters": [
@@ -775,7 +795,7 @@
             {
               "name": "template",
               "type": {
-                "text": "TemplateResult"
+                "text": "() => TemplateResult"
               },
               "description": "TemplateResult"
             }
