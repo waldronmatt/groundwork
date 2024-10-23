@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.3.2...@waldronmatt/lit-override@2.4.0) (2024-10-23)
+
+### Bug Fixes
+
+* **lit-override:** ues shoelace component name, refactoring ([6752afd](https://github.com/waldronmatt/groundwork/commit/6752afd3d867308f4ad0e4dc4b08a25a58080f7d)) - by @waldronmatt
+* **query-template-by-id.ts:** add cache param, remove unnecessary requestUpdate ([27efc3b](https://github.com/waldronmatt/groundwork/commit/27efc3b78ab7b4e7400d6e42c7025776aff1993e)) - by @waldronmatt
+* **utils:** prefer markup util to render a template function ([c10551c](https://github.com/waldronmatt/groundwork/commit/c10551c25187cbfe8a9a87ce28bd319ff55015c4)) - by @waldronmatt
+
+### Features
+
+* **context:** add a context provider and consumer ([6645e0d](https://github.com/waldronmatt/groundwork/commit/6645e0d7e0455ad736f782962f278a45f30a5d67)) - by @waldronmatt
+
 ## [2.3.2](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.3.1...@waldronmatt/lit-override@2.3.2) (2024-09-01)
 
 ### Bug Fixes

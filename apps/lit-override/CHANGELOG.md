@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/waldronmatt/groundwork/compare/lit-override@2.2.5...lit-override@2.3.0) (2024-10-23)
+
+### Bug Fixes
+
+* **ts:** pass in template without calling it ([ccbb995](https://github.com/waldronmatt/groundwork/commit/ccbb995d02416489c33ad1eca630a108cb4a073d)) - by @waldronmatt
+
+### Features
+
+* **src:** add context examples, reorganize index.html examples ([dc918b9](https://github.com/waldronmatt/groundwork/commit/dc918b9eab5946492ccfe6a254a78321b2824481)) - by @waldronmatt
+
 ## [2.2.5](https://github.com/waldronmatt/groundwork/compare/lit-override@2.2.4...lit-override@2.2.5) (2024-09-25)
 
 **Note:** Version bump only for package lit-override
