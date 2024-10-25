@@ -122,6 +122,7 @@
 | ---- | ---- | ----------- | ------ | ------------- |
 | `js` | `*`  | \*          |        | ./provider.js |
 | `js` | `*`  | \*          |        | ./consumer.js |
+| `js` | `*`  | \*          |        | ./key.js      |
 
 ## `src/context/key.ts`:
 
@@ -158,6 +159,59 @@
 | `js`                        | `*`                     | \*                  |                                    | ./provider.component.js |
 | `js`                        | `default`               | LitOverrideProvider | src/context/provider.ts            |                         |
 | `custom-element-definition` | `lit-override-provider` | LitOverrideProvider | /src/context/provider.component.js |                         |
+
+## `src/decorators/cache.ts`:
+
+### class: `TemplateCacheManager`
+
+#### Fields
+
+| Name    | Privacy | Type                                                     | Default | Description | Inherited From |
+| ------- | ------- | -------------------------------------------------------- | ------- | ----------- | -------------- |
+| `cache` | private | `Record<string, TemplateIdProperty['templateIdGetter']>` | `{}`    |             |                |
+
+#### Methods
+
+| Name                 | Privacy | Description | Parameters                                                                  | Return                                   | Inherited From |
+| -------------------- | ------- | ----------- | --------------------------------------------------------------------------- | ---------------------------------------- | -------------- |
+| `getTemplate`        |         |             | `id: string`                                                                | `TemplateIdProperty['templateIdGetter']` |                |
+| `cacheTemplate`      |         |             | `id: TemplateIdProperty['templateIdSetter'], template: HTMLTemplateElement` |                                          |                |
+| `removeTemplate`     |         |             | `id: string`                                                                |                                          |                |
+| `clearTemplateCache` |         |             |                                                                             |                                          |                |
+
+<hr/>
+
+### Exports
+
+| Kind | Name                   | Declaration          | Module                  | Package |
+| ---- | ---------------------- | -------------------- | ----------------------- | ------- |
+| `js` | `TemplateCacheManager` | TemplateCacheManager | src/decorators/cache.ts |         |
+
+## `src/decorators/index.ts`:
+
+### Exports
+
+| Kind | Name | Declaration | Module | Package                   |
+| ---- | ---- | ----------- | ------ | ------------------------- |
+| `js` | `*`  | \*          |        | ./query-template-by-id.js |
+| `js` | `*`  | \*          |        | ./cache.js                |
+| `js` | `*`  | \*          |        | ./types.js                |
+
+## `src/decorators/query-template-by-id.ts`:
+
+### Functions
+
+| Name                | Description                                                                                               | Parameters                                                                     | Return |
+| ------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------ |
+| `queryTemplateById` | queryTemplateById&#xA;&#xA;Gets a template element by id that is provided to the \`templateId\` property. | `{ cache = true, fallback = false }: QueryTemplateByIdParams, cache, fallback` |        |
+
+<hr/>
+
+### Exports
+
+| Kind | Name                | Declaration       | Module                                 | Package |
+| ---- | ------------------- | ----------------- | -------------------------------------- | ------- |
+| `js` | `queryTemplateById` | queryTemplateById | src/decorators/query-template-by-id.ts |         |
 
 ## `src/controllers/adopted-stylesheets-converter.ts`:
 
@@ -197,30 +251,6 @@
 | Kind | Name | Declaration | Module | Package                            |
 | ---- | ---- | ----------- | ------ | ---------------------------------- |
 | `js` | `*`  | \*          |        | ./adopted-stylesheets-converter.js |
-
-## `src/decorators/index.ts`:
-
-### Exports
-
-| Kind | Name | Declaration | Module | Package                   |
-| ---- | ---- | ----------- | ------ | ------------------------- |
-| `js` | `*`  | \*          |        | ./query-template-by-id.js |
-
-## `src/decorators/query-template-by-id.ts`:
-
-### Functions
-
-| Name                | Description                                                                                                                                                        | Parameters                                                                     | Return |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------ |
-| `queryTemplateById` | queryTemplateById&#xA;&#xA;Gets a template element by id that is provided to the \`templateId\` property.&#xA;Will cache the template element on successful query. | `{ cache = true, fallback = false }: QueryTemplateByIdParams, cache, fallback` |        |
-
-<hr/>
-
-### Exports
-
-| Kind | Name                | Declaration       | Module                                 | Package |
-| ---- | ------------------- | ----------------- | -------------------------------------- | ------- |
-| `js` | `queryTemplateById` | queryTemplateById | src/decorators/query-template-by-id.ts |         |
 
 ## `src/directives/index.ts`:
 

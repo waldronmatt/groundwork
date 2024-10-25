@@ -334,6 +334,14 @@
             "name": "*",
             "package": "./consumer.js"
           }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./key.js"
+          }
         }
       ]
     },
@@ -424,6 +432,164 @@
           }
         }
       ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/decorators/cache.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "TemplateCacheManager",
+          "members": [
+            {
+              "kind": "field",
+              "name": "cache",
+              "type": {
+                "text": "Record<string, TemplateIdProperty['templateIdGetter']>"
+              },
+              "privacy": "private",
+              "default": "{}"
+            },
+            {
+              "kind": "method",
+              "name": "getTemplate",
+              "return": {
+                "type": {
+                  "text": "TemplateIdProperty['templateIdGetter']"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "id",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "cacheTemplate",
+              "parameters": [
+                {
+                  "name": "id",
+                  "type": {
+                    "text": "TemplateIdProperty['templateIdSetter']"
+                  }
+                },
+                {
+                  "name": "template",
+                  "type": {
+                    "text": "HTMLTemplateElement"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "removeTemplate",
+              "parameters": [
+                {
+                  "name": "id",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "clearTemplateCache"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "TemplateCacheManager",
+          "declaration": {
+            "name": "TemplateCacheManager",
+            "module": "src/decorators/cache.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/decorators/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./query-template-by-id.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./cache.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./types.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/decorators/query-template-by-id.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "queryTemplateById",
+          "parameters": [
+            {
+              "name": "{ cache = true, fallback = false }",
+              "default": "{}",
+              "type": {
+                "text": "QueryTemplateByIdParams"
+              }
+            },
+            {
+              "description": "caches the template element between component renders when enabled. Defaults to `true`.",
+              "name": "cache"
+            },
+            {
+              "description": "gets a template element if an id is not provided (not cached). Defaults to `false`.",
+              "name": "fallback"
+            }
+          ],
+          "description": "queryTemplateById\n\nGets a template element by id that is provided to the `templateId` property."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "queryTemplateById",
+          "declaration": {
+            "name": "queryTemplateById",
+            "module": "src/decorators/query-template-by-id.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/decorators/types.ts",
+      "declarations": [],
+      "exports": []
     },
     {
       "kind": "javascript-module",
@@ -523,59 +689,6 @@
           "declaration": {
             "name": "*",
             "package": "./adopted-stylesheets-converter.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/decorators/index.ts",
-      "declarations": [],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "*",
-          "declaration": {
-            "name": "*",
-            "package": "./query-template-by-id.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
-      "path": "src/decorators/query-template-by-id.ts",
-      "declarations": [
-        {
-          "kind": "function",
-          "name": "queryTemplateById",
-          "parameters": [
-            {
-              "name": "{ cache = true, fallback = false }",
-              "default": "{}",
-              "type": {
-                "text": "QueryTemplateByIdParams"
-              }
-            },
-            {
-              "description": "caches the template element between component renders when enabled. Defaults to `true`.",
-              "name": "cache"
-            },
-            {
-              "description": "gets a template element if an id is not provided (not cached). Defaults to `false`.",
-              "name": "fallback"
-            }
-          ],
-          "description": "queryTemplateById\n\nGets a template element by id that is provided to the `templateId` property.\nWill cache the template element on successful query."
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "queryTemplateById",
-          "declaration": {
-            "name": "queryTemplateById",
-            "module": "src/decorators/query-template-by-id.ts"
           }
         }
       ]
