@@ -3,6 +3,7 @@ import { injectStyles, injectTemplate } from '@waldronmatt/lit-override/src/util
 import type { EmitConnectedCallbackInfo } from '@waldronmatt/lit-override/src/index.js';
 import '@waldronmatt/lit-override/src/components/index.js';
 import './child-component.js';
+
 export class HostApp extends LitElement {
   private applyStyleOverride = css`
     :host {

@@ -1,5 +1,4 @@
 import { html, LitElement } from 'lit';
-import '@waldronmatt/lit-override/src/components/index.js';
 import '@waldronmatt/lit-override/src/context/index.js';
 import { customStyles, customMarkup } from './context-data.js';
 
