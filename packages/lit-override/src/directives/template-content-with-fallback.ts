@@ -32,7 +32,6 @@ class TemplateContentWithFallbackDirective extends Directive {
  * Detects a `template` element from the light DOM and renders it.
  * Will fallback to your component's markup provided as an argument.
  *
- *
  * @param fallback renders markup if a `template` element is not found. Defaults to `<slot></slot>`.
  * @param templateEl a `template` element. Defaults to null.
  */
