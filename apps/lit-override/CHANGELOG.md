@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/waldronmatt/groundwork/compare/lit-override@2.3.0...lit-override@2.3.1) (2024-10-25)
+
+### Bug Fixes
+
+* **lit-override:** minor updates ([93a243d](https://github.com/waldronmatt/groundwork/commit/93a243d40346a4db00530dbccc1039978c22d6de)) - by @waldronmatt
+
 # [2.3.0](https://github.com/waldronmatt/groundwork/compare/lit-override@2.2.5...lit-override@2.3.0) (2024-10-23)
 
 ### Bug Fixes

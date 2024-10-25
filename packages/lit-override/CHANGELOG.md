@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.4.0...@waldronmatt/lit-override@2.5.0) (2024-10-25)
+
+### Features
+
+* **decorators:** add initializer to clear cache on DOM disconnection, add a class to manage cache ([9c31fb5](https://github.com/waldronmatt/groundwork/commit/9c31fb50378829118526fea0772eafe4b8603940)) - by @waldronmatt
+
 # [2.4.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.3.2...@waldronmatt/lit-override@2.4.0) (2024-10-23)
 
 ### Bug Fixes
