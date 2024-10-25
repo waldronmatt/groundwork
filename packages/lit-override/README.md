@@ -1,6 +1,6 @@
 # Lit Override
 
-Utility functions for overriding styles and markup in your Lit components. See the [API docs](custom-elements.md) for more info.
+Override styles and markup in your Lit components. See the [API docs](custom-elements.md) for more info.
 
 ## Features
 
@@ -14,7 +14,7 @@ Utility functions for overriding styles and markup in your Lit components. See t
 Install dependencies:
 
 ```bash
-pnpm add @waldronmatt/lit-override lit lit-html
+pnpm add @waldronmatt/lit-override lit lit-html @lit/context
 ```
 
 ## Shadow DOM
@@ -42,7 +42,7 @@ render() {
       emitConnectedCallback
       @connected-callback=${(event: { target: HTMLElement }) => {
         injectStyles([event.target], css`::slotted([slot='heading']) { color: #fff; }`);
-        injectTemplate([event.target], html`<slot name="heading"></slot>`);
+        injectTemplate([event.target], () => html`<slot name="heading"></slot>`);
       }}
     >
       <h3 slot="heading">Custom markup from the shadow dom!</h3>
@@ -51,7 +51,7 @@ render() {
 }
 ```
 
-Alternatively, you can use the `onConnectedCallback` callback function if performance is a concern with emitting an event on `connectedCallback`:
+Alternatively, you can use the `onConnectedCallback` callback function if performance is a concern with emitting an event on the `connectedCallback` lifecycle method:
 
 `host-app.ts`
 
@@ -63,7 +63,7 @@ render() {
     <child-component
       .onConnectedCallback=${(thisChild: LitElement) => {
         injectStyles([thisChild], css`::slotted([slot='heading']) { color: #fff; }`);
-        injectTemplate([thisChild], html`<slot name="heading"></slot>`);
+        injectTemplate([thisChild], () => html`<slot name="heading"></slot>`);
       }}
     >
       <h3 slot="heading">Custom markup from the shadow dom!</h3>
@@ -149,11 +149,11 @@ export class ChildComponent extends LitElement {
 }
 ```
 
-### Lit Override Component
+## Lit Override Component
 
 The `<lit-override>` component provides an all-in-one approach to override markup and styles in the light DOM and shadow DOM:
 
-#### Shadow DOM
+### Shadow DOM
 
 `host-app.ts`
 
@@ -167,7 +167,7 @@ render() {
       emitConnectedCallback
       @connected-callback=${(event: { target: HTMLElement }) => {
         injectStyles([event.target], css`::slotted([slot='heading']) { color: #fff; }`);
-        injectTemplate([event.target], html`<slot name="heading"></slot>`);
+        injectTemplate([event.target], () => html`<slot name="heading"></slot>`);
       }}
     >
       <h3 slot="heading">Custom markup from the shadow dom!</h3>
@@ -176,7 +176,7 @@ render() {
 }
 ```
 
-#### Light DOM
+### Light DOM
 
 `index.html`
 
@@ -198,7 +198,34 @@ render() {
 </body>
 ```
 
-**Note**: Go to the `lit-override` project via [`apps/lit-override`](../../apps/lit-override) to see more examples.
+## Lit Context Provider / Consumer
+
+Alternatively, you can use a context provider component to inject custom styles and markup to the context consumer component:
+
+`host-app.ts`
+
+```ts
+import '@waldronmatt/lit-override/context/index.js';
+
+render() {
+  return html`
+    <lit-override-provider .override=${
+      {
+        styles: css`::slotted([slot='heading']) { color: #fff; }`,
+        markup: () => html`<slot name="heading"></slot>`, }
+      }
+    >
+      <lit-override-consumer>
+        <h3 slot="heading">This is a heading from the <em>host app</em>!</h3>
+      </lit-override-consumer>
+    </lit-override-provider>
+  `;
+}
+```
+
+## Additional Examples
+
+Go to the `lit-override` project via [`apps/lit-override`](../../apps/lit-override) to see more examples.
 
 ## Background
 
@@ -216,35 +243,31 @@ Originally I planned on using the `::part` css pseudo-element and exposing an ap
 
 CSS variables work well and they can pierce the shadow dom. The downsides involve needing to carefully plan out every css property and migrate all of them to use variables, but this seemed unsustainable. Additionally, css variables are best suited for propagating design decisions down from a global root rather than encoding them as overrides.
 
-Then I discovered `adoptedStyleSheets` which allows for applying stylesheets to the shadow DOM. This was the solution I was looking for. I could override styles without any of the disadvantages of `::part`. Browsers optimze this by parsing the stylesheet once and store as a single instance that can be used across multiple elements. This is significantly more performant than injecting style tags.
+The `adoptedStyleSheets` property allows for applying stylesheets to the shadow DOM. I could override styles without any of the disadvantages of `::part`. Browsers optimze this by parsing the stylesheet once and store as a single instance that can be used across multiple elements. This is significantly more performant than injecting style tags.
 
-While significantly better than other options, `adoptedStyleSheets` came with a few minor disadvantages. First, not all browsers supported it, so polyfilling it required a less-performant style tag injection method. In recent years, this is less of an issue now that all major browsers support it. This utility no longer supports polyfilling this behavior for older browsers.
+While significantly better than other options, `adoptedStyleSheets` came with a few minor disadvantages. First, not all browsers supported it, so polyfilling it required a less-performant style tag injection method. In recent years, however, this is less of an issue now that all major browsers support it.
 
-Secondly, if you want to preserve the original styles, you might need to use `!important` to override css properties shared between the two stylesheets. This can be mitigated if you remove the original stylesheet entirely. The tools here are built with this option in mind.
+Secondly, if you want to preserve the original styles, you might need to use `!important` to override css properties shared between the two stylesheets. This can be mitigated if you remove the original stylesheet entirely. The tools here are built with the option to clear out any existing stylesheets.
+
+A second option involves using a context provider component to inject custom styles and markup into a context consumer component which this package also has available to use. Context solves many of the complexities covered below with race conditions.
 
 ## Race Conditions
 
-In order for overriding to work, the parent component needs a reliable way to know when `connectedCallback` has fired for child components. This has been a pressing topic in the web component community as seen in [this thread](https://github.com/WICG/webcomponents/issues/619). Luckily there is an easy workaround.
+In order for overriding to work, the parent component needs a reliable way to know when `connectedCallback` has fired for child components. This has been a pressing topic in the web component community as seen in [this thread](https://github.com/WICG/webcomponents/issues/619).
 
-In the child component's `connectedCallback`, emit an event so the parent component can listen and act on it. This helps prevent race conditions where the parent's `connectedCallback` fires before children `connectedCallback`.
+In the child component's `connectedCallback`, we can work around this limitation by eitting an event so the parent component can listen and act on it. This helps prevent race conditions where the parent's `connectedCallback` fires before children `connectedCallback`.
 
-This beahvior follows Lit's recommendations to pass information up the tree to the parent component. Instead of passing information in response to user interaction, this would be when a child component's `connectedCallback` fires.
+This beahvior follows Lit's recommendations to pass information up the tree to the parent component. Instead of passing information in response to user interaction, this would be when a child component's `connectedCallback` fires. However, this approach is also an anti-pattern, as the Lit team recommends to not emit events on lifecycle events.
 
-To avoid too much noise from `connectedCallback` events being emitted, this feature is disabled by default which can be useful in situations where you have default styling and don't intend to override. You must pass in `emitConnectedCallback` prop as `true` to enable overriding. You can also use the `onConnectedCallback` callback function if performance is a concern with emitting an event on `connectedCallback`.
+To avoid too much noise from `connectedCallback` events being emitted, this feature is disabled by default which can be useful in situations where you have default styling and don't intend to override. You must pass in `emitConnectedCallback` prop as `true` to enable overriding. You can alternatively use the `onConnectedCallback` callback function if performance is a concern with emitting an event on `connectedCallback`.
 
 For situations where components are lazy-loaded, the solution above won't be enough. In `injectStyles` and `injectTemplate`, we use `whenDefined` to inject custom styles and markup only when elements become registered. This also helps with error handling.
 
 In situations where we slot in a component with custom styles and markup from the light DOM using the `template` element, the native `slotchange` event will guarantee us access to the child component being slotted in. We can avoid race conditions and also do away with the `emitConnectedCallback` event in this situation.
 
-## Limitations
-
-This project assumes you are overriding styles and markup on initial load via `connectedCallback` and/or `slotchange`. Additional work would need to be done to support overriding if state changes (for example, if you decide to inject styles and markup at a later point in the component's/app's lifecycle or after an action).
-
 ## Caution
 
-Before using these utilities for your own use, please note that they are experimental. For production sites, please use at your own risk.
-
-Please also note that you should first try to align with teams on a design system that promotes component composability to avoid overriding in the first place.
+Please note that this library is experimental. For production sites, please use at your own risk.
 
 ## Future Work
 
