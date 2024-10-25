@@ -31,12 +31,20 @@ describe('lit-override', () => {
     `);
 
     await expect(elProvider).to.be.accessible();
+
     expect(elConsumer.shadowRoot!.innerHTML).to.contain('<slot name="heading"></slot>');
-    const adoptedStyles = elConsumer.shadowRoot?.adoptedStyleSheets;
-    expect(adoptedStyles?.length).to.equal(1);
+
+    const adoptedStyleSheets = elConsumer.shadowRoot?.adoptedStyleSheets;
+    const sheet = adoptedStyleSheets![0];
+    const cssText = Array.from(sheet!.cssRules)
+      .map((rule) => rule.cssText)
+      .join(' ');
+
+    expect(adoptedStyleSheets?.length).to.equal(1);
+    expect(cssText).to.contain('::slotted([slot="heading"]) { text-decoration: underline; }');
   });
 
-  it('renders nothing when nothing is provided', async () => {
+  it('renders nothing when styles and markup are not provided', async () => {
     const elConsumer = await fixture<LitElement>(html`
       <lit-override-consumer>
         <h3 slot="heading">Hello World!</h3>
@@ -46,7 +54,6 @@ describe('lit-override', () => {
     await fixture<LitElement>(html`<lit-override-provider>${elConsumer}</lit-override-provider>`);
 
     expect(elConsumer.shadowRoot!.innerHTML).to.contain('');
-    const adoptedStyles = elConsumer.shadowRoot?.adoptedStyleSheets;
-    expect(adoptedStyles?.length).to.equal(0);
+    expect(elConsumer.shadowRoot?.adoptedStyleSheets?.length).to.equal(0);
   });
 });
