@@ -1,13 +1,10 @@
 import { LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
+import { ConnectedCallbackEvent } from './event.js';
+import { EmitConnectedCallbackInfo } from './types.js';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type Constructor<T> = new (...args: any[]) => T;
-
-export interface EmitConnectedCallbackInfo {
-  name: string;
-  isConnected: boolean;
-}
 
 export declare class EmitConnectedCallbackProps {
   emitConnectedCallback: boolean;
@@ -25,36 +22,30 @@ export declare class EmitConnectedCallbackProps {
  */
 export const EmitConnectedCallback = <T extends Constructor<LitElement>>(superClass: T) => {
   class EmitConnectedCallbackMixin extends superClass {
+    get childInfo(): EmitConnectedCallbackInfo {
+      return {
+        name: this.constructor.name,
+        isConnected: this.isConnected,
+      };
+    }
+
     @property({ reflect: true, type: Boolean })
     emitConnectedCallback = false;
 
     @property({ attribute: false })
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    onConnectedCallback = (_thisChild: LitElement, _childInfo: EmitConnectedCallbackInfo) => {};
-
-    private setEmitConnectedCallback(childInfo: EmitConnectedCallbackInfo) {
-      if (this.emitConnectedCallback) {
-        const event = new CustomEvent('connected-callback', {
-          bubbles: true,
-          composed: true,
-          cancelable: false,
-          detail: { ...childInfo },
-        });
-
-        this.dispatchEvent(event);
-      }
-    }
+    onConnectedCallback? = (_thisChild: LitElement, _childInfo: EmitConnectedCallbackInfo) => {};
 
     connectedCallback() {
       super.connectedCallback();
 
-      const childInfo: EmitConnectedCallbackInfo = {
-        name: this.constructor.name,
-        isConnected: this.isConnected,
-      };
+      if (this.onConnectedCallback) {
+        this.onConnectedCallback(this, this.childInfo);
+      }
 
-      this.onConnectedCallback(this, childInfo);
-      this.setEmitConnectedCallback(childInfo);
+      if (this.emitConnectedCallback) {
+        this.dispatchEvent(new ConnectedCallbackEvent(this.childInfo));
+      }
     }
   }
 

@@ -167,6 +167,15 @@ describe('emit-connected-callback', () => {
     sandbox.restore();
   });
 
+  it('does not call onConnectedCallback if not defined', async () => {
+    const el = await fixture<LitOverride>(html`<lit-override></lit-override>`);
+
+    const callbackSpy = sinon.spy();
+    el.connectedCallback();
+
+    expect(callbackSpy).not.to.have.been.called;
+  });
+
   it('calls onConnectedCallback on connectedCallback lifecycle', async () => {
     const el = await fixture<LitOverride>(html`<lit-override></lit-override>`);
 
