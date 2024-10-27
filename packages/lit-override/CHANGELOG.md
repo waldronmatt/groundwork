@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.5.0...@waldronmatt/lit-override@2.5.1) (2024-10-27)
+
+### Bug Fixes
+
+* **mixins:** onConnectedCallback runs only when called, add unit test, refactor event logic ([7d692f6](https://github.com/waldronmatt/groundwork/commit/7d692f61e7f188b34239ff25dd5123d06690b3de)) - by @waldronmatt
+
 # [2.5.0](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.4.0...@waldronmatt/lit-override@2.5.0) (2024-10-25)
 
 ### Features
