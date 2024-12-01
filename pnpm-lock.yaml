@@ -462,8 +462,8 @@ importers:
         specifier: 5.0.7
         version: 5.0.7
       storybook:
-        specifier: 7.6.20
-        version: 7.6.20
+        specifier: 8.4.5
+        version: 8.4.5(prettier@3.3.2)
       tsconfig-config:
         specifier: workspace:*
         version: link:../../configs/tsconfig-config
@@ -6014,30 +6014,6 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/builder-manager@7.6.20:
-    resolution: {integrity: sha512-e2GzpjLaw6CM/XSmc4qJRzBF8GOoOyotyu3JrSPTYOt4RD8kjUsK4QlismQM1DQRu8i39aIexxmRbiJyD74xzQ==}
-    dependencies:
-      '@fal-works/esbuild-plugin-global-externals': 2.1.2
-      '@storybook/core-common': 7.6.20
-      '@storybook/manager': 7.6.20
-      '@storybook/node-logger': 7.6.20
-      '@types/ejs': 3.1.5
-      '@types/find-cache-dir': 3.2.1
-      '@yarnpkg/esbuild-plugin-pnp': 3.0.0-rc.15(esbuild@0.18.20)
-      browser-assert: 1.2.1
-      ejs: 3.1.10
-      esbuild: 0.18.20
-      esbuild-plugin-alias: 0.2.1
-      express: 4.19.2
-      find-cache-dir: 3.3.2
-      fs-extra: 11.2.0
-      process: 0.11.10
-      util: 0.12.5
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-    dev: true
-
   /@storybook/builder-vite@7.6.19(typescript@5.4.5)(vite@5.2.12):
     resolution: {integrity: sha512-llYpfYCHQCD0nPy+5J+H67iKcOpBrexIFO13wXxHQyl27Z+1T2JJj4cHqZs5S3a2XLiwf4df44NBvvwV5cmJmQ==}
     peerDependencies:
@@ -6160,57 +6136,6 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@storybook/cli@7.6.20:
-    resolution: {integrity: sha512-ZlP+BJyqg7HlnXf7ypjG2CKMI/KVOn03jFIiClItE/jQfgR6kRFgtjRU7uajh427HHfjv9DRiur8nBzuO7vapA==}
-    hasBin: true
-    dependencies:
-      '@babel/core': 7.24.7
-      '@babel/preset-env': 7.24.7(@babel/core@7.24.7)
-      '@babel/types': 7.24.7
-      '@ndelangen/get-tarball': 3.0.9
-      '@storybook/codemod': 7.6.20
-      '@storybook/core-common': 7.6.20
-      '@storybook/core-events': 7.6.20
-      '@storybook/core-server': 7.6.20
-      '@storybook/csf-tools': 7.6.20
-      '@storybook/node-logger': 7.6.20
-      '@storybook/telemetry': 7.6.20
-      '@storybook/types': 7.6.20
-      '@types/semver': 7.5.8
-      '@yarnpkg/fslib': 2.10.3
-      '@yarnpkg/libzip': 2.3.0
-      chalk: 4.1.2
-      commander: 6.2.1
-      cross-spawn: 7.0.3
-      detect-indent: 6.1.0
-      envinfo: 7.13.0
-      execa: 5.1.1
-      express: 4.19.2
-      find-up: 5.0.0
-      fs-extra: 11.2.0
-      get-npm-tarball-url: 2.1.0
-      get-port: 5.1.1
-      giget: 1.2.3
-      globby: 11.1.0
-      jscodeshift: 0.15.2(@babel/preset-env@7.24.7)
-      leven: 3.1.0
-      ora: 5.4.1
-      prettier: 2.8.8
-      prompts: 2.4.2
-      puppeteer-core: 2.1.1
-      read-pkg-up: 7.0.1
-      semver: 7.6.2
-      strip-json-comments: 3.1.1
-      tempy: 1.0.1
-      ts-dedent: 2.2.0
-      util-deprecate: 1.0.2
-    transitivePeerDependencies:
-      - bufferutil
-      - encoding
-      - supports-color
-      - utf-8-validate
-    dev: true
-
   /@storybook/client-logger@7.6.17:
     resolution: {integrity: sha512-6WBYqixAXNAXlSaBWwgljWpAu10tPRBJrcFvx2gPUne58EeMM20Gi/iHYBz2kMCY+JLAgeIH7ZxInqwO8vDwiQ==}
     dependencies:
@@ -6239,27 +6164,6 @@ packages:
       '@storybook/csf-tools': 7.6.19
       '@storybook/node-logger': 7.6.19
       '@storybook/types': 7.6.19
-      '@types/cross-spawn': 6.0.6
-      cross-spawn: 7.0.3
-      globby: 11.1.0
-      jscodeshift: 0.15.2(@babel/preset-env@7.24.7)
-      lodash: 4.17.21
-      prettier: 2.8.8
-      recast: 0.23.9
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@storybook/codemod@7.6.20:
-    resolution: {integrity: sha512-8vmSsksO4XukNw0TmqylPmk7PxnfNfE21YsxFa7mnEBmEKQcZCQsNil4ZgWfG0IzdhTfhglAN4r++Ew0WE+PYA==}
-    dependencies:
-      '@babel/core': 7.24.7
-      '@babel/preset-env': 7.24.7(@babel/core@7.24.7)
-      '@babel/types': 7.24.7
-      '@storybook/csf': 0.1.8
-      '@storybook/csf-tools': 7.6.20
-      '@storybook/node-logger': 7.6.20
-      '@storybook/types': 7.6.20
       '@types/cross-spawn': 6.0.6
       cross-spawn: 7.0.3
       globby: 11.1.0
@@ -6307,37 +6211,6 @@ packages:
       '@storybook/core-events': 7.6.19
       '@storybook/node-logger': 7.6.19
       '@storybook/types': 7.6.19
-      '@types/find-cache-dir': 3.2.1
-      '@types/node': 18.19.34
-      '@types/node-fetch': 2.6.11
-      '@types/pretty-hrtime': 1.0.3
-      chalk: 4.1.2
-      esbuild: 0.18.20
-      esbuild-register: 3.5.0(esbuild@0.18.20)
-      file-system-cache: 2.3.0
-      find-cache-dir: 3.3.2
-      find-up: 5.0.0
-      fs-extra: 11.2.0
-      glob: 10.4.2
-      handlebars: 4.7.8
-      lazy-universal-dotenv: 4.0.0
-      node-fetch: 2.7.0
-      picomatch: 2.3.1
-      pkg-dir: 5.0.0
-      pretty-hrtime: 1.0.3
-      resolve-from: 5.0.0
-      ts-dedent: 2.2.0
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-    dev: true
-
-  /@storybook/core-common@7.6.20:
-    resolution: {integrity: sha512-8H1zPWPjcmeD4HbDm4FDD0WLsfAKGVr566IZ4hG+h3iWVW57II9JW9MLBtiR2LPSd8u7o0kw64lwRGmtCO1qAw==}
-    dependencies:
-      '@storybook/core-events': 7.6.20
-      '@storybook/node-logger': 7.6.20
-      '@storybook/types': 7.6.20
       '@types/find-cache-dir': 3.2.1
       '@types/node': 18.19.34
       '@types/node-fetch': 2.6.11
@@ -6432,52 +6305,28 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@storybook/core-server@7.6.20:
-    resolution: {integrity: sha512-qC5BdbqqwMLTdCwMKZ1Hbc3+3AaxHYWLiJaXL9e8s8nJw89xV8c8l30QpbJOGvcDmsgY6UTtXYaJ96OsTr7MrA==}
+  /@storybook/core@8.4.5(prettier@3.3.2):
+    resolution: {integrity: sha512-aB1sQNX5nRoUAqg5u1py0MuR/VPd6c6PhECa4rW6pmr7kZcfyP4PP6UFpXuN71ypTQlkRE3Vc5PQZ3gLhE9o3g==}
+    peerDependencies:
+      prettier: ^2 || ^3
+    peerDependenciesMeta:
+      prettier:
+        optional: true
     dependencies:
-      '@aw-web-design/x-default-browser': 1.4.126
-      '@discoveryjs/json-ext': 0.5.7
-      '@storybook/builder-manager': 7.6.20
-      '@storybook/channels': 7.6.20
-      '@storybook/core-common': 7.6.20
-      '@storybook/core-events': 7.6.20
-      '@storybook/csf': 0.1.8
-      '@storybook/csf-tools': 7.6.20
-      '@storybook/docs-mdx': 0.1.0
-      '@storybook/global': 5.0.0
-      '@storybook/manager': 7.6.20
-      '@storybook/node-logger': 7.6.20
-      '@storybook/preview-api': 7.6.20
-      '@storybook/telemetry': 7.6.20
-      '@storybook/types': 7.6.20
-      '@types/detect-port': 1.3.5
-      '@types/node': 18.19.34
-      '@types/pretty-hrtime': 1.0.3
-      '@types/semver': 7.5.8
+      '@storybook/csf': 0.1.12
       better-opn: 3.0.2
-      chalk: 4.1.2
-      cli-table3: 0.6.5
-      compression: 1.7.4
-      detect-port: 1.6.1
-      express: 4.19.2
-      fs-extra: 11.2.0
-      globby: 11.1.0
-      lodash: 4.17.21
-      open: 8.4.2
-      pretty-hrtime: 1.0.3
-      prompts: 2.4.2
-      read-pkg-up: 7.0.1
+      browser-assert: 1.2.1
+      esbuild: 0.21.5
+      esbuild-register: 3.5.0(esbuild@0.21.5)
+      jsdoc-type-pratt-parser: 4.1.0
+      prettier: 3.3.2
+      process: 0.11.10
+      recast: 0.23.9
       semver: 7.6.2
-      telejson: 7.2.0
-      tiny-invariant: 1.3.3
-      ts-dedent: 2.2.0
       util: 0.12.5
-      util-deprecate: 1.0.2
-      watchpack: 2.4.1
       ws: 8.17.0
     transitivePeerDependencies:
       - bufferutil
-      - encoding
       - supports-color
       - utf-8-validate
     dev: true
@@ -6507,27 +6356,17 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/csf-tools@7.6.20:
-    resolution: {integrity: sha512-rwcwzCsAYh/m/WYcxBiEtLpIW5OH1ingxNdF/rK9mtGWhJxXRDV8acPkFrF8rtFWIVKoOCXu5USJYmc3f2gdYQ==}
-    dependencies:
-      '@babel/generator': 7.24.7
-      '@babel/parser': 7.24.7
-      '@babel/traverse': 7.24.7
-      '@babel/types': 7.24.7
-      '@storybook/csf': 0.1.8
-      '@storybook/types': 7.6.20
-      fs-extra: 11.2.0
-      recast: 0.23.9
-      ts-dedent: 2.2.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@storybook/csf@0.0.1:
     resolution: {integrity: sha512-USTLkZze5gkel8MYCujSRBVIrUQ3YPBrLOx7GNk/0wttvVtlzWXAq9eLbQ4p/NicGxP+3T7KPEMVV//g+yubpw==}
     dependencies:
       lodash: 4.17.21
     dev: false
+
+  /@storybook/csf@0.1.12:
+    resolution: {integrity: sha512-9/exVhabisyIVL0VxTCxo01Tdm8wefIXKXfltAPTSr8cbLn5JAxGQ6QV3mjdecLGEOucfoVhAKtJfVHxEK1iqw==}
+    dependencies:
+      type-fest: 2.19.0
+    dev: true
 
   /@storybook/csf@0.1.8:
     resolution: {integrity: sha512-Ntab9o7LjBCbFIao5l42itFiaSh/Qu+l16l/r/9qmV9LnYZkO+JQ7tzhdlwpgJfhs+B5xeejpdAtftDRyXNajw==}
@@ -6617,20 +6456,12 @@ packages:
     resolution: {integrity: sha512-fZWQcf59x4P0iiBhrL74PZrqKJAPuk9sWjP8BIkGbf8wTZtUunbY5Sv4225fOL4NLJbuX9/RYLUPoxQ3nucGHA==}
     dev: true
 
-  /@storybook/manager@7.6.20:
-    resolution: {integrity: sha512-0Cf6WN0t7yEG2DR29tN5j+i7H/TH5EfPppg9h9/KiQSoFHk+6KLoy2p5do94acFU+Ro4+zzxvdCGbcYGKuArpg==}
-    dev: true
-
   /@storybook/mdx2-csf@1.1.0:
     resolution: {integrity: sha512-TXJJd5RAKakWx4BtpwvSNdgTDkKM6RkXU8GK34S/LhidQ5Pjz3wcnqb0TxEkfhK/ztbP8nKHqXFwLfa2CYkvQw==}
     dev: true
 
   /@storybook/node-logger@7.6.19:
     resolution: {integrity: sha512-2g29QC44Zl1jKY37DmQ0/dO7+VSKnGgPI/x0mwVwQffypSapxH3rwLLT5Q5XLHeFyD+fhRu5w9Cj4vTGynJgpA==}
-    dev: true
-
-  /@storybook/node-logger@7.6.20:
-    resolution: {integrity: sha512-l2i4qF1bscJkOplNffcRTsgQWYR7J51ewmizj5YrTM8BK6rslWT1RntgVJWB1RgPqvx6VsCz1gyP3yW1oKxvYw==}
     dev: true
 
   /@storybook/postinstall@7.6.19:
@@ -6797,22 +6628,6 @@ packages:
       '@storybook/client-logger': 7.6.19
       '@storybook/core-common': 7.6.19
       '@storybook/csf-tools': 7.6.19
-      chalk: 4.1.2
-      detect-package-manager: 2.0.1
-      fetch-retry: 5.0.6
-      fs-extra: 11.2.0
-      read-pkg-up: 7.0.1
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-    dev: true
-
-  /@storybook/telemetry@7.6.20:
-    resolution: {integrity: sha512-dmAOCWmOscYN6aMbhCMmszQjoycg7tUPRVy2kTaWg6qX10wtMrvEtBV29W4eMvqdsoRj5kcvoNbzRdYcWBUOHQ==}
-    dependencies:
-      '@storybook/client-logger': 7.6.20
-      '@storybook/core-common': 7.6.20
-      '@storybook/csf-tools': 7.6.20
       chalk: 4.1.2
       detect-package-manager: 2.0.1
       fetch-retry: 5.0.6
@@ -10826,6 +10641,17 @@ packages:
       - supports-color
     dev: true
 
+  /esbuild-register@3.5.0(esbuild@0.21.5):
+    resolution: {integrity: sha512-+4G/XmakeBAsvJuDugJvtyF1x+XJT4FMocynNpxrvEBViirpfUn2PgNpCHedfWhF4WokNsO/OvMKrmJOIJsI5A==}
+    peerDependencies:
+      esbuild: '>=0.12 <1'
+    dependencies:
+      debug: 4.3.5
+      esbuild: 0.21.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /esbuild@0.18.20:
     resolution: {integrity: sha512-ceqxoedUrcayh7Y7ZX6NdbbDzGROiyVBgC4PriJThBKSVPWnnFHZAkfI1lJT8QFkOwH4qOS2SJkS4wvpGl8BpA==}
     engines: {node: '>=12'}
@@ -13804,6 +13630,11 @@ packages:
       write-file-atomic: 2.4.3
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /jsdoc-type-pratt-parser@4.1.0:
+    resolution: {integrity: sha512-Hicd6JK5Njt2QB6XYFS7ok9e37O8AYk3jTcppG4YVQnYjOemymvTcmc7OWsmq/Qqj5TdRFO5/x/tIPmBeRtGHg==}
+    engines: {node: '>=12.0.0'}
     dev: true
 
   /jsdom@20.0.3:
@@ -16924,7 +16755,6 @@ packages:
     resolution: {integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==}
     engines: {node: '>=14'}
     hasBin: true
-    dev: false
 
   /pretty-format@27.5.1:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
@@ -18437,14 +18267,19 @@ packages:
       - utf-8-validate
     dev: true
 
-  /storybook@7.6.20:
-    resolution: {integrity: sha512-Wt04pPTO71pwmRmsgkyZhNo4Bvdb/1pBAMsIFb9nQLykEdzzpXjvingxFFvdOG4nIowzwgxD+CLlyRqVJqnATw==}
+  /storybook@8.4.5(prettier@3.3.2):
+    resolution: {integrity: sha512-9tfgabXnMibYp3SvoaJXXMD63Pw0SA9Hnf5v6TxysCYZs4DZ/04fAkK+9RW+K4C5JkV83qXMMlrsPj766R47fg==}
     hasBin: true
+    peerDependencies:
+      prettier: ^2 || ^3
+    peerDependenciesMeta:
+      prettier:
+        optional: true
     dependencies:
-      '@storybook/cli': 7.6.20
+      '@storybook/core': 8.4.5(prettier@3.3.2)
+      prettier: 3.3.2
     transitivePeerDependencies:
       - bufferutil
-      - encoding
       - supports-color
       - utf-8-validate
     dev: true
