@@ -15,7 +15,7 @@
     "eslint-config-custom": "workspace:*",
     "rimraf": "5.0.10",
     "tsconfig-config": "workspace:*",
-    "typescript": "5.5.4",
+    "typescript": "5.7.2",
     "vite": "5.4.11"
   },
   "dependencies": {
