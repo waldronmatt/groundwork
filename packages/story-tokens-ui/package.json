@@ -55,7 +55,7 @@
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "@vitejs/plugin-react-swc": "3.7.0",
-    "eslint": "8.57.0",
+    "eslint": "8.57.1",
     "eslint-config-custom": "workspace:*",
     "glob": "10.4.5",
     "react": "18.3.1",
