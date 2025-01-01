@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.4](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.5.3...@waldronmatt/lit-override@2.5.4) (2025-01-01)
+
+### Bug Fixes
+
+* **deps:** update eslint ([#222](https://github.com/waldronmatt/groundwork/issues/222)) ([e708c26](https://github.com/waldronmatt/groundwork/commit/e708c2669e00e2a6e83982373ab085a37343d11f)) - by @renovate[bot]
+
 ## [2.5.3](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/lit-override@2.5.2...@waldronmatt/lit-override@2.5.3) (2025-01-01)
 
 **Note:** Version bump only for package @waldronmatt/lit-override

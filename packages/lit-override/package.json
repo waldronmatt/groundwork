@@ -1,6 +1,6 @@
 {
   "name": "@waldronmatt/lit-override",
-  "version": "2.5.3",
+  "version": "2.5.4",
   "type": "module",
   "exports": {
     "./src/*": "./src/*"
