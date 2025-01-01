@@ -13,9 +13,9 @@
   "devDependencies": {
     "eslint": "8.57.0",
     "eslint-config-custom": "workspace:*",
-    "rimraf": "5.0.7",
+    "rimraf": "5.0.10",
     "tsconfig-config": "workspace:*",
-    "typescript": "5.5.2",
+    "typescript": "5.5.4",
     "vite": "5.4.8"
   },
   "dependencies": {
