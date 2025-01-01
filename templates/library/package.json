@@ -46,7 +46,7 @@
   "homepage": "https://github.com/waldronmatt/groundwork/tree/main/templates/library#readme",
   "devDependencies": {
     "@types/jest": "29.5.14",
-    "eslint": "8.57.0",
+    "eslint": "8.57.1",
     "eslint-config-custom": "workspace:*",
     "jest": "29.7.0",
     "jest-config": "workspace:*",

@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-custom",
-  "version": "1.5.9",
+  "version": "1.5.10",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -20,17 +20,17 @@
     "eslint-plugin-lit": "1.14.0",
     "eslint-plugin-lit-a11y": "1.1.0",
     "eslint-plugin-mdx": "3.1.5",
-    "eslint-plugin-react": "7.34.3",
+    "eslint-plugin-react": "7.34.4",
     "eslint-plugin-react-hooks": "4.6.2",
-    "eslint-plugin-react-refresh": "0.4.7",
+    "eslint-plugin-react-refresh": "0.4.16",
     "eslint-plugin-storybook": "0.8.0",
     "eslint-plugin-vitest": "0.5.4",
-    "eslint-plugin-wc": "2.1.0"
+    "eslint-plugin-wc": "2.1.1"
   },
   "devDependencies": {
-    "eslint": "8.57.0"
+    "eslint": "8.57.1"
   },
   "peerDependencies": {
-    "eslint": "8.57.0"
+    "eslint": "8.57.1"
   }
 }
