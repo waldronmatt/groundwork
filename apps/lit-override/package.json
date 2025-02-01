@@ -16,7 +16,7 @@
     "rimraf": "5.0.10",
     "tsconfig-config": "workspace:*",
     "typescript": "5.7.2",
-    "vite": "5.4.12"
+    "vite": "5.4.14"
   },
   "dependencies": {
     "@waldronmatt/lit-override": "workspace:*",
