@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.13](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.5.11...eslint-config-custom@1.5.13) (2025-02-01)
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-react-refresh to v0.4.18 ([#243](https://github.com/waldronmatt/groundwork/issues/243)) ([ff7a1f2](https://github.com/waldronmatt/groundwork/commit/ff7a1f2ca490edc32fe1c92f42352f870032c477)) - by @renovate[bot]
+
 ## [1.5.11](https://github.com/waldronmatt/groundwork/compare/eslint-config-custom@1.5.10...eslint-config-custom@1.5.11) (2025-01-01)
 
 ### Bug Fixes
