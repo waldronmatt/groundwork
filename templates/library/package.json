@@ -53,7 +53,7 @@
     "rimraf": "5.0.10",
     "tsconfig-config": "workspace:*",
     "tslib": "2.8.1",
-    "tsup": "8.3.5",
-    "typescript": "5.7.2"
+    "tsup": "8.3.6",
+    "typescript": "5.7.3"
   }
 }
