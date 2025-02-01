@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/library@1.1.5...@waldronmatt/library@1.1.6) (2025-02-01)
+
+**Note:** Version bump only for package @waldronmatt/library
+
 ## [1.1.5](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/library@1.1.4...@waldronmatt/library@1.1.5) (2025-01-01)
 
 **Note:** Version bump only for package @waldronmatt/library
