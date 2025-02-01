@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.9](https://github.com/waldronmatt/groundwork/compare/lit-override@2.3.8...lit-override@2.3.9) (2025-02-01)
+
+**Note:** Version bump only for package lit-override
+
+## [2.3.8](https://github.com/waldronmatt/groundwork/compare/lit-override@2.3.7...lit-override@2.3.8) (2025-02-01)
+
+**Note:** Version bump only for package lit-override
+
+## [2.3.7](https://github.com/waldronmatt/groundwork/compare/lit-override@2.3.6...lit-override@2.3.7) (2025-01-22)
+
+**Note:** Version bump only for package lit-override
+
+## [2.3.6](https://github.com/waldronmatt/groundwork/compare/lit-override@2.3.4...lit-override@2.3.6) (2025-01-01)
+
+### Bug Fixes
+
+* **deps:** update dependencies ([#225](https://github.com/waldronmatt/groundwork/issues/225)) ([b1d8371](https://github.com/waldronmatt/groundwork/commit/b1d83715aeb45a5a1baf47da1ed291065b8e387f)) - by @renovate[bot]
+
+## [2.3.4](https://github.com/waldronmatt/groundwork/compare/lit-override@2.3.3...lit-override@2.3.4) (2025-01-01)
+
+**Note:** Version bump only for package lit-override
+
+## [2.3.3](https://github.com/waldronmatt/groundwork/compare/lit-override@2.3.2...lit-override@2.3.3) (2025-01-01)
+
+### Bug Fixes
+
+* **deps:** update eslint ([#222](https://github.com/waldronmatt/groundwork/issues/222)) ([e708c26](https://github.com/waldronmatt/groundwork/commit/e708c2669e00e2a6e83982373ab085a37343d11f)) - by @renovate[bot]
+
+## [2.3.2](https://github.com/waldronmatt/groundwork/compare/lit-override@2.3.1...lit-override@2.3.2) (2025-01-01)
+
+**Note:** Version bump only for package lit-override
+
 ## [2.3.1](https://github.com/waldronmatt/groundwork/compare/lit-override@2.3.0...lit-override@2.3.1) (2024-10-25)
 
 ### Bug Fixes

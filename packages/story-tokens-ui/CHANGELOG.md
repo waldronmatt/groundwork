@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.12](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.2.11...@waldronmatt/story-tokens-ui@1.2.12) (2025-02-01)
+
+**Note:** Version bump only for package @waldronmatt/story-tokens-ui
+
+## [1.2.11](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.2.10...@waldronmatt/story-tokens-ui@1.2.11) (2025-02-01)
+
+**Note:** Version bump only for package @waldronmatt/story-tokens-ui
+
+## [1.2.10](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.2.9...@waldronmatt/story-tokens-ui@1.2.10) (2025-01-22)
+
+**Note:** Version bump only for package @waldronmatt/story-tokens-ui
+
+## [1.2.9](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.2.8...@waldronmatt/story-tokens-ui@1.2.9) (2025-01-01)
+
+**Note:** Version bump only for package @waldronmatt/story-tokens-ui
+
+## [1.2.8](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.2.7...@waldronmatt/story-tokens-ui@1.2.8) (2025-01-01)
+
+**Note:** Version bump only for package @waldronmatt/story-tokens-ui
+
+## [1.2.7](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.2.6...@waldronmatt/story-tokens-ui@1.2.7) (2025-01-01)
+
+### Bug Fixes
+
+* **deps:** update eslint ([#222](https://github.com/waldronmatt/groundwork/issues/222)) ([e708c26](https://github.com/waldronmatt/groundwork/commit/e708c2669e00e2a6e83982373ab085a37343d11f)) - by @renovate[bot]
+
+## [1.2.6](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.2.5...@waldronmatt/story-tokens-ui@1.2.6) (2025-01-01)
+
+**Note:** Version bump only for package @waldronmatt/story-tokens-ui
+
 ## [1.2.5](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/story-tokens-ui@1.2.4...@waldronmatt/story-tokens-ui@1.2.5) (2024-09-25)
 
 **Note:** Version bump only for package @waldronmatt/story-tokens-ui

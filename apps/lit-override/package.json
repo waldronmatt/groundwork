@@ -1,7 +1,7 @@
 {
   "name": "lit-override",
   "private": true,
-  "version": "2.3.1",
+  "version": "2.3.9",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,16 +11,16 @@
     "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
   "devDependencies": {
-    "eslint": "8.57.0",
+    "eslint": "8.57.1",
     "eslint-config-custom": "workspace:*",
-    "rimraf": "5.0.7",
+    "rimraf": "5.0.10",
     "tsconfig-config": "workspace:*",
-    "typescript": "5.5.2",
-    "vite": "5.4.8"
+    "typescript": "5.7.3",
+    "vite": "5.4.14"
   },
   "dependencies": {
     "@waldronmatt/lit-override": "workspace:*",
-    "lit": "3.1.4",
-    "lit-html": "3.1.4"
+    "lit": "3.2.1",
+    "lit-html": "3.2.1"
   }
 }

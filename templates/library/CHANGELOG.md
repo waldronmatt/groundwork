@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/library@1.1.5...@waldronmatt/library@1.1.6) (2025-02-01)
+
+**Note:** Version bump only for package @waldronmatt/library
+
+## [1.1.5](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/library@1.1.4...@waldronmatt/library@1.1.5) (2025-01-01)
+
+**Note:** Version bump only for package @waldronmatt/library
+
+## [1.1.4](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/library@1.1.3...@waldronmatt/library@1.1.4) (2025-01-01)
+
+### Bug Fixes
+
+* **deps:** update eslint ([#222](https://github.com/waldronmatt/groundwork/issues/222)) ([e708c26](https://github.com/waldronmatt/groundwork/commit/e708c2669e00e2a6e83982373ab085a37343d11f)) - by @renovate[bot]
+
+## [1.1.3](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/library@1.1.2...@waldronmatt/library@1.1.3) (2025-01-01)
+
+**Note:** Version bump only for package @waldronmatt/library
+
 ## [1.1.2](https://github.com/waldronmatt/groundwork/compare/@waldronmatt/library@1.1.1...@waldronmatt/library@1.1.2) (2024-07-01)
 
 **Note:** Version bump only for package @waldronmatt/library
