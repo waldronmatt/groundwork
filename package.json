@@ -1,7 +1,7 @@
 {
   "name": "groundwork",
   "description": "A monorepo boilerplate using pnpm, nx, and lerna-lite.",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "type": "module",
   "private": true,
   "author": "Matthew Waldron",
@@ -60,11 +60,11 @@
     "execa": "8.0.1",
     "husky": "9.1.7",
     "knip": "4.6.0",
-    "lint-staged": "15.3.0",
+    "lint-staged": "15.4.3",
     "npm-run-all2": "6.2.6",
     "nx": "17.3.2",
     "prettier": "3.4.2",
-    "publint": "0.2.12",
+    "publint": "0.3.2",
     "secretlint": "8.5.0",
     "syncpack": "12.4.0",
     "typescript": "5.7.3"
