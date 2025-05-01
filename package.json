@@ -1,7 +1,7 @@
 {
   "name": "groundwork",
   "description": "A monorepo boilerplate using pnpm, nx, and lerna-lite.",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "type": "module",
   "private": true,
   "author": "Matthew Waldron",
@@ -42,7 +42,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@arethetypeswrong/cli": "0.17.3",
+    "@arethetypeswrong/cli": "0.17.4",
     "@commitlint/cli": "18.6.1",
     "@commitlint/config-conventional": "18.6.3",
     "@lerna-lite/changed": "3.11.0",
@@ -54,7 +54,7 @@
     "@nrwl/cli": "15.9.3",
     "@nrwl/nx-cloud": "18.0.1",
     "@secretlint/secretlint-rule-preset-recommend": "8.5.0",
-    "@types/node": "20.17.16",
+    "@types/node": "20.17.31",
     "commitizen": "4.3.1",
     "cz-conventional-changelog": "3.3.0",
     "execa": "8.0.1",
@@ -64,7 +64,7 @@
     "npm-run-all2": "6.2.6",
     "nx": "17.3.2",
     "prettier": "3.4.2",
-    "publint": "0.3.2",
+    "publint": "0.3.12",
     "secretlint": "8.5.0",
     "syncpack": "12.4.0",
     "typescript": "5.7.3"
