@@ -54,7 +54,7 @@
   "devDependencies": {
     "@types/react": "18.3.20",
     "@types/react-dom": "18.3.6",
-    "@vitejs/plugin-react-swc": "3.7.2",
+    "@vitejs/plugin-react-swc": "3.9.0",
     "eslint": "8.57.1",
     "eslint-config-custom": "workspace:*",
     "glob": "10.4.5",
