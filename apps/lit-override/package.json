@@ -1,7 +1,7 @@
 {
   "name": "lit-override",
   "private": true,
-  "version": "2.3.9",
+  "version": "2.3.10",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@waldronmatt/lit-override": "workspace:*",
-    "lit": "3.2.1",
-    "lit-html": "3.2.1"
+    "lit": "3.3.0",
+    "lit-html": "3.3.0"
   }
 }
