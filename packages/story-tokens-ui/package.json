@@ -57,7 +57,7 @@
     "@vitejs/plugin-react-swc": "3.9.0",
     "eslint": "8.57.1",
     "eslint-config-custom": "workspace:*",
-    "glob": "10.4.5",
+    "glob": "11.0.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "rimraf": "5.0.10",
