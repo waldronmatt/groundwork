@@ -11,7 +11,7 @@
     "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
   "devDependencies": {
-    "eslint": "8.57.1",
+    "eslint": "9.32.0",
     "eslint-config-custom": "workspace:*",
     "rimraf": "5.0.10",
     "tsconfig-config": "workspace:*",
