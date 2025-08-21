@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-custom",
-  "version": "1.5.14",
+  "version": "1.5.15",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -13,19 +13,19 @@
     "eslint-config-airbnb-typescript": "17.1.0",
     "eslint-plugin-chai-expect": "3.1.0",
     "eslint-plugin-chai-friendly": "0.7.4",
-    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jest": "27.9.0",
     "eslint-plugin-jest-dom": "5.5.0",
     "eslint-plugin-jest-formatting": "3.1.0",
-    "eslint-plugin-lit": "1.14.0",
+    "eslint-plugin-lit": "1.15.0",
     "eslint-plugin-lit-a11y": "1.1.0",
-    "eslint-plugin-mdx": "3.1.5",
-    "eslint-plugin-react": "7.34.4",
+    "eslint-plugin-mdx": "3.6.2",
+    "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "4.6.2",
     "eslint-plugin-react-refresh": "0.4.20",
-    "eslint-plugin-storybook": "0.8.0",
-    "eslint-plugin-vitest": "0.5.4",
-    "eslint-plugin-wc": "2.1.1"
+    "eslint-plugin-storybook": "0.12.0",
+    "@vitest/eslint-plugin": "1.0.1",
+    "eslint-plugin-wc": "2.2.1"
   },
   "devDependencies": {
     "eslint": "8.57.1"
