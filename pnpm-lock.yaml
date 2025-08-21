@@ -531,8 +531,8 @@ importers:
         specifier: 1.3.0
         version: 1.3.0(vite@5.4.19)
       vite-plugin-static-copy:
-        specifier: 1.0.6
-        version: 1.0.6(vite@5.4.19)
+        specifier: 2.3.2
+        version: 2.3.2(vite@5.4.19)
 
   templates/library:
     devDependencies:
@@ -17001,7 +17001,6 @@ packages:
   /p-map@7.0.3:
     resolution: {integrity: sha512-VkndIv2fIB99swvQoA65bm+fsmt6UNdGeIB0oxBs+WhAhdh08QA04JXpI7rbB9r08/nkbysKoya9rtDERYOYMA==}
     engines: {node: '>=18'}
-    dev: false
 
   /p-memoize@4.0.1:
     resolution: {integrity: sha512-km0sP12uE0dOZ5qP+s7kGVf07QngxyG0gS8sYFvFWhqlgzOsSy+m71aUejf/0akxj5W7gE//2G74qTv6b4iMog==}
@@ -20556,15 +20555,16 @@ packages:
       vite: 5.4.19(@types/node@20.17.31)
     dev: true
 
-  /vite-plugin-static-copy@1.0.6(vite@5.4.19):
-    resolution: {integrity: sha512-3uSvsMwDVFZRitqoWHj0t4137Kz7UynnJeq1EZlRW7e25h2068fyIZX4ORCCOAkfp1FklGxJNVJBkBOD+PZIew==}
+  /vite-plugin-static-copy@2.3.2(vite@5.4.19):
+    resolution: {integrity: sha512-iwrrf+JupY4b9stBttRWzGHzZbeMjAHBhkrn67MNACXJVjEMRpCI10Q3AkxdBkl45IHaTfw/CNVevzQhP7yTwg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
-      vite: ^5.0.0
+      vite: ^5.0.0 || ^6.0.0
     dependencies:
       chokidar: 3.6.0
       fast-glob: 3.3.2
       fs-extra: 11.3.0
+      p-map: 7.0.3
       picocolors: 1.1.1
       vite: 5.4.19(@types/node@20.17.31)
     dev: true
