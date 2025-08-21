@@ -49,7 +49,7 @@
   "peerDependencies": {
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "storybook": "7.6.20"
+    "storybook": "8.6.14"
   },
   "devDependencies": {
     "@types/react": "18.3.20",
@@ -61,7 +61,7 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "rimraf": "5.0.10",
-    "storybook": "7.6.20",
+    "storybook": "8.6.14",
     "tsconfig-config": "workspace:*",
     "typescript": "5.8.3",
     "vite": "5.4.19",
