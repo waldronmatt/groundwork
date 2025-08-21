@@ -50,7 +50,7 @@
     "eslint-config-custom": "workspace:*",
     "jest": "29.7.0",
     "jest-config": "workspace:*",
-    "rimraf": "5.0.10",
+    "rimraf": "6.0.1",
     "tsconfig-config": "workspace:*",
     "tslib": "2.8.1",
     "tsup": "8.4.0",
