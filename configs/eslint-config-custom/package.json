@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-custom",
-  "version": "1.5.14",
+  "version": "1.5.15",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -23,14 +23,14 @@
     "eslint-plugin-react": "7.34.4",
     "eslint-plugin-react-hooks": "4.6.2",
     "eslint-plugin-react-refresh": "0.4.20",
-    "eslint-plugin-storybook": "0.8.0",
+    "eslint-plugin-storybook": "9.0.18",
     "eslint-plugin-vitest": "0.5.4",
     "eslint-plugin-wc": "2.1.1"
   },
   "devDependencies": {
-    "eslint": "8.57.1"
+    "eslint": "9.32.0"
   },
   "peerDependencies": {
-    "eslint": "8.57.1"
+    "eslint": "9.32.0"
   }
 }
